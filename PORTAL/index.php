@@ -3,14 +3,15 @@
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-	<meta name="author" content="TEAM ViRiLiTY">
+	<meta name="author" content="Dante Vidal Tueros, Analista Desarrollador"/>
 
 
-	<script language="javascript" src="JS/LIBRERIAS/jquery.js"></script>
-	<script language="javascript" src="JS/MODULOS/funciones_carga_pagina.js"></script>
-	<link rel="stylesheet" type="text/css" href="CSS/general_tabla.css" media="screen"> 
-	<link rel="stylesheet" type="text/css" href="CSS/estilo_base.css" media="screen">  
-	<link rel="stylesheet" type="text/css" href="CSS/MODULO1/general.css" media="screen"> 
+	<script language="javascript" src="../JS/LIBRERIAS/jquery.js"></script>
+	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_carga_pagina.js"></script>
+	<link rel="stylesheet" type="text/css" href="../CSS/general_tabla.css" media="screen"> 
+	<link rel="stylesheet" type="text/css" href="../CSS/estilo_base.css" media="screen">  
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/general.css" media="screen"> 
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/transiciones_efectos.css" media="screen"> 
 	<title>Untitled 3</title>
 </head>
 
@@ -25,6 +26,7 @@
 	<div id="opcion_primaria"></div>
 
 	
+	<div id="cerrar_catalogo"></div>
 	
 </div>
 
