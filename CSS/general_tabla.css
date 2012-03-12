@@ -1,0 +1,91 @@
+/*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************//*************TABLAS******************************/
+
+.tabla_cabecera{
+	width:80%;
+	margin-top: 2%;
+	margin-left:10%;
+}
+
+.tabla_cabecera100{
+
+	width:100%;
+	margin-top: 1%;
+
+}
+.tabla_cabecera100 td{
+	background: #BBB;
+}
+
+.tabla_cabecera td{
+	background: #BBB;
+}
+
+.tabla_comun1{
+	float:left;
+	width:90%;
+	margin-top:3%;
+	margin-left:5%;
+}
+
+.tabla_contenido{
+
+	width:80%;
+	margin-left:10%;	
+	border:1px solid #EEE;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.tabla_contenido100_sin_scroll{
+
+	width:100%;	
+	border:1px solid #EEE;
+
+}
+
+.tabla_pie{
+	float:left;
+	width:84%;
+	margin-left:8%;
+	
+}
+
+.tabla450{
+	min-height: 450px;
+}
+.tabla400{
+	min-height: 400px;
+}
+.tabla350{
+	min-height: 350px;
+}
+.tabla300{
+	min-height: 300px;
+}
+.tabla250{
+	min-height: 250px;
+}
+.tabla200{
+	min-height: 250px;
+}
+.tabla150{
+	min-height: 150px;
+}
+.tabla100{
+	min-height: 100px;
+}
+.tabla50{
+	min-height: 50px;
+}
+
+.boton_lado_tabla{
+	float:left;
+	width:6%;
+	margin-left:1%;
+	margin-top:2%;	
+	text-align: center;
+}
+
+.borde_inferior{
+	border-bottom: 1px solid #333;
+}

@@ -1,0 +1,2 @@
+var GLOBAL_AREA="DIV_AREA";
+
