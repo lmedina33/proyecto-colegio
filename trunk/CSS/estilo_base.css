@@ -1,0 +1,683 @@
+body{
+	font-family: Arial,Helvetica,sans-serif;
+	font-size:13px;
+	background: ;
+	padding:0px;
+	margin:0px;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#FFFFFF), color-stop(.6,#C4EDFF),color-stop(.4,#C4EDFF));
+	background:-moz-linear-gradient(0% 100% 90deg,#FFFFFF, #FFFFFF, #C4EDFF 43%,#C4EDFF 59%,#FFFFFF 87%);
+}
+
+legend{
+	font-size:150%;
+}
+fieldset{
+	padding:0px;
+	
+}
+form{
+
+}
+
+caption{
+	height: 20px;
+	font-weight: bold;
+	font-size:130%;
+	margin-bottom:2%;
+}
+
+#logo{
+	margin-left:20px;
+	margin-top:10px;
+	width:182px;
+	height:75px;
+	background:url("../../imagenes/logo.png") repeat-x;
+}
+
+.lista tr{
+	
+	background:white;	
+}
+.lista td{
+	border-bottom: solid gray 1px;
+}
+.mtop10{
+	margin-top:10px;
+}
+.mtop20{
+	margin-top:20px;
+}
+.mtop40{
+	margin-top:40px;
+}
+.mleft10{
+	margin-left:10px;	
+}
+.mleft20{
+	margin-left:20px;	
+}
+.mleft40{
+	margin-left:40px;	
+}
+.subtitulo{
+	text-decoration:underline;
+	font-style: italic;
+}
+
+.enlinea{
+	display:inline;
+}
+.font90pc{
+	font-size:90%;
+}
+
+.ancho_combobox150{
+	width:150px;
+}
+
+.ancho_combobox120{
+	width:120px;
+}
+
+.ancho_combobox100{
+	width:100px;
+}
+
+#cabecera{
+	position:relative;
+	height:110px;
+	border:solid 1px #AAA;
+	border-radius:6px 6px 6px 6px;
+}
+#div_back
+{    opacity: .40;
+  	top: 0px;
+	background-color: #666;
+	height:100%;
+	width:100%;
+	position: fixed;
+	display: none;
+	z-index: 200;
+}
+
+
+#div_back2
+{    opacity: .40;
+  	top: 0px;
+	background-color: #666;
+	height:100%;
+	width:100%;
+	position: fixed;
+	display: none;
+	z-index: 300;
+}
+
+#div_back3
+{    opacity: .40;
+  	top: 0px;
+	background-color: #666;
+	height:100%;
+	width:100%;
+	position: fixed;
+	display: none;
+	z-index: 450;
+}
+
+.ancho_pantalla{
+	width:920px;
+	border:0px;
+	
+}
+.bloque{
+	display:block;
+	width: 100%;
+}
+
+.bloque2{
+	display:block;
+	width: 100%;
+	min-height: 10px;
+}
+
+.alinear_derecha{
+	text-align:right;
+}
+.alinear_izquierda{
+	text-align:left;
+}
+.alinear_centro{
+	text-align:center;
+}
+/*******************************MAIN MENU**********************************//*******************************MAIN MENU**********************************//*******************************MAIN MENU**********************************//*******************************MAIN MENU**********************************//*******************************MAIN MENU**********************************//*******************************MAIN MENU******************************/
+
+#menu_inicio{
+	width: 100%;
+	
+}
+
+.opcion_inicio{
+	width: 100%;
+	height:230px;		
+	text-align: center;	
+	margin-right:7px;
+	margin-bottom:7px;	
+	border-radius:4px;	
+	box-shadow:6px 4px 10px #444;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#BBB));
+}
+
+#escritorio{
+	
+	width: 100%;
+}
+
+#pagina{
+	float:left;
+	min-height:600px;
+	border:1px solid #AAA;
+	padding-bottom:50px;
+	background:#FFF;
+/*	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#C4EDFF));
+ 	background: -moz-linear-gradient(top, #FFF, #C4EDFF);*/
+border-radius:10px 10px 10px 10px;
+}
+/***************************SUB MENU*******************************************//***************************SUB MENU*******************************************//***************************SUB MENU*******************************************//***************************SUB MENU*******************************************//***************************SUB MENU*******************************************//***************************SUB MENU*******************************************//***************************SUB MENU*******************************************//***************************SUB MENU*******************************************/
+
+
+
+#menu{
+	position:relative;
+	height:30px;
+/*	border:solid 1px #EEE;
+	padding-bottom: 7px;*/
+	padding-top: 7px;
+}
+
+.menu_pestana{
+	width: 150px;  
+	height: 100%;
+	margin-left:0px;
+	float:left;
+	
+	cursor:pointer;
+}
+
+.menu_pestana[title="Activada"]{
+	width: 150px;  
+	height: 100%;
+	margin-left:0px;
+	font-weight:bold;
+	
+		background:#FFF;
+	float:left;
+	border-top:solid 1px #AAA;
+	border-left:solid 1px #AAA;
+	border-right:solid 1px #AAA;
+/*	background-color:#FFFBC4;*/
+	cursor:pointer;
+	opacity: 1;
+	filter: none;
+	-moz-transition: all 800ms;
+	-webkit-transition: all 800ms;
+	-o-transition: all 800ms;
+	transition: all 800ms;
+
+	border-radius:10px 0px 0px 0px;
+}
+
+
+#bloque_prueba{
+	border:1px solid black; 
+	width:400px; 
+	height:200px;
+	margin-left: 200px;
+	margin-top:300px;
+	background:white;
+	
+
+}
+
+
+
+
+
+
+.menu_pestana[title="Activada"] table tr td{
+	
+	text-decoration:underline;
+}
+
+.texto_pestana{
+	width:100%;
+	height: 100%;
+	text-align:center;
+	margin-top:6%;	
+}
+
+.margen_pestana{
+	width: 105px;
+	height:100%;
+	float:left;
+	margin-left:10px;
+}
+
+#boton_atras{
+	float:left;
+	margin-right:20px;
+	width: 105px;
+	height:100%;
+	display:none;
+}
+/*
+#boton_logistica{
+	float:left;
+	margin-right:20px;
+	width: 105px;
+	height:100%;
+	
+}*/
+
+/***********************************CONTENIDOS***********************************//***********************************CONTENIDOS***********************************//***********************************CONTENIDOS***********************************//***********************************CONTENIDOS***********************************//***********************************CONTENIDOS***********************************//***********************************CONTENIDOS***********************************//***********************************CONTENIDOS***********************************/
+
+/*
+.contenido_proveedores,.contenido_compras{
+	width:100%;
+	height:100%;
+}*/
+.contenido_titulo{
+		
+	width:80%;
+	margin-left:10%;
+	margin-top:4%;
+	font-size:180%;
+	font-weight:bold;
+	text-align: center;
+}
+
+.contenido_comun{
+	float:left;	
+	width:80%;
+	margin-left:10%;
+	margin-top:3%;
+	
+
+}
+.field_ancho{
+	float:left;
+	margin-left:8%;
+	margin-top:2%;
+	width:80.6%;
+}
+.campo_ancho{
+	width:100%;	
+}
+
+
+
+
+/**************************************MENU VERTICAL******************************************//**************************************MENU VERTICAL******************************************//**************************************MENU VERTICAL******************************************//**************************************MENU VERTICAL******************************************//**************************************MENU VERTICAL******************************************//**************************************MENU VERTICAL******************************************/
+
+.fondo_pestanasecun_1{
+	background-image: url("../../imagenes/submenu_pest_1.png");
+}
+.fondo_pestanasecun_2{
+	background-image: url("../../imagenes/submenu_pest_2.png");
+}
+#menu_vertical,#farm_menu_vertical{
+	width:18%;
+	height:400px;
+	float:left;
+	margin-left:21px;
+	display:none;
+}
+.submenus{
+	float:left;
+	width:100%;
+}
+
+.pestanasecun{
+	width:100%;
+	height:70px;	
+
+	float: left;
+}
+
+.boton_submenu{
+	margin-left:40px;
+	margin-top:35px;
+	
+	height:35px;
+	width: 150px;
+	cursor:pointer;
+	
+		
+	text-align: center;	
+	font-weight: bold;
+		/*background-image: url("../imagenes/pestana_egresos.png");*/
+	border-radius:4px;	
+	box-shadow:2px 2px 5px #444;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF), to(#BBB));
+}
+
+/*************************UTILES*****************************//*************************UTILES*****************************//*************************UTILES*****************************//*************************UTILES*****************************//*************************UTILES*****************************//*************************UTILES*****************************//*************************UTILES*****************************//*************************UTILES*****************************//*************************UTILES*****************************/
+
+.bloque{
+	width:100%;
+	float:left;
+}
+
+.centrado85{
+	width:85%;
+	margin-left:7%;
+}
+.centrado90{
+	width:90%;
+	margin-left:5%;
+}
+
+
+.centrado95{
+	width:95%;
+	margin-left:2.5%;
+}
+
+.oculto{
+	display:none;
+}
+.alavista{
+	display:block;
+}
+
+.resalta_borde{
+	border:2px red solid;
+}
+
+
+
+/*******************Transiciones*****************/
+
+
+
+.transicion800_delay800{
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 800ms,800ms,800ms;
+	-webkit-transition-delay: 800ms,800ms,800ms;
+	-o-transition-delay: 800ms,800ms,800ms;
+	transition-delay: 800ms,800ms,800ms;
+}
+
+
+
+
+.transicion800_delay1600{
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 1600ms,1600ms,1600ms;
+	-webkit-transition-delay: 1600ms,1600ms,1600ms;
+	-o-transition-delay: 1600ms,1600ms,1600ms;
+	transition-delay: 1600ms,1600ms,1600ms;
+}
+
+
+
+
+.trans_pag_1_der_izq,.trans_pag_2_der_izq{/*esta transicion hace el cambio suave e inmediato en las propiedades left y background y luego de 800ms se hace el cambio en z-index*/
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 0ms,0ms,800ms;
+	-webkit-transition-delay: 0ms,0ms,800ms;
+	-o-transition-delay: 0ms,0ms,800ms;
+	transition-delay: 80ms,0ms,800ms;
+}
+
+.trans_pag_2_der_izq_delay800{  /*esta transicion es como la normal pero la diferencia es que tiene 800ms de delay en todas sus transiciones*/
+		
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 800ms,800ms,1600ms;
+	-webkit-transition-delay: 800ms,800ms,1600ms;
+	-o-transition-delay: 800ms,800ms,1600ms;
+	transition-delay: 800ms,800ms,1600ms;
+}
+
+
+
+
+
+
+
+.trans_pag_3_der_izq{/*esta transicion es diferente ya que hace el cambio inmediato en el z-index*/
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 0ms,0ms,0ms;
+	-webkit-transition-delay: 0ms,0ms,0ms;
+	-o-transition-delay: 0ms,0ms,0ms;
+	transition-delay: 0ms,0ms,0ms;
+}
+
+
+
+
+
+
+.trans_pag_3_der_izq_delay800{/*esta transicion es diferente ya que hace el cambio inmediato en el z-index*/
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 800ms,800ms,800ms;
+	-webkit-transition-delay: 800ms,800ms,800ms;
+	-o-transition-delay: 800ms,800ms,800ms;
+	transition-delay: 800ms,800ms,800ms;
+}
+
+
+
+
+
+
+
+.trans_pag_3_der_izq_delay1600{/*esta transicion es diferente ya que hace el cambio inmediato en el z-index*/
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 1600ms,1600ms,1600ms;
+	-webkit-transition-delay: 1600ms,1600ms,1600ms;
+	-o-transition-delay: 1600ms,1600ms,1600ms;
+	transition-delay:  1600ms,1600ms,1600ms;
+}
+
+
+
+
+.trans_pag_2_izq_der{/* En este caso se hace el desplazamiento de izq a la derecha de la página 2, para esto se hace un cambio inmediato en todas las transiciones, con un delay = 0 */
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 0ms,0ms,0ms;
+	-webkit-transition-delay: 0ms,0ms,0ms;
+	-o-transition-delay: 0ms,0ms,0ms;
+	transition-delay: 80ms,0ms,0ms;
+}
+
+
+
+
+
+.trans_pag_2_izq_der_delay800{/* En este caso se hace el desplazamiento de izq a la derecha de la página 2, para esto se hace un cambio inmediato en todas las transiciones, con un delay = 0 */
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 800ms,800ms,800ms;
+	-webkit-transition-delay: 800ms,800ms,800ms;
+	-o-transition-delay: 800ms,800ms,800ms;
+	transition-delay: 800ms,800ms,800ms;
+}
+
+
+
+
+
+.trans_pag_3_izq_der{/* En este caso se hace el desplazamiento de izq a la derecha de la página 2, para esto se hace un cambio inmediato en todas las transiciones, con un delay = 0 */
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 0ms,0ms,800ms;
+	-webkit-transition-delay: 0ms,0ms,800ms;
+	-o-transition-delay: 0ms,0ms,800ms;
+	transition-delay: 80ms,0ms,800ms;
+}
