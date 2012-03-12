@@ -1,0 +1,179 @@
+#catalogo{
+	
+
+	margin-top:100px;
+ 	width:1150px;
+ 	height:500px;
+ 	margin-left: 70px;
+}
+
+#catalogo #contenido{
+	width:1000px;
+ 	height:500px;
+ 	float:left;
+ 	position: relative;
+}
+
+#catalogo #contenido #cara_1{
+ 	background:orange;
+	width:500px;
+ 	height:500px;
+ 	
+ 	position:absolute;
+ 	left:500px;
+ 	
+ 	z-index:30;
+}
+
+
+#catalogo #contenido #cara_2{
+ 	background:green;
+	width:500px;
+ 	height:500px;
+ 	
+ 	position:absolute;
+ 	left:500px;
+ 	
+ 	z-index:20;
+}
+
+
+#catalogo #contenido #cara_3{
+ 	background:blue;
+	width:500px;
+ 	height:500px;
+ 	
+ 	position:absolute;
+ 	left:500px;
+ 	
+ 	z-index:10;
+}
+
+
+#catalogo #contenido #cara_4{
+ 	background:orange;
+	width:500px;
+ 	height:500px;
+ 	
+ 	position:absolute;
+ 	left:500px;
+ 	
+ 	z-index:0;
+}
+
+#catalogo #opciones_vertical {
+	
+	width:90px;
+ 	height:500px;
+ 	float:left;
+}
+
+
+#catalogo #opciones_vertical #opcion_inicial{
+	
+	width:30px;
+ 	height:500px;
+ 	background:#4F4;
+ 	float:left;
+}
+
+#catalogo #opciones_vertical #opcion_primaria{
+	
+	width:30px;
+ 	height:500px;
+ 	background:#44F;
+ 	float:left;
+ 	
+}
+
+#catalogo #opciones_vertical #opcion_secundaria{
+	
+	width:30px;
+ 	height:500px;
+ 	background:#FAA;
+ 	float:left;
+ 	
+}
+
+
+#catalogo #opciones_vertical_izq {
+	
+	width:60px;
+ 	height:500px;
+ 	float:left;
+}
+
+
+#catalogo #opciones_vertical_izq #opcion_inicial{
+	
+	width:30px;
+ 	height:500px;
+ 	background:#4F4;
+ 	float:right;
+ 	display:none;
+}
+
+#catalogo #opciones_vertical_izq #opcion_primaria{
+	
+	width:30px;
+ 	height:500px;
+ 	background:#44F;
+ 	float:right;
+ 	display:none;
+ 	
+}
+
+
+
+#catalogo #opciones_vertical_izq #cerrar_catalogo{
+	
+	width:30px;
+ 	height:150px;
+ 	margin-top:350px;
+ 	background:orange;
+ 	float:right;
+ 	display:none;
+ 	
+}
+
+
+
+
+
+#catalogo  #contenido #sub_menu_inferior{
+	
+	position: absolute;
+	width: 400px;
+	height: 40px;
+	
+	left:0px;
+	bottom:0px;
+	
+	z-index:50;
+}
+
+
+#catalogo  #contenido #sub_menu_inferior .opcion{
+	background:red;
+	font-size: 15px;
+	width: 130px;
+	height: 16px;
+	
+	float:left;
+	margin-left:10px;
+	
+	text-align:center;
+	vertical-align:middle;	
+	padding-top:7px;	
+	padding-bottom:7px;
+	margin-top:10px;
+	cursor:pointer;
+}
+
+
+
+#catalogo  #contenido #sub_menu_inferior .opcion[title="Seleccionada"]{ 
+	background:white;
+	
+	margin-top:0px;
+}
