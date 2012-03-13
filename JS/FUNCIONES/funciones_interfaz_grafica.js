@@ -74,7 +74,7 @@ function pestana_out(opcion){
 
 
 
-function fun_stand_by_sistema(tiempo_microsegundos){  //esta función sirve para proteger toda la interfaz y no permitir ningun movimiento por el tiempo en microsegundos planteado. Se necesita la declaración del div protector_transparente.
+function fun_stand_by_sistema(tiempo_microsegundos){
 	
 	$("#protector_transparente").fadeIn(0);
 	$("#protector_transparente").delay(tiempo_microsegundos).fadeOut(0);
