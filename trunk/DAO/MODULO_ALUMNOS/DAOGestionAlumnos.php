@@ -6,12 +6,26 @@ class DAOGestionAlumnos extends Conexion{
 	
 	var	$nombre_tabla_alumnos="portal_alumno";
 	
+	//-- Estructura de tabla para la tabla `portal_alumno`
+	//-- 
+	//
+	//CREATE TABLE `portal_alumno` (
+	//  `codigo` varchar(10) NOT NULL,
+	//  `nombres` varchar(20) default NULL,
+	//  `apellido_paterno` varchar(20) default NULL,
+	//  `apellido_materno` varchar(20) default NULL,
+	//  `eda	d` int(11) default NULL,
+  	//`password` varchar(25) default NULL,
+	//  `disponible` int(11) default NULL,
+	//  PRIMARY KEY  (`codigo`)
+	//) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+	
     function admin_insertar_alumno($codigo,$nombres,$apellido_p,$apellido_m,$edad,$password){ //INGRESA UN NUEVO ALUMNO 
 				$cn = $this->conexion();
         		$uno=1;
         if($cn!="no_conexion"){
         	
-        	$sql="select * from $this->nombre_tabla_usuarios where codigo='$codigo'";	//VERIFICA Q NO EXISTA OTRO CODIGO IGUAL 
+        	$sql="select * from $this->nombre_tabla_alumnos where codigo='$codigo'";	//VERIFICA Q NO EXISTA OTRO CODIGO IGUAL 
 			   $rs = mysql_query($sql,$cn);
 			
         	if(mysql_num_rows($rs)==0){
@@ -56,7 +70,7 @@ class DAOGestionAlumnos extends Conexion{
 		
 		if($cn!="no_conexion"){	
 									
-			$sql="select * from $this->nombre_tabla_usuarios where codigo='$codigo'";  
+			$sql="select * from $this->nombre_tabla_alumnos where codigo='$codigo'";  
 			$rs = mysql_query($sql,$cn);
 			
 			if(mysql_num_rows($rs)==0){
@@ -111,7 +125,7 @@ codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_mate
 				$cn = $this->conexion();
         
         if($cn!="no_conexion"){
-        	$sql="update $this-->nombre_tabla_alumnos  set password='$nuevo_password' where  codigo='$codigo' and password='$nuevo_password'";
+        	$sql="update $this-->nombre_tabla_alumnos set password='$nuevo_password' where  codigo='$codigo' and password='$password'";
 			$rs = mysql_query($sql,$cn);
 						 
 						 
