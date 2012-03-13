@@ -223,10 +223,10 @@
 	-o-transition-duration: 800ms,200ms,0ms;
 	transition-duration: 800ms,200ms,0ms;
 	
-	-moz-transition-delay: 0ms,0ms,0ms;
-	-webkit-transition-delay: 0ms,0ms,0ms;
-	-o-transition-delay: 0ms,0ms,0ms;
-	transition-delay: 0ms,0ms,0ms;
+	-moz-transition-delay: 500ms,500ms,500ms;
+	-webkit-transition-delay: 500ms,500ms,500ms;
+	-o-transition-delay: 500ms,500ms,500ms;
+	transition-delay: 500ms,500ms,500ms;
 }
 
 
@@ -343,3 +343,206 @@
 	-o-transition-delay: 0ms,0ms;
 	transition-delay: 0ms,0ms;
 }
+
+
+/****************EFECTOS DE DESPLAZAMIENTO PARA LOS BOTONES LATERALES IZQUIERDOS*****************/
+
+
+
+.trans_opciones_vertical_izq_delay800{ /****/
+	
+	-moz-transition-property: visibility;
+	-webkit-transition-property: visibility;
+	-o-transition-property: visibility;
+	transition-property: visibility;
+	
+	
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function:  linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function:  linear;
+	
+	
+	-moz-transition-duration: 0ms;
+	-webkit-transition-duration: 0ms;
+	-o-transition-duration: 0ms;
+	transition-duration: 0ms;
+	
+	-moz-transition-delay: 800ms;
+	-webkit-transition-delay: 800ms;
+	-o-transition-delay: 800ms;
+	transition-delay: 800ms;
+}
+
+
+.trans_opciones_vertical_izq{ /****/
+	
+	-moz-transition-property: visibility;
+	-webkit-transition-property: visibility;
+	-o-transition-property: visibility;
+	transition-property: visibility;
+	
+	
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function:  linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function:  linear;
+	
+	
+	-moz-transition-duration: 0ms;
+	-webkit-transition-duration: 0ms;
+	-o-transition-duration: 0ms;
+	transition-duration: 0ms;
+	
+	-moz-transition-delay: 0ms;
+	-webkit-transition-delay: 0ms;
+	-o-transition-delay: 0ms;
+	transition-delay: 0ms;
+}
+
+
+
+
+.trans_opcion_inicial_submenu_izq{ /**este efecto nos permitira hacer un desplazamiento hacia la izquierda de la opcion INICIAL del submenu izquierdo**/
+	
+	-moz-transition-property: left;
+	-webkit-transition-property: left;
+	-o-transition-property: left;
+	transition-property: left;
+	
+	
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function:  linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function:  linear;
+	
+	
+	-moz-transition-duration: 300ms;
+	-webkit-transition-duration: 300ms;
+	-o-transition-duration: 300ms;
+	transition-duration: 300ms;
+	
+	-moz-transition-delay: 500ms;
+	-webkit-transition-delay: 500ms;
+	-o-transition-delay: 500ms;
+	transition-delay: 500ms;
+}
+
+
+
+.trans_opcion_primaria_submenu_izq{ /**este efecto nos permitira hacer un desplazamiento hacia la izquierda de la opcion INICIAL del submenu izquierdo**/
+	
+	-moz-transition-property: left;
+	-webkit-transition-property: left;
+	-o-transition-property: left;
+	transition-property: left;
+	
+	
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function:  linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function:  linear;
+	
+	
+	-moz-transition-duration: 300ms;
+	-webkit-transition-duration: 300ms;
+	-o-transition-duration: 300ms;
+	transition-duration: 300ms;
+	
+	-moz-transition-delay: 500ms;
+	-webkit-transition-delay: 500ms;
+	-o-transition-delay: 500ms;
+	transition-delay: 500ms;
+}
+
+
+
+
+
+
+
+.trans_opcion_inicial_submenu_izq_delay800{ /**este efecto nos permitira hacer un desplazamiento hacia la izquierda de la opcion INICIAL del submenu izquierdo**/
+	
+	-moz-transition-property: left;
+	-webkit-transition-property: left;
+	-o-transition-property: left;
+	transition-property: left;
+	
+	
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function:  linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function:  linear;
+	
+	
+	-moz-transition-duration: 300ms;
+	-webkit-transition-duration: 300ms;
+	-o-transition-duration: 300ms;
+	transition-duration: 300ms;
+	
+	-moz-transition-delay: 1300ms;
+	-webkit-transition-delay: 1300ms;
+	-o-transition-delay: 1300ms;
+	transition-delay: 1300ms;
+}
+
+
+
+.trans_opcion_primaria_submenu_izq_delay800{ /**este efecto nos permitira hacer un desplazamiento hacia la izquierda de la opcion INICIAL del submenu izquierdo**/
+	
+	-moz-transition-property: left;
+	-webkit-transition-property: left;
+	-o-transition-property: left;
+	transition-property: left;
+	
+	
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function:  linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function:  linear;
+	
+	
+	-moz-transition-duration: 300ms;
+	-webkit-transition-duration: 300ms;
+	-o-transition-duration: 300ms;
+	transition-duration: 300ms;
+	
+	-moz-transition-delay: 1300ms;
+	-webkit-transition-delay: 1300ms;
+	-o-transition-delay: 1300ms;
+	transition-delay: 1300ms;
+}
+
+
+
+
+/************TRANSICION DE EFECTO PARA EL SUBMENU INFERIOR**********/
+
+
+
+
+.trans_submenu_inferior{
+	
+	-moz-transition-property: display,background-color;
+	-webkit-transition-property: display,background-color;;
+	-o-transition-property: display,background-color;;
+	transition-property: display,background-color;;
+	
+	
+	-moz-transition-timing-function: linear,linear;
+	-webkit-transition-timing-function:  linear,linear;
+	-o-transition-timing-function: linear,linear;
+	transition-timing-function:  linear,linear;
+	
+	
+	-moz-transition-duration: 150ms,800ms;
+	-webkit-transition-duration: 150ms,800ms;
+	-o-transition-duration: 150ms,800ms;
+	transition-duration: 150ms,800ms;
+	
+	-moz-transition-delay: 800ms,800ms;
+	-webkit-transition-delay: 800ms,800ms;
+	-o-transition-delay: 800ms,800ms;
+	transition-delay: 800ms,800ms;
+}
+

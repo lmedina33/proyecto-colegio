@@ -17,7 +17,6 @@
 <body>
 
 
-
 <div id="catalogo">
 
 <div id="opciones_vertical_izq">

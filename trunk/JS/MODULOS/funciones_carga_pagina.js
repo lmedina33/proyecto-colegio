@@ -8,9 +8,6 @@ window.onload = function(){
 
 
 
-
-
-
 }
 
 function fun_actualizacion_datos(){

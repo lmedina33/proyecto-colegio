@@ -1,26 +1,101 @@
-#catalogo{
+body{
+	background:url("../../IMAGENES/PORTAL/fondo.jpg")  center;
 	
+}
 
-	margin-top:100px;
- 	width:1150px;
+
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+
+#cabecera{
+ 	width:1250px;
+ 	height:150px;
+ 	background:yellow;
+ 	margin: 0px auto;
+}
+
+
+#cuerpo{
+ 	width:1250px;
+ 	height:600px;
+ 	position:relative;
+ 	margin: 0px auto;
+ 	margin-top:30px;
+}
+
+
+
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+
+
+
+#menu_vertical{
+ 	width:250px;
+ 	height:550px;
+ 	background:gray;
+ 	
+ 	position:absolute;
+ 	left: 300px;
+ 	top: -20px;
+ 	visibility:visible;
+}
+
+
+#menu_vertical .opcion{
+ 	width:200px;
+ 	height:80px;
+ 	margin-top:25px;
+ 	margin-left:25px;
+ 	background:blue;
+ 	
+}
+
+
+
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+
+#catalogo{
+
+ 	width:1250px;
  	height:500px;
- 	margin-left: 70px;
 }
 
 #catalogo #contenido{
-	width:1000px;
- 	height:500px;
+	width:1100px;
+ 	height:550px;
  	float:left;
  	position: relative;
 }
 
 #catalogo #contenido #cara_1{
  	background:orange;
-	width:500px;
- 	height:500px;
+	width:550px;
+ 	height:550px;
  	
  	position:absolute;
- 	left:500px;
+ 	left:550px;
  	
  	z-index:30;
 }
@@ -28,11 +103,11 @@
 
 #catalogo #contenido #cara_2{
  	background:green;
-	width:500px;
- 	height:500px;
+	width:550px;
+ 	height:550px;
  	
  	position:absolute;
- 	left:500px;
+ 	left:550px;
  	
  	z-index:20;
 }
@@ -40,11 +115,11 @@
 
 #catalogo #contenido #cara_3{
  	background:blue;
-	width:500px;
- 	height:500px;
+	width:550px;
+ 	height:550px;
  	
  	position:absolute;
- 	left:500px;
+ 	left:550px;
  	
  	z-index:10;
 }
@@ -52,11 +127,11 @@
 
 #catalogo #contenido #cara_4{
  	background:orange;
-	width:500px;
- 	height:500px;
+	width:550px;
+ 	height:550px;
  	
  	position:absolute;
- 	left:500px;
+ 	left:550px;
  	
  	z-index:0;
 }
@@ -64,7 +139,7 @@
 #catalogo #opciones_vertical {
 	
 	width:90px;
- 	height:500px;
+ 	height:550px;
  	float:left;
 }
 
@@ -72,7 +147,7 @@
 #catalogo #opciones_vertical #opcion_inicial{
 	
 	width:30px;
- 	height:500px;
+ 	height:550px;
  	background:#4F4;
  	float:left;
 }
@@ -80,7 +155,7 @@
 #catalogo #opciones_vertical #opcion_primaria{
 	
 	width:30px;
- 	height:500px;
+ 	height:550px;
  	background:#44F;
  	float:left;
  	
@@ -89,7 +164,7 @@
 #catalogo #opciones_vertical #opcion_secundaria{
 	
 	width:30px;
- 	height:500px;
+ 	height:550px;
  	background:#FAA;
  	float:left;
  	
@@ -99,28 +174,33 @@
 #catalogo #opciones_vertical_izq {
 	
 	width:60px;
- 	height:500px;
+ 	height:550px;
  	float:left;
+ 	position:relative;
+ 	visibility:hidden;
 }
 
 
 #catalogo #opciones_vertical_izq #opcion_inicial{
 	
 	width:30px;
- 	height:500px;
+ 	height:550px;
  	background:#4F4;
- 	float:right;
- 	display:none;
+ 	
+ 	
+ 	left:60px;
+ 	position:absolute;
 }
 
 #catalogo #opciones_vertical_izq #opcion_primaria{
 	
 	width:30px;
- 	height:500px;
+ 	height:550px;
  	background:#44F;
  	float:right;
- 	display:none;
- 	
+ 	left:90px;
+
+ 	position:absolute;
 }
 
 
@@ -129,7 +209,7 @@
 	
 	width:30px;
  	height:150px;
- 	margin-top:350px;
+ 	margin-top:400px;
  	background:orange;
  	float:right;
  	display:none;
@@ -150,6 +230,8 @@
 	bottom:0px;
 	
 	z-index:50;
+	
+	display:none;
 }
 
 
