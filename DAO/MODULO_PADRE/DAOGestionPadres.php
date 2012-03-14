@@ -16,13 +16,13 @@ class DAOGestionPadre extends Conexion{
 	//  `apellido_materno` varchar(20) default NULL,
 	//  `username` varchar(25) default NULL,
 	//  `password` varchar(25) default NULL,
-	//  `disponible` int(11) default NULL,
+	//  `disponible` int(1) default 1,
 	//  PRIMARY KEY  (`dni`)
 	//) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 	
     function admin_insertar_padre($dni,$nombres,$apellido_p,$apellido_m,$username,$password){ //INGRESA UN NUEVO PADRE 
 				$cn = $this->conexion();
-        		$uno=1;
+        		//$uno=1;
         if($cn!="no_conexion"){
         	
         	$sql="select * from $this->nombre_tabla_padre where dni='$dni'";	//VERIFICA Q NO EXISTA OTRO DNI IGUAL 
@@ -31,7 +31,7 @@ class DAOGestionPadre extends Conexion{
         	if(mysql_num_rows($rs)==0){
 				
 			
-        	$sql="insert into $this->nombre_tabla_padre (dni,nombres,apellido_paterno,apellido_materno,username,password,disponible) values ('$dni','$nombres','$apellido_p','$apellido_m',$username,'$password','$uno')";
+        	$sql="insert into $this->nombre_tabla_padre (dni,nombres,apellido_paterno,apellido_materno,username,password,disponible) values ('$dni','$nombres','$apellido_p','$apellido_m',$username,'$password',1)";
 			    $rs = mysql_query($sql,$cn);
 			
 						 
@@ -98,16 +98,16 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 	//EN CASO CONTRARIO SE ESTABLECE A 0
 	
 	function cambiar_disponibilidad($dni,$disponible){
-		$uno=1;
-		$cero=0;
+		//$uno=1;
+		//$cero=0;
 		$cn = $this->conexion();
 		if($cn!="no_conexion"){
 			if($disponible=="disponible"){
-				$sql="update $this-->nombre_tabla_padre set disponible='$uno' where dni='$dni'";
+				$sql="update $this-->nombre_tabla_padre set disponible=1 where dni='$dni'";
 				$rs = mysql_query($sql,$cn);
 			}else{
 					if($cn=="no_disponible"){
-						$sql="update $this-->nombre_tabla_padre set disponible='$cero' where dni='$dni'";
+						$sql="update $this-->nombre_tabla_padre set disponible=0 where dni='$dni'";
 						$rs = mysql_query($sql,$cn);
 						}
 				}
