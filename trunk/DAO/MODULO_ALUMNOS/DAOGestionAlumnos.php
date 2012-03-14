@@ -14,15 +14,15 @@ class DAOGestionAlumnos extends Conexion{
 	//  `nombres` varchar(20) default NULL,
 	//  `apellido_paterno` varchar(20) default NULL,
 	//  `apellido_materno` varchar(20) default NULL,
-	//  `eda	d` int(11) default NULL,
+	//  `edad` int(11) default NULL,
   	//`password` varchar(25) default NULL,
-	//  `disponible` int(11) default NULL,
+	//  `disponible` int(1) default 1,
 	//  PRIMARY KEY  (`codigo`)
 	//) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 	
     function admin_insertar_alumno($codigo,$nombres,$apellido_p,$apellido_m,$edad,$password){ //INGRESA UN NUEVO ALUMNO 
 				$cn = $this->conexion();
-        		$uno=1;
+        		//$uno=1;
         if($cn!="no_conexion"){
         	
         	$sql="select * from $this->nombre_tabla_alumnos where codigo='$codigo'";	//VERIFICA Q NO EXISTA OTRO CODIGO IGUAL 
@@ -31,7 +31,7 @@ class DAOGestionAlumnos extends Conexion{
         	if(mysql_num_rows($rs)==0){
 				
 			
-        	$sql="insert into $this->nombre_tabla_alumnos (codigo,nombres,apellido_paterno,apellido_materno,edad,password,disponible) values ('$codigo','$nombres','$apellido_p','$apellido_m',$edad,'$password','$uno')";
+        	$sql="insert into $this->nombre_tabla_alumnos (codigo,nombres,apellido_paterno,apellido_materno,edad,password,disponible) values ('$codigo','$nombres','$apellido_p','$apellido_m',$edad,'$password',1)";
 			    $rs = mysql_query($sql,$cn);
 			
 						 
@@ -98,16 +98,16 @@ codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_mate
 	//EN CASO CONTRARIO SE ESTABLECE A 0
 	
 	function cambiar_disponibilidad($codigo,$disponible){
-		$uno=1;
-		$cero=0;
+		//$uno=1;
+		//$cero=0;
 		$cn = $this->conexion();
 		if($cn!="no_conexion"){
 			if($disponible=="disponible"){
-				$sql="update $this-->nombre_tabla_alumnos set disponible='$uno' where codigo='$codigo'";
+				$sql="update $this-->nombre_tabla_alumnos set disponible=1 where codigo='$codigo'";
 				$rs = mysql_query($sql,$cn);
 			}else{
 					if($cn=="no_disponible"){
-						$sql="update $this-->nombre_tabla_alumnos set disponible='$cero' where codigo='$codigo'";
+						$sql="update $this-->nombre_tabla_alumnos set disponible=0 where codigo='$codigo'";
 						$rs = mysql_query($sql,$cn);
 						}
 				}
