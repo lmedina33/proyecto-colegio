@@ -1,0 +1,31 @@
+
+/*******************Transiciones*****************/
+
+
+
+.transicion800_delay800{
+	
+	-moz-transition-property: left,background-color,z-index;
+	-webkit-transition-property: left,background-color,z-index;
+	-o-transition-property: left,background-color,z-index;
+	transition-property: left,background-color,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear,linear;
+	-webkit-transition-timing-function:  ease,linear,linear;
+	-o-transition-timing-function: ease,linear,linear;
+	transition-timing-function:  ease,linear,linear;
+	
+	
+	-moz-transition-duration: 800ms,200ms,0ms;
+	-webkit-transition-duration: 800ms,200ms,0ms;
+	-o-transition-duration: 800ms,200ms,0ms;
+	transition-duration: 800ms,200ms,0ms;
+	
+	-moz-transition-delay: 800ms,800ms,800ms;
+	-webkit-transition-delay: 800ms,800ms,800ms;
+	-o-transition-delay: 800ms,800ms,800ms;
+	transition-delay: 800ms,800ms,800ms;
+}
+
+
