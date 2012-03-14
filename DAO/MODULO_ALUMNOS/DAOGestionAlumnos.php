@@ -106,11 +106,11 @@ codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_mate
 
 				
 				if($disponible=="disponible"){
-					$sql="update $this-->nombre_tabla_alumnos set disponible = 1 where codigo='$codigo'";
+					$sql="update $this->nombre_tabla_alumnos set disponible = 1 where codigo='$codigo'";
 					$rs = mysql_query($sql,$cn);
 				}else{
 						if($disponible=="no_disponible"){
-							$sql="update $this-->nombre_tabla_alumnos set disponible = 0 where codigo='$codigo'";
+							$sql="update $this->nombre_tabla_alumnos set disponible = 0 where codigo='$codigo'";
 							$rs = mysql_query($sql,$cn);
 							}
 					}
@@ -129,7 +129,7 @@ codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_mate
 				$cn = $this->conexion();
         
         if($cn!="no_conexion"){
-        	$sql="update $this-->nombre_tabla_alumnos set password='$nuevo_password' where  codigo='$codigo' and password='$password'";
+        	$sql="update $this->nombre_tabla_alumnos set password='$nuevo_password' where  codigo='$codigo' and password='$password'";
 			$rs = mysql_query($sql,$cn);
 						 
 						 
