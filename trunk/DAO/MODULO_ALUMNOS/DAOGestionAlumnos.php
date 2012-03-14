@@ -102,16 +102,20 @@ codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_mate
 		//$cero=0;
 		$cn = $this->conexion();
 		if($cn!="no_conexion"){
-			if($disponible=="disponible"){
-				$sql="update $this-->nombre_tabla_alumnos set disponible=1 where codigo='$codigo'";
-				$rs = mysql_query($sql,$cn);
-			}else{
-					if($cn=="no_disponible"){
-						$sql="update $this-->nombre_tabla_alumnos set disponible=0 where codigo='$codigo'";
-						$rs = mysql_query($sql,$cn);
-						}
-				}
-			return "mysql_si";
+			
+
+				
+				if($disponible=="disponible"){
+					$sql="update $this-->nombre_tabla_alumnos set disponible = 1 where codigo='$codigo'";
+					$rs = mysql_query($sql,$cn);
+				}else{
+						if($disponible=="no_disponible"){
+							$sql="update $this-->nombre_tabla_alumnos set disponible = 0 where codigo='$codigo'";
+							$rs = mysql_query($sql,$cn);
+							}
+					}
+				return "mysql_si";
+			
 		}else{
 			return "mysql_no";
 			}
