@@ -1,6 +1,6 @@
 <?php
 
-require_once("../Conexion.php");
+require_once("../CONEXION/Conexion.php");
 
 class DAOGestionAlumnos extends Conexion{
 	
