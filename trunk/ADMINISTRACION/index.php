@@ -33,27 +33,27 @@
 
 		
 		<div id="menu_vertical">
-			<div id="opcion_1" class="opcion"></div>
-				<div id="submenu_1"  class="sub_menu">
-				<div id="subopcion_1" class="subopcion"></div>
-				<div id="subopcion_2" class="subopcion"></div>
-				<div id="subopcion_3" class="subopcion"></div>
+			<div id="1" class="opcion"></div>
+				<div id="submenu_1"  class="submenu">
+					<div id="subopcion_1" class="subopcion" title="Click para seleccionar"></div>
+					<div id="subopcion_2" class="subopcion" title="Click para seleccionar"></div>
+					<div id="subopcion_3" class="subopcion" title="Click para seleccionar"></div>
 				</div>
 				
-			<div id="opcion_2"  class="opcion"></div>			
-				<div id="submenu_2"  class="sub_menu">
+			<div id="2"  class="opcion"></div>			
+				<div id="submenu_2"  class="submenu">
 				
-				<div id="subopcion_1" class="subopcion"></div>
-				<div id="subopcion_2" class="subopcion"></div>
-				<div id="subopcion_3" class="subopcion"></div>
+					<div id="subopcion_1" class="subopcion" title="Click para seleccionar"></div>
+					<div id="subopcion_2" class="subopcion" title="Click para seleccionar"></div>
+					<div id="subopcion_3" class="subopcion" title="Click para seleccionar"></div>
 				</div>
 				
-			<div id="opcion_3"  class="opcion"></div>
-				<div id="submenu_3"  class="sub_menu">
+			<div id="3"  class="opcion"></div>
+				<div id="submenu_3"  class="submenu">
 				
-				<div id="subopcion_1" class="subopcion"></div>
-				<div id="subopcion_2" class="subopcion"></div>
-				<div id="subopcion_3" class="subopcion"></div>
+					<div id="subopcion_1" class="subopcion" title="Click para seleccionar"></div>
+					<div id="subopcion_2" class="subopcion" title="Click para seleccionar"></div>
+					<div id="subopcion_3" class="subopcion" title="Click para seleccionar"></div>
 				</div>
 				
 			<div class="sub_opcion"></div>
