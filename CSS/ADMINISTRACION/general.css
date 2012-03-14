@@ -1,0 +1,288 @@
+body{
+	background:url("../../IMAGENES/PORTAL/fondo.jpg")  center;
+	
+}
+
+
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+
+#cabecera{
+ 	width:1250px;
+ 	height:150px;
+ 	background:yellow;
+ 	margin: 0px auto;
+}
+
+
+#cuerpo{
+ 	width:1250px;
+ 	height:600px;
+ 
+ 	margin: 0px auto;
+ 	margin-top:30px;
+}
+
+
+#pie_pagina{
+ 	width:1280px;
+ 	height:55px;
+ 	background:url("../../IMAGENES/PORTAL/footer.png")  center;
+ 	position:relative;
+ 	margin: 0px auto;
+ 	margin-top:30px;
+}
+
+
+
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+
+
+
+#menu_vertical{
+ 	width:300px;
+ 	height:550px;
+ 	background:gray;
+ 	position:relative;
+  
+ 	visibility:visible;
+}
+
+
+#menu_vertical .opcion{
+ 	width:250px;
+ 	height:50px;
+ 	margin-left:50px;
+ 	margin-top:2px;
+ 	background:blue;
+  	position:relative;	
+}
+
+
+#menu_vertical .submenu{
+ 	width:200px;
+ 	min-height:30px;
+ 	margin-left:100px;
+ 	margin-top:2px;
+ 	background:white;
+ 	display:none;
+		
+}
+
+#menu_vertical .submenu .subopcion{
+ 	width:200px;
+ 	height:30px;
+ 	margin-top:2px;
+ 	background:red;
+
+}
+
+
+
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+/************************CATALOGO***********************/
+
+#catalogo{
+
+ 	width:1250px;
+ 	height:500px;
+}
+
+#catalogo #contenido{
+	width:1100px;
+ 	height:550px;
+ 	float:left;
+ 	position: relative;
+}
+
+#catalogo #contenido #cara_1{
+ 	background:orange;
+	width:550px;
+ 	height:550px;
+ 	
+ 	position:absolute;
+ 	left:550px;
+ 	
+ 	z-index:30;
+}
+
+
+#catalogo #contenido #cara_2{
+ 	background:green;
+	width:550px;
+ 	height:550px;
+ 	
+ 	position:absolute;
+ 	left:550px;
+ 	
+ 	z-index:20;
+}
+
+
+#catalogo #contenido #cara_3{
+ 	background:blue;
+	width:550px;
+ 	height:550px;
+ 	
+ 	position:absolute;
+ 	left:550px;
+ 	
+ 	z-index:10;
+}
+
+
+#catalogo #contenido #cara_4{
+ 	background:orange;
+	width:550px;
+ 	height:550px;
+ 	
+ 	position:absolute;
+ 	left:550px;
+ 	
+ 	z-index:0;
+}
+
+#catalogo #opciones_vertical {
+	
+	width:90px;
+ 	height:550px;
+ 	float:left;
+}
+
+
+#catalogo #opciones_vertical #opcion_inicial{
+	
+	width:30px;
+ 	height:550px;
+ 	background:#4F4;
+ 	float:left;
+}
+
+#catalogo #opciones_vertical #opcion_primaria{
+	
+	width:30px;
+ 	height:550px;
+ 	background:#44F;
+ 	float:left;
+ 	
+}
+
+#catalogo #opciones_vertical #opcion_secundaria{
+	
+	width:30px;
+ 	height:550px;
+ 	background:#FAA;
+ 	float:left;
+ 	
+}
+
+
+#catalogo #opciones_vertical_izq {
+	
+	width:60px;
+ 	height:550px;
+ 	float:left;
+ 	position:relative;
+ 	visibility:hidden;
+}
+
+
+#catalogo #opciones_vertical_izq #opcion_inicial{
+	
+	width:30px;
+ 	height:550px;
+ 	background:#4F4;
+ 	
+ 	
+ 	left:60px;
+ 	position:absolute;
+}
+
+#catalogo #opciones_vertical_izq #opcion_primaria{
+	
+	width:30px;
+ 	height:550px;
+ 	background:#44F;
+ 	float:right;
+ 	left:90px;
+
+ 	position:absolute;
+}
+
+
+
+#catalogo #opciones_vertical_izq #cerrar_catalogo{
+	
+	width:30px;
+ 	height:150px;
+ 	margin-top:400px;
+ 	background:orange;
+ 	float:right;
+ 	display:none;
+ 	
+}
+
+
+
+
+
+#catalogo  #contenido #sub_menu_inferior{
+	
+	position: absolute;
+	width: 400px;
+	height: 40px;
+	
+	left:0px;
+	bottom:0px;
+	
+	z-index:50;
+	
+	display:none;
+}
+
+
+#catalogo  #contenido #sub_menu_inferior .opcion{
+	background:red;
+	font-size: 15px;
+	width: 130px;
+	height: 16px;
+	
+	float:left;
+	margin-left:10px;
+	
+	text-align:center;
+	vertical-align:middle;	
+	padding-top:7px;	
+	padding-bottom:7px;
+	margin-top:10px;
+	cursor:pointer;
+}
+
+
+
+#catalogo  #contenido #sub_menu_inferior .opcion[title="Seleccionada"]{ 
+	background:white;
+	
+	margin-top:0px;
+}
