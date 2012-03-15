@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("../../DAO/MODULO_ALUMNO/DAOLoginAlumno.php");
 
 $logeo=new DAOLoginAlumno();
@@ -36,7 +36,7 @@ if($logeo->valida_string_logeo($_POST['nombre_usuario'])==1 && $logeo->valida_st
 		
 		$valores=split("{",$respuesta);
 		
-		session_start();					//FALTA DEFINIR Q VARIABLE S DE SESION SE REQUIEREN!!!!!!!!!!
+						//FALTA DEFINIR Q VARIABLE S DE SESION SE REQUIEREN!!!!!!!!!!
 		$_SESSION["usuario"]=$valores[2];
 		$_SESSION["modulo"]=$valores[1];
 		$_SESSION["nombre_usuario"]=$valores[0];
