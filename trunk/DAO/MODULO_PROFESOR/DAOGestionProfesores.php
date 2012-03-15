@@ -34,11 +34,11 @@ class DAOGestionProfesores extends Conexion{
         	$sql="insert into $this->nombre_tabla_profesor (dni,nombres,apellido_paterno,apellido_materno,username,password,disponible) values ('$dni','$nombres','$apellido_p','$apellido_m','$username','$password',1)";
 			    $rs = mysql_query($sql,$cn);
 			
-						 
+			mysql_close($cn);			 
 			return "mysql_si";
 				
 			}else{
-				
+				mysql_close($cn);
 				return "existe";
 			}
 		}else{
@@ -53,7 +53,7 @@ class DAOGestionProfesores extends Conexion{
         if($cn!="no_conexion"){
         	$sql="delete from $this->nombre_tabla_profesor where  dni='$dni'";
 			$rs = mysql_query($sql,$cn);
-						 
+			mysql_close($cn);			 
 			return "mysql_si";
 		
 			
@@ -80,11 +80,11 @@ class DAOGestionProfesores extends Conexion{
 dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',username='$username',password='$password' where dni='$dni_anterior'";		
 			    $rs = mysql_query($sql,$cn);
 			
-						 
+				mysql_close($cn);		 
 				return "mysql_si";
 				
 				}else{
-				
+					mysql_close($cn);
 					return "existe";
 					}
 		}else{
@@ -111,6 +111,7 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 						$rs = mysql_query($sql,$cn);
 						}
 				}
+			mysql_close($cn);
 			return "mysql_si";
 		}else{
 			return "mysql_no";
@@ -129,7 +130,7 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
            $sql="update $this->nombre_tabla_profesor set username='$username_nuevo',password='$nuevo_password' where  username='$username' and password='$password'";
 		   $rs = mysql_query($sql,$cn);
 						 
-						 
+			mysql_close($cn);			 
 			return "mysql_si";
 		
 			

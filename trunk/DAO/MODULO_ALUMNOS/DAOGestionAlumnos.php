@@ -34,13 +34,14 @@ class DAOGestionAlumnos extends Conexion{
         	$sql="insert into $this->nombre_tabla_alumnos (codigo,nombres,apellido_paterno,apellido_materno,edad,password,disponible) values ('$codigo','$nombres','$apellido_p','$apellido_m',$edad,'$password',1)";
 			    $rs = mysql_query($sql,$cn);
 			
-						 
+			mysql_close($cn);			 
 			return "mysql_si";
 				
 			}else{
-				
+				mysql_close($cn);
 				return "existe";
 			}
+			//mysql_close($cn)
 		}else{
 		return "mysql_no";
 		}
@@ -53,7 +54,7 @@ class DAOGestionAlumnos extends Conexion{
         if($cn!="no_conexion"){
         	$sql="delete from $this->nombre_tabla_alumnos where  codigo='$codigo'";
 			$rs = mysql_query($sql,$cn);
-						 
+			mysql_close($cn);			 
 			return "mysql_si";
 		
 			
@@ -80,11 +81,11 @@ class DAOGestionAlumnos extends Conexion{
 codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',edad='$edad',password='$password' where codigo='$codigo_anterior'";		
 			    $rs = mysql_query($sql,$cn);
 			
-						 
+				mysql_close($cn);		 
 				return "mysql_si";
 				
 				}else{
-				
+					mysql_close($cn);
 					return "existe";
 					}
 		}else{
@@ -114,6 +115,7 @@ codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_mate
 							$rs = mysql_query($sql,$cn);
 							}
 					}
+				mysql_close($cn);
 				return "mysql_si";
 			
 		}else{
@@ -132,7 +134,7 @@ codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_mate
         	$sql="update $this->nombre_tabla_alumnos set password='$nuevo_password' where  codigo='$codigo' and password='$password'";
 			$rs = mysql_query($sql,$cn);
 						 
-						 
+			mysql_close($cn);			 
 			return "mysql_si";
 		
 			
