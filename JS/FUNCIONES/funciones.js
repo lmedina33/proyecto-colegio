@@ -34,8 +34,8 @@ function efecto_presion(id){
 				$("#"+id).css("margin-right",ancho_desplazamiento+"px");
 				$("#"+id).css("margin-bottom",ancho_desplazamiento+"px");
 				BOXSHADOW="nada";
-				}				
-            }
+				}
+     }
 
 
 //Funcion dinámica para abrir un area ligada a una pestaña del menu principal
@@ -46,7 +46,6 @@ function abrir_area(opcion){//opcion sera stock, mantenimiento, compras o provee
 			/////////////////////////////////////////////////////////////
 				$("#area_"+opcion).show();
 				$("#pest_"+opcion).attr("title","Activada");
-			
 			
 }
             
@@ -70,7 +69,7 @@ function pestana_out(opcion){
 			$("#pest_"+opcion).css("font-weight","");
 			$("#pest_"+opcion+" table tr td").css("text-decoration","");
              
-            }
+}
 
 
 

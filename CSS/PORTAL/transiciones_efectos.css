@@ -1,5 +1,80 @@
 
-/*******************Transiciones*****************/
+#menu_vertical{
+	
+	-moz-transition-property: background-position,z-index;
+	-webkit-transition-property: background-position,z-index;
+	-o-transition-property: background-position,z-index;
+	transition-property: background-position,z-index;
+	
+	
+	-moz-transition-timing-function: ease,linear;
+	-webkit-transition-timing-function:  ease,linear;
+	-o-transition-timing-function: ease,linear;
+	transition-timing-function:  ease,linear;
+	
+	
+	-moz-transition-duration: 300ms,0ms;
+	-webkit-transition-duration: 300ms,0ms;
+	-o-transition-duration: 300ms,0ms;
+	transition-duration: 300ms,0ms;
+	
+	-moz-transition-delay: 0ms,0ms,;
+	-webkit-transition-delay: 0ms,0ms;
+	-o-transition-delay: 0ms,0ms;
+	transition-delay: 0ms,0ms;
+}
+
+
+#menu_vertical .opcion{
+	
+	-moz-transition-property: font-family;
+	-webkit-transition-property: font-family;
+	-o-transition-property: font-family;
+	transition-property: font-family;
+	
+	
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function:  linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function:  linear;
+	
+	
+	-moz-transition-duration: 300ms;
+	-webkit-transition-duration: 300ms;
+	-o-transition-duration: 300ms;
+	transition-duration: 300ms;
+	
+	-moz-transition-delay: 300ms,;
+	-webkit-transition-delay: 300ms;
+	-o-transition-delay: 300ms;
+	transition-delay: 300ms;
+}
+
+
+
+
+
+
+
+
+
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
+/*******************Transiciones usadas en la animación del catalogo*****************/
 
 
 
@@ -546,3 +621,19 @@
 	transition-delay: 800ms,800ms;
 }
 
+
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/
+/*******************Fin de Transiciones usadas en la animación del catalogo*****************/

@@ -51,25 +51,48 @@ body{
 
 
 
-#menu_vertical{
- 	width:250px;
- 	height:550px;
- 	background:gray;
+#contenedor_menu{
+ 	width:337px;
+ 	height:553px;
+ 	background:url("../../IMAGENES/PORTAL/minicuadernillo.png")  no-repeat;
  	
  	position:absolute;
- 	left: 300px;
- 	top: -20px;
+ 	left: 270px;
+ 	top: 0px;
  	visibility:visible;
+ 	z-index:50;
+}
+
+
+#menu_vertical{
+ 	width:315px;
+ 	height:553px;
+ 	background:url("../../IMAGENES/PORTAL/lapiz.png") 0 20px no-repeat;
+ 		
+ 	margin-left:37px;
+ 	margin-top:60px;
+ 	
 }
 
 
 #menu_vertical .opcion{
- 	width:200px;
- 	height:80px;
- 	margin-top:25px;
- 	margin-left:25px;
- 	background:blue;
+ 	width:300px;
+ 	height:30px;
  	
+ 	text-align:center;
+ 	margin-top:30px;
+ 	margin-left:20px;
+ 	font-size: 110%;
+ 	float:left;
+ 	font-weight:bold;
+ 	cursor:pointer;
+}
+
+
+#menu_vertical .opcion[title="Seleccionada"]{
+ 	font-family: cursive;
+ 	
+ 	font-size: 115%;
 }
 
 

@@ -7,48 +7,6 @@ window.onload = function(){
 //	setInterval(fun_actualizacion_datos,10000);
 
 
-$("#menu_vertical .opcion").click(function(){
-
-	/////CHEKEAMOS EL SUBMENU QUE ESTE ABIERTO
-	var id=$(this).attr("id");
-	var id_submenu_abierto;
-	
-	$("#menu_vertical .submenu").each(function(){
-		
-		if($(this).css("display")=="block"){
-			id_submenu_abierto=$(this).attr("id");
-		}
-		
-	});
-	
-//	alert(id_submenu_abierto);
-
-	
-	$("#menu_vertical .submenu").slideUp(300);
-	
-	if("submenu_"+id!=id_submenu_abierto){
-	
-	$("#menu_vertical #submenu_"+id).slideDown(300);	
-	}else{
-		$("#menu_vertical .submenu .subopcion").attr("title","Click para seleccionar");
-		$("#menu_vertical .submenu .subopcion").css("background","red");
-	}
-	
-});
-
-
-$("#menu_vertical .submenu .subopcion").click(function(){
-	
-	$("#menu_vertical .submenu .subopcion").attr("title","Click para seleccionar");
-	$("#menu_vertical .submenu .subopcion").css("background","red");
-	
-	
-	$(this).attr("title","Seleccionado");
-	$(this).css("background","yellow");
-	
-});
-
-
 
 
 

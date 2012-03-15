@@ -9,7 +9,8 @@
 	<script language="javascript" src="../JS/LIBRERIAS/jquery1_6.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_interfaz_grafica.js"></script>
 	
-	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_carga_pagina.js"></script>
+	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_animacion_catalogo.js"></script>
+	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_animacion_menu_principal.js"></script>
 	<link rel="stylesheet" type="text/css" href="../CSS/general_tabla.css" media="screen"> 
 	<link rel="stylesheet" type="text/css" href="../CSS/estilo_base.css" media="screen">  
 	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/general.css" media="screen"> 
@@ -32,16 +33,19 @@
 <div id="cuerpo">
 
 		
-		<div id="menu_vertical">
-			<div class="opcion"></div>
-			
-			<div class="opcion"></div>
-			
-			<div class="opcion"></div>
-			
-			<div class="opcion"></div>
-		</div>
+		<div id="contenedor_menu">
+			<div id="menu_vertical">
+				<div id="1-quienes_somos" title="Seleccionada" class="opcion">¿Qui&eacute;nes Somos?</div>
+				
+				<div id="2-mision_vision" title="Click para seleccionar" class="opcion">Misi&oacute;n y Visi&oacute;n</div>
+				
+				<div id="3-plana_docente_administrativa" title="Click para seleccionar" class="opcion">Plana docente y administrativa</div>
+				
+				<div id="4-servicios" title="Click para seleccionar" class="opcion">Servicios</div>
+			</div>
 
+		</div>
+		
 		<div id="catalogo">
 			
 			<div id="opciones_vertical_izq">
@@ -73,8 +77,8 @@
 				
 				
 				<div id="sub_menu_inferior"> 
-					<div class="opcion" title="Click para eleccionar">Album de fotos</div>
-					<div class="opcion" title="Click para eleccionar">Planilla docente</div> 
+					<div class="opcion" title="Click para seleccionar">Admisiones</div>
+					<div class="opcion" title="Click para seleccionar">Album de fotos</div> 
 				</div>
 				
 			</div>

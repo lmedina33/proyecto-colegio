@@ -54,7 +54,7 @@ body{
 #menu_vertical{
  	width:300px;
  	height:550px;
- 	background:gray;
+ 
  	position:relative;
   
  	visibility:visible;
@@ -73,12 +73,24 @@ body{
 }
 
 
+#menu_vertical .opcion .texto_pestana{
+ 	width:250px;
+ 	height:50px;
+ 	margin-left:50px;
+ 	margin-top:2px;
+ 	background:blue;
+  	position:relative;	
+}
+
+
+
+
 #menu_vertical .submenu{
- 	width:200px;
+ 	width:210px;
  	min-height:1px;
  	margin-left:100px;
  	margin-top:2px;
- 	background:white;
+ 
  	display:none;
 		
 }
@@ -87,19 +99,31 @@ body{
  	width:200px;
  	height:30px;
  	margin-top:2px;
- 	background:red;
-
+	margin-left:0px;
+ 	background:url('../../IMAGENES/ADMINISTRACION/background_subopcion.png') repeat-y;
+ 	background-position:0 0;
+	cursor:pointer;
+	
+	font-weight:normal;
 }
 
 
-#menu_vertical .submenu .subopcion [title="Seleccionado"]{
+#menu_vertical .submenu .subopcion[title="Seleccionado"]{
+
+ 	background:url('../../IMAGENES/ADMINISTRACION/background_subopcion.png') repeat-y;
+ 	background-position:-200px 0;
+	margin-left:10px;
+	
+	font-weight:bold;
+}
+
+
+
+#menu_vertical .submenu .subopcion .texto_pestana{
  	width:200px;
- 	height:30px;
- 	margin-top:2px;
- 	background:yellow;
-
+ 	text-align:center;
+ 	padding-top: 8px;
 }
-
 
 /************************CONTENIDO***********************/
 /************************CONTENIDO***********************/
@@ -115,9 +139,41 @@ body{
 
 #contenido{
 
- 	width:940px; 	
+ 	width:920px; 	
  	height:600px;
  	margin-left:10px;
  	float:left;
  	background:white;
+ 	box-shadow:10px 10px 15px 1px #666;
+ 	position:relative;
+}
+/*
+
+#contenido_sobra_derecha{
+	width:30px;
+	height:600px;
+	left: 920px;
+	 position:absolute;
+	background:url('../../IMAGENES/ADMINISTRACION/contenido_sobra_derecha.png') ;
+}
+
+#contenido_sombra_inferior{
+	width:920px;
+	height:30px;
+	top: 600px;
+	position:absolute;
+	background:url('../../IMAGENES/ADMINISTRACION/contenido_sombra_inferior.png') ;
+}
+
+#contenido_sombra_inferior_derecha{
+	width:30px;
+	height:30px;
+	left: 920px;
+	top: 600px;
+	position:absolute;
+	background:url('../../IMAGENES/ADMINISTRACION/contenido_sombra_inferior_derecha.png'); 
+}
+*/
+#contenido .area{
+	float:left;
 }
