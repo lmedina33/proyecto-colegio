@@ -10,7 +10,7 @@ class Conexion
 	var $servidor = "127.0.0.1";
 	var $usuario = "root";
 	var $clave = "root";
-	var $bd = "sinfo_colegio";
+	var $bd = "a5184535_cjem";
 	
 	//-------------------------------
 	
@@ -33,7 +33,7 @@ class Conexion
 
 
 	function conexion(){
-		$cn = mysql_connect("127.0.0.1","root","root");
+		$cn = mysql_connect("mysql8.000webhost.com","a5184535_cjem","piano13d+");
 		//$result = $cn;
 		if($cn){
 			mysql_select_db($this->bd,$cn);
