@@ -1,6 +1,6 @@
 <?php
 
-require_once("../Conexion.php");
+require_once("../CONEXION/Conexion.php");
 
 class DAOGestionPadre extends Conexion{
 	
@@ -31,7 +31,7 @@ class DAOGestionPadre extends Conexion{
         	if(mysql_num_rows($rs)==0){
 				
 			
-        	$sql="insert into $this->nombre_tabla_padre (dni,nombres,apellido_paterno,apellido_materno,username,password,disponible) values ('$dni','$nombres','$apellido_p','$apellido_m',$username,'$password',1)";
+        	$sql="insert into $this->nombre_tabla_padre (dni,nombres,apellido_paterno,apellido_materno,username,password,disponible) values ('$dni','$nombres','$apellido_p','$apellido_m','$username','$password',1)";
 			    $rs = mysql_query($sql,$cn);
 			
 						 
@@ -106,8 +106,8 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 				$sql="update $this-->nombre_tabla_padre set disponible=1 where dni='$dni'";
 				$rs = mysql_query($sql,$cn);
 			}else{
-					if($cn=="no_disponible"){
-						$sql="update $this-->nombre_tabla_padre set disponible=0 where dni='$dni'";
+					if($disponible=="no_disponible"){
+						$sql="update $this->nombre_tabla_padre set disponible=0 where dni='$dni'";
 						$rs = mysql_query($sql,$cn);
 						}
 				}
@@ -121,11 +121,11 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 	//FUNCION MODIFICAR USUARIO --> RECIBE EL USERNAME Y PASSWORD NUEVO MAS EL USERNAME Y PASS ANTIGUO
 									//PARA PODER USARLOS DE CONDICION ANTES DE MODIFICAR EL USERNAME Y PASSWORD
 	
-	function profesor_modificar_usuario($username,$username_nuevo,$password,$nuevo_password){
+	function padre_modificar_usuario($username,$username_nuevo,$password,$nuevo_password){
 				$cn = $this->conexion();
         
         if($cn!="no_conexion"){
-        	$sql="update $this-->nombre_tabla_padre set username='$username_nuevo',password='$nuevo_password' where  username='$username' and password='$password'";
+        	$sql="update $this->nombre_tabla_padre set username='$username_nuevo',password='$nuevo_password' where  username='$username' and password='$password'";
 			$rs = mysql_query($sql,$cn);
 						 
 						 
