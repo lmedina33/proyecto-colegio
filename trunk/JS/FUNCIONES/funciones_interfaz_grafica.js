@@ -38,6 +38,33 @@ function efecto_presion(id){
             }
 
 
+function abrir_contenido(contenido,area){ 
+		
+	$(".contenido-"+area).hide();
+
+	////////////////////////////////////////////////////////////
+	$("#contenido-"+contenido+"-"+area).fadeIn(500);
+
+		
+}
+
+
+function abrir_area(area){ 
+		
+		$("#menu_"+opcion).show();
+		$("#boton_atras").show();
+		$("#escritorio").show();
+		$("#area_"+opcion).show();
+		$("#menu_inicio").hide();
+		$(".submenu").hide();
+
+		
+}
+
+
+
+
+
 //Funcion dinámica para abrir un area ligada a una pestaña del menu principal
 function abrir_area(opcion){//opcion sera stock, mantenimiento, compras o proveedores
 				$(".area").hide();
@@ -78,6 +105,25 @@ function fun_stand_by_sistema(tiempo_microsegundos){
 	
 	$("#protector_transparente").fadeIn(0);
 	$("#protector_transparente").delay(tiempo_microsegundos).fadeOut(0);
+	
+}
+
+
+
+
+function fun_mostrar_popup_cargando(){
+	
+	$("#div_back_cargando").fadeIn(GLOBAL_VEL_FADE);
+	$("#cargando").fadeIn(GLOBAL_VEL_FADE);
+	
+}
+
+
+
+function fun_ocultar_popup_cargando(){
+	
+	$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
+	$("#cargando").fadeOut(GLOBAL_VEL_FADE);
 	
 }
 	

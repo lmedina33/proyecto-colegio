@@ -55,6 +55,40 @@ body{
 }
 
 
+
+.alinear_derecha{
+	text-align:right;
+}
+.alinear_izquierda{
+	text-align:left;
+}
+.alinear_centro{
+	text-align:center;
+}
+
+
+
+
+.oculto{
+	display:none;
+}
+.alavista{
+	display:block;
+}
+
+
+
+
+
+
+
+.bloque{
+	display:block;
+	width: 100%;
+}
+
+
+
 /*
 legend{
 	font-size:150%;
@@ -131,10 +165,6 @@ caption{
 	border:0px;
 	
 }
-.bloque{
-	display:block;
-	width: 100%;
-}
 
 .bloque2{
 	display:block;
@@ -142,15 +172,6 @@ caption{
 	min-height: 10px;
 }
 
-.alinear_derecha{
-	text-align:right;
-}
-.alinear_izquierda{
-	text-align:left;
-}
-.alinear_centro{
-	text-align:center;
-}
 /*******************************MAIN MENU**********************************//*******************************MAIN MENU**********************************//*******************************MAIN MENU**********************************//*******************************MAIN MENU**********************************//*******************************MAIN MENU**********************************//*******************************MAIN MENU******************************/
 /*
 #menu_inicio{
@@ -385,13 +406,6 @@ border-radius:10px 10px 10px 10px;
 .centrado95{
 	width:95%;
 	margin-left:2.5%;
-}
-
-.oculto{
-	display:none;
-}
-.alavista{
-	display:block;
 }
 
 .resalta_borde{

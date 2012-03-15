@@ -2,6 +2,7 @@
 
 function fun_aviso_popup(arg_texto,arg_titulo,arg_ancho,arg_top){
 
+
 	$("#popup_aviso #texto_aviso").html(arg_texto);
 	$("#popup_aviso #titulo_aviso").html(arg_titulo);
 	$("#popup_aviso").css("min-width",arg_ancho+"%");
