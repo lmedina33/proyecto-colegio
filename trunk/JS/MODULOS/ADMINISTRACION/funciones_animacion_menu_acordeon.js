@@ -24,6 +24,10 @@ $("#menu_vertical .opcion").click(function(){
 		
 	});
 	
+	
+	//ocultamos todas las areas
+	$(".area").hide();
+
 //	alert(id_submenu_abierto);
 
 	
@@ -37,6 +41,10 @@ $("#menu_vertical .opcion").click(function(){
 		$("#menu_vertical .submenu .subopcion").attr("title","Click para seleccionar");
 	
 		$("#menu_vertical #submenu-"+partes_id[1]+" .subopcion:first-child").attr("title","Seleccionado");
+		
+		//mostramos el area correspondiente
+		$("#area_"+partes_id[1]).show();
+
 	}else{
 		$("#menu_vertical .submenu .subopcion").attr("title","Click para seleccionar");
 		

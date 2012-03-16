@@ -1,14 +1,10 @@
-var GLOBAL_CARGAS=0; //es el numero de funciones que se cargan al cargar una página
 
 
-window.onload = function(){
-
-//La siguiente llamada es para hacer la actualizacion de datos cada 10000 microsegundos, el tiempo se puede cambiar
-//	setInterval(fun_actualizacion_datos,10000);
+$(document).ready(function(){
 
 
-$("#menu_vertical .opcion").click(function(){
-	
+$("#contenedor_menu #menu_vertical .opcion").click(function(){
+	//	alert("hola");
 	var desplazamiento_y_background=60;
 	
 	////////////veremos cual es la opcion actualmente seleccionada
@@ -51,10 +47,11 @@ $("#menu_vertical .opcion").click(function(){
 	$("#menu_vertical .opcion").attr("title","Click para seleccionar");
 	$(this).attr("title","Seleccionada");
 	
+
 });
 
 
-}
+});
 
 function fun_actualizacion_datos(){
 /*
@@ -62,13 +59,6 @@ Aca ponemos los datos que queremos sean actualizados cada cierto tiempo.
 */
 }
 
-
-$(document).ready(function(){
- 
-
-	//Aquí hacemos las llamadas de las funciones que queremos que se ejecuten una vez cargada la página
-
-});
 
 function fun_ini_nombre(){
 	 

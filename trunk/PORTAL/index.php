@@ -8,12 +8,21 @@
 
 	<script language="javascript" src="../JS/LIBRERIAS/jquery1_6.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_interfaz_grafica.js"></script>
+	<script language="javascript" src="../JS/FUNCIONES/funciones_variables_globales.js"></script>
 	
 	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_animacion_catalogo.js"></script>
 	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_animacion_menu_principal.js"></script>
+	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_animacion_album_fotos.js"></script>
+	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_click.js"></script>
+	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_post.js"></script>
+	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_carga_pagina.js"></script>
+	
+	
 	<link rel="stylesheet" type="text/css" href="../CSS/general_tabla.css" media="screen"> 
 	<link rel="stylesheet" type="text/css" href="../CSS/estilo_base.css" media="screen">  
 	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/general.css" media="screen"> 
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/galeria_fotos.css" media="screen"> 
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/cara1.css" media="screen"> 
 	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/transiciones_efectos.css" media="screen"> 
 	<title>Untitled 3</title>
 </head>
@@ -21,6 +30,12 @@
 <body>
 
 <div id="protector_transparente"></div>
+<div id="div_back"></div>
+
+<div id="galeria_fotos">
+<?php include("GALERIA_FOTOS/contenido.php"); ?>
+</div>
+
 
 
 
@@ -49,8 +64,8 @@
 		<div id="catalogo">
 			
 			<div id="opciones_vertical_izq">
-				<div id="opcion_inicial"></div>
-				<div id="opcion_primaria"></div>
+				<div id="opcion_inicial" class="opcion_vertical-catalogo"></div>
+				<div id="opcion_primaria" class="opcion_vertical-catalogo"></div>
 			
 				
 				<div id="cerrar_catalogo"></div>
@@ -61,32 +76,55 @@
 			<div id="contenido">
 			
 				<div id="cara_4">
-					CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 	CARA 4 
+					<div id="contenido-secundaria" class="area area-secundaria oculto">
+						<?php include("SECUNDARIA/contenido_derecha.php"); ?>
+					</div>
 				</div>
 				
 				<div id="cara_3">
-						CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3CARA 3 
+						
+					<div id="contenido-primaria" class="area area-primaria oculto">
+						<?php include("PRIMARIA/contenido_derecha.php"); ?>
+					</div>
+					
+					<div id="contenido-secundaria" class="area area-secundaria oculto">
+						<?php include("SECUNDARIA/contenido_izquierda.php"); ?>
+					</div>
 				</div>
 				<div id="cara_2">
-					CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2CARA 2
+					
+					<div id="contenido-inicial" class="area area-inicial oculto">
+						<?php include("INICIAL/contenido_derecha.php"); ?>
+					</div>
+					
+					<div id="contenido-primaria" class="area area-primaria oculto">
+						<?php include("PRIMARIA/contenido_izquierda.php"); ?>
+					</div>
 				</div>
 				<div id="cara_1">
-					CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1 CARA 1  
+				
+					<div id="contenido-cara_1" class="area area-principal alavista">
+						<?php include("CARA_1/contenido.php"); ?>
+					</div>
+					
+					<div id="contenido-inicial" class="area area-inicial oculto">
+						<?php include("INICIAL/contenido_izquierda.php"); ?>
+					</div>
 				</div>
 				
 				
 				
 				<div id="sub_menu_inferior"> 
-					<div class="opcion" title="Click para seleccionar">Admisiones</div>
-					<div class="opcion" title="Click para seleccionar">Album de fotos</div> 
+					<div id="opcion-admision" class="opcion" title="Click para seleccionar">Admisiones</div>
+					<div id="opcion-album"  class="opcion" title="Click para seleccionar">Album de fotos</div> 
 				</div>
 				
 			</div>
 			
 			<div id="opciones_vertical">
-				<div id="opcion_inicial"></div>
-				<div id="opcion_primaria"></div>
-				<div id="opcion_secundaria"></div>
+				<div id="opcion_inicial" class="opcion_vertical-catalogo"></div>
+				<div id="opcion_primaria" class="opcion_vertical-catalogo"></div>
+				<div id="opcion_secundaria" class="opcion_vertical-catalogo"></div>
 			</div>
 		</div>
 </div>

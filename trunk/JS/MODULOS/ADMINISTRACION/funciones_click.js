@@ -8,19 +8,7 @@ $(document).ready(function(){
 //////////////////////////////PAGINA PRINCIPAL////////////////////////////////////
 
 
-//La siguiente función abrirá un área PAG_WEB, REGISTROS, ETC
-$("#menu_vertical .opcion ").click(function(){
-		
-	var id=$(this).attr("id");
-	
-	var partes_id=id.split("-");  //hemos separado el ide en 2 partes separadas por el guion medio
-	//la parte 0 contiene la palabra opcion y la parte 1  el área
-	$(".area").hide();
-	$("#area_"+partes_id[1]).show();
-	
-	// Se debe elegir la primera subopción
-	$("#menu_vertical .submenu .subopcion:first-child").click();
-});
+
 
 
 
