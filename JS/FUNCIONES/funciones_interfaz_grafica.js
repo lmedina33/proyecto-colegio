@@ -66,7 +66,7 @@ function abrir_area(area){
 
 
 //Funcion dinámica para abrir un area ligada a una pestaña del menu principal
-function abrir_area(opcion){//opcion sera stock, mantenimiento, compras o proveedores
+/*function abrir_area(opcion){//opcion sera stock, mantenimiento, compras o proveedores
 				$(".area").hide();
 				$(".menu_pestana").attr("title","Activar");
 			
@@ -75,7 +75,7 @@ function abrir_area(opcion){//opcion sera stock, mantenimiento, compras o provee
 				$("#pest_"+opcion).attr("title","Activada");
 			
 			
-}
+}*/
             
 
 function pestana_activa(pestana,ventana){

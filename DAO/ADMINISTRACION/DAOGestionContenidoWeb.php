@@ -62,6 +62,40 @@ class DAOGestionContenidoWeb extends Conexion{
 		}
 	}
 	
+	function consultar_quienes_somos(){
+		
+		$cn = $this->conexion();
+        
+        if($cn!="no_conexion"){
+        	
+        	$sql="select * from $this->nombre_tabla_quienes_somos ";	//Limpiamos la tabla para insertar los nuevos parrafos
+			$rs = mysql_query($sql,$cn);
+			 
+			while($fila=mysql_fetch_object($rs)){
+				$quienes_somos[]=$fila;
+			}        	
+			
+			$respuesta="";
+			if($quienes_somos){
+					
+				foreach($quienes_somos as $q):
+					
+					$respuesta.=$q->parrafo."{";
+					
+				endforeach;	
+				
+			}else{
+				$respuesta="no data";
+			}
+			
+			mysql_close($cn);
+
+			return $respuesta;
+			
+		}else{
+		return "mysql_no";
+		}
+	}
 	
 	function actualizar_mision_vision($parrafos){ //Vamos a guardar los parrafos ingresados. Los párrafos están separados por llaves de apertura {
    	
@@ -97,6 +131,41 @@ class DAOGestionContenidoWeb extends Conexion{
 		}
 	}
 	
+	
+	function consultar_mision_vision(){
+		
+		$cn = $this->conexion();
+        
+        if($cn!="no_conexion"){
+        	
+        	$sql="select * from $this->nombre_tabla_mision_vision ";	//Limpiamos la tabla para insertar los nuevos parrafos
+			$rs = mysql_query($sql,$cn);
+			 
+			while($fila=mysql_fetch_object($rs)){
+				$mision_vision[]=$fila;
+			}        	
+			
+			$respuesta="";
+			if($mision_vision){
+					
+				foreach($mision_vision as $m):
+					
+					$respuesta.=$m->parrafo."{";
+					
+				endforeach;	
+				
+			}else{
+				$respuesta="no data";
+			}
+			
+			mysql_close($cn);
+
+			return $respuesta;
+			
+		}else{
+		return "mysql_no";
+		}
+	}
 	
 }
 	/*mysql> ;

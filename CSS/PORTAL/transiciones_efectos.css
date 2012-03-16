@@ -53,8 +53,44 @@
 
 
 
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
+/*******************Transiciones usadas en la animación del album de fotos*****************/
 
 
+#galeria_fotos #contenido-inicial-galeria_fotos{
+	
+	-moz-transition-property: margin-left;
+	-webkit-transition-property: margin-left;
+	-o-transition-property: margin-left;
+	transition-property: margin-left;
+	
+	
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function:  linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function:  linear;
+	
+	
+	-moz-transition-duration: 300ms;
+	-webkit-transition-duration: 300ms;
+	-o-transition-duration: 300ms;
+	transition-duration: 300ms;
+	
+	-moz-transition-delay: 0ms;
+	-webkit-transition-delay: 0ms;
+	-o-transition-delay: 0ms;
+	transition-delay: 0ms;
+}
 
 
 

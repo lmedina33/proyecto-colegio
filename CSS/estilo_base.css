@@ -6,6 +6,10 @@ body{
 	margin:0px;/*
 	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#FFFFFF), color-stop(.6,#C4EDFF),color-stop(.4,#C4EDFF));
 	background:-moz-linear-gradient(0% 100% 90deg,#FFFFFF, #FFFFFF, #C4EDFF 43%,#C4EDFF 59%,#FFFFFF 87%);*/
+	
+	overflow-x:hidden;
+	overflow-y:hidden;
+	
 }
 
 
@@ -17,7 +21,7 @@ body{
 	width:100%;
 	position: fixed;
 	display: none;
-	z-index: 200;
+	z-index: 80;
 }
 
 #protector_transparente
@@ -28,7 +32,7 @@ body{
 	width:100%;
 	position: fixed;
 	display: none;
-	z-index: 200;
+	z-index: 80;
 }
 
 
@@ -40,7 +44,7 @@ body{
 	width:100%;
 	position: fixed;
 	display: none;
-	z-index: 300;
+	z-index: 150;
 }
 
 #div_back3
@@ -51,7 +55,7 @@ body{
 	width:100%;
 	position: fixed;
 	display: none;
-	z-index: 450;
+	z-index: 200;
 }
 
 

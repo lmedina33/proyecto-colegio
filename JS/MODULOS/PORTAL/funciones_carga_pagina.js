@@ -21,8 +21,9 @@ Aca ponemos los datos que queremos sean actualizados cada cierto tiempo.
 $(document).ready(function(){
  
 
-	//Aquí hacemos las llamadas de las funciones que queremos que se ejecuten una vez cargada la página
-
+	//Vamos a actualizar el contenido de quienes somos desde que abrimos la pagina web
+		fun_consultar_quienes_somos("#contenido #cara_1 #contenido-cara_1 #contenido-quienes_somos-cara_1 #quienes_somos");
+		//fun_consultar_galeria("inicial");
 });
 
 function fun_ini_nombre(){

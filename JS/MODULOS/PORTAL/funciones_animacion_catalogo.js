@@ -1,4 +1,3 @@
-var GLOBAL_CARGAS=0; //es el numero de funciones que se cargan al cargar una página
 
 
 $(document).ready(function(){
