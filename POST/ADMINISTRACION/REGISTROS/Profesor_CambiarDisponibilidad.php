@@ -1,6 +1,6 @@
 <?php
 
-require_once("../../DAO/MODULO_PROFESOR/DAOGestionProfesores.php");
+require_once("../../../DAO/ADMINISTRACION/DAOGestionProfesores.php");
 
 $gestion_profesores=new DAOGestionProfesores();
 

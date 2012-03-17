@@ -1,6 +1,6 @@
 <?php
 
-require_once("../../DAO/MODULO_PADRE/DAOGestionPadres.php");
+require_once("../../../DAO/ADMINISTRACION/DAOGestionPadres.php");
 
 $gestion_padres=new DAOGestionPadre();
 
