@@ -2,7 +2,7 @@
 
 require_once("../CONEXION/Conexion.php");
 
-class DAOGestionAlumnos extends Conexion{
+class DAOGestionBlogProfesor extends Conexion{
 	
 	var	$nombre_tabla_blog="blog";
 	
@@ -28,7 +28,7 @@ class DAOGestionAlumnos extends Conexion{
         if($cn!="no_conexion"){
         	
         	
-	        $sql="insert into nombre_tabla_blog (codigo_profesor,codigo_alumno,entrada,persona_responde,fecha,hora) values ('$codigo_profesor','$codigo_alumno','$entrada','P',curdate(),curtime())";
+	        $sql="insert into $this->nombre_tabla_blog (codigo_profesor,codigo_alumno,entrada,persona_responde,fecha,hora) values ('$codigo_profesor','$codigo_alumno','$entrada','P',curdate(),curtime())";
 	        $rs = mysql_query($sql,$cn);
         
 			mysql_close($cn);
@@ -45,7 +45,7 @@ class DAOGestionAlumnos extends Conexion{
         if($cn!="no_conexion"){
         	
         	
-	        $sql="select entrada this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno'";
+	        $sql="select entrada $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno'";
 	        $rs = mysql_query($sql,$cn);
 			 		   
 			while($fila=mysql_fetch_object($rs)){
@@ -66,7 +66,7 @@ class DAOGestionAlumnos extends Conexion{
         if($cn!="no_conexion"){
         	
         	
-	        $sql="select entrada this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno' and fecha='$fecha'";
+	        $sql="select entrada $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno' and fecha='$fecha'";
 	        $rs = mysql_query($sql,$cn);
 			 		   
 			while($fila=mysql_fetch_object($rs)){
@@ -81,6 +81,7 @@ class DAOGestionAlumnos extends Conexion{
 		}
 	}
 	
+}
 	/*mysql> ;
     */
 ?>

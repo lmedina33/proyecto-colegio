@@ -2,7 +2,7 @@
 
 require_once("../CONEXION/Conexion.php");
 
-class DAOGestionAlumnos extends Conexion{
+class DAOGestionBlogAlumnos extends Conexion{
 	
 	var	$nombre_tabla_blog="blog";
 	
@@ -28,10 +28,11 @@ class DAOGestionAlumnos extends Conexion{
         if($cn!="no_conexion"){
         	
         	
-	        $sql="insert into nombre_tabla_blog (codigo_profesor,codigo_alumno,entrada,persona_responde,fecha,hora) values ('$codigo_profesor','$codigo_alumno','$entrada','A',curdate(),curtime())";
+	     	$sql="insert into $this->nombre_tabla_blog (codigo_profesor,codigo_alumno,entrada,persona_responde,fecha,hora) values ('$codigo_profesor','$codigo_alumno','$entrada','A',curdate(),curtime() )";
+			
 	        $rs = mysql_query($sql,$cn);
         
-			mysql_close($cn);
+			//mysql_close($cn);
 
 			return  "mysql_si";
 		}else{
@@ -45,16 +46,25 @@ class DAOGestionAlumnos extends Conexion{
         if($cn!="no_conexion"){
         	
         	
-	        $sql="select entrada this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno'";
+	        $sql="select entrada $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno'";
 	        $rs = mysql_query($sql,$cn);
 			 		   
 			while($fila=mysql_fetch_object($rs)){
 				$weadas[]=$fila;
-			}		   
+			}		  
+			$respuesta="";
+			if($weadas){
+				foreach($weadas as $w):
+					
+					$respuesta.=$w->entrada."{";
+					
+				endforeach;
+
+				}else{$respuesta="no data";}
 					   
 			mysql_close($cn);
 
-			return  $weadas;
+			return  $respuesta;
 		}else{
 		return "mysql_no";
 		}
@@ -66,22 +76,32 @@ class DAOGestionAlumnos extends Conexion{
         if($cn!="no_conexion"){
         	
         	
-	        $sql="select entrada this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno' and fecha='$fecha'";
+	        $sql="select * $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno' and fecha='$fecha'";
 	        $rs = mysql_query($sql,$cn);
 			 		   
 			while($fila=mysql_fetch_object($rs)){
 				$weadas[]=$fila;
-			}		   
+			}		  
+			$respuesta="";
+			if($weadas){
+				foreach($weadas as $w):
+					
+					$respuesta.=$w->entrada."{";
+					
+				endforeach;
+
+				}else{$respuesta="no data";}
 					   
 			mysql_close($cn);
 
-			return  $weadas;
+			return  $respuesta;	   
+
 		}else{
 		return "mysql_no";
 		}
 	}
 	
-    
+	}
 	/*mysql> ;
     */
 ?>
