@@ -45,26 +45,30 @@ class DAOGestionBlogAlumnos extends Conexion{
         
         if($cn!="no_conexion"){
         	
-        	
-	        $sql="select entrada $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno'";
-	        $rs = mysql_query($sql,$cn);
-			 		   
+        	$sql="select * from $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno'";	
+			$rs = mysql_query($sql,$cn);
+			 
 			while($fila=mysql_fetch_object($rs)){
-				$weadas[]=$fila;
-			}		  
+				$entrada[]=$fila;
+			}        	
+			
 			$respuesta="";
-			if($weadas){
-				foreach($weadas as $w):
+			if($entrada){
 					
-					$respuesta.=$w->entrada."{";
+				foreach($entrada as $q):
 					
-				endforeach;
-
-				}else{$respuesta="no data";}
-					   
+					$respuesta.=$q->entrada."{";
+					
+				endforeach;	
+				
+			}else{
+				$respuesta="no data";
+			}
+			
 			mysql_close($cn);
 
-			return  $respuesta;
+			return $respuesta;
+			
 		}else{
 		return "mysql_no";
 		}
@@ -75,33 +79,36 @@ class DAOGestionBlogAlumnos extends Conexion{
         
         if($cn!="no_conexion"){
         	
-        	
-	        $sql="select * $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno' and fecha='$fecha'";
-	        $rs = mysql_query($sql,$cn);
-			 		   
+          $sql="select * from $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno' and fecha='$fecha'";	
+			$rs = mysql_query($sql,$cn);
+			 
 			while($fila=mysql_fetch_object($rs)){
-				$weadas[]=$fila;
-			}		  
+				$entrada[]=$fila;
+			}        	
+			
 			$respuesta="";
-			if($weadas){
-				foreach($weadas as $w):
+			if($entrada){
 					
-					$respuesta.=$w->entrada."{";
+				foreach($entrada as $q):
 					
-				endforeach;
-
-				}else{$respuesta="no data";}
-					   
+					$respuesta.=$q->entrada."{";
+					
+				endforeach;	
+				
+			}else{
+				$respuesta="no data";
+			}
+			
 			mysql_close($cn);
 
-			return  $respuesta;	   
-
+			return $respuesta;
+			
 		}else{
 		return "mysql_no";
 		}
 	}
 	
-	}
+}
 	/*mysql> ;
     */
 ?>
