@@ -54,20 +54,38 @@ $("#marco_foto_mostrada #boton_cerrar").click(function(){
 
 function click_minifoto_muestra(background){
 
+	////////////Formateamos todo///////////////////////////
+	$("#marco_foto_mostrada img").attr("src","");
+	$("#marco_foto_mostrada img").attr("width","0px");
+	$("#marco_foto_mostrada img").attr("height","0px");
+	
+	$("#marco_foto_mostrada").css("width","0px");
+	$("#marco_foto_mostrada").css("height","0px");
+	
+	/////////////////////////////////////////////////////////////
+
 	var margen_foto_marco=20;
 
 	var values=background.split("IMAGENES");
 
-
-	$("#marco_foto_mostrada").fadeIn(GLOBAL_VEL_FADE);
 	
 	
-	$("#marco_foto_mostrada img").attr("src","../IMAGENES"+values[1].substring(0,values[1].length-1));
+	
+//	alert(background);
+	
+	var direccion_background=values[1].substring(0,values[1].length-1);
+	
+	if(direccion_background.substring(direccion_background.length-1,direccion_background.length)=='"'){
+		direccion_background=direccion_background.substring(0,direccion_background.length-1);
+	}
+	
+	
+	$("#marco_foto_mostrada img").attr("src","../IMAGENES"+direccion_background);
 	
 	$("#marco_foto_mostrada img").removeAttr("width");
 	$("#marco_foto_mostrada img").removeAttr("height");
 	
-	var width_real_imagen=$("#marco_foto_mostrada img").width();
+	var width_real_imagen=parseFloat($("#marco_foto_mostrada img").width())+2;
 	var height_real_imagen=$("#marco_foto_mostrada img").height();
 	
 	//////////////////////////////Le damos al marco el valor que le corresponde en su ancho y alto
@@ -80,7 +98,7 @@ function click_minifoto_muestra(background){
 	if(parseFloat(ancho_pantalla)<=(parseFloat(width_real_imagen)+margen_foto_marco*2)){
 	/*	alert("mas ancho");
 		alert(ancho_pantalla);*/
-		width_real_imagen=parseFloat(ancho_pantalla)-60;
+		width_real_imagen=parseFloat(ancho_pantalla)-60 +2;
 		$("#marco_foto_mostrada img").attr("width",width_real_imagen+"px");
 		
 		height_real_imagen=$("#marco_foto_mostrada img").height();
@@ -93,22 +111,22 @@ function click_minifoto_muestra(background){
 		
 		$("#marco_foto_mostrada img").attr("height",height_real_imagen+"px");
 		
-		width_real_imagen=$("#marco_foto_mostrada img").width();
+		width_real_imagen=parseFloat($("#marco_foto_mostrada img").width())+2;
 	}	
 	
 	
-	$("#marco_foto_mostrada ").css("width",(parseFloat(width_real_imagen)+margen_foto_marco*2)+"px");
+	$("#marco_foto_mostrada ").css("width",(width_real_imagen+margen_foto_marco*2)+"px");
 	$("#marco_foto_mostrada ").css("height",(parseFloat(height_real_imagen)+margen_foto_marco*2)+"px");
 	
 	
-	var margen_left=(parseFloat(ancho_pantalla)-(parseFloat(width_real_imagen)+margen_foto_marco*2))/2;
+	var margen_left=(parseFloat(ancho_pantalla)-(width_real_imagen+margen_foto_marco*2))/2;
 	var margen_top=(parseFloat(alto_pantalla)-(parseFloat(height_real_imagen)+margen_foto_marco*2))/2;
 		
 	
 	$("#marco_foto_mostrada ").css("margin-left",margen_left+"px");
 	$("#marco_foto_mostrada ").css("margin-top",margen_top+"px");
 		
-	$("#marco_foto_mostrada").fadeIn(GLOBAL_VEL_FADE);	
+	$("#marco_foto_mostrada").delay(200).fadeIn(GLOBAL_VEL_FADE);	//el delay es para prevenir que se descuadre la foto ya que a veces demora en cargar bien
 	$("#protector_marco_foto").fadeIn(GLOBAL_VEL_FADE);	
 	
 
