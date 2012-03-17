@@ -56,7 +56,7 @@ class DAOGestionBlogProfesor extends Conexion{
 					
 				foreach($entrada as $q):
 					
-					$respuesta.=$q->entrada."{";
+					$respuesta.=$q->persona_responde."{".$q->entrada."{".$q->fecha."{".$q->hora."{";
 					
 				endforeach;	
 				
@@ -90,7 +90,7 @@ class DAOGestionBlogProfesor extends Conexion{
 					
 				foreach($entrada as $q):
 					
-					$respuesta.=$q->entrada."{";
+					$respuesta.=$q->persona_responde."{".$q->entrada."{".$q->hora."{";
 					
 				endforeach;	
 				
