@@ -71,7 +71,7 @@
 	width:80px;
 	height:110px;
 	margin-top:20px;
-	background:gray;
+	background:#ccc;
 	float:left;	
 	position:absolute;
 	
@@ -89,7 +89,66 @@
 	margin-right:20px;
 	background-size:80px;
 	float:left;
+	cursor: pointer;
 	
 }
+
+
+#galeria_fotos .minifoto_muestra:hover{
+	
+	box-shadow:0px 0px 10px 10px #666;
+	
+}
+
+
+
+#protector_marco_foto
+{    opacity: .40;
+  	top: 0px;
+	background-color: #FFF;
+	height:100%;
+	width:100%;
+	position: fixed;
+	display: none;
+	z-index: 130;
+}
+
+
+#marco_foto_mostrada{
+	
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	background-color: white;
+
+	z-index:140;
+	
+	box-shadow:0px 0px 10px 10px #666;
+	
+	display:none;
+}
+
+
+#marco_foto_mostrada #boton_cerrar{
+	
+	width: 16px;
+	height: 16px;
+	background-image:url("../../IMAGENES/PORTAL/ALBUM_FOTOS/cerrar.png");
+	margin-right:2px;
+	margin-top:2px;
+	float:right;
+	z-index:140;
+	cursor:pointer;
+	border:1px #888 solid;
+		
+}
+
+
+#marco_foto_mostrada img{
+	
+	margin-left:20px;
+	margin-top:20px;
+}
+
 
 

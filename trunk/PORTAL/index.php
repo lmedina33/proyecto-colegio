@@ -30,8 +30,19 @@
 <body>
 
 <div id="protector_transparente"></div>
-<div id="div_back"></div>
+<div id="protector_marco_foto"></div>
 
+<div id="div_back"></div>
+<div id="div_back2"></div>
+<div id="div_back3"></div>
+
+<div id="marco_foto_mostrada">
+	<div id="boton_cerrar" title="Pulse aquí para cerrar la foto">
+	
+	</div>
+	<img src="" width="200"  width="200" />
+	
+</div>
 <div id="galeria_fotos">
 <?php include("GALERIA_FOTOS/contenido.php"); ?>
 </div>

@@ -156,7 +156,7 @@ function fun_consultar_galeria(tipo_consulta){  //esta función es para hacer alg
 				
 			//	alert(tipo_consulta_mayus);
 				for(var i=0;nombre_fotos[i];i++){
-					codigo_fotos+='<div class="minifoto_muestra" style="background-image:url('+"'../IMAGENES/PORTAL/ALBUM_FOTOS/"+tipo_consulta_mayus+"/"+nombre_fotos[i]+"'"+')"></div>';
+					codigo_fotos+='<div class="minifoto_muestra" onclick='+"'"+"click_minifoto_muestra($(this).css("+'"background-image"'+"))"+"'"+' style="background-image:url('+"'../IMAGENES/PORTAL/ALBUM_FOTOS/"+tipo_consulta_mayus+"/"+nombre_fotos[i]+"'"+')"></div>';
 					cont++;
 				}
 				$("#contenido-inicial-galeria_fotos").html(codigo_fotos);
