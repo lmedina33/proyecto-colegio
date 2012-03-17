@@ -11,7 +11,7 @@ class DAOLoginAlumno extends Conexion{
         if($cn!="no_conexion"){
 	        
 			/*$sql="select concat(u.apellido_paterno,' ',u.apellido_materno,', ',u.nombre) nombre, u.dni dni,p.url_modulo url,u.username user from general_perfil p,general_empleados u where u.id_perfil=p.id_perfil and u.username='$username' and u.password='$password'";*/
-			$sql=""select * from portal_alumno;
+			$sql="select * from portal_alumno";
 	        $rs = mysql_query($sql,$cn);
 	        	while($fila=mysql_fetch_object($rs)){
 					$arr[]=$fila;
