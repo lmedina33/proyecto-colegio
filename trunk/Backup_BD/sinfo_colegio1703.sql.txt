@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Servidor: localhost
--- Tiempo de generación: 23-03-2012 a las 12:10:16
+-- Tiempo de generación: 23-03-2012 a las 12:46:29
 -- Versión del servidor: 5.0.45
 -- Versión de PHP: 5.2.3
 
@@ -19,6 +19,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Estructura de tabla para la tabla `admin_cursos`
 -- 
 
+DROP TABLE IF EXISTS `admin_cursos`;
 CREATE TABLE `admin_cursos` (
   `id` int(11) NOT NULL auto_increment,
   `grado` int(1) default NULL,
@@ -46,6 +47,7 @@ INSERT INTO `admin_cursos` VALUES (12, 3, 'P', 'arte', 'B', '1113258');
 -- Estructura de tabla para la tabla `blog`
 -- 
 
+DROP TABLE IF EXISTS `blog`;
 CREATE TABLE `blog` (
   `id` int(11) NOT NULL auto_increment,
   `codigo_profesor` varchar(20) default NULL,
@@ -74,6 +76,7 @@ INSERT INTO `blog` VALUES (6, '222', '111', 'esteeselparrafoProfesor555555555555
 -- Estructura de tabla para la tabla `portal_actividades`
 -- 
 
+DROP TABLE IF EXISTS `portal_actividades`;
 CREATE TABLE `portal_actividades` (
   `id` int(11) NOT NULL auto_increment,
   `titulo` varchar(30) default NULL,
@@ -92,6 +95,7 @@ CREATE TABLE `portal_actividades` (
 -- Estructura de tabla para la tabla `portal_alumno`
 -- 
 
+DROP TABLE IF EXISTS `portal_alumno`;
 CREATE TABLE `portal_alumno` (
   `codigo` varchar(10) NOT NULL,
   `nombres` varchar(20) default NULL,
@@ -101,6 +105,9 @@ CREATE TABLE `portal_alumno` (
   `password` varchar(25) default NULL,
   `disponible` int(1) default '1',
   `id_padre` varchar(10) default NULL,
+  `grado` int(1) default NULL,
+  `nivel` varchar(1) default NULL,
+  `seccion` varchar(1) default NULL,
   PRIMARY KEY  (`codigo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -108,8 +115,8 @@ CREATE TABLE `portal_alumno` (
 -- Volcar la base de datos para la tabla `portal_alumno`
 -- 
 
-INSERT INTO `portal_alumno` VALUES ('CodAlumMod', 'NomAlumModi1', 'AlumPaternoModi1', 'AlumMaternoModi1', 11, 'PassModi1', 1, 'DniPadreMo');
-INSERT INTO `portal_alumno` VALUES ('CodAlumno1', 'NomAlum1', 'AlumPaterno1', 'AlumMaterno1', 1, 'pass1', 1, 'dniPadre1');
+INSERT INTO `portal_alumno` VALUES ('CodAlumMod', 'NomAlumModi1', 'AlumPaternoModi1', 'AlumMaternoModi1', 11, 'PassModi1', 1, 'DniPadreMo', NULL, NULL, '');
+INSERT INTO `portal_alumno` VALUES ('CodAlumno1', 'NomAlum1', 'AlumPaterno1', 'AlumMaterno1', 1, 'pass1', 1, 'dniPadre1', NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -117,6 +124,7 @@ INSERT INTO `portal_alumno` VALUES ('CodAlumno1', 'NomAlum1', 'AlumPaterno1', 'A
 -- Estructura de tabla para la tabla `portal_galeriafotos`
 -- 
 
+DROP TABLE IF EXISTS `portal_galeriafotos`;
 CREATE TABLE `portal_galeriafotos` (
   `id` int(11) NOT NULL auto_increment,
   `categoria` varchar(300) default NULL,
@@ -149,6 +157,7 @@ INSERT INTO `portal_galeriafotos` VALUES (14, 'inicial', '10.jpg');
 -- Estructura de tabla para la tabla `portal_mision_vision`
 -- 
 
+DROP TABLE IF EXISTS `portal_mision_vision`;
 CREATE TABLE `portal_mision_vision` (
   `id` int(11) NOT NULL auto_increment,
   `parrafo` varchar(300) default NULL,
@@ -167,6 +176,7 @@ INSERT INTO `portal_mision_vision` VALUES (4, 'fff');
 -- Estructura de tabla para la tabla `portal_padre`
 -- 
 
+DROP TABLE IF EXISTS `portal_padre`;
 CREATE TABLE `portal_padre` (
   `dni` varchar(10) NOT NULL,
   `nombres` varchar(20) default NULL,
@@ -189,6 +199,7 @@ CREATE TABLE `portal_padre` (
 -- Estructura de tabla para la tabla `portal_profesor`
 -- 
 
+DROP TABLE IF EXISTS `portal_profesor`;
 CREATE TABLE `portal_profesor` (
   `dni` varchar(10) NOT NULL,
   `nombres` varchar(20) default NULL,
@@ -213,6 +224,7 @@ INSERT INTO `portal_profesor` VALUES ('dni1', 'profe1', 'apellido_paterno1', 'ap
 -- Estructura de tabla para la tabla `portal_quienes_somos`
 -- 
 
+DROP TABLE IF EXISTS `portal_quienes_somos`;
 CREATE TABLE `portal_quienes_somos` (
   `id` int(11) NOT NULL auto_increment,
   `parrafo` varchar(300) default NULL,
@@ -237,6 +249,7 @@ INSERT INTO `portal_quienes_somos` VALUES (48, 'fin');
 -- Estructura de tabla para la tabla `portal_servicios`
 -- 
 
+DROP TABLE IF EXISTS `portal_servicios`;
 CREATE TABLE `portal_servicios` (
   `id` int(11) NOT NULL auto_increment,
   `titulo` varchar(30) default NULL,
