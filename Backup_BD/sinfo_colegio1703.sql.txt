@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Servidor: localhost
--- Tiempo de generación: 17-03-2012 a las 17:04:58
+-- Tiempo de generación: 23-03-2012 a las 12:10:16
 -- Versión del servidor: 5.0.45
 -- Versión de PHP: 5.2.3
 
@@ -12,6 +12,33 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- 
 -- Base de datos: `sinfo_colegio`
 -- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `admin_cursos`
+-- 
+
+CREATE TABLE `admin_cursos` (
+  `id` int(11) NOT NULL auto_increment,
+  `grado` int(1) default NULL,
+  `nivel` varchar(1) default NULL,
+  `nombre_curso` varchar(30) default NULL,
+  `seccion` varchar(1) default NULL,
+  `id_profesor` varchar(10) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+-- 
+-- Volcar la base de datos para la tabla `admin_cursos`
+-- 
+
+INSERT INTO `admin_cursos` VALUES (10, 3, 'P', 'lenguaje', 'B', 'nuevo_ID_p');
+INSERT INTO `admin_cursos` VALUES (9, 3, 'P', 'lenguaje', 'A', 'nuevo_ID_p');
+INSERT INTO `admin_cursos` VALUES (8, 3, 'P', 'Análisis Matematico', 'B', '56548935');
+INSERT INTO `admin_cursos` VALUES (7, 3, 'P', 'Análisis Matematico', 'A', '70440138');
+INSERT INTO `admin_cursos` VALUES (11, 3, 'P', 'arte', 'A', '325688');
+INSERT INTO `admin_cursos` VALUES (12, 3, 'P', 'arte', 'B', '1113258');
 
 -- --------------------------------------------------------
 
