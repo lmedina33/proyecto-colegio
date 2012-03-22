@@ -33,7 +33,7 @@ class Conexion
 
 
 	function conexion(){
-		$cn = mysql_connect("127.0.0.1","root","archer13");
+		$cn = mysql_connect("127.0.0.1","root","root");
 		//$result = $cn;
 		if($cn){
 			mysql_select_db($this->bd,$cn);

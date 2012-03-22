@@ -36,23 +36,16 @@ class DAOGestionContenidoWeb extends Conexion{
         	$sql="delete from $this->nombre_tabla_quienes_somos ";	//Limpiamos la tabla para insertar los nuevos parrafos
 			$rs = mysql_query($sql,$cn);
 			
-        			
 				$parrafos_split=split('{',$parrafos);
-				
-				
 				
 				$i=0;
 				while($parrafos_split[$i]){
 					$sql="insert into $this->nombre_tabla_quienes_somos (parrafo) values ('$parrafos_split[$i]')";
 					$rs = mysql_query($sql,$cn);
 					
-					
 					$i++;
 				}
 		        			
-				
-			
-			
 			mysql_close($cn);
 
 			return "mysql_si";
