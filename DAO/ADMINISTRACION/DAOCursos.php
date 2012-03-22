@@ -70,13 +70,13 @@ class DAOCursos extends Conexion{
 		}
     }
 	
-	function cambiar_profesor($grado,$nivel,$nombre_curso,$nuevo_profesor){  
+	function cambiar_profesor($grado,$nivel,$nombre_curso,$seccion,$nuevo_profesor){  
 
         $cn = $this->conexion();
         
         if($cn!="no_conexion"){
 	          
-  				$sql="update $this->nombre_tabla_admin_cursos set id_profesor = '$nuevo_profesor' where grado='$grado' and nivel='$nivel' and nombre_curso='$nombre_curso'";
+  				$sql="update $this->nombre_tabla_admin_cursos set id_profesor = '$nuevo_profesor' where grado='$grado' and nivel='$nivel' and nombre_curso='$nombre_curso' and seccion='$seccion'";
 				
 				$rs = mysql_query($sql,$cn);
 				mysql_close($cn);
