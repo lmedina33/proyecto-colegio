@@ -21,7 +21,7 @@ class DAOGestionAlumnos extends Conexion{
 	//  PRIMARY KEY  (`codigo`)
 	//) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 	
-    function admin_insertar_alumno($codigo,$nombres,$apellido_p,$apellido_m,$edad,$password,$id_padre){ //INGRESA UN NUEVO ALUMNO 
+    function admin_insertar_alumno($codigo,$nombres,$apellido_p,$apellido_m,$edad,$password,$id_padre,$grado,$nivel,$seccion){ //INGRESA UN NUEVO ALUMNO 
 				$cn = $this->conexion();
         		//$uno=1;
         if($cn!="no_conexion"){
@@ -32,7 +32,7 @@ class DAOGestionAlumnos extends Conexion{
         	if(mysql_num_rows($rs)==0){
 				
 			
-        	$sql="insert into $this->nombre_tabla_alumnos (codigo,nombres,apellido_paterno,apellido_materno,edad,password,disponible,id_padre) values ('$codigo','$nombres','$apellido_p','$apellido_m',$edad,'$password',1,'$id_padre')";
+        	$sql="insert into $this->nombre_tabla_alumnos (codigo,nombres,apellido_paterno,apellido_materno,edad,password,disponible,id_padre,grado,nivel,seccion) values ('$codigo','$nombres','$apellido_p','$apellido_m',$edad,'$password',1,'$id_padre','$grado','$nivel','$seccion')";
 			    $rs = mysql_query($sql,$cn);
 			
 			mysql_close($cn);			 
@@ -67,7 +67,7 @@ class DAOGestionAlumnos extends Conexion{
 					//EL PRIMER IF VERIFICA LA CONEXION
 					//EL SEGUNDO ES PARA SABER SI EL CODIGO NUEVO Q LES ESTOY ASIGNANDO EXISTE O NO
 					//EL COD_ANTERIOR SIRVE PARA COMPARAR CON EL CODIGO DE LA TABLA APORTAL_ALUMNO EXISTENTE ANTES DE MODIFICARLOS
-	function admin_modificar_alumno($codigo_anterior,$codigo,$nombres,$apellido_p,$apellido_m,$edad,$password,$id_padre){ 
+	function admin_modificar_alumno($codigo_anterior,$codigo,$nombres,$apellido_p,$apellido_m,$edad,$password,$id_padre,$grado,$nivel,$seccion){ 
 		$cn = $this->conexion();			
 		
 		if($cn!="no_conexion"){	
@@ -79,7 +79,7 @@ class DAOGestionAlumnos extends Conexion{
 				
 			
         		$sql="update $this->nombre_tabla_alumnos set 
-codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',edad='$edad',password='$password',id_padre='$id_padre' where codigo='$codigo_anterior'";		
+codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',edad='$edad',password='$password',id_padre='$id_padre',grado='$grado',nivel='$nivel',seccion='$seccion' where codigo='$codigo_anterior'";		
 			    $rs = mysql_query($sql,$cn);
 			
 				mysql_close($cn);		 
