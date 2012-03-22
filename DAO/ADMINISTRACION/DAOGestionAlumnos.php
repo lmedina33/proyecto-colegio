@@ -77,6 +77,7 @@ class DAOGestionAlumnos extends Conexion{
 			
 			if(mysql_num_rows($rs)==0){
 				
+
 			
         		$sql="update $this->nombre_tabla_alumnos set 
 codigo='$codigo',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',edad='$edad',password='$password',id_padre='$id_padre',grado='$grado',nivel='$nivel',seccion='$seccion' where codigo='$codigo_anterior'";		
