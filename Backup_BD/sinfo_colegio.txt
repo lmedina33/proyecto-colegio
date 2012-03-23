@@ -1,0 +1,249 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.2
+-- http://www.phpmyadmin.net
+-- 
+-- Servidor: localhost
+-- Tiempo de generación: 23-03-2012 a las 12:10:16
+-- Versión del servidor: 5.0.45
+-- Versión de PHP: 5.2.3
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Base de datos: `sinfo_colegio`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `admin_cursos`
+-- 
+
+CREATE TABLE `admin_cursos` (
+  `id` int(11) NOT NULL auto_increment,
+  `grado` int(1) default NULL,
+  `nivel` varchar(1) default NULL,
+  `nombre_curso` varchar(30) default NULL,
+  `seccion` varchar(1) default NULL,
+  `id_profesor` varchar(10) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+-- 
+-- Volcar la base de datos para la tabla `admin_cursos`
+-- 
+
+INSERT INTO `admin_cursos` VALUES (10, 3, 'P', 'lenguaje', 'B', 'nuevo_ID_p');
+INSERT INTO `admin_cursos` VALUES (9, 3, 'P', 'lenguaje', 'A', 'nuevo_ID_p');
+INSERT INTO `admin_cursos` VALUES (8, 3, 'P', 'Análisis Matematico', 'B', '56548935');
+INSERT INTO `admin_cursos` VALUES (7, 3, 'P', 'Análisis Matematico', 'A', '70440138');
+INSERT INTO `admin_cursos` VALUES (11, 3, 'P', 'arte', 'A', '325688');
+INSERT INTO `admin_cursos` VALUES (12, 3, 'P', 'arte', 'B', '1113258');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `blog`
+-- 
+
+CREATE TABLE `blog` (
+  `id` int(11) NOT NULL auto_increment,
+  `codigo_profesor` varchar(20) default NULL,
+  `codigo_alumno` varchar(20) default NULL,
+  `entrada` varchar(300) default NULL,
+  `persona_responde` varchar(1) default NULL,
+  `fecha` date default NULL,
+  `hora` time default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+-- 
+-- Volcar la base de datos para la tabla `blog`
+-- 
+
+INSERT INTO `blog` VALUES (1, '06200198', '222222222', NULL, NULL, NULL, NULL);
+INSERT INTO `blog` VALUES (2, '06200198', '222222222', 'esteeselparrafo111111111111111', 'A', '2012-03-17', '02:59:00');
+INSERT INTO `blog` VALUES (3, '06200198', '222222222', 'esteeselparrafo2222222222222222222222222', 'A', '2012-03-17', '02:59:36');
+INSERT INTO `blog` VALUES (4, '06200198', '222222222', 'esteeselparrafo3333333333333333333333333333333333333333', 'A', '2012-03-17', '02:59:49');
+INSERT INTO `blog` VALUES (5, '06200198', '222222222', 'esteeselparrafo555555555555555555555555555555555555555', 'A', '2012-03-17', '03:00:02');
+INSERT INTO `blog` VALUES (6, '222', '111', 'esteeselparrafoProfesor555555555555555555555555555555555555555', 'P', '2012-03-17', '03:15:23');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `portal_actividades`
+-- 
+
+CREATE TABLE `portal_actividades` (
+  `id` int(11) NOT NULL auto_increment,
+  `titulo` varchar(30) default NULL,
+  `parrafo` varchar(300) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- 
+-- Volcar la base de datos para la tabla `portal_actividades`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `portal_alumno`
+-- 
+
+CREATE TABLE `portal_alumno` (
+  `codigo` varchar(10) NOT NULL,
+  `nombres` varchar(20) default NULL,
+  `apellido_paterno` varchar(20) default NULL,
+  `apellido_materno` varchar(20) default NULL,
+  `edad` int(11) default NULL,
+  `password` varchar(25) default NULL,
+  `disponible` int(1) default '1',
+  `id_padre` varchar(10) default NULL,
+  PRIMARY KEY  (`codigo`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Volcar la base de datos para la tabla `portal_alumno`
+-- 
+
+INSERT INTO `portal_alumno` VALUES ('CodAlumMod', 'NomAlumModi1', 'AlumPaternoModi1', 'AlumMaternoModi1', 11, 'PassModi1', 1, 'DniPadreMo');
+INSERT INTO `portal_alumno` VALUES ('CodAlumno1', 'NomAlum1', 'AlumPaterno1', 'AlumMaterno1', 1, 'pass1', 1, 'dniPadre1');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `portal_galeriafotos`
+-- 
+
+CREATE TABLE `portal_galeriafotos` (
+  `id` int(11) NOT NULL auto_increment,
+  `categoria` varchar(300) default NULL,
+  `nombre_foto` varchar(300) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
+-- 
+-- Volcar la base de datos para la tabla `portal_galeriafotos`
+-- 
+
+INSERT INTO `portal_galeriafotos` VALUES (1, 'inicial', '1.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (2, 'inicial', '2.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (3, 'inicial', '3.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (4, 'inicial', '4.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (5, 'inicial', '5.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (6, 'inicial', '6.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (7, 'inicial', '7.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (8, 'inicial', '8.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (9, 'inicial', '9.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (10, 'inicial', '10.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (11, 'inicial', '7.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (12, 'inicial', '8.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (13, 'inicial', '9.jpg');
+INSERT INTO `portal_galeriafotos` VALUES (14, 'inicial', '10.jpg');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `portal_mision_vision`
+-- 
+
+CREATE TABLE `portal_mision_vision` (
+  `id` int(11) NOT NULL auto_increment,
+  `parrafo` varchar(300) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+-- 
+-- Volcar la base de datos para la tabla `portal_mision_vision`
+-- 
+
+INSERT INTO `portal_mision_vision` VALUES (4, 'fff');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `portal_padre`
+-- 
+
+CREATE TABLE `portal_padre` (
+  `dni` varchar(10) NOT NULL,
+  `nombres` varchar(20) default NULL,
+  `apellido_paterno` varchar(20) default NULL,
+  `apellido_materno` varchar(20) default NULL,
+  `username` varchar(25) default NULL,
+  `password` varchar(25) default NULL,
+  `disponible` int(1) default '1',
+  PRIMARY KEY  (`dni`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Volcar la base de datos para la tabla `portal_padre`
+-- 
+
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `portal_profesor`
+-- 
+
+CREATE TABLE `portal_profesor` (
+  `dni` varchar(10) NOT NULL,
+  `nombres` varchar(20) default NULL,
+  `apellido_paterno` varchar(20) default NULL,
+  `apellido_materno` varchar(20) default NULL,
+  `username` varchar(25) default NULL,
+  `password` varchar(25) default NULL,
+  `disponible` int(1) default '1',
+  PRIMARY KEY  (`dni`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Volcar la base de datos para la tabla `portal_profesor`
+-- 
+
+INSERT INTO `portal_profesor` VALUES ('dni5', 'profe5', 'ap_paterno5', 'ap_materno_5', 'profe5', '1234', 1);
+INSERT INTO `portal_profesor` VALUES ('dni1', 'profe1', 'apellido_paterno1', 'apellido_materno1', 'profe1', '12345', 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `portal_quienes_somos`
+-- 
+
+CREATE TABLE `portal_quienes_somos` (
+  `id` int(11) NOT NULL auto_increment,
+  `parrafo` varchar(300) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
+
+-- 
+-- Volcar la base de datos para la tabla `portal_quienes_somos`
+-- 
+
+INSERT INTO `portal_quienes_somos` VALUES (42, 'df asdf asdf asd f');
+INSERT INTO `portal_quienes_somos` VALUES (43, 'asdfasd fasd');
+INSERT INTO `portal_quienes_somos` VALUES (44, 'asdfasdf');
+INSERT INTO `portal_quienes_somos` VALUES (45, 'asdffffff');
+INSERT INTO `portal_quienes_somos` VALUES (46, 's');
+INSERT INTO `portal_quienes_somos` VALUES (47, 'dfasdf');
+INSERT INTO `portal_quienes_somos` VALUES (48, 'fin');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `portal_servicios`
+-- 
+
+CREATE TABLE `portal_servicios` (
+  `id` int(11) NOT NULL auto_increment,
+  `titulo` varchar(30) default NULL,
+  `parrafo` varchar(300) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- 
+-- Volcar la base de datos para la tabla `portal_servicios`
+-- 
