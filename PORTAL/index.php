@@ -87,28 +87,28 @@
 			<div id="contenido">
 			
 				<div id="cara_4">
-					<div id="contenido-secundaria" class="area area-secundaria oculto">
+					<div id="contenido-secundaria-2" class="area area-secundaria oculto">
 						<?php include("SECUNDARIA/contenido_derecha.php"); ?>
 					</div>
 				</div>
 				
 				<div id="cara_3">
 						
-					<div id="contenido-primaria" class="area area-primaria oculto">
+					<div id="contenido-primaria-2" class="area area-primaria oculto">
 						<?php include("PRIMARIA/contenido_derecha.php"); ?>
 					</div>
 					
-					<div id="contenido-secundaria" class="area area-secundaria oculto">
+					<div id="contenido-secundaria-1" class="area area-secundaria oculto">
 						<?php include("SECUNDARIA/contenido_izquierda.php"); ?>
 					</div>
 				</div>
 				<div id="cara_2">
 					
-					<div id="contenido-inicial" class="area area-inicial oculto">
+					<div id="contenido-inicial-2" class="area area-inicial oculto">
 						<?php include("INICIAL/contenido_derecha.php"); ?>
 					</div>
 					
-					<div id="contenido-primaria" class="area area-primaria oculto">
+					<div id="contenido-primaria-1" class="area area-primaria oculto">
 						<?php include("PRIMARIA/contenido_izquierda.php"); ?>
 					</div>
 				</div>
@@ -118,7 +118,7 @@
 						<?php include("CARA_1/contenido.php"); ?>
 					</div>
 					
-					<div id="contenido-inicial" class="area area-inicial oculto">
+					<div id="contenido-inicial-1" class="area area-inicial oculto">
 						<?php include("INICIAL/contenido_izquierda.php"); ?>
 					</div>
 				</div>

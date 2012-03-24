@@ -90,6 +90,7 @@ $("#catalogo #opciones_vertical_izq #opcion_primaria").click(function(){
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	$(".area").hide();
 	$(".area-primaria").fadeIn(GLOBAL_VEL_FADE);
+	
 });
 
 $("#catalogo #opciones_vertical_izq #cerrar_catalogo").click(function(){
@@ -128,8 +129,9 @@ $("#catalogo #sub_menu_inferior #opcion-admision").click(function(){
 	
 	var id_partes=area_abierta.split("-");
 
-	$("#contenido-"+id_partes[1]+" #contenido-actividades-"+id_partes[1]).hide();
-	$("#contenido-"+id_partes[1]+" #contenido-admisiones-"+id_partes[1]).fadeIn(GLOBAL_VEL_FADE);
+	$("#contenido-"+id_partes[1]+"-2 #contenido-actividades-"+id_partes[1]).hide();
+	$("#contenido-"+id_partes[1]+"-2 #contenido-admisiones-"+id_partes[1]).fadeIn(GLOBAL_VEL_FADE);
+	
 });
 
 

@@ -125,7 +125,7 @@ body{
 }
 
 #catalogo #contenido #cara_1{
- 	background:orange;
+ 	
 	width:550px;
  	height:550px;
  	
@@ -137,7 +137,7 @@ body{
 
 
 #catalogo #contenido #cara_2{
- 	background:green;
+ 	
 	width:550px;
  	height:550px;
  	
@@ -149,7 +149,7 @@ body{
 
 
 #catalogo #contenido #cara_3{
- 	background:blue;
+ 	
 	width:550px;
  	height:550px;
  	
@@ -161,7 +161,7 @@ body{
 
 
 #catalogo #contenido #cara_4{
- 	background:orange;
+ 	
 	width:550px;
  	height:550px;
  	
@@ -294,3 +294,78 @@ body{
 	
 	margin-top:0px;
 }
+
+
+
+/***********************************************************************/
+/***************************CARAS CATALOGO******************************/
+/***************************CARAS CATALOGO******************************/
+/***************************CARAS CATALOGO******************************/
+/***************************CARAS CATALOGO******************************/
+/***************************CARAS CATALOGO******************************/
+/***************************CARAS CATALOGO******************************/
+
+
+#catalogo #contenido-inicial-1{
+	width:550px;
+	height:550px;
+/*	background:yellow;*/
+}
+
+#catalogo #contenido-inicial-2{
+	width:550px;
+	height:550px;
+/*	background:white;*/
+}
+
+
+#catalogo .contenido-inicial{
+	width:550px;
+	height:550px;
+	float:left;
+}
+
+
+#catalogo #contenido-primaria-1{
+	width:550px;
+	height:550px;
+	/**/
+}
+
+#catalogo #contenido-primaria-2{
+	width:550px;
+	height:550px;
+	background:url('../../IMAGENES/PORTAL/CATALOGO/primaria2.png');
+}
+
+
+#catalogo .contenido-primaria{
+	width:550px;
+	height:550px;
+	float:left;
+}
+
+
+
+
+#catalogo #contenido-secundaria-1{
+	width:550px;
+	height:550px;
+	background:url('../../IMAGENES/PORTAL/CATALOGO/secundaria1.png');
+}
+
+#catalogo #contenido-secundaria-2{
+	width:550px;
+	height:550px;
+	/*background:white;*/
+}
+
+
+#catalogo .contenido-secundaria{
+	width:550px;
+	height:550px;
+	float:left;
+}
+
+
+
