@@ -20,6 +20,8 @@ require_once("../CONEXION/Conexion.php");
 class DAOCursos extends Conexion{
 
   	var $nombre_tabla_admin_cursos="admin_cursos";
+	
+	//EL CAMPO CODIGO SE RA  IGUAL A = NIVEL+GRADO+NOMBRE+SECCION
   
 	function insertar_dao_cursos($grado,$nivel,$grado_cursos){  
 
@@ -38,8 +40,10 @@ class DAOCursos extends Conexion{
 				while($valores[$i]){		
 					$i2=$i+1;
 					$i3=$i+2;
-
-	        		$sql="insert into $this->nombre_tabla_admin_cursos (grado,nivel,nombre_curso,seccion,id_profesor) values ($grado,'$nivel','$valores[$i]','$valores[$i2]','$valores[$i3]')";
+					
+					$codigo=$nivel.$grado.$valores[$i].$valores[$i2];
+					
+	        		$sql="insert into $this->nombre_tabla_admin_cursos (codigo,grado,nivel,nombre_curso,seccion,id_profesor) values ('$codigo',$grado,'$nivel','$valores[$i]','$valores[$i2]','$valores[$i3]')";
 	       
 	        		$rs = mysql_query($sql,$cn);
 				
@@ -56,12 +60,33 @@ class DAOCursos extends Conexion{
 	function modificar_nombre_grado_cursos($grado,$nivel,$nombre_curso,$nuevo_nombre_curso){  
 
         $cn = $this->conexion();
-        
+        //$cadena_respuesta="";
         if($cn!="no_conexion"){
 	          
-  				$sql="update $this->nombre_tabla_admin_cursos set nombre_curso = '$nuevo_nombre_curso' where grado='$grado' and nivel='$nivel' and nombre_curso='$nombre_curso'";
+			  	/*$codigo=$nivel.$grado.$nuevo_nombre_curso;
 				
-				$rs = mysql_query($sql,$cn);	
+  				$sql="update $this->nombre_tabla_admin_cursos set codigo='$codigo', nombre_curso = '$nuevo_nombre_curso' where grado='$grado' and nivel='$nivel' and nombre_curso='$nombre_curso'";
+				
+				$rs = mysql_query($sql,$cn);	*/
+				$sql="select * from $this->nombre_tabla_admin_cursos where grado='$grado' and nivel='$nivel' and nombre_curso='$nombre_curso'";
+			    $rs = mysql_query($sql,$cn);
+				
+				while($fila=mysql_fetch_object($rs)){
+					$consulta[]=$fila;
+				} 
+			
+        		if($consulta[0]){
+				
+					foreach ($consulta as $c):
+						//$cadena_respuesta.=$c->nombre_curso."{".$c->seccion."{".$c->id_profesor."{";
+						$codigo=$nivel.$grado.$nuevo_nombre_curso.$c->seccion;
+						$sql="update $this->nombre_tabla_admin_cursos set codigo='$codigo', nombre_curso ='$nuevo_nombre_curso' where grado='$grado' and nivel='$nivel' and nombre_curso='$nombre_curso'";
+				
+						$rs = mysql_query($sql,$cn);
+						
+					endforeach;
+				
+				} 
 				mysql_close($cn);
 				return "mysql_si";
         
