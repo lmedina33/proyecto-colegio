@@ -22,7 +22,7 @@ $("#catalogo #opciones_vertical #opcion_inicial").click(function(){
 	
 	$("#catalogo #contenido #cara_1").css("z-index","0");
 
-	$("#catalogo #contenido #cara_1").css("background-color","green");
+//	$("#catalogo #contenido #cara_1").css("background-color","green");
 	
 //	$("#catalogo #contenido #cara_1").removeClass("transicion800");
 	
@@ -127,7 +127,7 @@ $("#catalogo #opciones_vertical #opcion_primaria").click(function(){
 	
 	$("#catalogo #contenido #cara_2").css("left","0px");
 	
-	$("#catalogo #contenido #cara_2").css("background-color","blue");
+//	$("#catalogo #contenido #cara_2").css("background-color","blue");
 	
 	//$("#catalogo #contenido #cara_2").removeClass("transicion800");
 	
@@ -138,8 +138,8 @@ $("#catalogo #opciones_vertical #opcion_secundaria").click(function(){
 	
 	/************CON LA SIGUIENTE FUNCIÓN SE HACE UN STAND BY EN TODA LA PÁGINA PARA QUE NO SE PERMITA HACER NINGUNA OTRA FUNCIÓN***********/
 	
-	fun_stand_by_sistema(800);
-	
+//	fun_stand_by_sistema(800);
+
 	///////////////////////////////////////////////////////
 	
 	
@@ -246,7 +246,7 @@ $("#catalogo #opciones_vertical #opcion_secundaria").click(function(){
 	
 	$("#catalogo #contenido #cara_3").css("left","0px");
 								
-	$("#catalogo #contenido #cara_3").css("background-color","orange");
+//	$("#catalogo #contenido #cara_3").css("background-color","orange");
 
 
 });
@@ -332,7 +332,7 @@ $("#catalogo #opciones_vertical_izq #opcion_inicial").click(function(){
 		
 	$("#catalogo #contenido #cara_2").css("left","550px");
 	
-	$("#catalogo #contenido #cara_2").css("background-color","green");
+//	$("#catalogo #contenido #cara_2").css("background-color","green");
 	
 	
 	
@@ -374,7 +374,7 @@ $("#catalogo #opciones_vertical_izq #opcion_primaria").click(function(){
 								
 	$("#catalogo #contenido #cara_3").css("left","550px");
 							
-	$("#catalogo #contenido #cara_3").css("background-color","blue");
+//	$("#catalogo #contenido #cara_3").css("background-color","blue");
 	
 	
 	
@@ -419,7 +419,7 @@ $("#catalogo #opciones_vertical_izq #cerrar_catalogo").click(function(){
 	
 	$("#catalogo #contenido #cara_1").css("left","550px");
 	
-	$("#catalogo #contenido #cara_1").css("background-color","orange");
+//	$("#catalogo #contenido #cara_1").css("background-color","orange");
 	
 	
 	$("#catalogo #opciones_vertical_izq").removeClass("trans_opciones_vertical_izq_delay800");
