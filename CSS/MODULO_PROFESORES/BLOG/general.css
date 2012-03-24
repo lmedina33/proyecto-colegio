@@ -28,6 +28,7 @@ body{
  	float:left;
  	margin: 0px auto;
  	
+ 	
 }
 
 
@@ -193,37 +194,39 @@ body{
 }
 
 
-#cuerpo-pagina #contenido-pagina  #profesor{
-	
- 	width:577px; 		
- 	height:35px;
+#cuerpo-pagina #contenido-pagina  #elegir_alumno{
+ 	width:600px;
+ 		
+ 	height:60px;
 	float:left;
-	padding-left:25px;
-	padding-top:23px;
-	font-size:110%;
-	
-	font-style:italic;
-	
-	font-weight:bold;
 }
 
 
+#cuerpo-pagina #contenido-pagina  #elegir_alumno #slc_alumno{
+ 	width:250px;
+ 		
+ 	height:20px;
+ 	margin-left:20px;
+ 	margin-top:20px;
+	float:left;
+}
 
 
 #cuerpo-pagina #contenido-pagina  #blog{
-	
- 	width:600px; 		
+ 	width:600px;
+ 		
  	min-height:150px;
-	float:left;	
+	float:left;
+	
 	border-top:dashed 1px gray;
 	
-	font-family:cursive;
 }
 
 
 
 #cuerpo-pagina #contenido-pagina  #blog #titulo{
- 	width:300px; 		
+ 	width:300px;
+ 		
  	height:30px;
  	margin-left:20px;
  	margin-top:20px;
@@ -244,18 +247,18 @@ body{
  	margin-top:10px;
 	float:left;
 	
-	background:#FEB;
+	background:#DDD;
 	
  	border-radius:7px;	
 }
 
-#cuerpo-pagina #contenido-pagina  #blog .entrada_profesor{
+#cuerpo-pagina #contenido-pagina  #blog .entrada_alumno{
  	
-	background:#DDD;
+	background:#FEB;
 	
 }
 
-#cuerpo-pagina #contenido-pagina  #blog .entrada_profesor .btn_eliminar{
+#cuerpo-pagina #contenido-pagina  #blog .entrada_alumno .btn_eliminar{
  	
  	display:none;
 	

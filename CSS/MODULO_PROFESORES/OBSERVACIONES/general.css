@@ -28,6 +28,7 @@ body{
  	float:left;
  	margin: 0px auto;
  	
+ 	
 }
 
 
@@ -193,37 +194,41 @@ body{
 }
 
 
-#cuerpo-pagina #contenido-pagina  #profesor{
-	
- 	width:577px; 		
- 	height:35px;
+#cuerpo-pagina #contenido-pagina  #elegir_alumno{
+ 	width:600px;
+ 		
+ 	height:60px;
 	float:left;
-	padding-left:25px;
-	padding-top:23px;
-	font-size:110%;
 	
-	font-style:italic;
-	
-	font-weight:bold;
+}
+
+#cuerpo-pagina #contenido-pagina  #elegir_alumno #slc_alumno{
+ 	width:250px;
+ 		
+ 	height:20px;
+ 	margin-left:20px;
+ 	margin-top:20px;
+	float:left;
 }
 
 
 
 
-#cuerpo-pagina #contenido-pagina  #blog{
-	
- 	width:600px; 		
+
+#cuerpo-pagina #contenido-pagina  #observaciones{
+ 	width:600px;
+ 		
  	min-height:150px;
-	float:left;	
+	float:left;
+	
 	border-top:dashed 1px gray;
 	
-	font-family:cursive;
 }
 
 
-
-#cuerpo-pagina #contenido-pagina  #blog #titulo{
- 	width:300px; 		
+#cuerpo-pagina #contenido-pagina  #observaciones #titulo{
+ 	width:300px;
+ 		
  	height:30px;
  	margin-left:20px;
  	margin-top:20px;
@@ -236,7 +241,7 @@ body{
 
 
 
-#cuerpo-pagina #contenido-pagina  #blog .entrada{
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion{
  	width:580px;
  		
  	min-height:80px;
@@ -244,39 +249,27 @@ body{
  	margin-top:10px;
 	float:left;
 	
-	background:#FEB;
-	
- 	border-radius:7px;	
-}
-
-#cuerpo-pagina #contenido-pagina  #blog .entrada_profesor{
- 	
 	background:#DDD;
 	
-}
-
-#cuerpo-pagina #contenido-pagina  #blog .entrada_profesor .btn_eliminar{
- 	
- 	display:none;
-	
+ 	border-radius:7px;	
+ 	padding-bottom:15px;
 }
 
 
-
-#cuerpo-pagina #contenido-pagina  #blog .entrada .cabecera{
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cabecera{
  	width:550px;
  	height:30px;
  	padding-left:30px;
 	
 }
 
-#cuerpo-pagina #contenido-pagina  #blog .entrada .cabecera .persona_dice{
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cabecera .fecha_cabecera{
  	float:left;
  	font-weight:bold;
  	
  	padding-top:10px;
 }
-#cuerpo-pagina #contenido-pagina  #blog .entrada .cabecera .btn_eliminar{
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cabecera .btn_eliminar{
  	float:right;
 	cursor:pointer;
 	height:20px;
@@ -284,9 +277,7 @@ body{
 	backgrounD:black;
 }
 
-
-
-#cuerpo-pagina #contenido-pagina  #blog .entrada .cuerpo{
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cuerpo{
  	width:530px;
  	min-height:50px;
  	float:left;
@@ -295,40 +286,28 @@ body{
  	
 }
 
-#cuerpo-pagina #contenido-pagina  #blog .entrada .cuerpo table{
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cuerpo table{
  	width:530px; 	
  	
  	float:left;
  	text-align:left;
 }
-
-#cuerpo-pagina #contenido-pagina  #blog .entrada .cuerpo table td{
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cuerpo table td{
  	width:530px; 	
 }
 
 
 
-#cuerpo-pagina #contenido-pagina  #blog .entrada .pie{
- 	width:560px;
- 	height:20px;
- 	float:left;
- 	
- 	padding-right:20px;
- 	text-align:right;
- 	font-size:85%;
-}
-
-
-
-
-#cuerpo-pagina #contenido-pagina  #nueva_entrada{
+#cuerpo-pagina #contenido-pagina  #nueva_observacion{
  	width:600px;
  		
  	height:200px;
-
 	float:left;
 	
 }
+
+
+
 
 #cuerpo-pagina  #contenido-opciones{
  	width:600px;
@@ -377,14 +356,9 @@ body{
 
 
 
-#cuerpo-pagina  #contenido-opciones #opcion-notas{
+#cuerpo-pagina  #contenido-opciones #opcion-observaciones{
 
     margin-left:10px;
  	
 }
 
-#cuerpo-pagina  #contenido-opciones #opcion-observaciones{
-
-    margin-left:120px;
- 	
-}
