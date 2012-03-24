@@ -7,8 +7,6 @@ body{
 	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#FFFFFF), color-stop(.6,#C4EDFF),color-stop(.4,#C4EDFF));
 	background:-moz-linear-gradient(0% 100% 90deg,#FFFFFF, #FFFFFF, #C4EDFF 43%,#C4EDFF 59%,#FFFFFF 87%);*/
 	
-	overflow-x:hidden;
-	overflow-y:hidden;
 	
 }
 

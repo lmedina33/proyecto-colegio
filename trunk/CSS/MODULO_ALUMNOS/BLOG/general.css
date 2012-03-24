@@ -1,0 +1,280 @@
+body{
+	background:url("../../../IMAGENES/PORTAL/fondo.jpg")  center;
+	
+	overflow-y:scroll;
+}
+
+
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+
+#cabecera-pagina{
+ 	width:950px;
+ 	height:130px;
+ 	background:yellow;
+ 	margin: 0px auto;
+}
+
+
+#cabecera-pagina #logotipo{
+ 	width:700px;
+ 	height:130px;
+ 	background:green;
+ 	float:left;
+ 	margin: 0px auto;
+ 	
+ 	
+}
+
+
+
+#cuerpo-pagina{
+
+ 	width:950px;
+ 	min-height:570px;
+ 	position:relative;
+	margin-top:10px;
+	margin-left:155px;
+ 	float:left;
+ 	
+}
+
+
+
+#pie-pagina{
+ 	width:950px;
+ 	height:100px;
+ 	background:red;
+ 	position:relative;
+ 	margin: 0px auto;
+ 	margin-top:30px;
+}
+
+
+
+
+
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+
+
+
+#cuerpo-pagina #menu_vertical{
+ 	width:200px;
+ 	min-height:550px; 
+ 	float:left;
+ 	margin-left:40px;
+ 	
+}
+
+
+#cuerpo-pagina #menu_vertical #titulo_menu{
+	width:200px;
+ 	height:30px;
+ 	font-family: cursive;
+ 	font-size:140%;
+ 	font-weight:bold;
+ 	text-align:center;
+ 	padding-top:20px;
+}
+
+
+#cuerpo-pagina #menu_vertical .opcion{
+ 	width:200px;
+ 	height:35px;
+ 	margin-top:2px;
+  	position:relative;	
+  	
+	color:black;
+	cursor:pointer;
+ 	border-radius:6px;
+}
+
+
+
+#cuerpo-pagina #menu_vertical .opcion[title="Seleccionado"] {
+
+ 	font-family: cursive;
+	color:white;	
+ 	font-weight:bold;
+ 	
+ 	background-color:blue;
+}
+
+#cuerpo-pagina #menu_vertical .opcion .texto_pestana{
+ 	width:200px;
+ 	height:30px;
+ 	margin-top:7px;
+  	position:relative;	
+	float:left;
+	
+ 	font-size:110%;
+ 	text-align:center;
+}
+
+
+
+
+#cuerpo-pagina #menu_vertical .submenu{
+ 	width:180px;
+ 	min-height:1px;
+ 	margin-left:30px;
+ 	margin-top:2px;
+ 	background:white;
+ 
+ 	display:none;
+		
+}
+
+#cuerpo-pagina #menu_vertical .submenu .subopcion{
+ 	width:170px;
+ 	height:30px;
+ 	margin-top:2px;
+	margin-left:0px;
+ /*	background:url('../../../IMAGENES/ADMINISTRACION/background_subopcion.png') repeat-y;*/
+ 	background-position:0 0;
+	
+	font-weight:normal;
+}
+
+
+#cuerpo-pagina #menu_vertical .submenu .subopcion[title="Seleccionado"]{
+
+ /*	background:url('../../../IMAGENES/ADMINISTRACION/background_subopcion.png') repeat-y;*/
+ 	background-position:-200px 0;
+	margin-left:10px;
+	
+	font-weight:bold;
+}
+
+
+
+#cuerpo-pagina #menu_vertical .submenu .subopcion .texto_pestana{
+ 	width:170px;
+ 	text-align:center;
+ 	padding-top: 8px;
+}
+
+
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+
+
+#cuerpo-pagina #contenido-pagina{
+ 	width:600px;
+ 		
+ 	min-height:550px;
+	background:white;
+    	
+ 	float:left;
+ 	border-radius:10px 10px 10px 10px;
+ 	border:#00F solid 2px;
+ 	box-shadow:0px 0px 25px #000;
+ 	
+   	position:absolute;
+ 	z-index:0;
+ 	
+    top:60px;
+    left:250px;
+}
+
+
+#cuerpo-pagina #contenido-pagina  #profesor{
+ 	width:600px;
+ 		
+ 	height:100px;
+	background:blue;
+	float:left;
+}
+#cuerpo-pagina #contenido-pagina  #blog{
+ 	width:600px;
+ 		
+ 	min-height:700px;
+	background:red;
+	float:left;
+	
+}
+
+
+#cuerpo-pagina #contenido-pagina  #nueva_entrada{
+ 	width:600px;
+ 		
+ 	height:200px;
+	background:yellow;
+	float:left;
+	
+}
+
+#cuerpo-pagina  #contenido-opciones{
+ 	width:600px;
+ 		
+ 	height:60px;
+    margin-left:20px;
+   	position:relative;
+ 	float:left;
+}
+
+#cuerpo-pagina  #contenido-opciones .opcion{
+ 	width:100px;
+ 		
+ 	height:30px;
+	
+	background:#666;
+ 	float:left;
+ 	border:#00F solid 2px;
+ 	border-radius:10px 10px 0px 0px;
+ 	
+   	position:absolute;
+    margin-top:31px;
+ 	z-index:0;
+ 	
+ 	box-shadow:0px -5px 15px #333;
+ 	cursor:pointer;
+}
+
+
+#cuerpo-pagina  #contenido-opciones .opcion[title="Seleccionado"]{
+ 
+	background:white;    
+	margin-top:28px;
+ 	z-index:10;
+ 	
+}
+
+
+#cuerpo-pagina  #contenido-opciones  .opcion .texto_pestana{
+ 	width:100px;
+ 		
+ 	height:20px;
+ 	padding-top:7px;
+ 	text-align:center;
+}
+
+
+
+#cuerpo-pagina  #contenido-opciones #opcion-notas{
+
+    margin-left:10px;
+ 	
+}
+
+#cuerpo-pagina  #contenido-opciones #opcion-observaciones{
+
+    margin-left:120px;
+ 	
+}
