@@ -1,0 +1,56 @@
+
+/*******************Transiciones*****************/
+/*menu acordeon*/
+
+#menu_vertical .opcion {
+	
+	-moz-transition-property: margin-left,background-color,font-weight;
+	-webkit-transition-property: margin-left,background-color,font-weight;
+	-o-transition-property: margin-left,background-color,font-weight;
+	transition-property: margin-left,background-color,font-weight;
+	
+	
+	-moz-transition-timing-function: linear,linear,linear;
+	-webkit-transition-timing-function:  linear,linear,linear;
+	-o-transition-timing-function: linear,linear,linear;
+	transition-timing-function:  linear,linear,linear;
+	
+	
+	-moz-transition-duration: 300ms,300ms,300ms;
+	-webkit-transition-duration: 300ms,300ms,300ms;
+	-o-transition-duration: 300ms,300ms,300ms;
+	transition-duration: 300ms,300ms,300ms;
+	
+	-moz-transition-delay: 0ms,0ms,0ms;
+	-webkit-transition-delay: 0ms,0ms,0ms;
+	-o-transition-delay: 0ms,0ms,0ms;
+	transition-delay: 0ms,0ms,0ms;
+}
+
+
+
+#cuerpo-pagina  #contenido-opciones .opcion {
+	
+	-moz-transition-property: margin-top;
+	-webkit-transition-property: margin-top;
+	-o-transition-property: margin-top;
+	transition-property: margin-top;
+	
+	
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function:  linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function:  linear;
+	
+	
+	-moz-transition-duration: 30ms;
+	-webkit-transition-duration: 30ms;
+	-o-transition-duration: 30ms;
+	transition-duration: 30ms;
+	
+	-moz-transition-delay: 0ms;
+	-webkit-transition-delay: 0ms;
+	-o-transition-delay: 0ms;
+	transition-delay: 0ms;
+}
+

@@ -89,6 +89,12 @@ body{
 	width: 100%;
 }
 
+.linea{
+	display:block;
+	width: 100%;
+	float:left;
+	min-height:20px;
+}
 
 
 /*
