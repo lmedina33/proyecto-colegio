@@ -1,0 +1,63 @@
+body{
+	background:url("../../IMAGENES/PORTAL/fondo.jpg")  center;
+	
+}
+
+
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+
+#cabecera-pagina{
+ 	width:950px;
+ 	height:130px;
+ 	background:yellow;
+ 	margin: 0px auto;
+}
+
+
+#cabecera-pagina #logotipo{
+ 	width:700px;
+ 	height:130px;
+ 	background:green;
+ 	float:left;
+ 	margin: 0px auto;
+}
+
+
+
+#cuerpo-pagina{
+	background:white;
+ 	width:950px;
+ 	height:600px;
+ 	position:relative;
+ 	margin: 0px auto;
+ 	margin-top:30px;
+}
+
+
+#pie-pagina{
+ 	width:950px;
+ 	height:100px;
+ 	background:red;
+ 	position:relative;
+ 	margin: 0px auto;
+ 	margin-top:0px;
+}
+
+
+/********************CUERPO***********/
+
+#cuerpo-pagina .boton_area{
+	background:blue;
+ 	width:250px;
+ 	height:250px;
+ 	margin-top:100px;
+ 	margin-left:150px;
+ 	float:left;
+}
+

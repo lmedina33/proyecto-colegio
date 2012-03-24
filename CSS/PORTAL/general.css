@@ -1,6 +1,8 @@
 body{
 	background:url("../../IMAGENES/PORTAL/fondo.jpg")  center;
 	
+	overflow-x:hidden;
+	overflow-y:hidden;
 }
 
 
