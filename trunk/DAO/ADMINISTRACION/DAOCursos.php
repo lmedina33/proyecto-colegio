@@ -7,10 +7,10 @@ require_once("../CONEXION/Conexion.php");
 	//-- 
 
 	//CREATE TABLE `admin_cursos` (
-	//  `id` int(11) NOT NULL auto_increment,
+	//  `codigo` varchar(20) NOT NULL,
 	//  `grado` int(2) default NULL,
 	//  `nivel` varchar(1) default NULL,
-	//  `nombre_curso` varchar(30) default NULL,
+	//  `nombre_curso` varchar(15) default NULL,
 	//  `seccion` varchar(1) default NULL,
 	//	  `id_profesor` varchar(10) default NULL,
 	//  PRIMARY KEY  (`id`)
