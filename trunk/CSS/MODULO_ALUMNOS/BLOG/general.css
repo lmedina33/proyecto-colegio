@@ -216,7 +216,8 @@ body{
  	min-height:150px;
 	float:left;	
 	border-top:dashed 1px gray;
-	
+	border-bottom:dashed 1px gray;
+	padding-bottom:20px;
 	font-family:cursive;
 }
 
@@ -324,10 +325,39 @@ body{
 #cuerpo-pagina #contenido-pagina  #nueva_entrada{
  	width:600px;
  		
- 	height:200px;
+ 	height:150px;
 
 	float:left;
-	
+	padding-top:50px;
+	}
+
+
+
+#cuerpo-pagina #contenido-pagina  #nueva_entrada .texto{
+ 	width:170px;
+ 		
+ 	height:70px;
+	margin-left:30px;
+	float:left;
+	text-align:right;
+	padding-top:30px;
+}
+
+
+#cuerpo-pagina #contenido-pagina  #nueva_entrada .caja{
+ 	width:400px;
+ 		
+ 	height:100px;
+
+	float:left;
+}
+
+#cuerpo-pagina #contenido-pagina  #nueva_entrada .boton{
+ 	width:100px;
+ 		
+ 	height:20px;
+	margin-top:10px;
+	margin-left:230px;
 }
 
 #cuerpo-pagina  #contenido-opciones{

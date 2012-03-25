@@ -10,6 +10,8 @@
 	<script language="javascript" src="../../JS/FUNCIONES/funciones_interfaz_grafica.js"></script>
 	<script language="javascript" src="../../JS/FUNCIONES/funciones_variables_globales.js"></script>
 	<script language="javascript" src="../../JS/FUNCIONES/funciones_info_operacionales.js"></script>
+	<script language="javascript" src="../../JS/FUNCIONES/funciones_info_verificacion.js"></script>
+	<script language="javascript" src="../../JS/FUNCIONES/funciones_popup_aviso.js"></script>
 	<script language="javascript" src="../../JS/FUNCIONES/funciones_info_fecha.js"></script>
 
 	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/BLOG/funciones_click.js"></script>
@@ -48,17 +50,14 @@
 
 
 	<div id="menu_vertical">
-		
-			
-			
-									
+											
 	</div>
 		
 			<div id="contenido-opciones">
 			
 			</div>
 		<div id="contenido-pagina">
-			
+			<input type="hidden" id="codigo_curso_elegido" value=""/>
 			<div id="profesor">
 				
 			</div>
@@ -73,7 +72,17 @@
 			</div>
 			
 			<div id="nueva_entrada">
+					
+				<div class="texto">
+					Escriba una nueva entrada para el blog:
+				</div>
+				<div class="caja">
+					<textarea rows="5" cols="40" id="txt_nueva_entrada"></textarea>
+				</div>
 				
+				<div class="boton">
+					<input id="btn_aceptar" value="Aceptar" type="button"/>
+				</div>
 			</div>
 		</div>
 </div>

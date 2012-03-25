@@ -78,3 +78,45 @@ function fun_cargar_blog(id_curso){  //esta función es para hacer alguna llamada
 	
 }
 
+
+
+function fun_insertar_nueva_entrada(id_curso,nueva_entrada){  //esta función es para hacer alguna llamada con ajax mediante post
+
+	
+	
+	$.ajax({
+        url: "../../POST/MODULO_ALUMNOS/AlumnoInsertaBlog.php",
+        type: "POST",
+        data:{codigo_curso:id_curso,nueva_entrada:nueva_entrada},
+        async:true,
+        beforeSend: function(objeto){
+        	
+        	fun_mostrar_cargando();
+        	
+        	/*
+        	$("#div_back_cargando").fadeIn(GLOBAL_VEL_FADE);
+			$("#cargando").fadeIn(GLOBAL_VEL_FADE);*/
+			
+        },
+        
+	success: function(data){
+
+			/*
+		$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
+		$("#cargando").fadeOut(GLOBAL_VEL_FADE);*/
+			fun_quitar_cargando();
+		
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+					
+			fun_cargar_blog(id_curso);
+		$("#cuerpo-pagina #contenido-pagina #nueva_entrada #txt_nueva_entrada").val("");
+		}
+	}
+	        
+			
+	});	
+	
+}
+
