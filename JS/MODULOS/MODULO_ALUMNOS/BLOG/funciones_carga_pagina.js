@@ -19,16 +19,16 @@ Aca ponemos los datos que queremos sean actualizados cada cierto tiempo.
 
 $(document).ready(function(){
  
-
+fun_inicializa_cursos();
 	//Aquí hacemos las llamadas de las funciones que queremos que se ejecuten una vez cargada la página
 
 });
 
-function fun_ini_nombre(){
+function fun_inicializa_cursos(){
 	 
 	
 	$.ajax({
-        url: "POST/algun archivo.php",
+        url: "../../POST/MODULO_ALUMNOS/AlumnoConsultaCursos.php",
         type: "POST",
         data:{},
         async:true,
@@ -38,24 +38,37 @@ function fun_ini_nombre(){
 			
         },
         
-	success: function(data_nombre){
+	success: function(data_cursos){
 			
-		
-		if(data_nombre=="mysql_no"){
+	
+		if(data_cursos=="mysql_no"){
 			FMSG_ERROR_CONEXION();
 		}else{
 			
-			if(data_nombre=="no_data"){
-				//accion
-			}else{
-				//accion
+			if(data_cursos!="no data"){
+				
+				var valores=data_cursos.split("{");
+				var num_campos=5;
+				
+				var html_cursos='<div id="titulo_menu">Mis Cursos</div>';
+				
+				GL_ARRAY_CURSOS=new Array();
+				GL_CONT_CURSOS=0;
+				for (var i=0;valores[i];i+=num_campos){
+					
+					GL_ARRAY_CURSOS[GL_CONT_CURSOS]=new Array(valores[i],valores[i+1],valores[i+2],valores[i+3],valores[i+4]);
+					GL_CONT_CURSOS++;
+					
+					html_cursos+='<div id="'+valores[i]+'" class="opcion" onclick="click_opcion_curso('+"'"+valores[i]+"'"+')"><div class="texto_pestana" >'+valores[i+1]+'</div></div>';
+										
+				}
+				
+				$("#cuerpo-pagina #menu_vertical").html(html_cursos);
+				
+				click_opcion_curso(valores[0]);
+				
 			}
 		
-		
-			if(GLOBAL_PAGINA_CARGADA==GLOBAL_CARGAS){
-				$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
-				$("#cargando").fadeOut(GLOBAL_VEL_FADE);
-			}
 			
 		}
 }

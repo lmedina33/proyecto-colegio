@@ -4,7 +4,7 @@ require_once("../../DAO/MODULO_PROFESORES/DAOGestionBlogProfesor.php");
 
 $gestion_profesor=new DAOGestionBlogProfesor();
 
-$respuesta=$gestion_profesor->profesor_registra_entrada("06200198","222222222","esteeselparrafoProfesor555555555555555555555555555555555555555");
+$respuesta=$gestion_profesor->profesor_registra_entrada("P4historiaA","CodAlumno4","Mi respuesta para el alumno.");
 
 
 echo $respuesta;

@@ -307,7 +307,7 @@ function fun_cargar_anio_fecha_custom(arg_array_fechas,arg_div_contenedor,arg_di
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-function fun_cargar_mes_fecha_custom(arg_array_fechas,arg_div_contenedor,,arg_div_mesarg_div_anio){
+function fun_cargar_mes_fecha_custom(arg_array_fechas,arg_div_contenedor,arg_div_mesarg_div_anio){
 	
 	var select_html="";
 	var array_meses=new Array();

@@ -111,22 +111,24 @@ function fun_stand_by_sistema(tiempo_microsegundos){
 
 
 
-function fun_mostrar_popup_cargando(){
+
+function fun_mostrar_cargando(){
 	
-	$("#div_back_cargando").fadeIn(GLOBAL_VEL_FADE);
-	$("#cargando").fadeIn(GLOBAL_VEL_FADE);
+	$("#cargando").fadeIn(300);
+	$("#div_back3").fadeIn(300);
+	
 	
 }
 
 
 
-function fun_ocultar_popup_cargando(){
+function fun_quitar_cargando(){
 	
-	$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
-	$("#cargando").fadeOut(GLOBAL_VEL_FADE);
+	$("#cargando").fadeOut(300);
+	$("#div_back3").fadeOut(300);
+	
 	
 }
-	
 	
 function estado_vencimiento(div){
 /*

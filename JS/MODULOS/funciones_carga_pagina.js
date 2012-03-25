@@ -45,7 +45,7 @@ function fun_ini_nombre(){
 			FMSG_ERROR_CONEXION();
 		}else{
 			
-			if(data_nombre=="no_data"){
+			if(data_nombre=="no data"){
 				//accion
 			}else{
 				//accion
