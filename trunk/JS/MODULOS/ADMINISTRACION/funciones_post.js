@@ -29,7 +29,7 @@ function fun_post_nombre(/*arg_1,arg_2*/){  //esta función es para hacer alguna 
 			FMSG_ERROR_CONEXION();
 		}else{
 			
-			if(data_nombre=="no_data"){
+			if(data_nombre=="no data"){
 				//accion
 			}else{
 				//accion

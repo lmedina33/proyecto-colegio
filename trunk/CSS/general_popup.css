@@ -66,8 +66,11 @@
 
 #cargando{
 	
-	width:20%;
-	height:200px;
+	left:490px;
+	top:200px;
+	width:300px;
+	height:110px;
+	z-index: 210;
 }
 #cargando #titulo_popup{
 	width:100%;

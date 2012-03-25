@@ -1,15 +1,44 @@
 
 <div id="cargando" class="pop_up_general">
 
-<div id="titulo_popup" class="seccion_popup">
+<div id="titulo" class="seccion_popup">
 <table>
 <tr><td>Espere un momento por favor...</td></tr>
 </table>
 
 </div>
 
-<div id="cuerpo_popup" class="seccion_popup">
-<table class="mtop40" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<div id="cuerpo" class="seccion_popup">
+<table style="margin-top:10px" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+
+	<tr>
+	<td width="37%"></td>
+	<td width="30%" class="alinear_centro">
+	<div id="pantalla_cargando"></div>
+	</td>
+	<td width="30%"></td>
+	</tr>
+	
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+
+<div id="cargando_inicial" class="pop_up_general alavista">
+
+<div id="titulo" class="seccion_popup">
+<table>
+<tr><td>Espere un momento por favor...</td></tr>
+</table>
+
+</div>
+
+<div id="cuerpo" class="seccion_popup">
+<table style="margin-top:10px" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
 <tbody>
 
 	<tr>

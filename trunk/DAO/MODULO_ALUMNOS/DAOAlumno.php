@@ -27,7 +27,7 @@ class DAOAlumno extends Conexion{
         if($cn!="no_conexion"){
         	
         	
-	     	$sql=" select c.nombre_curso,p.dni,p.nombres,p.apellido_paterno,p.apellido_materno  from portal_alumno a, admin_cursos c,portal_profesor p where a.codigo='$codigo_alumno' and c.nivel=a.nivel and c.grado = a.grado and c.seccion = a.seccion and c.id_profesor=p.dni";
+	     	$sql="select c.codigo,c.nombre_curso,p.nombres,p.apellido_paterno,p.apellido_materno  from portal_alumno a, admin_cursos c,portal_profesor p where a.codigo='$codigo_alumno' and c.nivel=a.nivel and c.grado = a.grado and c.seccion = a.seccion and c.id_profesor=p.dni";
 			
 	        $rs = mysql_query($sql,$cn);
         
@@ -37,44 +37,11 @@ class DAOAlumno extends Conexion{
 			}    
 			
 			$respuesta="";
-			if($entrada){
+			if($cursos){
 					
-				foreach($entrada as $q):
+				foreach($cursos as $q):
 					
-					$respuesta.=$q->nombre_curso."{".$q->entrada."{".$q->fecha."{".$q->hora."{";
-					
-				endforeach;	
-				
-			}else{
-				$respuesta="no data";
-			}
-			
-			mysql_close($cn);
-
-			return  "mysql_si";
-		}else{
-		return "mysql_no";
-		}
-	}
-
-	function alumno_consulta_entrada($codigo_profesor,$codigo_alumno){
-		$cn = $this->conexion();
-        
-        if($cn!="no_conexion"){
-        	
-        	$sql="select * from $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno'";	
-			$rs = mysql_query($sql,$cn);
-			 
-			while($fila=mysql_fetch_object($rs)){
-				$entrada[]=$fila;
-			}        	
-			
-			$respuesta="";
-			if($entrada){
-					
-				foreach($entrada as $q):
-					
-					$respuesta.=$q->persona_responde."{".$q->entrada."{".$q->fecha."{".$q->hora."{";
+					$respuesta.=$q->codigo."{".$q->nombre_curso."{".$q->nombres."{".$q->apellido_paterno."{".$q->apellido_materno."{";
 					
 				endforeach;	
 				
@@ -84,42 +51,7 @@ class DAOAlumno extends Conexion{
 			
 			mysql_close($cn);
 
-			return $respuesta;
-			
-		}else{
-		return "mysql_no";
-		}
-	}
-	
-	function alumno_consulta_entrada_por_fecha($codigo_profesor,$codigo_alumno,$fecha){
-		$cn = $this->conexion();
-        
-        if($cn!="no_conexion"){
-        	
-          $sql="select * from $this->nombre_tabla_blog where codigo_profesor='$codigo_profesor' and codigo_alumno='$codigo_alumno' and fecha='$fecha'";	
-			$rs = mysql_query($sql,$cn);
-			 
-			while($fila=mysql_fetch_object($rs)){
-				$entrada[]=$fila;
-			}        	
-			
-			$respuesta="";
-			if($entrada){
-					
-				foreach($entrada as $q):
-					
-					$respuesta.=$q->persona_responde."{".$q->entrada."{".$q->hora."{";
-					
-				endforeach;	
-				
-			}else{
-				$respuesta="no data";
-			}
-			
-			mysql_close($cn);
-
-			return $respuesta;
-			
+			return  $respuesta;
 		}else{
 		return "mysql_no";
 		}

@@ -138,7 +138,7 @@ function fun_consultar_quienes_somos(arg_div_contenedor){  //esta función es par
 			FMSG_ERROR_CONEXION();
 		}else{
 						
-			if(data!="no_data"){
+			if(data!="no data"){
 				
 				var valores=data.split("{");
 				var parrafos="";
@@ -191,7 +191,7 @@ function fun_consultar_mision_vision(arg_div_contenedor){  //esta función es par
 			FMSG_ERROR_CONEXION();
 		}else{
 						
-			if(data!="no_data"){
+			if(data!="no data"){
 				
 				var valores=data.split("{");
 				var parrafos="";
