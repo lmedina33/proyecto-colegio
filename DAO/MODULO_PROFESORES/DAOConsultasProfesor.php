@@ -6,6 +6,7 @@ class DAOConsultasProfesor extends Conexion{
 	
 	var	$nombre_tabla_admin_cursos="admin_cursos";
 	var	$nombre_tabla_alumnos="portal_alumno";
+	var	$nombre_tabla_blog="blog";
 	//var $nombre_tabla_profesor="portal_profesor";
 	
 	//-- 
@@ -90,13 +91,57 @@ class DAOConsultasProfesor extends Conexion{
 					}		
 					if($consulta2[0]){
 						foreach ($consulta2 as $c2):
-							$cadena_respuesta.=$c2->nombres."{".$c2->apellido_paterno."{".$c2->apellido_materno."{";
+							$cadena_respuesta.=$c2->codigo."{".$c2->nombres."{".$c2->apellido_paterno."{".$c2->apellido_materno."{";
 						endforeach;
 						}
 					$fila2=null;
 					$consulta2=null;
 					$c2=null;
 				endforeach;
+			}
+			
+			return $cadena_respuesta;
+			
+			   
+		}else{
+		return "mysql_no";
+		}
+	}
+	
+	
+	function consultar_alumnos_curso_blog($codigo){
+		  $cn = $this->conexion();
+        //$cadena_respuesta="";
+        if($cn!="no_conexion"){
+        	$sql="select codigo_alumno from $this->nombre_tabla_blog where codigo_curso='$codigo' group by codigo_alumno";
+			    $rs = mysql_query($sql,$cn);
+				 
+			while($fila=mysql_fetch_object($rs)){
+				$consulta[]=$fila;
+			}
+			
+        	if($consulta[0]){
+				
+				foreach ($consulta as $c):
+					//$cadena_respuesta.=$c->nombres."{".$c->apellido_paterno."{".$c->apellido_materno."{";
+					$codigo_alumno=$c->codigo_alumno;
+					
+					$sql="select * from $this->nombre_tabla_alumnos where codigo='$codigo_alumno' ";
+				    $rs = mysql_query($sql,$cn);
+					while($fila2=mysql_fetch_object($rs)){
+						$consulta2[]=$fila2;
+					}		
+					if($consulta2[0]){
+						foreach ($consulta2 as $c2):
+							$cadena_respuesta.=$c2->codigo."{".$c2->nombres."{".$c2->apellido_paterno."{".$c2->apellido_materno."{";
+						endforeach;
+						}
+					$fila2=null;
+					$consulta2=null;
+					$c2=null;
+				endforeach;
+			}else{
+				$cadena_respuesta="no data";
 			}
 			
 			return $cadena_respuesta;
