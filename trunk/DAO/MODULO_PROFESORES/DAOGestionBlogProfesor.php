@@ -27,6 +27,9 @@ class DAOGestionBlogProfesor extends Conexion{
         
         if($cn!="no_conexion"){
         	
+        	$sql="update $this->nombre_tabla_blog set eliminable=0 where codigo_curso='$codigo_curso' and codigo_alumno='$codigo_alumno'";
+        	
+        	$rs = mysql_query($sql,$cn);
         	
 	        $sql="insert into $this->nombre_tabla_blog (codigo_curso,codigo_alumno,entrada,persona_responde,fecha,hora) values ('$codigo_curso','$codigo_alumno','$entrada','P',curdate(),curtime())";
 	        $rs = mysql_query($sql,$cn);
