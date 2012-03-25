@@ -37,14 +37,22 @@ function fun_cargar_blog(id_curso){  //esta función es para hacer alguna llamada
 			if(data!="no data"){
 				
 				var valores=data.split("{");
-				var num_campos=4;
+				var num_campos=5;
 				
 				var html_blog='<div id="titulo">Blog</div>';
 								
 				for(var i=0;valores[i];i+=num_campos){
 					
 					if(valores[i]=="A"){
-						html_entrada='<div class="entrada "><div class="cabecera"><div class="persona_dice">Usted dijo:</div><div class="btn_eliminar"></div></div><div class="cuerpo"><table ><tr><td width="100%">'+valores[i+1]+'</tr></table></div><div class="pie">'+fun_oracion_fecha(fun_fecha_invierte_formato(valores[i+2]))+", "+valores[i+3]+'</div></div>';
+						
+						if(valores[i+4]=="1"){ //es eliminable
+							html_entrada='<div class="entrada "><div class="cabecera"><div class="persona_dice">Usted dijo:</div><div class="btn_eliminar"></div></div><div class="cuerpo"><table ><tr><td width="100%">'+valores[i+1]+'</tr></table></div><div class="pie">'+fun_oracion_fecha(fun_fecha_invierte_formato(valores[i+2]))+", "+valores[i+3]+'</div></div>';
+						}else{
+							html_entrada='<div class="entrada "><div class="cabecera"><div class="persona_dice">Usted dijo:</div></div><div class="cuerpo"><table ><tr><td width="100%">'+valores[i+1]+'</tr></table></div><div class="pie">'+fun_oracion_fecha(fun_fecha_invierte_formato(valores[i+2]))+", "+valores[i+3]+'</div></div>';
+						}
+						
+						
+						
 					}else{
 						html_entrada='<div class="entrada entrada_profesor"><div class="cabecera "><div class="persona_dice">El profesor respondi&oacute;:</div><div class="btn_eliminar"></div></div><div class="cuerpo"><table ><tr><td width="100%">'+valores[i+1]+'</tr></table></div><div class="pie">'+fun_oracion_fecha(fun_fecha_invierte_formato(valores[i+2]))+", "+valores[i+3]+'</div></div>';
 					}
