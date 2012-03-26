@@ -50,7 +50,7 @@
 				<div id="submenu-pag_web"  class="submenu">
 				
 					
-					<div id="quienes_somos-pag_web" class="subopcion" title="Seleccionado">
+					<div id="quienes_somos-pag_web" class="subopcion" title="Click para seleccionar">
 						<div class="texto_pestana">¿Quienes somos?</div>						
 					</div>
 					

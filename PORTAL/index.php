@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
 	<meta name="author" content="Dante Vidal Tueros, Analista Desarrollador"/>
 
 
@@ -18,12 +18,13 @@
 	<script language="javascript" src="../JS/MODULOS/PORTAL/funciones_carga_pagina.js"></script>
 	
 	
-	<link rel="stylesheet" type="text/css" href="../CSS/general_tabla.css" media="screen"> 
-	<link rel="stylesheet" type="text/css" href="../CSS/estilo_base.css" media="screen">  
-	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/general.css" media="screen"> 
-	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/galeria_fotos.css" media="screen"> 
-	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/cara1.css" media="screen"> 
-	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/transiciones_efectos.css" media="screen"> 
+	<link rel="stylesheet" type="text/css" href="../CSS/general_tabla.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/estilo_base.css" media="screen"/>  
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/general.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/galeria_fotos.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/cara1.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/primaria.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/transiciones_efectos.css" media="screen"/> 
 	<title>Untitled 3</title>
 </head>
 
@@ -87,28 +88,28 @@
 			<div id="contenido">
 			
 				<div id="cara_4">
-					<div id="contenido-secundaria-2" class="area area-secundaria oculto">
+					<div id="contenido-secundaria-2" class="area area-secundaria alavista">
 						<?php include("SECUNDARIA/contenido_derecha.php"); ?>
 					</div>
 				</div>
 				
 				<div id="cara_3">
 						
-					<div id="contenido-primaria-2" class="area area-primaria oculto">
+					<div id="contenido-primaria-2" class="area area-primaria alavista">
 						<?php include("PRIMARIA/contenido_derecha.php"); ?>
 					</div>
 					
-					<div id="contenido-secundaria-1" class="area area-secundaria oculto">
+					<div id="contenido-secundaria-1" class="area area-secundaria alavista">
 						<?php include("SECUNDARIA/contenido_izquierda.php"); ?>
 					</div>
 				</div>
 				<div id="cara_2">
 					
-					<div id="contenido-inicial-2" class="area area-inicial oculto">
+					<div id="contenido-inicial-2" class="area area-inicial alavista">
 						<?php include("INICIAL/contenido_derecha.php"); ?>
 					</div>
 					
-					<div id="contenido-primaria-1" class="area area-primaria oculto">
+					<div id="contenido-primaria-1" class="area area-primaria alavista">
 						<?php include("PRIMARIA/contenido_izquierda.php"); ?>
 					</div>
 				</div>
@@ -118,7 +119,7 @@
 						<?php include("CARA_1/contenido.php"); ?>
 					</div>
 					
-					<div id="contenido-inicial-1" class="area area-inicial oculto">
+					<div id="contenido-inicial-1" class="area area-inicial alavista">
 						<?php include("INICIAL/contenido_izquierda.php"); ?>
 					</div>
 				</div>

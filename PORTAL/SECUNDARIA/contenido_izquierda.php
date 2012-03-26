@@ -3,7 +3,7 @@
 	<div id="contenido-cuerpo">
 		
 		<div id="metodologia">
-				bla bla bla metodologia
+				bla bla bla metodologia SECUNDARIA
 		</div>
 	</div>
 

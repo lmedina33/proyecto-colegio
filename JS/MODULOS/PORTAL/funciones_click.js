@@ -45,8 +45,8 @@ $("#catalogo #opciones_vertical #opcion_inicial").click(function(){
 	
 	
 	
-	$(".area").hide();
-	$(".area-inicial").fadeIn(GLOBAL_VEL_FADE);
+	$("#contenido-cara_1").fadeOut(GLOBAL_VEL_FADE);
+	//$(".area-inicial").fadeIn(GLOBAL_VEL_FADE);
 });
 
 
@@ -57,8 +57,8 @@ $("#catalogo #opciones_vertical #opcion_primaria").click(function(){
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
 	
-	$(".area").hide();
-	$(".area-primaria").fadeIn(GLOBAL_VEL_FADE);
+	$("#contenido #contenido-inicial-2").fadeOut(GLOBAL_VEL_FADE);
+	
 });
 
 
@@ -67,8 +67,8 @@ $("#catalogo #opciones_vertical #opcion_secundaria").click(function(){
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
-	$(".area").hide();
-	$(".area-secundaria").fadeIn(GLOBAL_VEL_FADE);
+	
+	$("#contenido #contenido-primaria-2").fadeOut(GLOBAL_VEL_FADE);
 });
 
 
@@ -77,8 +77,8 @@ $("#catalogo #opciones_vertical_izq #opcion_inicial").click(function(){
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
-	$(".area").hide();
-	$(".area-inicial").fadeIn(GLOBAL_VEL_FADE);
+	
+	$("#contenido #contenido-inicial-2").fadeIn(GLOBAL_VEL_FADE);
 });
 
 
@@ -88,8 +88,8 @@ $("#catalogo #opciones_vertical_izq #opcion_primaria").click(function(){
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
-	$(".area").hide();
-	$(".area-primaria").fadeIn(GLOBAL_VEL_FADE);
+
+	$("#contenido #contenido-primaria-2").fadeIn(GLOBAL_VEL_FADE);
 	
 });
 
@@ -98,8 +98,12 @@ $("#catalogo #opciones_vertical_izq #cerrar_catalogo").click(function(){
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
-	$(".area").hide();
-	$(".area-principal").delay(500).fadeIn(GLOBAL_VEL_FADE);
+	
+	
+	
+	$("#contenido-cara_1").delay(500).fadeIn(GLOBAL_VEL_FADE);
+/*	$(".area").hide();
+	$(".area-principal").delay(500).fadeIn(GLOBAL_VEL_FADE);*/
 });
 
 

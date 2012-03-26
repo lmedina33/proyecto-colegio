@@ -1,0 +1,57 @@
+
+/************************CARA1***********************/
+/************************CARA1***********************/
+/************************CARA1***********************/
+/************************CARA1***********************/
+/************************CARA1***********************/
+/************************CARA1***********************/
+
+
+#catalogo #contenido #contenido-inicial-1 #contenido-metodologia-inicial  #metodologia{
+	width:360px;
+ 	height:110px;
+ 	color:white;
+ 	margin-top:430px;
+ 	margin-left:20px;
+}
+
+
+#catalogo #contenido #contenido-inicial-2 .contenido-inicial  #contenido-titulo{
+	width:250px;
+ 	height:30px;
+ 	color:black;
+ 	font-size:160%;
+ 	font-weight:bold;
+ 	font-family:cursive;
+ 	
+ 	margin-top:55px;
+ 	margin-left:25px;
+}
+
+
+#catalogo #contenido #contenido-inicial-2 #contenido-actividades-inicial  #actividades{
+	width:500px;
+ 	height:250px;
+ 	color:black;
+ 	font-size:110%;
+ 	margin-top:20px;
+ 	margin-left:25px;
+}
+
+
+
+
+#catalogo #contenido #contenido-inicial-2 #contenido-admisiones-inicial  #admisiones{
+	width:500px;
+ 	height:250px;
+ 	color:black;
+ 	font-size:110%;
+ 	margin-top:20px;
+ 	margin-left:25px;
+}
+
+
+
+#catalogo #contenido #contenido-inicial-2  ul li{
+	list-style-type: square;
+}
