@@ -183,7 +183,7 @@ body{
 	
 	width:30px;
  	height:550px;
- 	background:#4F4;
+ 	background:url('../../IMAGENES/PORTAL/CATALOGO/pestana_inicial.png');
  	float:left;
 }
 
@@ -191,7 +191,7 @@ body{
 	
 	width:30px;
  	height:550px;
- 	background:#44F;
+ 	background:url('../../IMAGENES/PORTAL/CATALOGO/pestana_primaria.png');
  	float:left;
  	
 }
@@ -200,7 +200,7 @@ body{
 	
 	width:30px;
  	height:550px;
- 	background:#FAA;
+ 	background:url('../../IMAGENES/PORTAL/CATALOGO/pestana_secundaria.png');
  	float:left;
  	
 }
@@ -220,7 +220,7 @@ body{
 	
 	width:30px;
  	height:550px;
- 	background:#4F4;
+ 	background:url('../../IMAGENES/PORTAL/CATALOGO/pestana_inicial.png');
  	
  	
  	left:60px;
@@ -231,7 +231,7 @@ body{
 	
 	width:30px;
  	height:550px;
- 	background:#44F;
+ 	background:url('../../IMAGENES/PORTAL/CATALOGO/pestana_primaria.png');
  	float:right;
  	left:90px;
 
@@ -309,13 +309,13 @@ body{
 #catalogo #contenido-inicial-1{
 	width:550px;
 	height:550px;
-/*	background:yellow;*/
+ 	background:url('../../IMAGENES/PORTAL/CATALOGO/inicial_izq.png');
 }
 
 #catalogo #contenido-inicial-2{
 	width:550px;
 	height:550px;
-/*	background:white;*/
+ 	background:url('../../IMAGENES/PORTAL/CATALOGO/inicial_der.png');
 }
 
 
@@ -329,13 +329,13 @@ body{
 #catalogo #contenido-primaria-1{
 	width:550px;
 	height:550px;
-	/**/
+	background:url('../../IMAGENES/PORTAL/CATALOGO/secundaria_izq.png');
 }
 
 #catalogo #contenido-primaria-2{
 	width:550px;
 	height:550px;
-	background:url('../../IMAGENES/PORTAL/CATALOGO/primaria2.png');
+	background:url('../../IMAGENES/PORTAL/CATALOGO/secundaria_der.png');
 }
 
 
@@ -351,13 +351,13 @@ body{
 #catalogo #contenido-secundaria-1{
 	width:550px;
 	height:550px;
-	background:url('../../IMAGENES/PORTAL/CATALOGO/secundaria1.png');
+	background:url('../../IMAGENES/PORTAL/CATALOGO/secundaria_izq.png');
 }
 
 #catalogo #contenido-secundaria-2{
 	width:550px;
 	height:550px;
-	/*background:white;*/
+	background:url('../../IMAGENES/PORTAL/CATALOGO/secundaria_der.png');
 }
 
 
@@ -367,5 +367,51 @@ body{
 	float:left;
 }
 
+
+/***********************Estilos para dar efecto de transición en el catálogo con las imagenes************/
+
+#catalogo #contenido .area{
+	position:absolute;
+	width:550px;
+	height:550px;	
+	
+ 	box-shadow:0px 0px 25px #111;
+}
+
+/******PARA LA CARA 1*****/
+
+#catalogo #contenido #contenido-cara_1{  /*Recordando que el z-index más alto es el de cara 1 al principio, llegando hasta 30*/
+	z-index:32;
+}
+
+#catalogo #contenido #contenido-inicial-1{  
+	z-index:31;
+}
+
+
+
+/*********AHORA PARA LA CARA 2********/
+
+
+#catalogo #contenido #contenido-inicial-2{  /*Recordando que el z-index más alto es el de cara 2 al principio, llegando hasta 20*/
+	z-index:22;
+}
+
+
+#catalogo #contenido #contenido-primaria-1{  
+	z-index:21;
+}
+
+/*********AHORA PARA LA CARA 3********/
+
+
+#catalogo #contenido #contenido-primaria-2{  /*Recordando que el z-index más alto es el de cara 2 al principio, llegando hasta 20*/
+	z-index:32
+}
+
+
+#catalogo #contenido #contenido-secundaria-1{  
+	z-index:31;
+}
 
 

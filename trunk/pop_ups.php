@@ -1,14 +1,14 @@
 
 <div id="cargando" class="pop_up_general">
 
-<div id="titulo" class="seccion_popup">
+<div id="titulo_popup" class="seccion_popup">
 <table>
 <tr><td>Espere un momento por favor...</td></tr>
 </table>
 
 </div>
 
-<div id="cuerpo" class="seccion_popup">
+<div id="cuerpo_popup" class="seccion_popup">
 <table style="margin-top:10px" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
 <tbody>
 
@@ -30,14 +30,14 @@
 
 <div id="cargando_inicial" class="pop_up_general alavista">
 
-<div id="titulo" class="seccion_popup">
+<div id="titulo_popup" class="seccion_popup">
 <table>
 <tr><td>Espere un momento por favor...</td></tr>
 </table>
 
 </div>
 
-<div id="cuerpo" class="seccion_popup">
+<div id="cuerpo_popup" class="seccion_popup">
 <table style="margin-top:10px" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
 <tbody>
 

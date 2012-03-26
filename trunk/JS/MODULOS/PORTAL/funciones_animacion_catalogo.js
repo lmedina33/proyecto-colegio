@@ -115,15 +115,14 @@ $("#catalogo #opciones_vertical #opcion_primaria").click(function(){
 	
 	/////////////////////////////
 	
-	
 	$("#catalogo #contenido #cara_2").css("z-index","10");
 	
-	$("#catalogo #opciones_vertical #opcion_inicial").css("visibility","hidden");
-	$("#catalogo #opciones_vertical ").css("background-color","#44F");
+	//$("#catalogo #opciones_vertical #opcion_inicial").css("visibility","hidden");
+	$("#catalogo #opciones_vertical #opcion_inicial").hide();
 	
+	//$("#catalogo #opciones_vertical ").css("background-color","#44F");
 	
 	///////////////////////////////////////////////
-	
 	
 	$("#catalogo #contenido #cara_2").css("left","0px");
 	
@@ -233,16 +232,11 @@ $("#catalogo #opciones_vertical #opcion_secundaria").click(function(){
 	$("#catalogo #contenido #cara_3").css("z-index","20");
 	
 	
-	$("#catalogo #opciones_vertical ").css("background-color","#FAA");
+	//$("#catalogo #opciones_vertical ").css("background-color","#FAA");
 		
-	$("#catalogo #opciones_vertical #opcion_primaria").css("visibility","hidden");
+	//$("#catalogo #opciones_vertical #opcion_primaria").css("visibility","hidden");
 	
-	/*
-	$("#catalogo #opciones_vertical_izq #opcion_inicial").css("float","left");
-	
-	$("#catalogo #opciones_vertical_izq #opcion_primaria").css("float","left");
-	$("#catalogo #opciones_vertical_izq #opcion_primaria").css("display","block");
-	*/
+	$("#catalogo #opciones_vertical #opcion_primaria").hide();
 	
 	$("#catalogo #contenido #cara_3").css("left","0px");
 								
@@ -325,8 +319,8 @@ $("#catalogo #opciones_vertical_izq #opcion_inicial").click(function(){
 	
 	$("#catalogo #contenido #cara_2").css("z-index","20");
 		
-	$("#catalogo #opciones_vertical #opcion_inicial").css("visibility","visible");
-		
+	//$("#catalogo #opciones_vertical #opcion_inicial").css("visibility","visible");
+	$("#catalogo #opciones_vertical #opcion_inicial").show();	
 	///////////////////////////////////////////////
 	
 		
@@ -357,12 +351,15 @@ $("#catalogo #opciones_vertical_izq #opcion_primaria").click(function(){
 	
 	$("#catalogo #contenido #cara_3").css("z-index","10");
 	
-	$("#catalogo #opciones_vertical #opcion_primaria").css("visibility","visible");
+	//$("#catalogo #opciones_vertical #opcion_primaria").css("visibility","visible");
+	
+	
+	$("#catalogo #opciones_vertical #opcion_primaria").show();
 	
 	$("#catalogo #opciones_vertical_izq #opcion_inicial").css("float","right");
 	$("#catalogo #opciones_vertical_izq #opcion_primaria").css("float","right");
 	
-	$("#catalogo #opciones_vertical ").css("background-color","#44F");
+	//$("#catalogo #opciones_vertical ").css("background-color","#44F");
 
 	
 	

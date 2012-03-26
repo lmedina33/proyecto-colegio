@@ -3,7 +3,7 @@
 	<div id="contenido-cuerpo">
 		
 		<div id="actividades">
-				actividades inicial bla bla ba
+				actividades inicial bla bla ba SECUNDARIA
 		</div>
 	</div>
 
@@ -16,7 +16,7 @@
 	<div id="contenido-cuerpo">
 		
 		<div id="admisiones">
-					admisiones inicial bla bla ba	
+					admisiones inicial bla bla ba	 SECUNDARIA
 		</div>
 	</div>
 

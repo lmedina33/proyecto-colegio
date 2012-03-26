@@ -15,7 +15,7 @@ function fun_actualizar_quienes_somos(arg_parrafos/*arg_1,arg_2*/){  //esta func
         async:true,
         beforeSend: function(objeto){
         	
-        	fun_mostrar_popup_cargando();
+        	fun_mostrar_cargando();
         	/*
         	$("#div_back_cargando").fadeIn(GLOBAL_VEL_FADE);
 			$("#cargando").fadeIn(GLOBAL_VEL_FADE);*/
@@ -27,8 +27,8 @@ function fun_actualizar_quienes_somos(arg_parrafos/*arg_1,arg_2*/){  //esta func
 			/*
 		$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
 		$("#cargando").fadeOut(GLOBAL_VEL_FADE);*/
-			fun_ocultar_popup_cargando();
-		
+		fun_quitar_cargando();
+
 		if(data=="mysql_no"){
 			FMSG_ERROR_CONEXION();
 		}else{
@@ -67,7 +67,7 @@ function fun_actualizar_mision_vision(arg_parrafos/*arg_1,arg_2*/){  //esta func
         async:true,
         beforeSend: function(objeto){
         	
-        	fun_mostrar_popup_cargando();
+        	fun_mostrar_cargando();
         	/*
         	$("#div_back_cargando").fadeIn(GLOBAL_VEL_FADE);
 			$("#cargando").fadeIn(GLOBAL_VEL_FADE);*/
@@ -79,7 +79,7 @@ function fun_actualizar_mision_vision(arg_parrafos/*arg_1,arg_2*/){  //esta func
 			/*
 		$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
 		$("#cargando").fadeOut(GLOBAL_VEL_FADE);*/
-			fun_ocultar_popup_cargando();
+			fun_quitar_cargando();
 		
 		if(data=="mysql_no"){
 			FMSG_ERROR_CONEXION();
@@ -120,7 +120,7 @@ function fun_consultar_quienes_somos(arg_div_contenedor){  //esta función es par
         async:true,
         beforeSend: function(objeto){
         	
-        	fun_mostrar_popup_cargando();
+        	fun_mostrar_cargando();
         	/*
         	$("#div_back_cargando").fadeIn(GLOBAL_VEL_FADE);
 			$("#cargando").fadeIn(GLOBAL_VEL_FADE);*/
@@ -132,7 +132,7 @@ function fun_consultar_quienes_somos(arg_div_contenedor){  //esta función es par
 			/*
 		$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
 		$("#cargando").fadeOut(GLOBAL_VEL_FADE);*/
-			fun_ocultar_popup_cargando();
+			fun_quitar_cargando();
 		
 		if(data=="mysql_no"){
 			FMSG_ERROR_CONEXION();
@@ -173,7 +173,7 @@ function fun_consultar_mision_vision(arg_div_contenedor){  //esta función es par
         async:true,
         beforeSend: function(objeto){
         	
-        	fun_mostrar_popup_cargando();
+        	fun_mostrar_cargando();
         	/*
         	$("#div_back_cargando").fadeIn(GLOBAL_VEL_FADE);
 			$("#cargando").fadeIn(GLOBAL_VEL_FADE);*/
@@ -185,7 +185,7 @@ function fun_consultar_mision_vision(arg_div_contenedor){  //esta función es par
 			/*
 		$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
 		$("#cargando").fadeOut(GLOBAL_VEL_FADE);*/
-			fun_ocultar_popup_cargando();
+			fun_quitar_cargando();
 		
 		if(data=="mysql_no"){
 			FMSG_ERROR_CONEXION();
