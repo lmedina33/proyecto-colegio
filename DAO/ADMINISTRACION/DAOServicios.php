@@ -3,41 +3,43 @@ require_once("../CONEXION/Conexion.php");
 
 
 	//-- 
-	//-- Estructura de tabla para la tabla `portal_admision`
+	//-- Estructura de tabla para la tabla `portal_actividades`
 	//-- 
 	//
-	//DROP TABLE IF EXISTS `portal_admision`;
-	//CREATE TABLE `portal_admision` (
+	//DROP TABLE IF EXISTS `portal_actividades`;
+	//CREATE TABLE `portal_actividades` (
 	//  `id` int(11) NOT NULL auto_increment,
-	//  `nivel` varchar(1) default NULL,
+	//  `titulo` varchar(30) default NULL,
 	//  `parrafo` varchar(300) default NULL,
+	//  `nivel` varchar(1) default NULL,
 	//  PRIMARY KEY  (`id`)
 	//) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
-class DAOAdmision extends Conexion{
+class DAOServicios extends Conexion{
 
-  	var $nombre_tabla_admision="portal_admision";
+  	var $nombre_tabla_servicios="portal_servicios";
   
-	function insertar_admision($nivel,$parrafos){  
+//	function insertar_actividad($nivel,$parrafos){  
+	function insertar_servicios($titulo,$parrafos){  
 
         $cn = $this->conexion();
         
         if($cn!="no_conexion"){
 	          
 			//Aki va la observacion e executar un aquery q elimine los registro con los campode de grado y nivel similares 
-			$sql="delete from $this->nombre_tabla_admision where   nivel='$nivel'";
+			$sql="delete from $this->nombre_tabla_servicios ";
 			$rs = mysql_query($sql,$cn); 
 			 //AKI TERMINA LA ELIMINACION DEL REGISTRO
 
 		
 			$parrafos_split=split('{',$parrafos);
-
+			$titulos_split=split('{',$titulo);
 				
 				$i=0;
-				while($parrafos_split[$i]){
-					$sql="insert into $this->nombre_tabla_admision (nivel,parrafo) values ('$nivel','$parrafos_split[$i]')";
+				while($parrafos_split[$i] ){
+					$sql="insert into $this->nombre_tabla_servicios (titulo,parrafo) values ('$titulos_split[$i]','$parrafos_split[$i]')";
 					$rs = mysql_query($sql,$cn);
 					//echo"$parrafos_split[$i]";
 					$i++;
@@ -53,13 +55,13 @@ class DAOAdmision extends Conexion{
 	
 	
 	
-	function consultar_admision($nivel){
+	function consultar_servicios(){
 		
 		$cn = $this->conexion();
         
         if($cn!="no_conexion"){
         	
-        	$sql="select * from $this->nombre_tabla_admision  where nivel='$nivel'";	
+        	$sql="select * from $this->nombre_tabla_servicios  ";	
 			$rs = mysql_query($sql,$cn);
 			 
 			while($fila=mysql_fetch_object($rs)){
@@ -71,7 +73,7 @@ class DAOAdmision extends Conexion{
 					
 				foreach($meto as $q):
 					
-					$respuesta.=$q->parrafo."{";
+					$respuesta.=$q->titulo."{".$q->parrafo."{";
 					
 				endforeach;	
 				

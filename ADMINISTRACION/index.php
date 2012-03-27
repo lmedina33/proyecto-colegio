@@ -17,8 +17,10 @@
 	
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/funciones_carga_pagina.js"></script>
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/funciones_click.js"></script>
+	
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/GESTION_CONTENIDO_WEB/funciones_post.js"></script>
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/GESTION_CONTENIDO_WEB/funciones_click.js"></script>
+	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/GESTION_CONTENIDO_WEB/funciones_change.js"></script>
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/funciones_animacion_menu_acordeon.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="../CSS/general_popup.css" media="screen"/> 
@@ -62,29 +64,23 @@
 						<div class="texto_pestana">Metodolog&iacute;a</div>
 					</div>
 					
+					<div id="actividades-pag_web" class="subopcion" title="Click para seleccionar">
+						<div class="texto_pestana">Actividades</div>
+					</div>
+										
+					<div id="admision-pag_web" class="subopcion" title="Click para seleccionar">
+						<div class="texto_pestana">Admisi&oacute;n</div>
+					</div>
+								
+					<div id="servicios-pag_web" class="subopcion" title="Click para seleccionar">
+						<div class="texto_pestana">Servicios</div>
+					</div>
+					
+					
 					<div id="planilla_docente_admin-pag_web" class="subopcion" title="Click para seleccionar">
 						<div class="texto_pestana">Plana docente y administrativa</div>
 					</div>
 					
-					<div id="Servicios-pag_web" class="subopcion" title="Click para seleccionar">
-						<div class="texto_pestana">Metodolog&iacute;a</div>
-					</div>
-					
-					<div id="Admisiones-pag_web" class="subopcion" title="Click para seleccionar">
-						<div class="texto_pestana">Metodolog&iacute;a</div>
-					</div>
-					
-					<div id="Actividades-pag_web" class="subopcion" title="Click para seleccionar">
-						<div class="texto_pestana">Metodolog&iacute;a</div>
-					</div>
-					
-					<div id="Albumes de fotos-pag_web" class="subopcion" title="Click para seleccionar">
-						<div class="texto_pestana">Metodolog&iacute;a</div>
-					</div>
-					
-					<div id="Videos-pag_web" class="subopcion" title="Click para seleccionar">
-						<div class="texto_pestana">Metodolog&iacute;a</div>
-					</div>
 				</div>
 				
 			<div id="opcion-registros"  class="opcion"></div>			

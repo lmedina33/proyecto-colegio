@@ -24,6 +24,21 @@ $(document).ready(function(){
 	//Vamos a actualizar el contenido de quienes somos desde que abrimos la pagina web
 		fun_consultar_quienes_somos("#contenido #cara_1 #contenido-cara_1 #contenido-quienes_somos-cara_1 #quienes_somos");
 		//fun_consultar_galeria("inicial");
+		fun_consultar_metodologia("I","#contenido #cara_1 #contenido-inicial-1 #contenido-metodologia-inicial #metodologia");
+		fun_consultar_metodologia("P","#contenido #cara_2 #contenido-primaria-1 #contenido-metodologia-primaria #metodologia");
+		fun_consultar_metodologia("S","#contenido #cara_3 #contenido-secundaria-1 #contenido-metodologia-secundaria #metodologia");
+		
+		//CARGAMOS LAS ACTIVIDADES
+		
+		fun_consultar_actividades("I","#contenido #contenido-inicial-2 #contenido-actividades-inicial #actividades");
+		fun_consultar_actividades("P","#contenido #contenido-primaria-2 #contenido-actividades-primaria #actividades");
+		fun_consultar_actividades("S","#contenido #contenido-secundaria-2 #contenido-actividades-secundaria #actividades");
+		
+		//CARGAMOS LAS ADMISIONES
+		
+		fun_consultar_admision("I","#contenido #contenido-inicial-2 #contenido-admisiones-inicial #admisiones");
+		fun_consultar_admision("P","#contenido #contenido-primaria-2 #contenido-admisiones-primaria #admisiones");
+		fun_consultar_admision("S","#contenido #contenido-secundaria-2 #contenido-admisiones-secundaria #admisiones");
 });
 
 function fun_ini_nombre(){

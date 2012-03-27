@@ -40,10 +40,13 @@ $("#contenedor_menu #menu_vertical #2-mision_vision").click(function(){
 
 $("#catalogo #opciones_vertical #opcion_inicial").click(function(){
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
+		$("#contenido-inicial-2 #contenido-actividades-inicial").fadeIn(GLOBAL_VEL_FADE);
+		$("#contenido-inicial-2 #contenido-admisiones-inicial").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
-	
+	$("#area_abierta").val("inicial");
+
 	
 	$("#contenido-cara_1").fadeOut(GLOBAL_VEL_FADE);
 	//$(".area-inicial").fadeIn(GLOBAL_VEL_FADE);
@@ -53,9 +56,12 @@ $("#catalogo #opciones_vertical #opcion_inicial").click(function(){
 $("#catalogo #opciones_vertical #opcion_primaria").click(function(){
 	
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
+	$("#contenido-primaria-2 #contenido-actividades-primaria").fadeIn(GLOBAL_VEL_FADE);
+		$("#contenido-primaria-2 #contenido-admisiones-primaria").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
+	$("#area_abierta").val("primaria");
 	
 	$("#contenido #contenido-inicial-2").fadeOut(GLOBAL_VEL_FADE);
 	
@@ -65,8 +71,13 @@ $("#catalogo #opciones_vertical #opcion_primaria").click(function(){
 $("#catalogo #opciones_vertical #opcion_secundaria").click(function(){
 
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
+	$("#contenido-secundaria-2 #contenido-actividades-secundaria").fadeIn(GLOBAL_VEL_FADE);
+		$("#contenido-secundaria-2 #contenido-admisiones-secundaria").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+	
+	
+	$("#area_abierta").val("secundaria");
 	
 	$("#contenido #contenido-primaria-2").fadeOut(GLOBAL_VEL_FADE);
 });
@@ -75,9 +86,12 @@ $("#catalogo #opciones_vertical #opcion_secundaria").click(function(){
 $("#catalogo #opciones_vertical_izq #opcion_inicial").click(function(){
 
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
+	$("#contenido-inicial-2 #contenido-actividades-inicial").fadeIn(GLOBAL_VEL_FADE);
+	$("#contenido-inicial-2 #contenido-admisiones-inicial").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
+	$("#area_abierta").val("inicial");
 	$("#contenido #contenido-inicial-2").fadeIn(GLOBAL_VEL_FADE);
 });
 
@@ -86,9 +100,13 @@ $("#catalogo #opciones_vertical_izq #opcion_inicial").click(function(){
 $("#catalogo #opciones_vertical_izq #opcion_primaria").click(function(){
 
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
+	$("#contenido-primaria-2 #contenido-actividades-primaria").fadeIn(GLOBAL_VEL_FADE);
+		$("#contenido-primaria-2 #contenido-admisiones-primaria").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 
+	$("#area_abierta").val("primaria");
+	
 	$("#contenido #contenido-primaria-2").fadeIn(GLOBAL_VEL_FADE);
 	
 });
@@ -100,6 +118,7 @@ $("#catalogo #opciones_vertical_izq #cerrar_catalogo").click(function(){
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
 	
+	$("#area_abierta").val("");
 	
 	$("#contenido-cara_1").delay(500).fadeIn(GLOBAL_VEL_FADE);
 /*	$(".area").hide();
@@ -122,19 +141,20 @@ $("#catalogo .opcion_vertical-catalogo").click(function(){
 
 $("#catalogo #sub_menu_inferior #opcion-admision").click(function(){
 	
-	var area_abierta;
-	$(".area").each(function(){
-		
-		if($(this).css("display")=="block"){		
-			area_abierta=$(this).attr("id");	
-		}
-		
-	});
+	var area_abierta=$("#area_abierta").val();
 	
-	var id_partes=area_abierta.split("-");
-
-	$("#contenido-"+id_partes[1]+"-2 #contenido-actividades-"+id_partes[1]).hide();
-	$("#contenido-"+id_partes[1]+"-2 #contenido-admisiones-"+id_partes[1]).fadeIn(GLOBAL_VEL_FADE);
+	if($("#contenido-"+area_abierta+"-2 #contenido-admisiones-"+area_abierta).css("display")=="block"){
+		$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
+		$("#contenido-"+area_abierta+"-2 #contenido-actividades-"+area_abierta).fadeIn(GLOBAL_VEL_FADE);
+		$("#contenido-"+area_abierta+"-2 #contenido-admisiones-"+area_abierta).hide();
+	}else{
+		
+		
+		$("#contenido-"+area_abierta+"-2 #contenido-actividades-"+area_abierta).hide();
+		$("#contenido-"+area_abierta+"-2 #contenido-admisiones-"+area_abierta).fadeIn(GLOBAL_VEL_FADE);
+	
+	}
+	
 	
 });
 
@@ -144,18 +164,10 @@ $("#catalogo #sub_menu_inferior #opcion-admision").click(function(){
 
 $("#catalogo #sub_menu_inferior #opcion-album").click(function(){
 	
-	var area_abierta;
-	$(".area").each(function(){
-		
-		if($(this).css("display")=="block"){		
-			area_abierta=$(this).attr("id");	
-		}
-		
-	});
-	
-	var id_partes=area_abierta.split("-");
-
-	fun_consultar_galeria(id_partes[1]);
+	var area_abierta=$("#area_abierta").val();
+	$("#contenido-"+area_abierta+"-2 #contenido-actividades-"+area_abierta).fadeIn(GLOBAL_VEL_FADE);
+		$("#contenido-"+area_abierta+"-2 #contenido-admisiones-"+area_abierta).hide();
+	fun_consultar_galeria(area_abierta);
 });
 
 

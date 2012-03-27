@@ -3,19 +3,7 @@
 	<div id="contenido-cuerpo">
 		
 		<div id="actividades">
-				<ul>
-					<li>
-						<p>Actividad 1, vamos de excursión. etc etc</p>
-					</li>
-					
-					<li>
-						<p>Actividad 2, Concurso de danza  etc</p>
-					</li>
-					
-					<li>
-						<p>Hacemos eventos deportivos</p>
-					</li>
-				</ul>
+			
 		</div>
 	</div>
 
@@ -28,19 +16,7 @@
 	<div id="contenido-cuerpo">
 		
 		<div id="admisiones">
-					<ul>
-					<li>
-						<p>Evaluar x</p>
-					</li>
 					
-					<li>
-						<p>Evaluar</p>
-					</li>
-					
-					<li>
-						<p>Evaluar</p>
-					</li>
-				</ul>
 		</div>
 	</div>
 

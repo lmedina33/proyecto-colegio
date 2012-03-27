@@ -23,7 +23,9 @@
 	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/general.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/galeria_fotos.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/cara1.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/inicial.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/primaria.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/secundaria.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/PORTAL/transiciones_efectos.css" media="screen"/> 
 	<title>Untitled 3</title>
 </head>
@@ -74,6 +76,8 @@
 		</div>
 		
 		<div id="catalogo">
+			
+			<input type="hidden" id="area_abierta" value=""/>
 			
 			<div id="opciones_vertical_izq">
 				<div id="opcion_inicial" class="opcion_vertical-catalogo"></div>

@@ -21,7 +21,8 @@ class DAOActividades extends Conexion{
 
   	var $nombre_tabla_actividades="portal_actividades";
   
-	function insertar_actividad($nivel,$titulo,$parrafos){  
+	function insertar_actividad($nivel,$parrafos){  
+//	function insertar_actividad($nivel,$titulo,$parrafos){  
 
         $cn = $this->conexion();
         
@@ -34,11 +35,11 @@ class DAOActividades extends Conexion{
 
 		
 			$parrafos_split=split('{',$parrafos);
-			$titulos_split=split('{',$titulo);
+		//	$titulos_split=split('{',$titulo);
 				
 				$i=0;
-				while($parrafos_split[$i] || $titulos_split[$i]){
-					$sql="insert into $this->nombre_tabla_actividades (nivel,titulo,parrafo) values ('$nivel','$titulos_split[$i]','$parrafos_split[$i]')";
+				while($parrafos_split[$i] ){
+					$sql="insert into $this->nombre_tabla_actividades (nivel,titulo,parrafo) values ('$nivel','','$parrafos_split[$i]')";
 					$rs = mysql_query($sql,$cn);
 					//echo"$parrafos_split[$i]";
 					$i++;
@@ -72,7 +73,7 @@ class DAOActividades extends Conexion{
 					
 				foreach($meto as $q):
 					
-					$respuesta.=$q->titulo."{".$q->parrafo."{";
+					$respuesta.=$q->parrafo."{";
 					
 				endforeach;	
 				
