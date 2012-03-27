@@ -110,11 +110,170 @@ function fun_consultar_mision_vision(arg_div_contenedor){  //esta función es par
 	
 }
 
+/***********METODOLOGIAS**************/
+/***********METODOLOGIAS**************/
+/***********METODOLOGIAS**************/
+/***********METODOLOGIAS**************/
+/***********METODOLOGIAS**************/
+
+
+function fun_consultar_metodologia(nivel,arg_div_contenedor){  //esta función es para hacer alguna llamada con ajax mediante post
+
+	
+	$.ajax({
+        url: "../POST/ADMINISTRACION/GESTION_CONTENIDO_WEB/consultar_metodologia.php",
+        type: "POST",
+        data:{nivel:nivel},
+        async:true,
+        beforeSend: function(objeto){
+        	
+        //	fun_mostrar_cargando();
+        				
+        },
+        
+	success: function(data){
+
+		//	fun_quitar_cargando();
+		
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+						
+			if(data!="no data"){
+				
+				var valores=data.split("{");
+				var parrafos="";
+				for(var i=0;valores[i];i++){
+					parrafos+=valores[i]+"\n";
+				}
+				
+				$(arg_div_contenedor).html(parrafos);
+				
+			}else{
+				$(arg_div_contenedor).html("");
+			}
+		
+		}
+	}
+	       	
+	});	
+	
+}
+
+
+/***********ACTIVIDADES**************/
+/***********ACTIVIDADES**************/
+/***********ACTIVIDADES**************/
+/***********ACTIVIDADES**************/
+/***********ACTIVIDADES**************/
+
+
+function fun_consultar_actividades(nivel,arg_div_contenedor){  //esta función es para hacer alguna llamada con ajax mediante post
+
+	
+	$.ajax({
+        url: "../POST/ADMINISTRACION/GESTION_CONTENIDO_WEB/consultar_actividad.php",
+        type: "POST",
+        data:{nivel:nivel},
+        async:true,
+        beforeSend: function(objeto){
+        	
+        	fun_mostrar_cargando();
+        				
+        },
+        
+	success: function(data){
+
+			fun_quitar_cargando();
+		
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+						
+			if(data!="no data"){
+				
+				var valores=data.split("{");
+				var parrafos="<ul>";
+				for(var i=0;valores[i];i++){
+					parrafos+="<li><p>"+valores[i]+"</p></li>";
+				}
+				parrafos+="</ul>";
+				
+				$(arg_div_contenedor).html(parrafos);
+				
+			}else{
+				$(arg_div_contenedor).html("");
+			}
+		
+		}
+	}
+	       	
+	});	
+	
+}
 
 
 
 
+/***********ADMISION**************/
+/***********ADMISION**************/
+/***********ADMISION**************/
+/***********ADMISION**************/
+/***********ADMISION**************/
 
+
+function fun_consultar_admision(nivel,arg_div_contenedor){  //esta función es para hacer alguna llamada con ajax mediante post
+
+	
+	$.ajax({
+        url: "../POST/ADMINISTRACION/GESTION_CONTENIDO_WEB/consultar_admision.php",
+        type: "POST",
+        data:{nivel:nivel},
+        async:true,
+        beforeSend: function(objeto){
+        	
+        	fun_mostrar_cargando();
+        				
+        },
+        
+	success: function(data){
+
+			fun_quitar_cargando();
+		
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+			
+			if(data!="no data"){
+				
+				var valores=data.split("{");
+				var parrafos="<ul>";
+				for(var i=0;valores[i];i++){
+					parrafos+="<li><p>"+valores[i]+"</p></li>";
+				}
+				parrafos+="</ul>";
+				
+				$(arg_div_contenedor).html(parrafos);
+				
+			}else{
+				$(arg_div_contenedor).html("");
+			}
+		
+		}
+	}
+	       	
+	});	
+	
+}
+
+
+
+
+/***********ALBUM FOTOGRAFICO**************/
+/***********ALBUM FOTOGRAFICO**************/
+/***********ALBUM FOTOGRAFICO**************/
+/***********ALBUM FOTOGRAFICO**************/
+/***********ALBUM FOTOGRAFICO**************/
 function fun_consultar_galeria(tipo_consulta){  //esta función es para hacer alguna llamada con ajax mediante post
 
 	

@@ -463,15 +463,18 @@ $("#catalogo #contenido #sub_menu_inferior .opcion").mouseout(function(){
 
 $("#catalogo #contenido #sub_menu_inferior .opcion").click(function(){
 	
-	$("#catalogo #contenido #sub_menu_inferior .opcion").attr("title","Click para seleccionar");
-	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
-	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+	if($(this).attr("title")=="Click para seleccionar"){
+
+		$("#catalogo #contenido #sub_menu_inferior .opcion").attr("title","Click para seleccionar");
+		$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
+		$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+			
+		$(this).attr("title","Seleccionada");
 		
-	$(this).attr("title","Seleccionada");
-	
-	$(this).css("margin-top","0px");
-	$(this).css("background-color","white");
-	
+		$(this).css("margin-top","0px");
+		$(this).css("background-color","white");
+			
+	}
 });
 
 

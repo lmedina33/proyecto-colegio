@@ -1,7 +1,6 @@
 
 
-
-#catalogo #contenido #contenido-primaria-1 #contenido-metodologia-primaria  #metodologia{
+#catalogo #contenido #contenido-secundaria-1 #contenido-metodologia-secundaria  #metodologia{
 	width:360px;
  	height:110px;
  	color:white;
@@ -10,7 +9,7 @@
 }
 
 
-#catalogo #contenido #contenido-primaria-2 .contenido-primaria  #contenido-titulo{
+#catalogo #contenido #contenido-secundaria-2 .contenido-secundaria  #contenido-titulo{
 	width:250px;
  	height:30px;
  	color:black;
@@ -23,7 +22,7 @@
 }
 
 
-#catalogo #contenido #contenido-primaria-2 #contenido-actividades-primaria  #actividades{
+#catalogo #contenido #contenido-secundaria-2 #contenido-actividades-secundaria  #actividades{
 	width:500px;
  	height:250px;
  	color:black;
@@ -35,7 +34,7 @@
 
 
 
-#catalogo #contenido #contenido-primaria-2 #contenido-admisiones-primaria  #admisiones{
+#catalogo #contenido #contenido-secundaria-2 #contenido-admisiones-secundaria  #admisiones{
 	width:500px;
  	height:250px;
  	color:black;
@@ -46,6 +45,6 @@
 
 
 
-#catalogo #contenido #contenido-primaria-2  ul li{
+#catalogo #contenido #contenido-secundaria-2  ul li{
 	list-style-type: square;
 }

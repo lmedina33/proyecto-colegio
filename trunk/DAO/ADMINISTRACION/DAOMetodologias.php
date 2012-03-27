@@ -29,29 +29,17 @@ class DAOMetodologia extends Conexion{
 			//Aki va la observacion e executar un aquery q elimine los registro con los campode de grado y nivel similares 
 			$sql="delete from $this->nombre_tabla_metodologia where   nivel='$nivel'";
 			$rs = mysql_query($sql,$cn); 
-			 //AKI TERMINA LA ELIMINACION DEL REGISTRO
-
-			/*
-				$valores=split("{",$parrafos);
-				$i=0;						
-				while($valores[$i]){		
-					//$i2=$i+1;
-					//$i3=$i+2;
-echo "$valores[$i]";
-	        		$sql="insert into $this->nombre_tabla_metodologia (nivel,parrafo) values ('$nivel','$valores[$i]')";
-	       
-	        		$rs = mysql_query($sql,$cn);
-				
-					$i=$i+1;		
-				}*/
+			
 		
+			
 			$parrafos_split=split('{',$parrafos);
 				
 				$i=0;
 				while($parrafos_split[$i]){
+				
 					$sql="insert into $this->nombre_tabla_metodologia (nivel,parrafo) values ('$nivel','$parrafos_split[$i]')";
 					$rs = mysql_query($sql,$cn);
-					echo"$parrafos_split[$i]";
+					//echo "$parrafos_split[$i]";
 					$i++;
 				}
 				

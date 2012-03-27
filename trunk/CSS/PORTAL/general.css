@@ -261,7 +261,7 @@ body{
 	width: 400px;
 	height: 40px;
 	
-	left:0px;
+	left:550px;
 	bottom:0px;
 	
 	z-index:50;
@@ -329,13 +329,13 @@ body{
 #catalogo #contenido-primaria-1{
 	width:550px;
 	height:550px;
-	background:url('../../IMAGENES/PORTAL/CATALOGO/secundaria_izq.png');
+	background:url('../../IMAGENES/PORTAL/CATALOGO/primaria_izq.png');
 }
 
 #catalogo #contenido-primaria-2{
 	width:550px;
 	height:550px;
-	background:url('../../IMAGENES/PORTAL/CATALOGO/secundaria_der.png');
+	background:url('../../IMAGENES/PORTAL/CATALOGO/primaria_der.png');
 }
 
 
