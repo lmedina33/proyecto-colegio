@@ -1,10 +1,10 @@
 <?php
 
-require_once("../../../DAO/ADMINISTRACION/DAOGestionAlumnos.php");
+require_once("../../../DAO/ADMINISTRACION/DAOCursos.php");
 
-$gestion_alumnos=new DAOGestionAlumnos();
+$gestion_alumnos=new DAOCursos();
 
-$respuesta=$gestion_alumnos->consultar_notas("codalum17");
+$respuesta=$gestion_alumnos->consultar_notas("CodAlum34");
 
 
 echo $respuesta;
