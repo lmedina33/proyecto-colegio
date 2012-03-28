@@ -12,7 +12,8 @@ require_once("../CONEXION/Conexion.php");
 	//  `nivel` varchar(1) default NULL,
 	//  `nombre_curso` varchar(15) default NULL,
 	//  `seccion` varchar(1) default NULL,
-	//	  `id_profesor` varchar(10) default NULL,
+	//	`id_profesor` varchar(10) default NULL,
+	//	`categoria` varchar(1) default NULL,
 	//  PRIMARY KEY  (`id`)
 	//) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -23,7 +24,7 @@ class DAOCursos extends Conexion{
 	
 	//EL CAMPO CODIGO SE RA  IGUAL A = NIVEL+GRADO+NOMBRE+SECCION
   
-	function insertar_dao_cursos($grado,$nivel,$grado_cursos){  
+	function insertar_dao_cursos($grado,$nivel,$grado_cursos,$categoria){  
 
         $cn = $this->conexion();
         
@@ -43,7 +44,7 @@ class DAOCursos extends Conexion{
 					
 					$codigo=$nivel.$grado.$valores[$i].$valores[$i2];
 					
-	        		$sql="insert into $this->nombre_tabla_admin_cursos (codigo,grado,nivel,nombre_curso,seccion,id_profesor) values ('$codigo',$grado,'$nivel','$valores[$i]','$valores[$i2]','$valores[$i3]')";
+	        		$sql="insert into $this->nombre_tabla_admin_cursos (codigo,grado,nivel,nombre_curso,seccion,id_profesor,categoria) values ('$codigo',$grado,'$nivel','$valores[$i]','$valores[$i2]','$valores[$i3]','$categoria')";
 	       
 	        		$rs = mysql_query($sql,$cn);
 				
