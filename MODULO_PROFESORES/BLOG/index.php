@@ -16,10 +16,9 @@
 
 	<script language="javascript" src="../../JS/MODULOS/MODULO_PROFESORES/BLOG/funciones_click.js"></script>
 	<script language="javascript" src="../../JS/MODULOS/MODULO_PROFESORES/BLOG/funciones_change.js"></script>
-	<script language="javascript" src="../../JS/MODULOS/MODULO_PROFESORES/BLOG/funciones_carga_pagina.js"></script>
 	<script language="javascript" src="../../JS/MODULOS/MODULO_PROFESORES/BLOG/funciones_post.js"></script>
-	<script language="javascript" src="../../JS/MODULOS/MODULO_PROFESORES/BLOG/variables_globales.js"></script>
-	
+	<script language="javascript" src="../../JS/MODULOS/MODULO_PROFESORES/variables_globales.js"></script>
+	<script language="javascript" src="../../JS/MODULOS/MODULO_PROFESORES/funciones_carga_pagina.js"></script>
 	
 	
 	

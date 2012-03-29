@@ -23,6 +23,8 @@ $(document).ready(function(){
 
 	//Vamos a actualizar el contenido de quienes somos desde que abrimos la pagina web
 		fun_consultar_quienes_somos("#contenido #cara_1 #contenido-cara_1 #contenido-quienes_somos-cara_1 #quienes_somos");
+		fun_consultar_mision_vision("#contenido #cara_1 #contenido-cara_1 #contenido-mision_vision-cara_1 #mision_vision");
+		fun_consultar_servicios("#contenido #cara_1 #contenido-cara_1 #contenido-servicios-cara_1 #servicios");
 		//fun_consultar_galeria("inicial");
 		fun_consultar_metodologia("I","#contenido #cara_1 #contenido-inicial-1 #contenido-metodologia-inicial #metodologia");
 		fun_consultar_metodologia("P","#contenido #cara_2 #contenido-primaria-1 #contenido-metodologia-primaria #metodologia");

@@ -44,7 +44,7 @@ function abrir_contenido(contenido,area){
 
 	////////////////////////////////////////////////////////////
 	$("#contenido-"+contenido+"-"+area).fadeIn(500);
-
+	
 		
 }
 

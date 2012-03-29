@@ -15,9 +15,9 @@
 	<script language="javascript" src="../../JS/FUNCIONES/funciones_info_fecha.js"></script>
 
 	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/BLOG/funciones_click.js"></script>
-	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/BLOG/funciones_carga_pagina.js"></script>
 	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/BLOG/funciones_post.js"></script>
-	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/BLOG/variables_globales.js"></script>
+	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/variables_globales.js"></script>
+	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/funciones_carga_pagina.js"></script>
 	
 	
 	<link rel="stylesheet" type="text/css" href="../../CSS/general_tabla.css" media="screen"/> 

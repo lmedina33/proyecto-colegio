@@ -9,10 +9,16 @@
 	<script language="javascript" src="../../JS/LIBRERIAS/jquery1_6.js"></script>
 	<script language="javascript" src="../../JS/FUNCIONES/funciones_interfaz_grafica.js"></script>
 	<script language="javascript" src="../../JS/FUNCIONES/funciones_variables_globales.js"></script>
+	<script language="javascript" src="../../JS/FUNCIONES/funciones_info_operacionales.js"></script>
+	<script language="javascript" src="../../JS/FUNCIONES/funciones_info_verificacion.js"></script>
+	<script language="javascript" src="../../JS/FUNCIONES/funciones_popup_aviso.js"></script>
+	<script language="javascript" src="../../JS/FUNCIONES/funciones_info_fecha.js"></script>
 
 	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/CURSOS/funciones_click.js"></script>
-	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/CURSOS/funciones_animacion_menu_acordeon.js"></script>
-	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/funciones_post.js"></script>
+	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/CURSOS/funciones_post.js"></script>
+
+	
+	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/variables_globales.js"></script>
 	<script language="javascript" src="../../JS/MODULOS/MODULO_ALUMNOS/funciones_carga_pagina.js"></script>
 	
 	
@@ -47,28 +53,7 @@
 	<div id="menu_vertical">
 		<div id="titulo_menu">Mis Cursos</div>
 			
-			<div id="opcion-curso_1" title="Seleccionado"class="opcion"><div id="curso-matematica"  class="texto_pestana">Matemática</div></div>
-				
-				
-			<div id="opcion-curso_2"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_3"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_4"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_5"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_6"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_7"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_8"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_9"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_10"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_10"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_10"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_10"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_10"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_10"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_10"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_10"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_10"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_4"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
-			<div id="opcion-curso_4"  class="opcion"><div id="curso-matematica" class="texto_pestana">Matemática</div></div>			
+			
 					
 	</div>
 		
@@ -77,7 +62,30 @@
 				<div class="opcion" id="opcion-observaciones" ><div  class="texto_pestana">Observaciones</div></div>
 			</div>
 		<div id="contenido-pagina">
+		
+			<input type="hidden" id="codigo_curso_elegido" value=""/>
+		<div id="contenido-notas-principal" class="contenido-principal alavista">
+		
+		</div>
+		
+		
+		
+		
+		<div id="contenido-observaciones-principal" class="contenido-principal oculto">
+			<div id="profesor">
 			
+			</div>
+			
+			
+			<div id="observaciones">
+					
+				<div id="titulo">
+					Observaciones
+				</div>
+				
+			</div>
+		</div>
+		
 		</div>
 </div>
 		

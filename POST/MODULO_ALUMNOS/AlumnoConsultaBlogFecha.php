@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("../../DAO/MODULO_ALUMNOS/DAOGestionBlogAlumno.php");
 
 $gestion_alumnos=new DAOGestionBlogAlumnos();
