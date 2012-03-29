@@ -298,14 +298,45 @@ body{
 
 
 
+
 #cuerpo-pagina #contenido-pagina  #nueva_observacion{
  	width:600px;
  		
- 	height:200px;
+ 	height:150px;
+
 	float:left;
+	padding-top:50px;
 	
 }
 
+
+
+#cuerpo-pagina #contenido-pagina  #nueva_observacion .texto{
+ 	width:170px;
+ 		
+ 	height:70px;
+	margin-left:30px;
+	float:left;
+	text-align:right;
+	padding-top:30px;
+}
+
+
+#cuerpo-pagina #contenido-pagina  #nueva_observacion .caja{
+ 	width:400px;
+ 		
+ 	height:100px;
+
+	float:left;
+}
+
+#cuerpo-pagina #contenido-pagina  #nueva_observacion .boton{
+ 	width:100px;
+ 		
+ 	height:20px;
+	margin-top:10px;
+	margin-left:230px;
+}
 
 
 

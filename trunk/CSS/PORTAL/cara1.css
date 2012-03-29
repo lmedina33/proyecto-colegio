@@ -12,6 +12,43 @@
  	height:550px;
  	background-color:white;
  	background:url('../../IMAGENES/PORTAL/CATALOGO/portal.png');
+ 	
+}
+
+
+#catalogo #contenido #contenido-cara_1 .contenido-cara_1  #contenido-titulo{
+	width:250px;
+ 	height:30px;
+ 	color:black;
+ 	font-size:160%;
+ 	font-weight:bold;
+ 	font-family:cursive;
+ 	
+ 	margin-top:55px;
+ 	margin-left:50px;
+}
+
+
+#catalogo #contenido #contenido-cara_1 .contenido-cara_1  #contenido-cuerpo{
+ 	width:400px;
+ 	height:400px;
+ 	margin-left:40px;
+ 	float:left;
+}
+
+#catalogo #contenido #contenido-cara_1 .contenido-cara_1  #servicios{
+ 	margin-top:20px;
+}
+
+#catalogo #contenido #contenido-cara_1 .contenido-cara_1  #servicios .subtitulo_servicio{
+ 	font-style:italic;
+ 	font-weight:bold;
+ 	font-size:110%;
+}
+
+
+#catalogo #contenido #contenido-cara_1  ul li{
+	list-style-type: square;
 }
 
 
@@ -19,14 +56,4 @@
  	width:550px;
  	height:550px;
 }
-
-/*
-#pie_pagina{
- 	width:1280px;
- 	height:105px;
- 	background:url("../../IMAGENES/PORTAL/footer.png")  center;
- 	position:relative;
- 	margin: 0px auto;
- 	margin-top:30px;
-}*/
 

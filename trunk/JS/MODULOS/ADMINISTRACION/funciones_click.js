@@ -17,7 +17,7 @@ $(document).ready(function(){
 $("#menu_vertical .submenu .subopcion").click(function(){
 		
 	var id=$(this).attr("id");
-	
+
 	var partes_id=id.split("-");  //hemos separado el ide en 2 partes separadas por el guion medio
 	//la parte 0 contiene el contenido y la parte 1 contiende el área
 	abrir_contenido(partes_id[0],partes_id[1]);	  //pasamos los valores a la funcion abrir_contenido para que lo abra

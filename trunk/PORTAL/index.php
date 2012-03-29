@@ -55,6 +55,9 @@
 
 <div id="cabecera">
 
+<div id="login_modulo_alumnos" class="logearse">Modulo alumnos</div>
+<div id="login_modulo_padres" class="logearse">Modulo padres</div>
+<div id="login_modulo_profesores" class="logearse">Modulo profesores</div>
 </div>
 
 
@@ -68,9 +71,9 @@
 				
 				<div id="2-mision_vision" title="Click para seleccionar" class="opcion">Misi&oacute;n y Visi&oacute;n</div>
 				
-				<div id="3-plana_docente_administrativa" title="Click para seleccionar" class="opcion">Plana docente y administrativa</div>
+				<div id="3-servicios" title="Click para seleccionar" class="opcion">Servicios</div>
 				
-				<div id="4-servicios" title="Click para seleccionar" class="opcion">Servicios</div>
+				<div id="4-plana_docente_administrativa" title="Click para seleccionar" class="opcion">Plana docente y administrativa</div>
 			</div>
 
 		</div>

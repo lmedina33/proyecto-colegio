@@ -40,7 +40,7 @@ $("#menu_vertical .opcion").click(function(){
 		////////////////////Se elige la primera subopcion
 		$("#menu_vertical .submenu .subopcion").attr("title","Click para seleccionar");
 	
-		$("#menu_vertical #submenu-"+partes_id[1]+" .subopcion:first-child").attr("title","Seleccionado");
+		$("#menu_vertical #submenu-"+partes_id[1]+" .subopcion:first-child").click();
 		
 		//mostramos el area correspondiente
 		$("#area_"+partes_id[1]).show();

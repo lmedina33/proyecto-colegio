@@ -543,7 +543,7 @@ function fun_consultar_servicios(){  //esta función es para hacer alguna llamada
         },
         
 	success: function(data){
-alert(data);
+
 			fun_quitar_cargando();
 		
 		if(data=="mysql_no"){

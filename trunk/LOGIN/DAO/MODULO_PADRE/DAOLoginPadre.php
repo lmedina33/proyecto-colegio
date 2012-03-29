@@ -1,5 +1,5 @@
 <?php
-require_once("../../../DAO/Conexion.php");
+require_once("../../../CONEXION/Conexion.php");
 
 class DAOLoginPadre extends Conexion{
 	
@@ -9,7 +9,10 @@ class DAOLoginPadre extends Conexion{
         $cn = $this->conexion();
         									//falta definir q tipo de consulta se desea
         if($cn!="no_conexion"){
-	        $sql="select concat(u.apellido_paterno,' ',u.apellido_materno,', ',u.nombre) nombre, u.dni dni,p.url_modulo url,u.username user from general_perfil p,general_empleados u where u.id_perfil=p.id_perfil and u.username='$username' and u.password='$password'";
+	       
+			/*$sql="select concat(u.apellido_paterno,' ',u.apellido_materno,', ',u.nombre) nombre, u.dni dni,p.url_modulo url,u.username user from general_perfil p,general_empleados u where u.id_perfil=p.id_perfil and u.username='$username' and u.password='$password'";*/
+			
+			$sql="select * from portal_padre where username='$username' and password='$password' and disponible=1";
 	        $rs = mysql_query($sql,$cn);
 	        	while($fila=mysql_fetch_object($rs)){
 					$arr[]=$fila;
@@ -18,7 +21,7 @@ class DAOLoginPadre extends Conexion{
 	      	$respuesta="";
 	      	if($arr){
 				foreach($arr as $a):
-					$respuesta=$a->nombre."{".$a->url."{".$a->user."{".$a->dni;
+					$respuesta=$a->dni."{".$a->nombres." ".$a->apellido_paterno." ".$a->apellido_materno;
 				endforeach;
 			}else{
 				$respuesta="no data";
@@ -26,7 +29,6 @@ class DAOLoginPadre extends Conexion{
 	       	
 	       	
 			return $respuesta;
-		
 		}else{
 		return "mysql_no";
 		}

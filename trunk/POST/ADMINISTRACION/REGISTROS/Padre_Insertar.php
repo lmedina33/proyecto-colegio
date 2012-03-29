@@ -4,7 +4,7 @@ require_once("../../../DAO/ADMINISTRACION/DAOGestionPadres.php");
 
 $gestion_padres=new DAOGestionPadre();
 
-$respuesta=$gestion_padres->admin_insertar_padre("dni1","padre1","apellido_paterno1","apellido_materno1","padre1","1234");
+$respuesta=$gestion_padres->admin_insertar_padre($_POST['dni'],$_POST['nombres'],$_POST['apellido_p'],$_POST['apellido_m'],$_POST['usuario'],$_POST['password']);
 
 
 echo $respuesta;

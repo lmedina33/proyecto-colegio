@@ -47,6 +47,43 @@ class DAOGestionProfesores extends Conexion{
 	}
 	
 	
+	
+	
+	
+	function admin_get_profesores(){
+		
+		$cn = $this->conexion();
+        		//$uno=1;
+        if($cn!="no_conexion"){
+
+        	$sql="select * from $this->nombre_tabla_profesor ";	
+			   $rs = mysql_query($sql,$cn);
+
+			while($fila=mysql_fetch_object($rs)){
+				
+				$consulta[]=$fila;
+								
+			}
+			
+			$respuesta="";
+			if($consulta){
+				foreach($consulta as $c):
+				
+				$respuesta.=$c->dni."{".$c->nombres."{".$c->apellido_paterno."{".$c->apellido_materno."{".$c->username."{".$c->password."{".$c->disponible."{";
+				
+				endforeach;
+			}else{
+				$respuesta="no data";
+			}
+			
+			mysql_close($cn);
+			return $respuesta;
+		}else{
+		return "mysql_no";
+		}
+	}
+	
+	
     function eliminar_profesor($dni){ 	//ELIMINA PROFESOR POR DNI
 				$cn = $this->conexion();
         

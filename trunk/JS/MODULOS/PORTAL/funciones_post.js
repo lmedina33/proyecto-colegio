@@ -37,11 +37,12 @@ function fun_consultar_quienes_somos(arg_div_contenedor){  //esta función es par
 			if(data!="no data"){
 				
 				var valores=data.split("{");
-				var parrafos="";
+				var parrafos="<ul>";
 				for(var i=0;valores[i];i++){
-					parrafos+="<p>"+valores[i]+"</p>";
+					parrafos+="<li><p>"+valores[i]+"</p></li>";
 				}
 				
+				parrafos+="</ul>";
 				$(arg_div_contenedor).html(parrafos);
 				
 			}
@@ -91,12 +92,12 @@ function fun_consultar_mision_vision(arg_div_contenedor){  //esta función es par
 			if(data!="no data"){
 				
 				var valores=data.split("{");
-				var parrafos="";
+				var parrafos="<ul>";
 				for(var i=0;valores[i];i++){
-					parrafos+="<p>"+valores[i]+"</p>";
+					parrafos+="<li><p>"+valores[i]+"</p></li>";
 				}
 				
-				
+				parrafos+="</ul>";
 				$(arg_div_contenedor).html(parrafos);
 				
 			}
@@ -178,13 +179,13 @@ function fun_consultar_actividades(nivel,arg_div_contenedor){  //esta función es
         async:true,
         beforeSend: function(objeto){
         	
-        	fun_mostrar_cargando();
-        				
+        //	fun_mostrar_cargando();
+       			
         },
         
 	success: function(data){
 
-			fun_quitar_cargando();
+		//	fun_quitar_cargando();
 		
 		if(data=="mysql_no"){
 			FMSG_ERROR_CONEXION();
@@ -232,13 +233,13 @@ function fun_consultar_admision(nivel,arg_div_contenedor){  //esta función es pa
         async:true,
         beforeSend: function(objeto){
         	
-        	fun_mostrar_cargando();
+        //	fun_mostrar_cargando();
         				
         },
         
 	success: function(data){
 
-			fun_quitar_cargando();
+		//	fun_quitar_cargando();
 		
 		if(data=="mysql_no"){
 			FMSG_ERROR_CONEXION();
@@ -267,6 +268,88 @@ function fun_consultar_admision(nivel,arg_div_contenedor){  //esta función es pa
 }
 
 
+/***********SERVICIOS**************/
+/***********SERVICIOS**************/
+/***********SERVICIOS**************/
+/***********SERVICIOS**************/
+/***********SERVICIOS**************/
+
+
+
+function fun_consultar_servicios(arg_div_contenedor){  //esta función es para hacer alguna llamada con ajax mediante post
+
+	
+	$.ajax({
+        url: "../POST/ADMINISTRACION/GESTION_CONTENIDO_WEB/consultar_servicios.php",
+        type: "POST",
+        data:{},
+        async:true,
+        beforeSend: function(objeto){
+        	
+        //	fun_mostrar_cargando();
+        				
+        },
+        
+	success: function(data){
+
+		//	fun_quitar_cargando();
+		
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+						
+			if(data!="no data"){
+				
+				var TITULOS_SERVICIOS=new Array();
+				var SERVICIOS=new Array();
+				var CONT_SERVICIOS=0;
+				
+				var valores=data.split("{");
+				var parrafos="";
+				var titulos="";
+				
+				var html_servicios='<div class="subtitulo_servicio">'+valores[0]+'</div><ul>';
+				
+				var titulo_parrafo=valores[0];				
+				for(var i=0;valores[i];i+=2){
+					
+					if(titulo_parrafo==valores[i]){
+						//parrafos+=valores[i+1]+"\n";
+						html_servicios+="<li>"+valores[i+1]+"</li>";
+					}else{
+						titulo_parrafo=valores[i];
+						html_servicios+="</ul>";
+						html_servicios+='<div class="subtitulo_servicio">'+valores[i]+'</div><ul>'; 
+						
+						html_servicios+="<li>"+valores[i+1]+"</li>";
+						
+					}
+					
+				}
+				html_servicios+="</ul>";
+				$(arg_div_contenedor).html(html_servicios);				
+				//refrescar_vista_servicios();
+				
+			}else{
+				
+				
+				
+				///refrescar_vista_servicios();
+			}
+		
+		}
+	}
+	       	
+	});	
+	
+}
+
+
+
+
+
+
+
 
 
 /***********ALBUM FOTOGRAFICO**************/
@@ -285,7 +368,7 @@ function fun_consultar_galeria(tipo_consulta){  //esta función es para hacer alg
         async:true,
         beforeSend: function(objeto){
         	
-        	fun_mostrar_cargando();
+        //	fun_mostrar_cargando();
         	/*
         	$("#div_back_cargando").fadeIn(GLOBAL_VEL_FADE);
 			$("#cargando").fadeIn(GLOBAL_VEL_FADE);*/
@@ -295,10 +378,7 @@ function fun_consultar_galeria(tipo_consulta){  //esta función es para hacer alg
 	success: function(data){
 
 
-			/*
-		$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
-		$("#cargando").fadeOut(GLOBAL_VEL_FADE);*/
-			fun_quitar_cargando();
+		//	fun_quitar_cargando();
 		
 		if(data=="mysql_no"){
 			FMSG_ERROR_CONEXION();

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("../../DAO/MODULO_PROFESORES/DAOConsultasProfesor.php");
 
 $gestion_profesor=new DAOConsultasProfesor();

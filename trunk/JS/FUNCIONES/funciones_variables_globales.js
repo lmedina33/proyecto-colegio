@@ -24,6 +24,7 @@ var GLOBAL_PAGINA_CARGADA=0;  //VARIABLE USADA PARA SABER SI UNA PAGINA CARGO LO
 /////////////////////TITULOS PARA POP UPS DE AVISO//////////////////////////////
 
 var GLOBAL_TTL_ACN_INC="Acci&oacute;n incompleta";
+var GL_TTL_REGISTRO_EXITO="Registro exitoso";
 
 
 var GLOBAL_MARGEN_TOP_AVISO=23;

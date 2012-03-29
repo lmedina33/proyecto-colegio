@@ -1,17 +1,18 @@
 <?php
-require_once("../../../DAO/Conexion.php");
+require_once("../../../CONEXION/Conexion.php");
 
 class DAOLoginAlumno extends Conexion{
 	
 	
-	function logear_alumno($username,$password){  //AKI FALTA DEFINIR Q ES LO Q SE NECESITA DEL ALUMNO
+	function logear($username,$password){  //AKI FALTA DEFINIR Q ES LO Q SE NECESITA DEL ALUMNO
   
         $cn = $this->conexion();
         
         if($cn!="no_conexion"){
 	        
 			/*$sql="select concat(u.apellido_paterno,' ',u.apellido_materno,', ',u.nombre) nombre, u.dni dni,p.url_modulo url,u.username user from general_perfil p,general_empleados u where u.id_perfil=p.id_perfil and u.username='$username' and u.password='$password'";*/
-			$sql="select * from portal_alumno";
+			
+			$sql="select * from portal_alumno where codigo='$username' and password='$password' and disponible=1";
 	        $rs = mysql_query($sql,$cn);
 	        	while($fila=mysql_fetch_object($rs)){
 					$arr[]=$fila;
@@ -20,7 +21,7 @@ class DAOLoginAlumno extends Conexion{
 	      	$respuesta="";
 	      	if($arr){
 				foreach($arr as $a):
-					$respuesta=$a->nombre."{".$a->url."{".$a->user."{".$a->dni;
+					$respuesta=$a->nombres." ".$a->apellido_paterno." ".$a->apellido_materno."{".$a->nivel."{".$a->grado."{".$a->seccion;
 				endforeach;
 			}else{
 				$respuesta="no data";

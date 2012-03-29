@@ -22,7 +22,7 @@ $("#contenedor_menu #menu_vertical .opcion").click(function(){
 
 $("#contenedor_menu #menu_vertical #1-quienes_somos").click(function(){
 		
-	fun_consultar_quienes_somos("#contenido #cara_1 #contenido-cara_1 #contenido-quienes_somos-cara_1 #quienes_somos");
+//	fun_consultar_quienes_somos("#contenido #cara_1 #contenido-cara_1 #contenido-quienes_somos-cara_1 #quienes_somos");
 
 	
 });
@@ -30,7 +30,7 @@ $("#contenedor_menu #menu_vertical #1-quienes_somos").click(function(){
 
 $("#contenedor_menu #menu_vertical #2-mision_vision").click(function(){
 		
-	fun_consultar_mision_vision("#contenido #cara_1 #contenido-cara_1 #contenido-mision_vision-cara_1 #mision_vision");
+	//fun_consultar_mision_vision("#contenido #cara_1 #contenido-cara_1 #contenido-mision_vision-cara_1 #mision_vision");
 
 	
 });
@@ -169,6 +169,23 @@ $("#catalogo #sub_menu_inferior #opcion-album").click(function(){
 		$("#contenido-"+area_abierta+"-2 #contenido-admisiones-"+area_abierta).hide();
 	fun_consultar_galeria(area_abierta);
 });
+
+
+
+
+$(".logearse").click(function(){
+	
+	switch($(this).attr("id")){
+		case "login_modulo_alumnos":
+	parent.document.location="../login/index.php?logeo=A";	break;
+		case "login_modulo_padres":
+	parent.document.location="../login/index.php?logeo=P";	break;
+		case "login_modulo_profesores":
+	parent.document.location="../login/index.php?logeo=PR";	break;
+	}	
+});
+
+
 
 
 

@@ -193,6 +193,104 @@ body{
     left:250px;
 }
 
+#cuerpo-pagina #contenido-pagina  #profesor{
+	
+ 	width:577px; 		
+ 	height:35px;
+	float:left;
+	padding-left:25px;
+	padding-top:23px;
+	font-size:110%;
+	
+	font-style:italic;
+	
+	font-weight:bold;
+}
+
+
+#cuerpo-pagina #contenido-pagina  #observaciones{
+ 	width:600px;
+ 		
+ 	min-height:150px;
+	float:left;
+	
+	border-top:dashed 1px gray;
+	
+}
+
+
+#cuerpo-pagina #contenido-pagina  #observaciones #titulo{
+ 	width:300px;
+ 		
+ 	height:30px;
+ 	margin-left:20px;
+ 	margin-top:20px;
+ 	margin-bottom:0px;
+	float:left;
+	font-size:120%;
+	font-family:cursive;
+	font-weight:bold;
+}
+
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion{
+ 	width:580px;
+ 		
+ 	min-height:80px;
+ 	margin-left:10px;
+ 	margin-top:10px;
+	float:left;
+	
+	background:#DDD;
+	
+ 	border-radius:7px;	
+ 	padding-bottom:15px;
+}
+
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cabecera{
+ 	width:550px;
+ 	height:30px;
+ 	padding-left:30px;
+	
+}
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cabecera .fecha_cabecera{
+ 	float:left;
+ 	font-weight:bold;
+ 	
+ 	padding-top:10px;
+}
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cabecera .btn_eliminar{
+ 	float:right;
+	cursor:pointer;
+	height:20px;
+	width:20px;
+	backgrounD:black;
+}
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cuerpo{
+ 	width:530px;
+ 	min-height:50px;
+ 	float:left;
+ 	padding-left:20px;
+ 	padding-right:30px;
+ 	
+}
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cuerpo table{
+ 	width:530px; 	
+ 	
+ 	float:left;
+ 	text-align:left;
+}
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cuerpo table td{
+ 	width:530px; 	
+}
+
+
+
+
 #cuerpo-pagina  #contenido-opciones{
  	width:600px;
  		

@@ -17,10 +17,16 @@
 	
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/funciones_carga_pagina.js"></script>
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/funciones_click.js"></script>
+	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/variables_globales.js"></script>
 	
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/GESTION_CONTENIDO_WEB/funciones_post.js"></script>
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/GESTION_CONTENIDO_WEB/funciones_click.js"></script>
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/GESTION_CONTENIDO_WEB/funciones_change.js"></script>
+	
+	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/REGISTROS/funciones_post.js"></script>
+	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/REGISTROS/funciones_click.js"></script>
+	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/REGISTROS/funciones_change.js"></script>
+	
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/funciones_animacion_menu_acordeon.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="../CSS/general_popup.css" media="screen"/> 
