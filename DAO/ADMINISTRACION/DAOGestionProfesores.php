@@ -5,6 +5,7 @@ require_once("../CONEXION/Conexion.php");
 class DAOGestionProfesores extends Conexion{
 	
 	var	$nombre_tabla_profesor="portal_profesor";
+	var	$nombre_tabla_plana_docente="portal_planilla_docente";
 	
 	//-- Estructura de tabla para la tabla `portal_profesor`
 	//CREATE TABLE `portal_profesor` (
@@ -33,6 +34,10 @@ class DAOGestionProfesores extends Conexion{
 			
         	$sql="insert into $this->nombre_tabla_profesor (dni,nombres,apellido_paterno,apellido_materno,username,password,disponible) values ('$dni','$nombres','$apellido_p','$apellido_m','$username','$password',1)";
 			    $rs = mysql_query($sql,$cn);
+			    
+			    
+        	$sql="insert into $this->nombre_tabla_plana_docente (dni) values ('$dni') ";	//VERIFICA Q NO EXISTA OTRO CODIGO IGUAL 
+			   $rs = mysql_query($sql,$cn);
 			
 			mysql_close($cn);			 
 			return "mysql_si";
@@ -116,7 +121,9 @@ class DAOGestionProfesores extends Conexion{
         		$sql="update $this->nombre_tabla_profesor set 
 dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',username='$username',password='$password' where dni='$dni_anterior'";		
 			    $rs = mysql_query($sql,$cn);
-			
+			    
+			    $sql="update $this->nombre_tabla_plana_docente set dni='dni' where dni='$dni_anterior'";
+			$rs = mysql_query($sql,$cn);
 				mysql_close($cn);		 
 				return "mysql_si";
 				
@@ -142,11 +149,16 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 			if($disponible=="disponible"){
 				$sql="update $this->nombre_tabla_profesor set disponible=1 where dni='$dni'";
 				$rs = mysql_query($sql,$cn);
+				
+			    $sql="update $this->nombre_tabla_plana_docente set disponible=1 where dni='$dni'";
+			$rs = mysql_query($sql,$cn);
 			}else{
-					if($disponible=="no_disponible"){
+					
 						$sql="update $this->nombre_tabla_profesor set disponible=0 where dni='$dni'";
 						$rs = mysql_query($sql,$cn);
-						}
+					
+			   			 $sql="update $this->nombre_tabla_plana_docente set disponible=0 where dni='$dni'";
+						$rs = mysql_query($sql,$cn);
 				}
 			mysql_close($cn);
 			return "mysql_si";

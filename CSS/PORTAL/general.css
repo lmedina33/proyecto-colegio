@@ -382,6 +382,8 @@ body{
 
 #catalogo #contenido #contenido-cara_1{  /*Recordando que el z-index más alto es el de cara 1 al principio, llegando hasta 30*/
 	z-index:32;
+	overflow-x:hidden;
+	overflow-y:visible;
 }
 
 #catalogo #contenido #contenido-inicial-1{  
