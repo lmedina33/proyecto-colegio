@@ -130,32 +130,20 @@ function fun_quitar_cargando(){
 	
 }
 	
-function estado_vencimiento(div){
-/*
-	if(div=="tabla_detalles_stock"){
-	
-		cont=0;	
-		$("#tabla_detalles_stock tr").each(function(){
-			
-			
-			resultado=compara_fechas(cambia_formato_fecha(DETALLES_STOCK[cont][4],"normal"),cambia_formato_fecha(fecha_string(HOY_DIA,HOY_MES,HOY_ANIO),"normal"));
-		
-			if(resultado==0 || resultado==2){
-				$(this).children().each(function(){
-				
-				 if($(this).css("background-color")=="white" || $(this).css("background-color")=="rgba(0, 0, 0, 0)"){
-					$(this).css("background-color","red")
-					$(this).css("color","white")
-										
-				}
-				});
-				//alert($(this "td").css("background-color"));
-				
-			}
-			cont++;
-		});
-	}*/
+function fun_refresca_combo_box_con_tabla(arg_combo_box,arg_matriz,arg_cont_matriz,arg_indice1,arg_indice2){  //Esta función se encarga de refrescar cualquier combo box con información de una matriz, para esto debemos indicar que indices de cada registro queremos insertar en los values y options del combo box
+	var fila="";
+	var codigo_html="";
+	for(var i=0;i<arg_cont_matriz;i++){
+		fila='<option value="'+arg_matriz[i][arg_indice1]+'">'+arg_matriz[i][arg_indice2]+'</option>';
+		codigo_html=codigo_html+fila;
+	}
+
+	$(arg_combo_box).html(codigo_html);
 }
 
+function fun_combobox_opcion_elegida(arg_combo_box){  //devuelve la opcion elegida en el combo box, no el ID del option, sino el HTML
+	
+	return $(arg_combo_box+' option[value="'+$(arg_combo_box).val()+'"]').html();
+}
 
 

@@ -149,7 +149,7 @@
 				
 				</td>
 				<td width="40%" class="alinear_centro">
-				<input value="Aceptar" type="button" id="popup_aviso_aceptar" title="Aceptar" onclick="fun_cerrar_sobreaviso()"/>
+				<input value="Aceptar" type="button" id="popup_aviso_aceptar" title="Aceptar" onclick="fun_cerrar_aviso2()"/>
 				</td>
 				
 				
@@ -203,7 +203,7 @@
 				
 				</td>
 				<td width="40%" class="alinear_centro">
-				<input value="Aceptar" type="button" id="popup_aviso_aceptar" title="Aceptar" onclick="fun_cerrar_sobreaviso2()"/>
+				<input value="Aceptar" type="button" id="popup_aviso_aceptar" title="Aceptar" onclick="fun_cerrar_aviso3()"/>
 				</td>
 				
 				

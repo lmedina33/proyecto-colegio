@@ -12,6 +12,7 @@
 	<script language="javascript" src="../JS/FUNCIONES/funciones_variables_globales.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_info_operacionales.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_info_verificacion.js"></script>
+	<script language="javascript" src="../JS/FUNCIONES/funciones_popup_pregunta.js"></script>
 	
 	<script language="javascript" src="../JS/MODULOS/variables_globales.js"></script>
 	
@@ -27,11 +28,17 @@
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/REGISTROS/funciones_click.js"></script>
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/REGISTROS/funciones_change.js"></script>
 	
+	
+	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/CURSOS_RENDIMIENTO/funciones_post.js"></script>
+	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/CURSOS_RENDIMIENTO/funciones_click.js"></script>
+	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/CURSOS_RENDIMIENTO/funciones_change.js"></script>
+	
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/funciones_animacion_menu_acordeon.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="../CSS/general_popup.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/estilo_base.css" media="screen"/>  
 	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/general.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/pop_ups.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/transiciones_efectos.css" media="screen"/> 
 	<title>Untitled 3</title>
 </head>
@@ -119,12 +126,18 @@
 					
 				</div>
 				
-			<div id="3"  class="opcion"></div>
-				<div id="submenu_3"  class="submenu">
+			<div id="opcion-cursos_rendimiento"  class="opcion"></div>
+				<div id="submenu-cursos_rendimiento"  class="submenu">
 				
-					<div id="subopcion_1" class="subopcion" title="Click para seleccionar"></div>
-					<div id="subopcion_2" class="subopcion" title="Click para seleccionar"></div>
-					<div id="subopcion_3" class="subopcion" title="Click para seleccionar"></div>
+						
+					<div id="registro_cursos-cursos_rendimiento" class="subopcion" title="Seleccionado">
+						<div class="texto_pestana">Registrar Cursos</div>						
+					</div>
+						
+					<div id="notas_alumnos-cursos_rendimiento" class="subopcion" title="Seleccionado">
+						<div class="texto_pestana">Registrar notas</div>						
+					</div>
+					
 					
 				</div>
 				
@@ -143,6 +156,12 @@
 			<div id="area_registros" class="area oculto">
 							
 				<?php include("AREA_REGISTROS/contenido.php"); ?>
+			</div>	
+			
+			
+			<div id="area_cursos_rendimiento" class="area oculto">
+							
+				<?php include("AREA_CURSOS_RENDIMIENTO/contenido.php"); ?>
 			</div>	
 			
 			<!-- 

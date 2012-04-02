@@ -207,6 +207,83 @@ function fun_tratamiento_tildes(arg_palabra){  // ESTA FUNCION CONVIERTE TODOS L
 	
 }
 
+
+
+
+
+function fun_ignora_tildes(arg_palabra){  // ESTA FUNCION CONVIERTE TODOS LOS CARACTERES USADOS EN NUESTRO IDIOMA A SU RESPECTIVA EXPRECION ACUTE (O CODIFICACION HTML) PARA QUE PUEDAN SER GUARDADOS EN LA BASE DE DATOS Y NO TENER PROBLEMAS CON EL IDIOMA DE LA BASE DE DATOS
+	var nueva_palabra="";
+	cont=0;
+	
+	for(var i=0;arg_palabra[i];i++){
+	
+		if(arg_palabra[i]=='á' || arg_palabra[i]=='é' || arg_palabra[i]=="í" || arg_palabra[i]=='ó' || arg_palabra[i]=='ú' || arg_palabra[i]=='Á' || arg_palabra[i]=='É' || arg_palabra[i]=='Í' || arg_palabra[i]=='Ó' || arg_palabra[i]=='Ú' || arg_palabra[i]=='ñ' || arg_palabra[i]=='Ñ' || arg_palabra[i]=='ü' || arg_palabra[i]=='Ü' ){
+			
+			if(arg_palabra[i]=='á'){
+				nueva_palabra=nueva_palabra+"a";
+			}
+			
+			if(arg_palabra[i]=='é'){
+				nueva_palabra=nueva_palabra+"e";
+			}
+			
+			if(arg_palabra[i]=="í"){
+				nueva_palabra=nueva_palabra+"i";
+			}
+			
+			if(arg_palabra[i]=='ó'){
+				nueva_palabra=nueva_palabra+"o";
+			}
+			
+			if(arg_palabra[i]=='ú'){
+				nueva_palabra=nueva_palabra+"u";
+			}
+			
+			if(arg_palabra[i]=='Á'){
+				nueva_palabra=nueva_palabra+"A";
+			}
+			
+			if(arg_palabra[i]=='É'){
+				nueva_palabra=nueva_palabra+"E";
+			}
+			
+			if(arg_palabra[i]=='Í'){
+				nueva_palabra=nueva_palabra+"I";
+			}
+			
+			if(arg_palabra[i]=='Ó'){
+				nueva_palabra=nueva_palabra+"O";
+			}
+			
+			if(arg_palabra[i]=='Ú'){
+				nueva_palabra=nueva_palabra+"U";
+			}
+			
+			if(arg_palabra[i]=='Ñ'){
+				nueva_palabra=nueva_palabra+"Ñ";
+			}
+			
+			if(arg_palabra[i]=='ñ'){
+				nueva_palabra=nueva_palabra+"ñ";
+			}
+			
+			if(arg_palabra[i]=='ü'){
+				nueva_palabra=nueva_palabra+"u";
+			}
+			
+			if(arg_palabra[i]=='Ü'){
+				nueva_palabra=nueva_palabra+"U";
+			}
+			
+			
+		}else{
+			nueva_palabra=nueva_palabra+arg_palabra[i];
+		}
+	}
+	
+	return nueva_palabra;
+	
+}
 //////////////////////////////////////////LAS SIGUIENTES 2 FUNCIONES TRABAJAN JUNTAS
 
 
