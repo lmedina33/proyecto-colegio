@@ -53,7 +53,7 @@ class DAOCursos extends Conexion{
 	
 	//EL CAMPO CODIGO SE RA  IGUAL A = NIVEL+GRADO+NOMBRE+SECCION
   
-	function insertar_dao_cursos($grado,$nivel,$grado_cursos,$categoria){  
+	function insertar_dao_cursos($grado,$nivel,$grado_cursos){  
 
         $cn = $this->conexion();
         
@@ -70,14 +70,15 @@ class DAOCursos extends Conexion{
 				while($valores[$i]){		
 					$i2=$i+1;
 					$i3=$i+2;
+					$i4=$i+3;
 					
 					$codigo=$nivel.$grado.$valores[$i].$valores[$i2];
 					
-	        		$sql="insert into $this->nombre_tabla_admin_cursos (codigo,grado,nivel,nombre_curso,seccion,id_profesor,categoria) values ('$codigo',$grado,'$nivel','$valores[$i]','$valores[$i2]','$valores[$i3]','$categoria')";
+	        		$sql="insert into $this->nombre_tabla_admin_cursos (codigo,grado,nivel,nombre_curso,seccion,id_profesor,categoria) values ('$codigo',$grado,'$nivel','$valores[$i]','$valores[$i2]','$valores[$i3]','$valores[$i4]')";
 	       
 	        		$rs = mysql_query($sql,$cn);
 				
-					$i=$i+3;		
+					$i=$i+4;		
 				}
 				mysql_close($cn);
 				return "mysql_si";
@@ -98,6 +99,15 @@ class DAOCursos extends Conexion{
   				$sql="update $this->nombre_tabla_admin_cursos set codigo='$codigo', nombre_curso = '$nuevo_nombre_curso' where grado='$grado' and nivel='$nivel' and nombre_curso='$nombre_curso'";
 				
 				$rs = mysql_query($sql,$cn);	*/
+				
+				$sql="select * from $this->nombre_tabla_admin_cursos where grado='$grado' and nivel='$nivel' and nombre_curso='$nuevo_nombre_curso' and nombre_curso<>'$nombre_curso'";
+			    $rs = mysql_query($sql,$cn);
+				$respuesta="mysql_si";
+				
+				if(mysql_num_rows($rs)>0){
+					$respuesta="existe";
+				}else{
+					
 				$sql="select * from $this->nombre_tabla_admin_cursos where grado='$grado' and nivel='$nivel' and nombre_curso='$nombre_curso'";
 			    $rs = mysql_query($sql,$cn);
 				
@@ -117,8 +127,10 @@ class DAOCursos extends Conexion{
 					endforeach;
 				
 				} 
+				
+				}
 				mysql_close($cn);
-				return "mysql_si";
+				return $respuesta;
         
 		}else{
 		return "mysql_no";
@@ -131,8 +143,10 @@ class DAOCursos extends Conexion{
         
         if($cn!="no_conexion"){
 	          
+	          
   				$sql="update $this->nombre_tabla_admin_cursos set id_profesor = '$nuevo_profesor' where grado='$grado' and nivel='$nivel' and nombre_curso='$nombre_curso' and seccion='$seccion'";
-				
+			
+		
 				$rs = mysql_query($sql,$cn);
 				mysql_close($cn);
 				return "mysql_si";
@@ -146,7 +160,26 @@ class DAOCursos extends Conexion{
 		$cn = $this->conexion();
         $cadena_respuesta="";
         if($cn!="no_conexion"){
-        	$sql="select * from $this->nombre_tabla_admin_cursos where grado='$grado' and nivel='$nivel'";
+        	//primero obtenemos las secciones por separado
+        		$sql="select seccion from $this->nombre_tabla_admin_cursos  where grado='$grado' and nivel='$nivel' group by seccion order by seccion ASC";
+			    $rs = mysql_query($sql,$cn);
+			    
+        	while($fila=mysql_fetch_object($rs)){
+				$consulta_seccion[]=$fila;
+			} 
+			$cadena_respuesta="";
+			
+        	if($consulta_seccion[0]){
+				
+				foreach ($consulta_seccion as $c):
+					$cadena_respuesta.=$c->seccion."{";
+										
+				endforeach;
+				
+			
+			$cadena_respuesta.="}";
+        	
+        	$sql="select * from $this->nombre_tabla_admin_cursos where grado='$grado' and nivel='$nivel'  order by  nombre_curso,seccion ASC";
 			    $rs = mysql_query($sql,$cn);
 				
 			while($fila=mysql_fetch_object($rs)){
@@ -156,12 +189,14 @@ class DAOCursos extends Conexion{
         	if($consulta[0]){
 				
 				foreach ($consulta as $c):
-					$cadena_respuesta.=$c->nombre_curso."{".$c->seccion."{".$c->id_profesor."{";
+					$cadena_respuesta.=$c->nombre_curso."{".$c->seccion."{".$c->id_profesor."{".$c->categoria."{";
 										
 				endforeach;
 				
 			} 
-			
+			}else{
+				$cadena_respuesta="no data";
+			}
 			mysql_close($cn);
 			return $cadena_respuesta;
 			

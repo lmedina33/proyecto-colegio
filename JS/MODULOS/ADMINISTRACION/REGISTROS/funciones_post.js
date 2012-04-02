@@ -1,9 +1,11 @@
-var GL_ALUMNOS=new Array();
+var GL_ALUMNOS=new Array(); //codigo,nombres,apellido_p,apellido_m,password,id_padre,disponibilidad
 var GL_CONT_ALUMNOS=0;
 
-var GL_PADRES=new Array();
+var GL_PADRES=new Array(); //dni,nombres,apellido_p,apellido_m,usuario,password,disponibilidad
 var GL_CONT_PADRES=0;
 
+var GL_PROFESORES=new Array(); //dni,nombres,apellido_p,apellido_m,usuario,password,disponibilidad
+var GL_CONT_PROFESORES=0;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -103,6 +105,7 @@ function fun_get_alumnos(nivel,grado,seccion){
 
 
 
+
 function fun_insertar_profesor(dni,nombres,apellido_p,apellido_m,usuario,password){  
 
 	
@@ -165,24 +168,15 @@ function fun_get_profesores(){
 				
 				var num_campos=7;  //dni,nombres,apellido_p,apellido_m,usuario,password,disponibilidad
 				var valores=data.split("{");
-				var html_list="";
+				
 				
 				for(var i=0;valores[i];i+=num_campos){
 					
-					GL_PROFESORES[GL_CONT_PROFESORES]=new Array(valores[i],valores[i+1],valores[i+2],valores[i+3],valores[i+4],valores[i+5],parseFloat(valores[i+6]));
+					GL_PROFESORES[GL_CONT_PROFESORES]=new Array(valores[i],valores[i+1],valores[i+2],valores[i+3],valores[i+4],valores[i+5],parseFloat(valores[i+6]),valores[i+1]+" "+valores[i+2]+" "+valores[i+3]);
 					
-					
-					html_list+='<tr>'+
-							'<td width="'+GL_DIM_TABLA_PROFESORES[0]+'%">'+GL_PROFESORES[GL_CONT_PROFESORES][0]+'</td>'+
-							'<td width="'+GL_DIM_TABLA_PROFESORES[1]+'%">'+GL_PROFESORES[GL_CONT_PROFESORES][1]+" "+GL_PROFESORES[GL_CONT_PROFESORES][2]+" "+GL_PROFESORES[GL_CONT_PROFESORES][3]+'</td>'+
-							'<td width="'+GL_DIM_TABLA_PROFESORES[2]+'%">'+GL_PROFESORES[GL_CONT_PROFESORES][4]+'</td>'+
-							'<td width="'+GL_DIM_TABLA_PROFESORES[3]+'%">'+GL_PROFESORES[GL_CONT_PROFESORES][5]+'</td></tr>';
-					
-					GL_CONT_PADRES++;
+					GL_CONT_PROFESORES++;
 				}
-				
-				$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_PROFESORES+"#lista .lista").html(html_list);
-				
+				refrescar_tabla_profesores();
 			
 			}
 			
@@ -194,6 +188,21 @@ function fun_get_profesores(){
 	
 }
 
+function refrescar_tabla_profesores(){
+	var html_list="";
+				
+				for(var i=0;i<GL_CONT_PROFESORES;i++){
+					
+					html_list+='<tr>'+
+							'<td width="'+GL_DIM_TABLA_PROFESORES[0]+'%">'+GL_PROFESORES[i][0]+'</td>'+
+							'<td width="'+GL_DIM_TABLA_PROFESORES[1]+'%">'+GL_PROFESORES[i][1]+" "+GL_PROFESORES[i][2]+" "+GL_PROFESORES[i][3]+'</td>'+
+							'<td width="'+GL_DIM_TABLA_PROFESORES[2]+'%">'+GL_PROFESORES[i][4]+'</td>'+
+							'<td width="'+GL_DIM_TABLA_PROFESORES[3]+'%">'+GL_PROFESORES[i][5]+'</td></tr>';
+					
+				}
+				
+				$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_PROFESORES+"#lista .lista").html(html_list);
+}
 
 
 function fun_insertar_padre(dni,nombres,apellido_p,apellido_m,usuario,password){  
