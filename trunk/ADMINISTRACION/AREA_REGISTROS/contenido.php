@@ -216,4 +216,27 @@
 	</div>
 </div>
 
+
+
+<div id="contenido-subida_fotos-registros" class="contenido-registros alavista">
+	<div class="contenido_titulo" style="margin-top:4%;">
+		Subida de fotos
+	</div>
+	
+	<div id="contenido-cuerpo">		  		
+		
+		<select id="slc_nivel">
+			<option value="INICIAL">Inicial</option>
+			<option value="PRIMARIA">Primaria</option>
+			<option value="SECUNDARIA">Secundaria</option>
+		</select>
+		
+				
+		<div id="upload_button">Upload</div>
+			<ul id="lista">
+			</ul>
+	</div>
+</div>
+
+
 <?php include("AREA_GESTION_CONTENIDO_WEB/pop_ups.php"); ?>
