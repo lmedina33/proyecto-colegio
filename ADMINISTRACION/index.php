@@ -7,6 +7,7 @@
 
 
 	<script language="javascript" src="../JS/LIBRERIAS/jquery1_6.js"></script>
+	<script language="javascript" src="../JS/LIBRERIAS/AjaxUpload.2.0.min.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_interfaz_grafica.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_popup_aviso.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_variables_globales.js"></script>
@@ -121,6 +122,10 @@
 					</div>
 					
 					<div id="consultar_profesores-registros" class="subopcion" title="Click para seleccionar">
+						<div class="texto_pestana">Consultar Profesores</div>
+					</div>
+					
+					<div id="subida_fotos-registros" class="subopcion" title="Click para seleccionar">
 						<div class="texto_pestana">Consultar Profesores</div>
 					</div>
 					

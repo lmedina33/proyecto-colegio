@@ -9,7 +9,34 @@ var CONTENEDOR_CONSULTAS_PROFESORES="#contenido-consultar_profesores-registros "
 
 	
 $(document).ready(function(){
-
+	var button = $('#upload_button'), interval;
+	
+	var nivel_seleccionado=$("#contenido-subida_fotos-registros #slc_nivel").val();
+	
+	new AjaxUpload('#upload_button', {
+        action: '../POST/ADMINISTRACION/upload.php',
+        data:{nivel:$("#contenido-subida_fotos-registros #slc_nivel").val()},
+        onSubmit : function(file , ext){
+		if (! (ext && /^(jpg|png|jpeg|gif)$/.test(ext))){
+			// extensiones permitidas
+			alert('Error: Solo se permiten imagenes');
+			// cancela upload
+			return false;
+		} else {
+			button.text('Uploading');
+			this.disable();
+		}
+		},
+		onComplete: function(file, response){
+			button.text('Upload');
+			// enable upload button
+			this.enable();			
+			// Agrega archivo a la lista
+			$('#lista').appendTo('.files').text(file);
+		}	
+	});
+	
+	
 	//Aquí se declaran todos los eventos click que existen haciendo las llamadas a los eventos o funciones que correspondan, las funciones se dividen en áreas de modo que se puedan ubicar fácilmente. Las áreas serán las principales, zonas de trabajo, popups, etc.
 	
 //////////////////////////////PAGINA PRINCIPAL////////////////////////////////////
