@@ -1,0 +1,133 @@
+.contenido-pag_web .contenido_titulo{
+	font-size:130%;
+	font-weight:bold;
+	margin-top:30px;
+	margin-left:50px;
+}
+
+/**************************************************/
+/****************SUBIDA DE FOTOS*******************/
+/****************SUBIDA DE FOTOS*******************/
+/****************SUBIDA DE FOTOS*******************/
+/****************SUBIDA DE FOTOS*******************/
+/****************SUBIDA DE FOTOS*******************/
+/**************************************************/
+
+#contenido-subida_fotos-pag_web #caja_superior {
+	margin-top:30px;
+	margin-left:30px;
+	float:left;
+	
+}
+
+
+#contenido-subida_fotos-pag_web #upload_button {
+	margin-top:30px;
+	margin-left:30px;
+	float:left;
+	
+}
+
+
+
+#contenido-subida_fotos-pag_web #lista_fotos {
+	margin-top:30px;
+	margin-left:30px;
+	float:left;
+	width:470px; height:450px; border:1px solid black;
+	
+	overflow-x:hidden;
+	overflow-y:visible;
+}
+
+
+#contenido-subida_fotos-pag_web #lista_fotos #casilla_foto {
+	margin-top:20px;
+	margin-left:20px;
+	float:left;
+	width:130px; height:130px;
+	background:#CCC; 
+}
+
+#contenido-subida_fotos-pag_web #lista_fotos #casilla_foto input {
+
+	cursor:pointer;
+}
+
+
+#contenido-subida_fotos-pag_web #lista_fotos #casilla_foto #foto {
+	margin-top:0px;
+	margin-left:20px;
+	float:left;
+	width:100px; height:100px;
+	background-size:100px;
+	cursor:pointer;
+}
+
+#contenido-subida_fotos-pag_web #lista_fotos #casilla_foto #foto:hover{
+	border:1px blue solid;
+}
+
+
+
+#contenido-subida_fotos-pag_web #eliminar_foto {
+	margin-top:460px;
+	margin-left:15px;
+	
+	text-decoration:underline;
+	color:blue;
+	cursor:pointer;
+	float:left;
+	
+}
+
+
+#protector_marco_foto
+{    opacity: .40;
+  	top: 0px;
+	background-color: #FFF;
+	height:100%;
+	width:100%;
+	position: fixed;
+	display: none;
+	z-index: 130;
+}
+
+
+#marco_foto_mostrada{
+	
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	background-color: white;
+
+	z-index:140;
+	
+	box-shadow:0px 0px 10px 10px #666;
+	
+	display:none;
+}
+
+
+#marco_foto_mostrada #boton_cerrar{
+	
+	width: 16px;
+	height: 16px;
+	background-image:url("../../IMAGENES/PORTAL/ALBUM_FOTOS/cerrar.png");
+	margin-right:2px;
+	margin-top:2px;
+	float:right;
+	z-index:140;
+	cursor:pointer;
+	border:1px #888 solid;
+		
+}
+
+
+#marco_foto_mostrada img{
+	
+	margin-left:20px;
+	margin-top:20px;
+}
+
+

@@ -139,7 +139,7 @@ body{
 
 #contenido{
 
- 	width:920px; 	
+ 	width:700px; 	
  	height:600px;
  	margin-left:10px;
  	float:left;
@@ -179,18 +179,3 @@ body{
 }
 
 
-
-#upload_button {
-	width:120px;
-	height:35px;
-	text-align:center;
-	background-image:url(../../IMAGENES/ADMINISTRACION/boton.png);
-	color:#CCCCCC;
-	font-weight:bold;
-	padding-top:15px;
-	margin:auto;
-	cursor:pointer;
-}
-#upload_button:hover{
-	color:#FFFFFF;
-}
