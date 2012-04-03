@@ -113,5 +113,26 @@
 
 </div>
 
+<div id="contenido-planilla_docente_admin-pag_web" class="contenido-pag_web oculto">
+	<div class="contenido_titulo" style="margin-top:4%;">
+		Registro de Administrativos
+	</div>
+	<div id="contenido-cuerpo">
+		DNI: <input id="txt_dni" type="text" value=""/>
+		Nombres: <input id="txt_nombres" type="text" value=""/>
+		Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/>
+		Apellido Materno: <input id="txt_apellido_m" type="text" value=""/>
+		Cargo: <select id="slc_nivel">
+			  <option value="D">Director</option>
+			  <option value="U">Sub-director</option>
+			  <option value="S">Secretaria</option> 
+		  </select>
+  		
+		<input id="btn_guardar" type="button" value="Guardar registro"/>
+        
+	</div>
+
+</div>
+
 
 <?php include("AREA_GESTION_CONTENIDO_WEB/pop_ups.php"); ?>
