@@ -6,7 +6,7 @@ var CONTENEDOR_METODOLOGIAS="#contenido-metodologia-pag_web ";
 var CONTENEDOR_ACTIVIDADES="#contenido-actividades-pag_web ";
 var CONTENEDOR_ADMISION="#contenido-admision-pag_web ";
 var CONTENEDOR_SERVICIOS="#contenido-servicios-pag_web ";
-
+var CONTENEDOR_ADMINISTRATIVOS="#contenido-planilla_docente_admin-pag_web ";
 /////////////////////////////////////////////
 var GL_TITULOS_SERVICIOS=new Array();
 var GL_SERVICIOS=new Array();
@@ -495,6 +495,39 @@ $(AREA_PAG_WEB+CONTENEDOR_SERVICIOS+"#btn_guardar").click(function(){
 
 	
 });
+
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+/*Entorno Plana Docente Administrativa*/
+
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+//$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#btn_guardar").click(function(){
+$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#btn_guardar").click(function(){																		   
+ 
+ 	alert("entreee");
+	var dni=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_dni").val();
+	var nombres=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_nombres").val();
+	var apellido_p=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_apellido_p").val();
+	var apellido_m=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_apellido_m").val();
+	var nivel=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#slc_nivel").val();
+		
+		if(fun_esblanco(dni) || fun_esblanco(nombres) || fun_esblanco(apellido_p) || fun_esblanco(apellido_m)){
+			fun_aviso_popup("Debe llenar todos los datos del administrativo.",GLOBAL_TTL_ACN_INC,35,GLOBAL_MARGEN_TOP_AVISO);
+		}else{
+			alert("bien");
+			//fun_insertar_alumno(codigo,nombres,apellido_p,apellido_m,password,nivel,grado,seccion);
+		}
+
+	
+});
+
+
+
+
 //////////////////////////////AREA X///////////////////////////////////
 
 
