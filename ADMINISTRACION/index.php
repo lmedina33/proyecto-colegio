@@ -39,6 +39,7 @@
 	<link rel="stylesheet" type="text/css" href="../CSS/general_popup.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/estilo_base.css" media="screen"/>  
 	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/general.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/gestion_contenido_web.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/pop_ups.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/transiciones_efectos.css" media="screen"/> 
 	<title>Untitled 3</title>
@@ -47,8 +48,19 @@
 <body>
 
 <div id="protector_transparente"></div>
+<div id="protector_marco_foto"></div>
+
 <div id="div_back"></div>
 <div id="div_back2"></div>
+<div id="div_back3"></div>
+
+<div id="marco_foto_mostrada">
+	<div id="boton_cerrar" title="Pulse aquí para cerrar la foto">
+	
+	</div>
+	<img src="" width="200"  width="200" />
+	
+</div>
 
 
 
@@ -95,6 +107,9 @@
 						<div class="texto_pestana">Plana docente y administrativa</div>
 					</div>
 					
+					<div id="subida_fotos-pag_web" class="subopcion" title="Click para seleccionar">
+						<div class="texto_pestana">Albumes de fotos</div>
+					</div>
 				</div>
 				
 			<div id="opcion-registros"  class="opcion"></div>			
@@ -125,9 +140,6 @@
 						<div class="texto_pestana">Consultar Profesores</div>
 					</div>
 					
-					<div id="subida_fotos-registros" class="subopcion" title="Click para seleccionar">
-						<div class="texto_pestana">Consultar Profesores</div>
-					</div>
 					
 				</div>
 				

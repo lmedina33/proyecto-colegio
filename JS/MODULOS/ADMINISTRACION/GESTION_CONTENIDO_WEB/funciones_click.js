@@ -6,7 +6,6 @@ var CONTENEDOR_METODOLOGIAS="#contenido-metodologia-pag_web ";
 var CONTENEDOR_ACTIVIDADES="#contenido-actividades-pag_web ";
 var CONTENEDOR_ADMISION="#contenido-admision-pag_web ";
 var CONTENEDOR_SERVICIOS="#contenido-servicios-pag_web ";
-var CONTENEDOR_ADMINISTRATIVOS="#contenido-planilla_docente_admin-pag_web";
 
 /////////////////////////////////////////////
 var GL_TITULOS_SERVICIOS=new Array();
@@ -32,10 +31,78 @@ $(document).ready(function(){
 
 
 
+$("#menu_vertical #submenu-pag_web #subida_fotos-pag_web").click(function(){
+	
+	$("#upload_button").click();
+	fun_consultar_galeria($("#contenido-subida_fotos-pag_web #slc_nivel").val());
+});
+
+$("#contenido-subida_fotos-pag_web #slc_nivel").change(function(){
+		
+	$("#upload_button").click();
+	fun_consultar_galeria($("#contenido-subida_fotos-pag_web #slc_nivel").val());
+});
+
+
+$("#contenido-subida_fotos-pag_web #upload_button").click(function(){
+	
+	//alert($("#contenido-subida_fotos-registros #slc_nivel").val());
+	    
+	new AjaxUpload('#upload_button', {
+        action: '../POST/ADMINISTRACION/GESTION_CONTENIDO_WEB/subir_foto.php',
+        data:{nivel:$("#contenido-subida_fotos-pag_web #slc_nivel").val()},
+        onSubmit : function(file , ext){
+		if (! (ext && /^(jpg|png|jpeg|gif)$/.test(ext))){
+			// extensiones permitidas
+			alert('Error: Solo se permiten imagenes');
+			// cancela upload
+			return false;
+		} else {
+		
+			this.disable();
+		}
+		},
+		onComplete: function(file, response){
+			
+			alert(response);
+			
+			fun_consultar_galeria($("#contenido-subida_fotos-pag_web #slc_nivel").val());
+			// enable upload button
+			this.enable();			
+		}	
+	});
+	
+});
+
+
+
+$("#marco_foto_mostrada #boton_cerrar").click(function(){
+	
+	$("#marco_foto_mostrada").fadeOut(GLOBAL_VEL_FADE);	
+	$("#protector_marco_foto").fadeOut(GLOBAL_VEL_FADE);	
+	
+});
+
+
+$("#contenido-subida_fotos-pag_web #eliminar_foto").click(function(){
+	
+	//alert($("#contenido-subida_fotos-registros #slc_nivel").val());
+	foto_elegida=$("#contenido-subida_fotos-pag_web #lista_fotos input[@name='seleccionar_foto']:checked").val();
+	
+	if(foto_elegida){
+		fun_eliminar_foto($("#contenido-subida_fotos-pag_web #slc_nivel").val(),foto_elegida);
+	}else{
+		fun_aviso_popup("Debe elegir una de las fotos a eliminar.","Elija una foto",30,30);
+	}
+});
+
+
+
 $("#menu_vertical #submenu-pag_web #quienes_somos-pag_web").click(function(){
 
 	fun_consultar_quienes_somos(AREA_PAG_WEB+CONTENEDOR_QUIENES_SOMOS+"#txt_quienes_somos");
 });
+
 
 
 
@@ -420,6 +487,7 @@ $(AREA_PAG_WEB+CONTENEDOR_SERVICIOS+"#btn_guardar").click(function(){
 		}
 		
 	}	
+	
 
 	fun_insertar_servicios(cadena_titulos,cadena_parrafos);
 	
@@ -427,37 +495,6 @@ $(AREA_PAG_WEB+CONTENEDOR_SERVICIOS+"#btn_guardar").click(function(){
 
 	
 });
-
-////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////
-
-/*Entorno Plana Docente Administrativa*/
-
-////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////
-//$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#btn_guardar").click(function(){
-$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#btn_guardar").click(function(){																		   
- 
- 	alert("entreee");
-	var dni=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_dni").val();
-	var nombres=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_nombres").val();
-	var apellido_p=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_apellido_p").val();
-	var apellido_m=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_apellido_m").val();
-	var nivel=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#slc_nivel").val();
-		
-		if(fun_esblanco(dni) || fun_esblanco(nombres) || fun_esblanco(apellido_p) || fun_esblanco(apellido_m)){
-			fun_aviso_popup("Debe llenar todos los datos del administrativo.",GLOBAL_TTL_ACN_INC,35,GLOBAL_MARGEN_TOP_AVISO);
-		}else{
-			alert("bien");
-			//fun_insertar_alumno(codigo,nombres,apellido_p,apellido_m,password,nivel,grado,seccion);
-		}
-
-	
-});
-
-
 //////////////////////////////AREA X///////////////////////////////////
 
 

@@ -1,6 +1,6 @@
 <?php
 
-require_once("../../DAO/PORTAL/DAOGaleriaFotos.php");
+require_once("../../DAO/ADMINISTRACION/DAOGaleriaFotos.php");
 
 $galeria=new DAOGaleriaFotos();
 
