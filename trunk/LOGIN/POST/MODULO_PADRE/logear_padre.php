@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("../../DAO/MODULO_PROFESOR/DAOLoginPadre.php");
+require_once("../../DAO/MODULO_PADRE/DAOLoginPadre.php");
 
 $logeo=new DAOLoginPadre();
 
