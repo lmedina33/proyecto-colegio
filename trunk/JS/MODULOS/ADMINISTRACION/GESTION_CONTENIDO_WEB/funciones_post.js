@@ -1,5 +1,6 @@
 
-
+var GL_ADMIN=new Array(); //dni,nombres,apellido_p,apellido_m,usuario,password,disponibilidad
+var GL_CONT_ADMIN=0;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////AQUI SE DECLARAN TODAS LAS FUNCIONES POST QUE SERÁN LLAMADAS PARA SU USO EN EL MÓDULO ACTUAL//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -851,19 +852,19 @@ function fun_get_administrativo(){
 				GL_ADMIN=new Array();
 				GL_CONT_ADMIN=0;
 				
-				alert("toy dentro");
+				
 				var num_campos=5;  //dni,nombres,apellido_p,apellido_m,cargo
 				var valores=data.split("{");
 				
 				
 				for(var i=0;valores[i];i+=num_campos){
 					
-					GL_PROFESORES[GL_CONT_PROFESORES]=new Array(valores[i],valores[i+1],valores[i+2],valores[i+3],valores[i+4],valores[i+5],parseFloat(valores[i+6]),valores[i+1]+" "+valores[i+2]+" "+valores[i+3]);
+					GL_ADMIN[GL_CONT_ADMIN]=new Array(valores[i],valores[i+1],valores[i+2],valores[i+3],valores[i+4],valores[i+1]+" "+valores[i+2]+" "+valores[i+3]);
 					
-					GL_CONT_PROFESORES++;
+					GL_CONT_ADMIN++;
 				}
-				refrescar_tabla_profesores();
-			
+				refrescar_tabla_admin();
+
 			}
 			
 		}
@@ -871,5 +872,21 @@ function fun_get_administrativo(){
 	        
 			
 	});	
+}	
+function refrescar_tabla_admin(){
+	var html_list="";
+				
+				for(var i=0;i<GL_CONT_ADMIN;i++){
+					
+					html_list+='<tr>'+
+							'<td width="'+GL_DIM_TABLA_ADMIN[0]+'%">'+GL_ADMIN[i][0]+'</td>'+
+							'<td width="'+GL_DIM_TABLA_ADMIN[1]+'%">'+GL_ADMIN[i][1]+" "+GL_ADMIN[i][2]+" "+GL_ADMIN[i][3]+'</td>'+
+							'<td width="'+GL_DIM_TABLA_ADMIN[2]+'%">'+GL_ADMIN[i][4]+'</td>'+
+							'<td width="'+GL_DIM_TABLA_ADMIN[3]+'%">'+GL_ADMIN[i][5]+'</td></tr>';
+					
+				}
+				//alert(html_list);
+				$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#lista .lista").html(html_list);
+
 	
 }
