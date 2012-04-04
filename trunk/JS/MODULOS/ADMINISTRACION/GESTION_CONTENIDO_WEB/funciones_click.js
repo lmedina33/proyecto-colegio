@@ -513,20 +513,23 @@ $(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#btn_guardar").click(function(){
 	var nombres=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_nombres").val();
 	var apellido_p=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_apellido_p").val();
 	var apellido_m=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_apellido_m").val();
-	var nivel=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#slc_nivel").val();
+	var cargo=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#slc_nivel").val();
 		
 		if(fun_esblanco(dni) || fun_esblanco(nombres) || fun_esblanco(apellido_p) || fun_esblanco(apellido_m)){
 			fun_aviso_popup("Debe llenar todos los datos del administrativo.",GLOBAL_TTL_ACN_INC,35,GLOBAL_MARGEN_TOP_AVISO);
 		}else{
 			alert("bien");
-			//fun_insertar_alumno(codigo,nombres,apellido_p,apellido_m,password,nivel,grado,seccion);
+			fun_insertar_administrativo(dni,nombres,apellido_p,apellido_m,cargo);
 		}
 
 	
 });
 
 
-
+$("#menu_vertical #submenu-pag_web #consultar_admin-pag_web").click(function(){
+	
+	fun_get_administrativo();
+});
 
 //////////////////////////////AREA X///////////////////////////////////
 
