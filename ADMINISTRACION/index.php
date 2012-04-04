@@ -106,6 +106,10 @@
 					<div id="planilla_docente_admin-pag_web" class="subopcion" title="Click para seleccionar">
 						<div class="texto_pestana">Plana docente y administrativa</div>
 					</div>
+                    
+                    <div id="consultar_admin-pag_web" class="subopcion" title="Click para seleccionar">
+						<div class="texto_pestana">Consultar Administradores</div>
+					</div>
 					
 					<div id="subida_fotos-pag_web" class="subopcion" title="Click para seleccionar">
 						<div class="texto_pestana">Albumes de fotos</div>

@@ -124,15 +124,59 @@
 		Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/>
 		Apellido Materno: <input id="txt_apellido_m" type="text" value=""/>
 		Cargo: <select id="slc_nivel">
-			  <option value="D">Director</option>
-			  <option value="U">Sub-director</option>
-			  <option value="S">Secretaria</option> 
+			  <option value="Director">Director</option>
+			  <option value="Sub-director">Sub-director</option>
+			  <option value="Secretaria">Secretaria</option> 
 		  </select>
   		
 		<input id="btn_guardar" type="button" value="Guardar registro"/>
         
 	</div>
 
+</div>
+
+<div id="contenido-consultar_admin-pag_web" class="contenido-pag_web oculto">
+	<div class="contenido_titulo" style="margin-top:4%;">
+		Consulta de Administrativos
+	</div>
+	
+	<div id="contenido-cuerpo">		  		
+		<div id="lista">
+		<table id="cabecera_lista">
+			<tr>
+				<td width="15%">DNI</td>
+				<td width="50%">Nombres y Apellidos</td>
+				<td width="18%">Cargo</td>
+			</tr>
+		</table>
+		
+		<table class="lista"></table>
+		</div>
+		
+		<!--ESTA AREA ES PARA LA MODIFICACION DE LOS DATOS DE UN ALUMNO SELECCIONADO-->
+		<!--Habilitado: 
+		<select id="slc_habilitado">
+		
+		  <option value="disponible">Habilitado</option>
+			 <option value="no_disponible">No habilitado</option> 
+		</select> -->
+		  		
+		  		
+		DNI: <input id="txt_dni" type="text" value=""/>
+		Nombres: <input id="txt_nombres" type="text" value=""/>
+		Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/>
+		Apellido Materno: <input id="txt_apellido_m" type="text" value=""/>
+		Cargo: <select id="slc_nivel">
+			  <option value="Director">Director</option>
+			  <option value="Sub-director">Sub-director</option>
+			  <option value="Secretaria">Secretaria</option> 
+		  </select>
+				  		
+		<input id="btn_aceptar" type="button" value="Modificar registro"/>
+		  		
+		  		
+		<!--FIN AREA ES PARA LA MODIFICACION DE LOS DATOS DE UN ALUMNO SELECCIONADO-->
+	</div>
 </div>
 
 

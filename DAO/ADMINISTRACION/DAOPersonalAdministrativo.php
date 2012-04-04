@@ -134,7 +134,7 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 		}
 	}
 	
-	function consultar_planilla(){
+	function consultar_planilla_profesores(){
 		  $cn = $this->conexion();
         $cadena_respuesta="";
         if($cn!="no_conexion"){
@@ -178,6 +178,33 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 				if($consulta_imp){
 						foreach ($consulta_imp as $c):
 					$cadena_respuesta.=$c->nombres."{".$c->apellido_paterno."{".$c->apellido_materno."{".$c->cargo."{";
+										
+				endforeach;
+				}
+			
+				return $cadena_respuesta;
+			
+			   
+		}else{
+		return "mysql_no";
+		}
+	}
+	
+	function consultar_planilla(){
+		  $cn = $this->conexion();
+        $cadena_respuesta="";
+        if($cn!="no_conexion"){
+        				
+			$sql="select * from $this->nombre_tabla_personal";
+			$rs = mysql_query($sql,$cn);
+				
+			while($fila=mysql_fetch_object($rs)){
+				$consulta_imp[]=$fila;
+			} 
+			
+				if($consulta_imp){
+						foreach ($consulta_imp as $c):
+					$cadena_respuesta.=$c->dni."{".$c->nombres."{".$c->apellido_paterno."{".$c->apellido_materno."{".$c->cargo."{";
 										
 				endforeach;
 				}

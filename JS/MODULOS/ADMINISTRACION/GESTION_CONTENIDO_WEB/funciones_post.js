@@ -787,3 +787,89 @@ function click_minifoto_muestra(background){
 	
 	
 }
+
+
+//////////////////////////////PERSONAL ADMINISTRATIVO////////////////////////////
+//////////////////////////////PERSONAL ADMINISTRATIVO////////////////////////////
+//////////////////////////////PERSONAL ADMINISTRATIVO////////////////////////////
+
+function fun_insertar_administrativo(dni,nombres,apellido_p,apellido_m,cargo){  
+
+	
+	$.ajax({
+        url: "../POST/ADMINISTRACION/GESTION_CONTENIDO_WEB/Personal_insertar.php",
+        type: "POST",
+        data:{dni:dni,nombres:fun_tratamiento_tildes(nombres),apellido_p:fun_tratamiento_tildes(apellido_p),apellido_m:fun_tratamiento_tildes(apellido_m),cargo:cargo},
+        async:true,
+        beforeSend: function(objeto){
+
+        	fun_mostrar_cargando();
+
+        },
+        
+	success: function(data){
+
+		fun_quitar_cargando();
+
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+			
+			fun_aviso_popup("Los datos del personal '"+fun_tratamiento_tildes(nombres)+" "+fun_tratamiento_tildes(apellido_p)+" "+fun_tratamiento_tildes(apellido_m)+"' fueron guardados con &eacute;xito.",GL_TTL_REGISTRO_EXITO,30,GLOBAL_MARGEN_TOP_AVISO);
+			
+		}
+	}
+	        
+			
+	});	
+	
+}
+
+function fun_get_administrativo(){  
+
+	
+	$.ajax({
+        url: "../POST/ADMINISTRACION/GESTION_CONTENIDO_WEB/consultar_personal.php",
+        type: "POST",
+        data:{},
+        async:true,
+        beforeSend: function(objeto){
+
+        	fun_mostrar_cargando();
+
+        },
+        
+	success: function(data){
+
+		fun_quitar_cargando();
+
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+			
+			if(data!="no data"){
+				GL_ADMIN=new Array();
+				GL_CONT_ADMIN=0;
+				
+				alert("toy dentro");
+				var num_campos=5;  //dni,nombres,apellido_p,apellido_m,cargo
+				var valores=data.split("{");
+				
+				
+				for(var i=0;valores[i];i+=num_campos){
+					
+					GL_PROFESORES[GL_CONT_PROFESORES]=new Array(valores[i],valores[i+1],valores[i+2],valores[i+3],valores[i+4],valores[i+5],parseFloat(valores[i+6]),valores[i+1]+" "+valores[i+2]+" "+valores[i+3]);
+					
+					GL_CONT_PROFESORES++;
+				}
+				refrescar_tabla_profesores();
+			
+			}
+			
+		}
+	}
+	        
+			
+	});	
+	
+}
