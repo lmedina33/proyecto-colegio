@@ -38,6 +38,7 @@ body{
  	width:1280px;
  	height:105px;
  	position:relative;
+	background:url("../../IMAGENES/PORTAL/pie_pagina.png") no-repeat;
  	margin: 0px auto;
  	margin-top:30px;
 }
