@@ -7,6 +7,7 @@ var CONTENEDOR_ACTIVIDADES="#contenido-actividades-pag_web ";
 var CONTENEDOR_ADMISION="#contenido-admision-pag_web ";
 var CONTENEDOR_SERVICIOS="#contenido-servicios-pag_web ";
 var CONTENEDOR_ADMINISTRATIVOS="#contenido-planilla_docente_admin-pag_web ";
+var CONTENEDOR_CONSULTA_ADMIN="#contenido-consultar_admin-pag_web ";
 /////////////////////////////////////////////
 var GL_TITULOS_SERVICIOS=new Array();
 var GL_SERVICIOS=new Array();
