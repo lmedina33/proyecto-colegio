@@ -40,6 +40,7 @@
 	<link rel="stylesheet" type="text/css" href="../CSS/estilo_base.css" media="screen"/>  
 	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/general.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/gestion_contenido_web.css" media="screen"/> 
+	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/registros.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/pop_ups.css" media="screen"/> 
 	<link rel="stylesheet" type="text/css" href="../CSS/ADMINISTRACION/transiciones_efectos.css" media="screen"/> 
 	<title>Untitled 3</title>

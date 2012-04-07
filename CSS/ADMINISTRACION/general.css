@@ -140,8 +140,10 @@ body{
 #contenido{
 
  	width:700px; 	
- 	height:600px;
+ 	min-height:650px;
  	margin-left:10px;
+ 	margin-bottom:20px;
+ 	padding-bottom:15px;
  	float:left;
  	background:white;
  	box-shadow:10px 10px 15px 1px #666;
@@ -177,5 +179,14 @@ body{
 #contenido .area{
 	float:left;
 }
+
+
+#contenido .area .contenido_titulo{
+	font-weight:bold;
+	font-size:130%;
+	font-family:cursive;margin-top: 30px;
+margin-left: 50px;
+}
+
 
 

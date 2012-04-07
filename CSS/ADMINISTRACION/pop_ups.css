@@ -23,7 +23,9 @@
 	width:100%;
 }
 
-
+#cargando_inicial{
+	display:none;
+}
 /*popup_agregar_curso********popup_agregar_curso********popup_agregar_curso*/
 /*popup_agregar_curso********popup_agregar_curso********popup_agregar_curso*/
 /*popup_agregar_curso********popup_agregar_curso********popup_agregar_curso*/
