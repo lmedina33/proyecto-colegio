@@ -1,0 +1,280 @@
+
+
+.contenido-registros #contenido-cuerpo{
+	
+	margin-top:20px;
+	margin-left:35px;
+	
+}
+
+/*********CONSULTA DE ALUMNOS********/
+/*********CONSULTA DE ALUMNOS********/
+/*********CONSULTA DE ALUMNOS********/
+/*********CONSULTA DE ALUMNOS********/
+
+
+
+#contenido-consultar_alumnos-registros #contenido-cuerpo > .reglon {
+	width:600px;
+	height:20px;
+}
+#contenido-consultar_alumnos-registros #contenido-cuerpo > .reglon .campo{
+	float:left;
+	width:80px;
+}
+
+#contenido-consultar_alumnos-registros #contenido-cuerpo > .reglon .campo:first-child{
+	float:left;
+	width:150px;
+}
+
+
+#contenido-consultar_alumnos-registros #lista{
+	width:650px;
+	float:left;
+	height:200px;
+}
+
+#contenido-consultar_alumnos-registros #lista #cabecera_lista{
+	width:632px;
+	background:#DDD;
+	margin-top:10px;
+	
+} 
+
+#contenido-consultar_alumnos-registros #lista #contenido-lista {
+	width:650px;
+	height:160px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+} 
+
+#contenido-consultar_alumnos-registros #lista #contenido-lista .lista {
+	width:100%;
+	
+} 
+
+
+#contenido-consultar_alumnos-registros #campos_modif{
+	width:650px;
+	float:left;
+	height:200px;
+	margin-top:20px;
+	background:#DDD;
+}
+
+
+#contenido-consultar_alumnos-registros #campos_modif .reglon{
+	width:310px;
+	height:30px;
+	float:left;
+}
+
+#contenido-consultar_alumnos-registros #campos_modif #bloque-izq{
+	padding-top:10px;
+	padding-left:15px;
+	width:310px;
+	float:left;
+	height:160px;
+}
+
+
+#contenido-consultar_alumnos-registros #campos_modif #bloque-der{
+	padding-top:10px;
+	padding-left:15px;
+	width:310px;
+	float:left;
+	height:160px;
+}
+
+
+
+#contenido-consultar_alumnos-registros #campos_modif #bloque-inf{
+	width:650px;
+	float:left;
+	text-align:center;
+	height:30px;
+}
+
+
+
+/*********CONSULTA DE PADRES********/
+/*********CONSULTA DE PADRES********/
+/*********CONSULTA DE PADRES********/
+/*********CONSULTA DE PADRES********/
+
+
+
+#contenido-consultar_padres-registros #contenido-cuerpo > .reglon {
+	width:600px;
+	height:20px;
+}
+#contenido-consultar_padres-registros #contenido-cuerpo > .reglon .campo{
+	float:left;
+	width:80px;
+}
+
+#contenido-consultar_padres-registros #contenido-cuerpo > .reglon .campo:first-child{
+	float:left;
+	width:150px;
+}
+
+
+#contenido-consultar_padres-registros #lista{
+	width:650px;
+	float:left;
+	height:200px;
+}
+
+#contenido-consultar_padres-registros #lista #cabecera_lista{
+	width:632px;
+	background:#DDD;
+	margin-top:10px;
+	
+} 
+
+#contenido-consultar_padres-registros #lista #contenido-lista {
+	width:650px;
+	height:160px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+} 
+
+#contenido-consultar_padres-registros #lista #contenido-lista .lista {
+	width:100%;
+	
+} 
+
+
+#contenido-consultar_padres-registros #campos_modif{
+	width:650px;
+	float:left;
+	height:200px;
+	margin-top:20px;
+	background:#DDD;
+}
+
+
+#contenido-consultar_padres-registros #campos_modif .reglon{
+	width:310px;
+	height:30px;
+	float:left;
+}
+
+#contenido-consultar_padres-registros #campos_modif #bloque-izq{
+	padding-top:10px;
+	padding-left:15px;
+	width:310px;
+	float:left;
+	height:160px;
+}
+
+
+#contenido-consultar_padres-registros #campos_modif #bloque-der{
+	padding-top:10px;
+	padding-left:15px;
+	width:310px;
+	float:left;
+	height:160px;
+}
+
+
+
+#contenido-consultar_padres-registros #campos_modif #bloque-inf{
+	width:650px;
+	float:left;
+	text-align:center;
+	height:30px;
+}
+
+
+
+/*********CONSULTA DE PROFESORES********/
+/*********CONSULTA DE PROFESORES********/
+/*********CONSULTA DE PROFESORES********/
+/*********CONSULTA DE PADRES********/
+
+
+
+#contenido-consultar_profesores-registros #contenido-cuerpo > .reglon {
+	width:600px;
+	height:20px;
+}
+#contenido-consultar_profesores-registros #contenido-cuerpo > .reglon .campo{
+	float:left;
+	width:80px;
+}
+
+#contenido-consultar_profesores-registros #contenido-cuerpo > .reglon .campo:first-child{
+	float:left;
+	width:150px;
+}
+
+
+#contenido-consultar_profesores-registros #lista{
+	width:650px;
+	float:left;
+	height:200px;
+}
+
+#contenido-consultar_profesores-registros #lista #cabecera_lista{
+	width:632px;
+	background:#DDD;
+	margin-top:10px;
+	
+} 
+
+#contenido-consultar_profesores-registros #lista #contenido-lista {
+	width:650px;
+	height:160px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+} 
+
+#contenido-consultar_profesores-registros #lista #contenido-lista .lista {
+	width:100%;
+	
+} 
+
+
+#contenido-consultar_profesores-registros #campos_modif{
+	width:650px;
+	float:left;
+	height:200px;
+	margin-top:20px;
+	background:#DDD;
+}
+
+
+#contenido-consultar_profesores-registros #campos_modif .reglon{
+	width:310px;
+	height:30px;
+	float:left;
+}
+
+#contenido-consultar_profesores-registros #campos_modif #bloque-izq{
+	padding-top:10px;
+	padding-left:15px;
+	width:310px;
+	float:left;
+	height:160px;
+}
+
+
+#contenido-consultar_profesores-registros #campos_modif #bloque-der{
+	padding-top:10px;
+	padding-left:15px;
+	width:310px;
+	float:left;
+	height:160px;
+}
+
+
+
+#contenido-consultar_profesores-registros #campos_modif #bloque-inf{
+	width:650px;
+	float:left;
+	text-align:center;
+	height:30px;
+}
+

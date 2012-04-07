@@ -47,7 +47,6 @@ function fun_insertar_alumno(codigo,nombres,apellido_p,apellido_m,password,nivel
 
 function fun_get_alumnos(nivel,grado,seccion){  
 
-	
 	$.ajax({
         url: "../POST/ADMINISTRACION/REGISTROS/Alumno_get_alumnos.php",
         type: "POST",
@@ -60,7 +59,7 @@ function fun_get_alumnos(nivel,grado,seccion){
         },
         
 	success: function(data){
-
+//alert(data);
 		fun_quitar_cargando();
 
 		if(data=="mysql_no"){
@@ -284,9 +283,62 @@ function fun_get_padres(){
 					GL_CONT_PADRES++;
 				}
 				
-				alert(html_list);
+				
 				$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_PADRES+"#lista .lista").html(html_list);
 				
+			
+			}
+			
+		}
+	}
+	        
+			
+	});	
+	
+}
+
+
+
+function get_secciones(nivel,grado,div_que_llama,div_contenedor,carga_auxiliar){ //el div que llama es aquel que debe poerse en disable mientras se hace la consulta, //carga auxliar abrira un if para que se haga una carga que dependa de la carga de secciones
+	
+	$.ajax({
+        url: "../POST/ADMINISTRACION/REGISTROS/get_secciones.php",
+        type: "POST",
+        data:{nivel:nivel,grado:grado},
+        async:true,
+        beforeSend: function(objeto){
+
+        	//fun_mostrar_cargando();
+			$(div_que_llama).attr("disabled",true);
+        },
+        
+	success: function(data){
+			$(div_que_llama).attr("disabled",false);
+
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+			
+			if(data!="no data"){
+								
+				var valores=data.split("{");
+				var html_list="";
+				
+				for(var i=0;valores[i];i++){
+					
+					html_list+='<option value="'+valores[i]+'">'+valores[i]+'</option>';
+				}
+				
+				$(div_contenedor).html(html_list);
+				
+				switch(carga_auxiliar){
+					case "carga-alumnos": 
+						var nivel=$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#slc_nivel").val();
+						var grado=$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#slc_grado").val();
+						var seccion=$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#slc_seccion").val();
+						
+						fun_get_alumnos(nivel,grado,seccion);break;
+				}
 			
 			}
 			

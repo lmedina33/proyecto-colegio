@@ -285,6 +285,42 @@ class DAOCursos extends Conexion{
 		return "mysql_no";
 		}
 	}
+	
+	
+	function get_secciones($nivel,$grado){
+		
+		$cn = $this->conexion();
+        
+        if($cn!="no_conexion"){
+        	
+        	$sql="select seccion from $this->nombre_tabla_admin_cursos  where nivel='$nivel' and grado='$grado' group by seccion";	
+			$rs = mysql_query($sql,$cn);
+			 
+			while($fila=mysql_fetch_object($rs)){
+				$meto[]=$fila;
+			}        	
+			
+			$respuesta="";
+			if($meto){
+					
+				foreach($meto as $q):
+					
+					$respuesta.=$q->seccion."{";
+					
+				endforeach;	
+				
+			}else{
+				$respuesta="no data";
+			}
+			
+			mysql_close($cn);
+
+			return $respuesta;
+			
+		}else{
+		return "mysql_no";
+		}
+	}
 
 	
 }

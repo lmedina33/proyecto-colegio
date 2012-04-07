@@ -549,8 +549,14 @@ $("#menu_vertical #submenu-pag_web #consultar_admin-pag_web").click(function(){
 function refrescar_vista_servicios(){
 	
 	var html_servicios="";
+	var html_parrafos="";
 	for(var i=0;i<GL_CONT_SERVICIOS;i++){
-		html_servicios+='<div class="titulo_servicio">'+GL_TITULOS_SERVICIOS[i]+'</div><div class="concepto_servicio">'+GL_SERVICIOS[i]+'</div>';
+		valores = GL_SERVICIOS[i].split("\n");
+		html_parrafos="";
+		for(var j=0;valores[j];j++){
+			html_parrafos+="<p>"+valores[j]+"</p>";
+		}
+		html_servicios+='<div class="titulo_servicio">'+GL_TITULOS_SERVICIOS[i]+'</div><div class="concepto_servicio">'+html_parrafos+'</div>';
 	}
 	
 	$(AREA_PAG_WEB+CONTENEDOR_SERVICIOS+"#servicios_agregados").html(html_servicios);

@@ -1,5 +1,5 @@
 <div id="contenido-registro_cursos-cursos_rendimiento" class="contenido-cursos_rendimiento alavista">
-	<div class="contenido_titulo" style="margin-top:4%;">
+	<div class="contenido_titulo" >
 		Registro de cursos
 	</div>
 	<div id="contenido-cuerpo">
@@ -49,7 +49,7 @@
 </div>
 
 <div id="contenido-notas_alumnos-cursos_rendimiento" class="contenido-cursos_rendimiento alavista">
-	<div class="contenido_titulo" style="margin-top:4%;">
+	<div class="contenido_titulo" >
 		Consulta de alumnos
 	</div>
 	<div id="contenido-cuerpo">

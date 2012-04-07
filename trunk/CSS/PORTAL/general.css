@@ -44,6 +44,28 @@ body{
 }
 
 
+#visita_facebook{
+	
+	background:url("../../IMAGENES/PORTAL/visita_facebook.png") no-repeat;
+ 	margin-top:30px;
+}
+
+
+#visita_youtube{
+	
+	background:url("../../IMAGENES/PORTAL/visita_youtube.png") no-repeat;
+ 	margin-left:550px;
+}
+.lapicero{
+	float:left;
+ 	width:640px;
+ 	height:45px;
+ 	
+ 	margin: 0px auto;
+ 	margin-left:600px;
+}
+
+
 
 /***********************MENU VERTICAL PRINCIPAL**************************/
 /***********************MENU VERTICAL PRINCIPAL**************************/

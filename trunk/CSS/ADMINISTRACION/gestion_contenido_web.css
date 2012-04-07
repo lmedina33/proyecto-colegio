@@ -5,6 +5,156 @@
 	margin-left:50px;
 }
 
+.contenido-pag_web #contenido-cuerpo{
+	
+	margin-top:20px;
+	margin-left:35px;
+	
+}
+
+/****************QUIENES SOMOS*********************/
+/****************QUIENES SOMOS*********************/
+/****************QUIENES SOMOS*********************/
+/****************QUIENES SOMOS*********************/
+
+#contenido-quienes_somos-pag_web #txt_quienes_somos{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+#contenido-quienes_somos-pag_web #btn_aceptar{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+
+/****************MISION Y VISION*******************/
+/****************MISION Y VISION*******************/
+/****************MISION Y VISION*******************/
+/****************MISION Y VISION*******************/
+
+
+#contenido-mision_vision-pag_web #txt_mision_vision{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+#contenido-mision_vision-pag_web #btn_aceptar{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+
+/****************METODOLOGIA*******************/
+/****************METODOLOGIA*******************/
+/****************METODOLOGIA*******************/
+/****************METODOLOGIA*******************/
+
+
+#contenido-metodologia-pag_web .reglon{
+	width:650px;
+	margin-top:15px;
+}
+
+#contenido-metodologia-pag_web #txt_metodologia{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+#contenido-metodologia-pag_web #btn_aceptar{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+
+/****************ACTIVIDAD*******************/
+/****************ACTIVIDAD*******************/
+/****************ACTIVIDAD*******************/
+/****************ACTIVIDAD*******************/
+
+
+
+#contenido-actividades-pag_web .reglon{
+	width:650px;
+	margin-top:15px;
+}
+
+#contenido-actividades-pag_web #txt_actividades{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+#contenido-actividades-pag_web #btn_aceptar{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+
+/****************ADMISION*******************/
+/****************ADMISION*******************/
+/****************ADMISION*******************/
+/****************ADMISION*******************/
+
+
+
+#contenido-admision-pag_web .reglon{
+	width:650px;
+	margin-top:15px;
+}
+
+#contenido-admision-pag_web #txt_admision{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+#contenido-admision-pag_web #btn_aceptar{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+
+/****************SERVICIOS*******************/
+/****************SERVICIOS*******************/
+/****************SERVICIOS*******************/
+/****************SERVICIOS*******************/
+
+
+
+#contenido-servicios-pag_web .reglon{
+	width:650px;
+	margin-top:15px;
+}
+
+#contenido-servicios-pag_web #txt_servicio{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+#contenido-servicios-pag_web #servicios_agregados{
+	margin-left:20px;
+	margin-top:20px;
+	width:600px;
+	margin-bottom:25px;
+}
+
+#contenido-servicios-pag_web #servicios_agregados .titulo_servicio{
+	font-weight:bold;
+	font-size:110%;
+}
+
+#contenido-servicios-pag_web #servicios_agregados .concepto_servicio{
+	margin-left:15px;
+	margin-bottom:15px;
+}
+
+
+#contenido-servicios-pag_web #btn_agregar{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+
+
 /**************************************************/
 /****************SUBIDA DE FOTOS*******************/
 /****************SUBIDA DE FOTOS*******************/

@@ -1,12 +1,12 @@
 <div id="contenido-quienes_somos-pag_web" class="contenido-pag_web alavista">
-	<div class="contenido-titulo" style="margin-top:4%;">
+	<div class="contenido_titulo" >
 		¿Qui&eacute;nes somos?
 	</div>
 	<div id="contenido-cuerpo">
-		
+		Escriba, en el &aacute;rea de texto, el contenido a mostrar en el &aacute;rea "Quienes somos" de la p&aacute;gina web:
 		<textarea id="txt_quienes_somos" cols="40" rows="10"></textarea>
 		
-		<input type="button" id="btn_aceptar" value="guardar"/>
+		<input type="button" id="btn_aceptar" value="Guardar actualización"/>
 	</div>
 
 </div>
@@ -14,13 +14,14 @@
 
 
 <div id="contenido-mision_vision-pag_web" class="contenido-pag_web oculto">
-	<div class="contenido_titulo" style="margin-top:4%;">
+	<div class="contenido_titulo" >
 		Mision y vision
 	</div>
 	<div id="contenido-cuerpo">
+		Escriba, en el &aacute;rea de texto, el contenido a mostrar en el &aacute;rea "Misi&oacute;n y visi&oacute;n" de la p&aacute;gina web:
 		<textarea id="txt_mision_vision" cols="40" rows="10"></textarea>
 		
-		<input type="button" id="btn_aceptar" value="guardar"/>
+		<input type="button" id="btn_aceptar" value="Guardar actualización"/>
 	</div>
 
 
@@ -28,19 +29,23 @@
 
 
 <div id="contenido-metodologia-pag_web" class="contenido-pag_web oculto">
-	<div class="contenido_titulo" style="margin-top:4%;">
+	<div class="contenido_titulo" >
 		Metodolog&iacute;a
 	</div>
 	<div id="contenido-cuerpo">
+	
+		Seleccione el nivel acad&eacute;mico:
 		<select id="nivel_academico">
 			<option value="I">Inicial</option>
 			<option value="P">Primaria</option>
 			<option value="S">Secundaria</option>
 		</select>
 		
+		<div class="reglon">Escriba, en el &aacute;rea de texto, el contenido a mostrar en el &aacute;rea "Metodolog&iacute;a" del nivel acad&eacute;mico seleccionado: </div>
+		
 		<textarea id="txt_metodologia" cols="40" rows="10"   ></textarea>
 		
-		<input type="button" id="btn_aceptar" value="guardar"/>
+		<input type="button" id="btn_aceptar" value="Guardar actualización"/>
 	</div>
 
 
@@ -48,19 +53,20 @@
 
 
 <div id="contenido-actividades-pag_web" class="contenido-pag_web oculto">
-	<div class="contenido_titulo" style="margin-top:4%;">
+	<div class="contenido_titulo" >
 		Actividades
 	</div>
 	<div id="contenido-cuerpo">
+	Seleccione el nivel acad&eacute;mico:
 		<select id="nivel_academico">
 			<option value="I">Inicial</option>
 			<option value="P">Primaria</option>
 			<option value="S">Secundaria</option>
 		</select>
-		
+		<div class="reglon">Escriba, en el &aacute;rea de texto, el contenido a mostrar en el &aacute;rea "Actividades" del nivel acad&eacute;mico seleccionado: </div>
 		<textarea id="txt_actividades" cols="40" rows="10"   ></textarea>
 		
-		<input type="button" id="btn_aceptar" value="guardar"/>
+		<input type="button" id="btn_aceptar" value="Guardar actualización"/>
 	</div>
 
 
@@ -69,16 +75,18 @@
 
 
 <div id="contenido-admision-pag_web" class="contenido-pag_web oculto">
-	<div class="contenido_titulo" style="margin-top:4%;">
-		Admisi&oacute;
+	<div class="contenido_titulo" >
+		Admisi&oacute;n
 	</div>
+	
 	<div id="contenido-cuerpo">
+	Seleccione el nivel acad&eacute;mico:
 		<select id="nivel_academico">
 			<option value="I">Inicial</option>
 			<option value="P">Primaria</option>
 			<option value="S">Secundaria</option>
 		</select>
-		
+		<div class="reglon">Escriba, en el &aacute;rea de texto, el contenido a mostrar en el &aacute;rea "Admisi&oacute;n" del nivel acad&eacute;mico seleccionado: </div>
 		<textarea id="txt_admision" cols="40" rows="10"   ></textarea>
 		
 		<input type="button" id="btn_aceptar" value="guardar"/>
@@ -90,15 +98,23 @@
 
 
 <div id="contenido-servicios-pag_web" class="contenido-pag_web oculto">
-	<div class="contenido_titulo" style="margin-top:4%;">
+	<div class="contenido_titulo" >
 		Servicios
 	</div>
 	<div id="contenido-cuerpo">
-		
-		Titulo
+		<div class="reglon">A continuaci&oacute;n agregue los Servicios que se ofrecen, y finalmente guarde los cambios realizados para mostrarlos en la p&aacute;gina web: </div>
+		<div class="reglon">
+		T&iacute;tulo:
 		<input type="text" id="txt_titulo"/>
+		</div>
 		
-		Servicio
+		<div class="reglon">
+		Descripci&oacute;n del servicio:
+		
+		</div>
+		
+		
+		
 		<textarea id="txt_servicio" cols="40" rows="10"   ></textarea>
 		
 		<input type="button" id="btn_agregar" value="Agregar"/>
@@ -106,8 +122,8 @@
 		<div id="servicios_agregados">
 		
 		</div>
-		<input type="button" id="btn_borrar_ultimo" value="Borrar &uacute;ltimo agregado"/>
-		<input type="button" id="btn_guardar" value="Guardar todo"/>
+		<input type="button" id="btn_borrar_ultimo" value="Borrar &uacute;ltimo servicio agregado"/>
+		<input type="button" id="btn_guardar" value="Guardar cambios realizados"/>
 	</div>
 
 
@@ -115,7 +131,7 @@
 
 
 <div id="contenido-planilla_docente_admin-pag_web" class="contenido-pag_web oculto">
-	<div class="contenido_titulo" style="margin-top:4%;">
+	<div class="contenido_titulo" >
 		Registro de Administrativos
 	</div>
 	<div id="contenido-cuerpo">
@@ -136,7 +152,7 @@
 </div>
 
 <div id="contenido-consultar_admin-pag_web" class="contenido-pag_web oculto">
-	<div class="contenido_titulo" style="margin-top:4%;">
+	<div class="contenido_titulo" >
 		Consulta de Administrativos
 	</div>
 	

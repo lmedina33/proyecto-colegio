@@ -151,6 +151,8 @@
 
 <div id="pie_pagina">
 
+	<div id="visita_facebook" class="lapicero"></div>
+	<div id="visita_youtube" class="lapicero"></div>
 </div>
 
 
