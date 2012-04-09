@@ -1,0 +1,141 @@
+
+
+.contenido-cursos_rendimiento #contenido-cuerpo{
+	
+	margin-top:20px;
+	margin-left:35px;
+	
+}
+
+
+/*********REGISTRAR CURSOS********/
+/*********REGISTRAR CURSOS********/
+/*********REGISTRAR CURSOS********/
+/*********REGISTRAR CURSOS********/
+/*********REGISTRAR CURSOS********/
+
+
+
+#contenido-registro_cursos-cursos_rendimiento #contenido-cuerpo > .reglon:first-child{
+	
+	height:20px;
+}
+#contenido-registro_cursos-cursos_rendimiento #contenido-cuerpo > .reglon {
+	width:600px;
+	height:28px;
+}
+#contenido-registro_cursos-cursos_rendimiento #contenido-cuerpo > .reglon .campo{
+	float:left;
+	width:80px;
+}
+
+#contenido-registro_cursos-cursos_rendimiento #contenido-cuerpo > .reglon .campo:first-child{
+	float:left;
+	width:150px;
+}
+
+
+#contenido-registro_cursos-cursos_rendimiento .subtitulo{
+	text-decoration:underline;
+	font-style:italic;
+	font-weight:bold;
+	font-size:110%;
+	margin-top:20px;
+}
+
+
+#contenido-registro_cursos-cursos_rendimiento #lista{
+	width:632px;
+	float:left;
+	min-height:200px;
+}
+
+#contenido-registro_cursos-cursos_rendimiento #lista #cabecera_lista{
+	width:632px;
+	background:#DDD;
+	margin-top:10px;
+	
+} 
+
+#contenido-registro_cursos-cursos_rendimiento #lista #contenido-lista {
+	width:632px;
+	min-height:300px;
+} 
+
+#contenido-registro_cursos-cursos_rendimiento #lista #contenido-lista .lista {
+	width:100%;
+	
+} 
+
+
+
+/*********NOTAS CURSOS********/
+/*********NOTAS CURSOS********/
+/*********NOTAS CURSOS********/
+/*********NOTAS CURSOS********/
+/*********NOTAS CURSOS********/
+
+
+
+#contenido-notas_alumnos-cursos_rendimiento #contenido-cuerpo > .reglon:first-child{
+	
+	height:20px;
+}
+#contenido-notas_alumnos-cursos_rendimiento #contenido-cuerpo > .reglon {
+	width:600px;
+	height:28px;
+}
+#contenido-notas_alumnos-cursos_rendimiento #contenido-cuerpo > .reglon .campo{
+	float:left;
+	width:80px;
+}
+
+#contenido-notas_alumnos-cursos_rendimiento #contenido-cuerpo > .reglon .campo:first-child{
+	float:left;
+	width:150px;
+}
+
+
+#contenido-notas_alumnos-cursos_rendimiento .subtitulo{
+	text-decoration:underline;
+	font-style:italic;
+	font-weight:bold;
+	font-size:110%;
+	margin-top:20px;
+}
+
+
+#contenido-notas_alumnos-cursos_rendimiento #lista{
+	width:632px;
+	float:left;
+	min-height:200px;
+}
+
+#contenido-notas_alumnos-cursos_rendimiento #lista #cabecera_lista{
+	width:632px;
+	background:#EEE;
+	margin-top:10px;
+	font-weight:bold;
+	
+} 
+
+#contenido-notas_alumnos-cursos_rendimiento #lista #cabecera_lista   td{
+	text-align:center;
+	
+} 
+
+#contenido-notas_alumnos-cursos_rendimiento #lista #contenido-lista {
+	width:632px;
+	min-height:300px;
+} 
+
+#contenido-notas_alumnos-cursos_rendimiento #lista #contenido-lista .lista {
+	width:100%;
+	
+} 
+
+.texto_vertical{
+	 -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+}
+

@@ -137,6 +137,14 @@
 	margin-bottom:25px;
 }
 
+#contenido-servicios-pag_web .subtitulo{
+	text-decoration:underline;
+	font-style:italic;
+	font-weight:bold;
+	font-size:110%;
+	margin-top:20px;
+}
+
 #contenido-servicios-pag_web #servicios_agregados .titulo_servicio{
 	font-weight:bold;
 	font-size:110%;
@@ -154,7 +162,71 @@
 }
 
 
+/****************PLANA ADMINISTRATIVA DE FOTOS*******************/
+/****************PLANA ADMINISTRATIVA DE FOTOS*******************/
+/****************PLANA ADMINISTRATIVA DE FOTOS*******************/
+/****************PLANA ADMINISTRATIVA DE FOTOS*******************/
 
+#contenido-planilla_docente_admin-pag_web #btn_guardar{
+	margin-top:15px;
+	margin-left:15px;
+}
+
+
+#contenido-consultar_admin-pag_web  #lista{
+	width:650px;
+	float:left;
+	height:200px;
+}
+
+#contenido-consultar_admin-pag_web  #lista #cabecera_lista{
+	width:632px;
+	background:#DDD;
+	margin-top:10px;
+	
+} 
+
+#contenido-consultar_admin-pag_web  #lista #contenido-lista {
+	width:650px;
+	height:160px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+} 
+
+#contenido-consultar_admin-pag_web  #lista #contenido-lista .lista {
+	width:100%;
+	
+} 
+
+
+#contenido-consultar_admin-pag_web  #campos_modif{
+	width:650px;
+	float:left;
+	height:200px;
+	margin-top:20px;
+	background:#DDD;
+}
+
+#contenido-consultar_admin-pag_web #campos_modif #bloque-izq{
+	padding-top:10px;
+	padding-left:15px;
+	width:310px;
+	float:left;
+	height:160px;
+}
+
+
+#contenido-consultar_admin-pag_web  #campos_modif .reglon{
+	width:310px;
+	height:30px;
+
+}
+
+
+#contenido-consultar_admin-pag_web #btn_aceptar{
+	margin-top:15px;
+	margin-left:15px;
+}
 /**************************************************/
 /****************SUBIDA DE FOTOS*******************/
 /****************SUBIDA DE FOTOS*******************/

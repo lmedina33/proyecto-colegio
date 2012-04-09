@@ -60,6 +60,57 @@ $(AREA_CURSOS+CONTENEDOR_CURSOS+"#slc_seccion ").change(function(){
 
 
 
+
+
+
+
+
+
+
+
+$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_nivel").change(function(){
+	
+	var html_grado="";
+	switch($(this).val()){
+		
+		case "I": html_grado='<option value="1">1</option><option value="2">2</option><option value="3">3</option>'; break;
+		case "P":html_grado='<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>';  break;
+		case "S":html_grado='<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>';break;
+	}
+	$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_grado").html(html_grado);
+	
+	var nivel=$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_nivel").val();
+	var grado=$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_grado").val();
+	
+	fun_get_cursos_notas(nivel,grado);
+	
+	/*
+	get_secciones($(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_nivel").val(),$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_grado").val(),AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_nivel",AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_seccion");*/
+	
+});
+
+
+$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_grado").change(function(){
+
+	var nivel=$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_nivel").val();
+	var grado=$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_grado").val();
+	
+	fun_get_cursos_notas(nivel,grado);
+});
+
+
+$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_alumno").change(function(){
+
+
+	var codigo_alumno=$(AREA_CURSOS+CONTENEDOR_NOTAS+" #slc_alumno").val();
+				
+	fun_get_notas(codigo_alumno);
+});
+
+
+
+				
+				
 //////////////////////////////POP UP X////////////////////////////////////
 
 

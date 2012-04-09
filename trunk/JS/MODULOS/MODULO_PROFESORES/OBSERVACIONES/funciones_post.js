@@ -25,7 +25,6 @@ function fun_cargar_alumnos_curso(id_curso){  //esta función es para hacer algun
         
 	success: function(data){
 
-
 			/*
 		$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
 		$("#cargando").fadeOut(GLOBAL_VEL_FADE);*/

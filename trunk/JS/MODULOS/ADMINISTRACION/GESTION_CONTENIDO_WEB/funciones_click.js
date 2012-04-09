@@ -237,7 +237,7 @@ $(AREA_PAG_WEB+CONTENEDOR_MISION_VISION+"#btn_aceptar").click(function(){
 $("#menu_vertical #submenu-pag_web #metodologia-pag_web").click(function(){
 
 	var nivel=$(AREA_PAG_WEB+CONTENEDOR_METODOLOGIAS+"#nivel_academico").val();
-	fun_consultar_metodologia(nivel,AREA_PAG_WEB+CONTENEDOR_METODOLOGIAS+"#txt_admision");
+	fun_consultar_metodologia(nivel,AREA_PAG_WEB+CONTENEDOR_METODOLOGIAS+"#txt_metodologia");
 });
 
 
@@ -509,7 +509,7 @@ $(AREA_PAG_WEB+CONTENEDOR_SERVICIOS+"#btn_guardar").click(function(){
 //$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#btn_guardar").click(function(){
 $(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#btn_guardar").click(function(){																		   
  
- 	alert("entreee");
+ //	alert("entreee");
 	var dni=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_dni").val();
 	var nombres=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_nombres").val();
 	var apellido_p=$(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#txt_apellido_p").val();
@@ -519,7 +519,7 @@ $(AREA_PAG_WEB+CONTENEDOR_ADMINISTRATIVOS+"#btn_guardar").click(function(){
 		if(fun_esblanco(dni) || fun_esblanco(nombres) || fun_esblanco(apellido_p) || fun_esblanco(apellido_m)){
 			fun_aviso_popup("Debe llenar todos los datos del administrativo.",GLOBAL_TTL_ACN_INC,35,GLOBAL_MARGEN_TOP_AVISO);
 		}else{
-			alert("bien");
+		//	alert("bien");
 			fun_insertar_administrativo(dni,nombres,apellido_p,apellido_m,cargo);
 		}
 

@@ -91,6 +91,8 @@ function fun_get_alumnos(nivel,grado,seccion){
 				$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#lista .lista").html(html_list);
 				
 			
+			}else{
+				$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#lista .lista").html("");
 			}
 			
 		}
@@ -340,6 +342,14 @@ function get_secciones(nivel,grado,div_que_llama,div_contenedor,carga_auxiliar){
 						fun_get_alumnos(nivel,grado,seccion);break;
 				}
 			
+			}else{
+				$(div_contenedor).html("");
+				switch(carga_auxiliar){
+					case "carga-alumnos": 
+						
+				$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#lista .lista").html("");break;
+				}
+				
 			}
 			
 		}

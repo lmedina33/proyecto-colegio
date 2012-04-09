@@ -1,7 +1,8 @@
 
 var AREA_CURSOS="#area_cursos_rendimiento ";
-var CONTENEDOR_CURSOS="#contenido-registro_cursos-cursos_rendimiento ";
 	
+var CONTENEDOR_CURSOS="#contenido-registro_cursos-cursos_rendimiento ";
+var CONTENEDOR_NOTAS="#contenido-notas_alumnos-cursos_rendimiento ";
 $(document).ready(function(){
 
 	//Aquí se declaran todos los eventos click que existen haciendo las llamadas a los eventos o funciones que correspondan, las funciones se dividen en áreas de modo que se puedan ubicar fácilmente. Las áreas serán las principales, zonas de trabajo, popups, etc.
@@ -160,6 +161,29 @@ $("#menu_vertical #submenu-cursos_rendimiento #registro_cursos-cursos_rendimient
 
 
 
+
+$("#menu_vertical #submenu-cursos_rendimiento #notas_alumnos-cursos_rendimiento").click(function(){
+	var nivel=$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_nivel").val();
+	var grado=$(AREA_CURSOS+CONTENEDOR_NOTAS+"#slc_grado").val();
+	
+	fun_get_cursos_notas(nivel,grado);
+});
+
+
+
+
+
+
+$(AREA_CURSOS+CONTENEDOR_NOTAS+"#btn_insertar_nota").click(function(){
+
+
+	var codigo_alumno=$(AREA_CURSOS+CONTENEDOR_NOTAS+" #slc_alumno").val();
+	var codigo_curso=$(AREA_CURSOS+CONTENEDOR_NOTAS+" #slc_nivel").val()+$(AREA_CURSOS+CONTENEDOR_NOTAS+" #slc_grado").val()+$(AREA_CURSOS+CONTENEDOR_NOTAS+" #slc_curso").val()+$(AREA_CURSOS+CONTENEDOR_NOTAS+" #slc_seccion").val();
+	var bimestre=$(AREA_CURSOS+CONTENEDOR_NOTAS+" #slc_bimestre").val();
+	var nota=$(AREA_CURSOS+CONTENEDOR_NOTAS+" #txt_nota").val();
+				
+	fun_insertar_nota(codigo_alumno,codigo_curso,bimestre,nota);
+});
 
 
 });
