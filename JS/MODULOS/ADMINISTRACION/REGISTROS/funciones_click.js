@@ -49,7 +49,7 @@ $("#menu_vertical #submenu-registros #consultar_alumnos-registros").click(functi
 	var grado=$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#slc_grado").val();
 	var seccion=$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#slc_seccion").val();
 	
-	fun_get_alumnos(nivel,grado,seccion);
+	get_secciones($(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#slc_nivel").val(),$(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#slc_grado").val(),AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#slc_nivel",AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#slc_seccion","carga-alumnos");
 });
 	
 

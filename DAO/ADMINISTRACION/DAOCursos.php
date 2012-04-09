@@ -179,7 +179,7 @@ class DAOCursos extends Conexion{
 			
 			$cadena_respuesta.="}";
         	
-        	$sql="select * from $this->nombre_tabla_admin_cursos where grado='$grado' and nivel='$nivel'  order by  nombre_curso,seccion ASC";
+        	$sql="select * from $this->nombre_tabla_admin_cursos where grado='$grado' and nivel='$nivel'  order by  categoria,nombre_curso,seccion ASC";
 			    $rs = mysql_query($sql,$cn);
 				
 			while($fila=mysql_fetch_object($rs)){
@@ -218,20 +218,22 @@ class DAOCursos extends Conexion{
 				$sql="insert into $this->nombre_tabla_alum_notas (codigo_alumno,codigo_curso) values ('$codigo_alumno','$codigo_curso')";
 				$rs = mysql_query($sql,$cn);
 			}
+			
+				//echo $bimestre;
 			switch($bimestre){
-						case 1:	
-								$sql="update $this->nombre_tabla_alum_notas set bimestre_1=$nota where  codigo_alumno='$codigo_alumno' and codigo_curso='$codigo_curso'";
+						case '1':	
+								$sql="update $this->nombre_tabla_alum_notas set bimestre_1=$nota where  codigo_alumno='$codigo_alumno' and codigo_curso='$codigo_curso'";	//echo $sql;
 			    				$rs = mysql_query($sql,$cn);
 								break;
-						case 2:	
+						case '2':	
 								$sql="update $this->nombre_tabla_alum_notas set bimestre_2=$nota where  codigo_alumno='$codigo_alumno' and codigo_curso='$codigo_curso'";
 			    				$rs = mysql_query($sql,$cn);
 								break;
-						case 3:	
+						case '3':	
 								$sql="update $this->nombre_tabla_alum_notas set bimestre_3=$nota where  codigo_alumno='$codigo_alumno' and codigo_curso='$codigo_curso'";
 			    				$rs = mysql_query($sql,$cn);
 								break;
-						case 4:	
+						case '4':	
 								$sql="update $this->nombre_tabla_alum_notas set bimestre_4=$nota where  codigo_alumno='$codigo_alumno' and codigo_curso='$codigo_curso'";
 			    				$rs = mysql_query($sql,$cn);
 								break;

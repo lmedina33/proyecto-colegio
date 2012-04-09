@@ -119,6 +119,8 @@
 		
 		<input type="button" id="btn_agregar" value="Agregar"/>
 		
+		<div class="subtitulo">Vista previa</div>
+		
 		<div id="servicios_agregados">
 		
 		</div>
@@ -135,18 +137,32 @@
 		Registro de Administrativos
 	</div>
 	<div id="contenido-cuerpo">
-		DNI: <input id="txt_dni" type="text" value=""/>
-		Nombres: <input id="txt_nombres" type="text" value=""/>
-		Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/>
-		Apellido Materno: <input id="txt_apellido_m" type="text" value=""/>
-		Cargo: <select id="slc_nivel">
+	
+	<div class="reglon">
+		<div>DNI:</div><input id="txt_dni" type="text" value=""/>
+	</div>
+	
+	<div class="reglon">
+		<div>Nombres:</div><input id="txt_nombres" type="text" value=""/>
+	</div>
+	
+	<div class="reglon">
+		<div>Apellido Paterno:</div><input id="txt_apellido_p" type="text" value=""/>
+	</div>
+	
+	<div class="reglon">
+		<div>Apellido Materno: </div><input id="txt_apellido_m" type="text" value=""/>
+	</div>
+	
+	<div class="reglon">
+		<div>Cargo:</div><select id="slc_nivel">
 			  <option value="Director">Director</option>
 			  <option value="Sub-director">Sub-director</option>
 			  <option value="Secretaria">Secretaria</option> 
 		  </select>
-  		
-		<input id="btn_guardar" type="button" value="Guardar registro"/>
-        
+	</div>
+	<input id="btn_guardar" type="button" value="Guardar registro"/>
+	
 	</div>
 
 </div>
@@ -156,18 +172,24 @@
 		Consulta de Administrativos
 	</div>
 	
-	<div id="contenido-cuerpo">		  		
+	<div id="contenido-cuerpo">		
+	
+	
 		<div id="lista">
 		<table id="cabecera_lista">
 			<tr>
-				<td width="15%">DNI</td>
-				<td width="50%">Nombres y Apellidos</td>
-				<td width="18%">Cargo</td>
+				<td width="20%">DNI</td>
+				<td width="55%">Nombres y Apellidos</td>
+				<td width="35%">Cargo</td>
 			</tr>
 		</table>
 		
+		<div id="contenido-lista">
 		<table class="lista"></table>
 		</div>
+		</div>
+		  		
+	
 		
 		<!--ESTA AREA ES PARA LA MODIFICACION DE LOS DATOS DE UN ALUMNO SELECCIONADO-->
 		<!--Habilitado: 
@@ -177,18 +199,22 @@
 			 <option value="no_disponible">No habilitado</option> 
 		</select> -->
 		  		
-		  		
-		DNI: <input id="txt_dni" type="text" value=""/>
-		Nombres: <input id="txt_nombres" type="text" value=""/>
-		Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/>
-		Apellido Materno: <input id="txt_apellido_m" type="text" value=""/>
-		Cargo: <select id="slc_nivel">
+		<div id="campos_modif"> 
+		<div id="bloque-izq">
+		<div class="reglon">DNI: <input id="txt_dni" type="text" value=""/></div>
+		<div class="reglon">Nombres: <input id="txt_nombres" type="text" value=""/></div>
+		<div class="reglon">Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/></div>
+		<div class="reglon">Apellido Materno: <input id="txt_apellido_m" type="text" value=""/></div>
+		<div class="reglon">Cargo: <select id="slc_nivel">
 			  <option value="Director">Director</option>
 			  <option value="Sub-director">Sub-director</option>
 			  <option value="Secretaria">Secretaria</option> 
-		  </select>
-				  		
-		<input id="btn_aceptar" type="button" value="Modificar registro"/>
+		  </select></div>
+		  <input id="btn_aceptar" type="button" value="Modificar registro"/>
+		</div>
+		
+		</div>  		
+		
 		  		
 		  		
 		<!--FIN AREA ES PARA LA MODIFICACION DE LOS DATOS DE UN ALUMNO SELECCIONADO-->

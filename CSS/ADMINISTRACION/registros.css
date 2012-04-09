@@ -7,6 +7,18 @@
 	
 }
 
+
+ #contenido-alumnos-registros #btn_aceptar, #contenido-padres-registros #btn_aceptar, #contenido-profesores-registros #btn_aceptar{
+	margin-top:15px;
+	margin-left:15px;
+}
+
+
+ #contenido-consultar_alumnos-registros #btn_aceptar, #contenido-consultar_padres-registros #btn_aceptar, #contenido-consultar_profesores-registros #btn_aceptar{
+	margin-top:15px;
+	
+}
+
 /*********CONSULTA DE ALUMNOS********/
 /*********CONSULTA DE ALUMNOS********/
 /*********CONSULTA DE ALUMNOS********/

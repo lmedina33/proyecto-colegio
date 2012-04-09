@@ -510,7 +510,7 @@ function fun_insertar_servicios(titulos,parrafos){  //esta función es para hacer
         },
         
 	success: function(data){
-alert(data);
+
 			/*
 		$("#div_back_cargando").fadeOut(GLOBAL_VEL_FADE);
 		$("#cargando").fadeOut(GLOBAL_VEL_FADE);*/
@@ -880,9 +880,9 @@ function refrescar_tabla_admin(){
 					
 					html_list+='<tr>'+
 							'<td width="'+GL_DIM_TABLA_ADMIN[0]+'%">'+GL_ADMIN[i][0]+'</td>'+
-							'<td width="'+GL_DIM_TABLA_ADMIN[1]+'%">'+GL_ADMIN[i][1]+" "+GL_ADMIN[i][2]+" "+GL_ADMIN[i][3]+'</td>'+
-							'<td width="'+GL_DIM_TABLA_ADMIN[2]+'%">'+GL_ADMIN[i][4]+'</td>'+
-							'<td width="'+GL_DIM_TABLA_ADMIN[3]+'%">'+GL_ADMIN[i][5]+'</td></tr>';
+							'<td width="'+GL_DIM_TABLA_ADMIN[1]+'%">'+GL_ADMIN[i][5]+'</td>'+
+							'<td width="'+GL_DIM_TABLA_ADMIN[2]+'%">'+GL_ADMIN[i][4]+'</td></tr>';
+							
 					
 				}
 				//alert(html_list);
