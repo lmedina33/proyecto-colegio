@@ -60,14 +60,44 @@ header ("Pragma: no-cache");
 
 <div id="cuerpo-pagina">
 
-	<div id="btn_cursos" class="boton_area">
-	
-	</div>
-	
-	<div  id="btn_blog" class="boton_area">
-	
+
+	<div id="menu_vertical">
+		<div id="titulo_menu">Mis Cursos</div>
+			
+			
+					
 	</div>
 		
+			<div id="contenido-opciones">
+				<div class="opcion" id="opcion-notas" title="Seleccionado" ><div  class="texto_pestana">Notas</div></div>
+				<div class="opcion" id="opcion-observaciones" ><div  class="texto_pestana">Observaciones</div></div>
+			</div>
+		<div id="contenido-pagina">
+		
+			<input type="hidden" id="codigo_curso_elegido" value=""/>
+		<div id="contenido-notas-principal" class="contenido-principal alavista">
+		
+		</div>
+		
+		
+		
+		
+		<div id="contenido-observaciones-principal" class="contenido-principal oculto">
+			<div id="profesor">
+			
+			</div>
+			
+			
+			<div id="observaciones">
+					
+				<div id="titulo">
+					Observaciones
+				</div>
+				
+			</div>
+		</div>
+		
+		</div>
 </div>
 
 
