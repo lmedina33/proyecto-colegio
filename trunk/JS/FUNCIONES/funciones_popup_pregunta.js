@@ -56,6 +56,111 @@ function fun_realiza_accion_popup_pregunta(arg_accion){
 		break;
 		
 		
+		case "eliminar seccion": 
+			
+			
+			var cursos="";
+			
+			
+			
+			for(var i=0;i<GL_CONT_CURSOS;i++){
+				
+				if(i%GL_CONT_SECCIONES==GL_CONT_SECCIONES-1){
+					
+					// no se hace nada, solo se ignora la seccion				
+				}else{
+					cursos+=GL_CURSOS[i][0]+"{"+GL_CURSOS[i][1]+"{"+GL_CURSOS[i][2]+"{"+GL_CURSOS[i][3]+"{";
+				}
+			}	
+			
+			
+			fun_insertar_cursos($(AREA_CURSOS+CONTENEDOR_CURSOS+"#slc_nivel ").val(),$(AREA_CURSOS+CONTENEDOR_CURSOS+"#slc_grado ").val(),cursos);
+			
+			
+			
+		break;
+		
+		
+		case "eliminar curso": 
+			
+			
+			var cursos="";
+			
+			
+			
+			for(var i=0;i<GL_CONT_CURSOS;i++){
+				
+				if(GL_CURSOS[i][0]!=fun_combobox_opcion_elegida(AREA_CURSOS+CONTENEDOR_CURSOS+"#slc_curso")){
+				
+					cursos+=GL_CURSOS[i][0]+"{"+GL_CURSOS[i][1]+"{"+GL_CURSOS[i][2]+"{"+GL_CURSOS[i][3]+"{";					
+				}
+				
+			}	
+			
+			
+			fun_insertar_cursos($(AREA_CURSOS+CONTENEDOR_CURSOS+"#slc_nivel ").val(),$(AREA_CURSOS+CONTENEDOR_CURSOS+"#slc_grado ").val(),cursos);
+			
+			
+			
+		break;
+		
+		case "eliminar alumno": 
+			
+			var codigo=fun_obtener_id_fila_restaltada(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS+"#lista .lista");
+			
+			fun_eliminar_alumno(codigo,"");
+			
+			
+		break;
+		
+		
+		case "eliminar alumno no dispo": 
+			
+			var codigo=fun_obtener_id_fila_restaltada(AREA_REGISTROS+CONTENEDOR_CONSULTAS_ALUMNOS_NO_DISPO+"#lista .lista");
+			
+			fun_eliminar_alumno(codigo,"no dispo");
+			
+			
+		break;
+		
+		
+		case "eliminar profesor": 
+			
+			var codigo=fun_obtener_id_fila_restaltada(AREA_REGISTROS+CONTENEDOR_CONSULTAS_PROFESORES+"#lista .lista");
+			
+			fun_eliminar_profesor(codigo);
+			
+			
+		break;
+		
+		
+		case "eliminar padre": 
+			
+			var codigo=fun_obtener_id_fila_restaltada(AREA_REGISTROS+CONTENEDOR_CONSULTAS_PADRES+"#lista .lista");
+			
+			fun_eliminar_padre(codigo);
+			
+			
+		break;
+		
+		
+		
+		
+		
+		
+		case "eliminar inasistencia tardanza": 
+			
+			var codigo=$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+"#slc_alumno").val();
+			var fecha_codigo=fun_obtener_id_fila_restaltada(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+"#lista .lista");
+			
+			fun_eliminar_registro_asistencia(codigo,fecha_codigo);
+			
+			
+		break;
+		
+		
+		
+		
 		
 		
 		

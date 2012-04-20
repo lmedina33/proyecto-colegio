@@ -60,6 +60,8 @@ function fun_get_objeto(arg_arreglo,arg_id,arg_celda){ /// Se harán comparacione
 
 	for(var i=0;i<arg_arreglo.length && fin!=1;i++){
 	//	alert("compara  "+arreglo[i][0]+"   "+id);
+	
+
 		if(arg_arreglo[i][arg_celda]==arg_id){
 		//	alert("hola");
 			fin=1;
@@ -207,9 +209,52 @@ function fun_tratamiento_tildes(arg_palabra){  // ESTA FUNCION CONVIERTE TODOS L
 	
 }
 
+//////////////////////////////////////////LAS SIGUIENTES 2 FUNCIONES TRABAJAN JUNTAS
 
 
+function fun_invierte_tratamiento_tildes(arg_palabra){   //ESTA FUNCION SE ENCARGA DE TRANSFORMAR TODOS LOS ACUTES EN SU RESPECTIVO CARACTER, SE UTILIZA PARA IMPRIMIR LOS CARACTERES EN CAMPOS INPUT, YA QUE EN ESTOS LA TRADUCCION POR PARTE DE HTML NO ES AUTOMÁTICA
 
+	var indice_ini=1,indice_fin;
+	
+	while(indice_ini!=-1){
+		indice_ini=arg_palabra.indexOf("&");
+		indice_fin=arg_palabra.indexOf(";");
+		
+		if(indice_ini!=-1){
+			letra_equivalente=fun_caracter_equiv(arg_palabra.substring(indice_ini,indice_fin+1));
+			
+			arg_palabra=arg_palabra.substring(0,indice_ini)+letra_equivalente+arg_palabra.substring(indice_fin+1,arg_palabra.length);
+			
+		}
+	}
+	return arg_palabra;
+}
+
+
+	
+function fun_caracter_equiv(arg_codigo){
+	
+	switch(arg_codigo){
+		case "&aacute;":return "á"; break;
+		case "&eacute;":return "é"; break;
+		case "&iacute;":return "í"; break;
+		case "&oacute;":return "ó"; break;
+		case "&uacute;":return "ú"; break;
+		case "&Aacute;":return "Á"; break;
+		case "&Eacute;":return "É"; break;
+		case "&Iacute;":return "Í"; break;
+		case "&Oacute;":return "Ó"; break;
+		case "&Uacute;":return "Ú"; break;
+		case "&ntilde;":return "ñ"; break;
+		case "&Ntilde;":return "Ñ"; break;
+		case "&uuml;":return "ü"; break;
+		case "&Uuml;":return "Ü"; break;
+	}
+	
+
+	}
+	
+	/***********************/
 
 function fun_ignora_tildes(arg_palabra){  // ESTA FUNCION CONVIERTE TODOS LOS CARACTERES USADOS EN NUESTRO IDIOMA A SU RESPECTIVA EXPRECION ACUTE (O CODIFICACION HTML) PARA QUE PUEDAN SER GUARDADOS EN LA BASE DE DATOS Y NO TENER PROBLEMAS CON EL IDIOMA DE LA BASE DE DATOS
 	var nueva_palabra="";
@@ -284,49 +329,8 @@ function fun_ignora_tildes(arg_palabra){  // ESTA FUNCION CONVIERTE TODOS LOS CA
 	return nueva_palabra;
 	
 }
-//////////////////////////////////////////LAS SIGUIENTES 2 FUNCIONES TRABAJAN JUNTAS
 
 
-function fun_invierte_tratamiento_tildes(arg_palabra){   //ESTA FUNCION SE ENCARGA DE TRANSFORMAR TODOS LOS ACUTES EN SU RESPECTIVO CARACTER, SE UTILIZA PARA IMPRIMIR LOS CARACTERES EN CAMPOS INPUT, YA QUE EN ESTOS LA TRADUCCION POR PARTE DE HTML NO ES AUTOMÁTICA
-
-	var indice_ini=1,indice_fin;
-	
-	while(indice_ini!=-1){
-		indice_ini=arg_palabra.indexOf("&");
-		indice_fin=arg_palabra.indexOf(";");
-		
-		if(indice_ini!=-1){
-			letra_equivalente=fun_caracter_equiv(arg_palabra.substring(indice_ini,indice_fin+1));
-			
-			arg_palabra=arg_palabra.substring(0,indice_ini)+letra_equivalente+arg_palabra.substring(indice_fin+1,arg_palabra.length);
-			
-		}
-	}
-	return arg_palabra;
-}
-
-	
-function fun_caracter_equiv(arg_codigo){
-	
-	switch(arg_codigo){
-		case "&aacute;":return "á"; break;
-		case "&eacute;":return "é"; break;
-		case "&iacute;":return "í"; break;
-		case "&oacute;":return "ó"; break;
-		case "&uacute;":return "ú"; break;
-		case "&Aacute;":return "Á"; break;
-		case "&Eacute;":return "É"; break;
-		case "&Iacute;":return "Í"; break;
-		case "&Oacute;":return "Ó"; break;
-		case "&Uacute;":return "Ú"; break;
-		case "&ntilde;":return "ñ"; break;
-		case "&Ntilde;":return "Ñ"; break;
-		case "&uuml;":return "ü"; break;
-		case "&Uuml;":return "Ü"; break;
-	}
-	
-
-	}
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////

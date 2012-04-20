@@ -77,12 +77,12 @@ class DAOPersonalAdministrativo extends Conexion{
 					//EL PRIMER IF VERIFICA LA CONEXION
 					//EL SEGUNDO ES PARA SABER SI EL CODIGO NUEVO Q LES ESTOY ASIGNANDO EXISTE O NO
 					//EL COD_ANTERIOR SIRVE PARA COMPARAR CON EL CODIGO DE LA TABLA APORTAL_ALUMNO EXISTENTE ANTES DE MODIFICARLOS
-	function admin_modificar_personal($dni_anterior,$dni,$nombres,$apellido_p,$apellido_m,$cargo){ 
+	function admin_modificar_personal($dni_anterior,$dni,$nombres,$apellido_p,$apellido_m,$cargo){
 		$cn = $this->conexion();			
 		
 		if($cn!="no_conexion"){	
 									
-			$sql="select * from $this->nombre_tabla_personal where dni='$dni'";  
+			$sql="select * from $this->nombre_tabla_personal where dni='$dni' and dni<>'$dni_anterior'";  
 			$rs = mysql_query($sql,$cn);
 			
 			if(mysql_num_rows($rs)==0){
@@ -134,11 +134,11 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 		}
 	}
 	
-	function consultar_planilla_profesores(){
+	function consultar_planilla_total(){
 		  $cn = $this->conexion();
         $cadena_respuesta="";
         if($cn!="no_conexion"){
-        	$sql="select * from $this->nombre_tabla_profesor";
+        	$sql="select * from $this->nombre_tabla_profesor where disponible=1";
 			    $rs = mysql_query($sql,$cn);
 				
 			while($fila=mysql_fetch_object($rs)){
@@ -149,7 +149,7 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 				
 				foreach ($consulta as $c):
 					$cadena_respuesta.=$c->nombres."{".$c->apellido_paterno."{".$c->apellido_materno."{";
-					$var_dni=$c->dni;
+					/*$var_dni=$c->dni;
 					$sql="select * from $this->nombre_tabla_planilla_docente where dni='$var_dni'";
 				    $rs = mysql_query($sql,$cn);
 					while($fila2=mysql_fetch_object($rs)){
@@ -162,7 +162,7 @@ dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$
 						}
 					$fila2=null;
 					$consulta2=null;
-					$c2=null;
+					$c2=null;*/
 				endforeach;
 			}
 			

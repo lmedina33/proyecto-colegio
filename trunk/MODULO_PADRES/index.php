@@ -4,7 +4,7 @@ session_start();
 header("Cache-Control: no-store, no-cache, must-revalidate");
 
 if(!isset($_SESSION["codigo"]) || empty($_SESSION["codigo"]) || !isset($_SESSION["nombre_usuario"]) || empty($_SESSION["nombre_usuario"]) || $_SESSION["modulo"]!="MODULO_PADRES"){
-	header("location: ../login/index.php?logeo=A");
+	header("location: ../login/index.php?logeo=P");
 }
 
 
@@ -53,51 +53,16 @@ header ("Pragma: no-cache");
 	
 	<div id="logotipo">
 	
-	</div>
+	</div>	<div id="cerrar_sesion" > <div id="imagen"> </div> <div class="texto">Cerrar sesion</div> </div>
 </div>
 
 
 
 <div id="cuerpo-pagina">
 
-
-	<div id="menu_vertical">
-		<div id="titulo_menu">Mis Cursos</div>
-			
-			
-					
-	</div>
+	
+	
 		
-			<div id="contenido-opciones">
-				<div class="opcion" id="opcion-notas" title="Seleccionado" ><div  class="texto_pestana">Notas</div></div>
-				<div class="opcion" id="opcion-observaciones" ><div  class="texto_pestana">Observaciones</div></div>
-			</div>
-		<div id="contenido-pagina">
-		
-			<input type="hidden" id="codigo_curso_elegido" value=""/>
-		<div id="contenido-notas-principal" class="contenido-principal alavista">
-		
-		</div>
-		
-		
-		
-		
-		<div id="contenido-observaciones-principal" class="contenido-principal oculto">
-			<div id="profesor">
-			
-			</div>
-			
-			
-			<div id="observaciones">
-					
-				<div id="titulo">
-					Observaciones
-				</div>
-				
-			</div>
-		</div>
-		
-		</div>
 </div>
 
 

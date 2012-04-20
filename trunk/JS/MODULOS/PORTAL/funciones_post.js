@@ -352,6 +352,122 @@ function fun_consultar_servicios(arg_div_contenedor){  //esta función es para ha
 
 
 
+/***********PLANILLA**************/
+/***********PLANILLA**************/
+/***********PLANILLA**************/
+/***********PLANILLA**************/
+/***********PLANILLA**************/
+
+
+
+
+function fun_consultar_planilla(arg_div_contenedor){  //esta función es para hacer alguna llamada con ajax mediante post
+
+	
+	$.ajax({
+        url: "../POST/ADMINISTRACION/GESTION_CONTENIDO_WEB/consultar_planilla_total.php",
+        type: "POST",
+        data:{},
+        async:true,
+        beforeSend: function(objeto){
+        	
+        //	fun_mostrar_cargando();
+        				
+        },
+        
+	success: function(data){
+//alert(data);
+		//	fun_quitar_cargando();
+		
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+						
+			if(data!="no data"){
+				
+				var grupo_valores=data.split("}");
+				
+				var valores=grupo_valores[0].split("{");
+				var num_campos=3;
+				//primero los profesores
+				
+				var html_planilla_docente='<div class="subtitulo">Plana docente</div><ul>';
+				
+				for (var i=0;valores[i];i+=num_campos){
+					html_planilla_docente+='<li>'+valores[i]+" "+valores[i+1]+" "+valores[i+2]+"</li>";
+				}
+				
+				html_planilla_docente+='</ul>';
+				
+				
+				
+				valores=grupo_valores[1].split("{");
+				num_campos=4;
+				
+				
+				var html_planilla_administrativa='<div class="subtitulo">Plana administrativa</div><ul>';
+				
+				for (var i=0;valores[i];i+=num_campos){
+					html_planilla_administrativa+='<li><div class="subtitulo_cargo">'+valores[i+3]+':</div> <div class="nombre_planilla">'+valores[i]+" "+valores[i+1]+" "+valores[i+2]+"</div></li>";
+				}
+				
+				html_planilla_administrativa+='</ul>';
+				
+				$(arg_div_contenedor).html(html_planilla_docente+html_planilla_administrativa);
+				
+				/*
+				var TITULOS_SERVICIOS=new Array();
+				var SERVICIOS=new Array();
+				var CONT_SERVICIOS=0;
+				
+				var valores=data.split("{");
+				var parrafos="";
+				var titulos="";
+				
+				var html_servicios='<div class="subtitulo_servicio">'+valores[0]+'</div><ul>';
+				
+				var titulo_parrafo=valores[0];				
+				for(var i=0;valores[i];i+=2){
+					
+					if(titulo_parrafo==valores[i]){
+						//parrafos+=valores[i+1]+"\n";
+						html_servicios+="<li>"+valores[i+1]+"</li>";
+					}else{
+						titulo_parrafo=valores[i];
+						html_servicios+="</ul>";
+						html_servicios+='<div class="subtitulo_servicio">'+valores[i]+'</div><ul>'; 
+						
+						html_servicios+="<li>"+valores[i+1]+"</li>";
+						
+					}
+					
+				}
+				html_servicios+="</ul>";
+				$(arg_div_contenedor).html(html_servicios);				*/
+				//refrescar_vista_servicios();
+				
+			}else{
+				
+				
+				
+				///refrescar_vista_servicios();
+			}
+		
+		}
+	}
+	       	
+	});	
+	
+}
+
+
+
+
+
+
+
+
+
 /***********ALBUM FOTOGRAFICO**************/
 /***********ALBUM FOTOGRAFICO**************/
 /***********ALBUM FOTOGRAFICO**************/

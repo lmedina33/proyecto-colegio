@@ -1,7 +1,71 @@
 body{
-	background:url("../../../IMAGENES/PORTAL/fondo.jpg")  center;
+	background:url("../../../IMAGENES/fondo_imagen.jpg")  center;
 	
 	overflow-y:scroll;
+}
+
+
+#cerrar_sesion{
+	cursor: pointer;
+	float:right;
+	height:25px;
+	margin-top:20px;
+	margin-right:10px;
+	font-weight:bold;
+	
+}
+
+#cerrar_sesion #imagen{
+	cursor: pointer;
+	float:left;
+	background:url("../../../IMAGENES/cerrar_sesion.gif");
+	width:30px;
+	height:25px;
+}
+
+#cerrar_sesion .texto{
+	cursor: pointer;
+	float:left;
+
+}
+
+#cerrar_sesion .texto:hover{
+	
+	text-decoration:underline;
+	color:blue;
+	
+}
+
+
+#volver_atras{
+	cursor: pointer;
+	float:right;
+	height:25px;
+	margin-top:20px;
+	margin-right:10px;
+	font-weight:bold;
+	
+}
+
+#volver_atras #imagen{
+	cursor: pointer;
+	float:left;
+	background:url("../../../IMAGENES/volver_atras.gif") no-repeat;
+	width:30px;
+	height:25px;
+}
+
+#volver_atras .texto{
+	cursor: pointer;
+	float:left;
+
+}
+
+#volver_atras .texto:hover{
+	
+	text-decoration:underline;
+	color:blue;
+	
 }
 
 
@@ -16,7 +80,6 @@ body{
 #cabecera-pagina{
  	width:950px;
  	height:130px;
- 	background:yellow;
  	margin: 0px auto;
 }
 
@@ -282,7 +345,8 @@ body{
 	cursor:pointer;
 	height:20px;
 	width:20px;
-	backgrounD:black;
+	
+	background:url("../../../IMAGENES/x.png")  center;
 }
 
 

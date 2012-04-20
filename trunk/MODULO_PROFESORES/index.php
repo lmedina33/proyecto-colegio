@@ -4,7 +4,7 @@ session_start();
 header("Cache-Control: no-store, no-cache, must-revalidate");
 
 if(!isset($_SESSION["codigo"]) || empty($_SESSION["codigo"]) || !isset($_SESSION["nombre_usuario"]) || empty($_SESSION["nombre_usuario"]) || $_SESSION["modulo"]!="MODULO_PROFESORES"){
-	header("location: ../login/index.php?logeo=PR");
+	header("location: ../LOGIN/index.php?logeo=PR");
 }
 
 

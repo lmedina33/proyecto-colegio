@@ -6,6 +6,7 @@ class DAOGestionProfesores extends Conexion{
 	
 	var	$nombre_tabla_profesor="portal_profesor";
 	var	$nombre_tabla_plana_docente="portal_planilla_docente";
+  	var $nombre_tabla_admin_cursos="admin_cursos";
 	
 	//-- Estructura de tabla para la tabla `portal_profesor`
 	//CREATE TABLE `portal_profesor` (
@@ -19,6 +20,25 @@ class DAOGestionProfesores extends Conexion{
 	//  PRIMARY KEY  (`dni`)
 	//) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 	
+	
+	
+	//	-- 
+	//-- Estructura de tabla para la tabla `admin_cursos`
+	//-- 
+
+	//CREATE TABLE `admin_cursos` (
+	//  `codigo` varchar(20) NOT NULL,
+	//  `grado` int(2) default NULL,
+	//  `nivel` varchar(1) default NULL,
+	//  `nombre_curso` varchar(15) default NULL,
+	//  `seccion` varchar(1) default NULL,
+	//	`id_profesor` varchar(10) default NULL,
+	//	`categoria` varchar(1) default NULL,
+	//  PRIMARY KEY  (`id`)
+	//) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+	
+	
+	
 	//CUANDO SE INSERTA UN PROFESOR, AUTOMATICAMNETE ESTARÁ DISPONIBLE !!!!
 	
     function admin_insertar_profesor($dni,$nombres,$apellido_p,$apellido_m,$username,$password){ //INGRESA UN NUEVO PROFESOR 
@@ -30,18 +50,25 @@ class DAOGestionProfesores extends Conexion{
 			   $rs = mysql_query($sql,$cn);
 			
         	if(mysql_num_rows($rs)==0){
+				$sql="select * from $this->nombre_tabla_profesor where username='$username'";	//VERIFICA Q NO EXISTA OTRO DNI IGUAL 
+				$rs = mysql_query($sql,$cn);
 				
+	        	if(mysql_num_rows($rs)==0){
 			
-        	$sql="insert into $this->nombre_tabla_profesor (dni,nombres,apellido_paterno,apellido_materno,username,password,disponible) values ('$dni','$nombres','$apellido_p','$apellido_m','$username','$password',1)";
-			    $rs = mysql_query($sql,$cn);
-			    
-			    
-        	$sql="insert into $this->nombre_tabla_plana_docente (dni) values ('$dni') ";	//VERIFICA Q NO EXISTA OTRO CODIGO IGUAL 
-			   $rs = mysql_query($sql,$cn);
-			
-			mysql_close($cn);			 
-			return "mysql_si";
-				
+		        	$sql="insert into $this->nombre_tabla_profesor (dni,nombres,apellido_paterno,apellido_materno,username,password,disponible) values ('$dni','$nombres','$apellido_p','$apellido_m','$username','$password',1)";
+					    $rs = mysql_query($sql,$cn);
+					    
+					    
+		        	$sql="insert into $this->nombre_tabla_plana_docente (dni) values ('$dni') ";	//VERIFICA Q NO EXISTA OTRO CODIGO IGUAL 
+					   $rs = mysql_query($sql,$cn);
+					
+					mysql_close($cn);			 
+					return "mysql_si";
+					
+				}else{
+					mysql_close($cn);
+					return "existe user";
+				}
 			}else{
 				mysql_close($cn);
 				return "existe";
@@ -61,7 +88,7 @@ class DAOGestionProfesores extends Conexion{
         		//$uno=1;
         if($cn!="no_conexion"){
 
-        	$sql="select * from $this->nombre_tabla_profesor ";	
+        	$sql="select * from $this->nombre_tabla_profesor  order by disponible DESC";	
 			   $rs = mysql_query($sql,$cn);
 
 			while($fila=mysql_fetch_object($rs)){
@@ -107,26 +134,48 @@ class DAOGestionProfesores extends Conexion{
 					//EL PRIMER IF VERIFICA LA CONEXION
 					//EL SEGUNDO ES PARA SABER SI EL DNI NUEVO Q LES ESTOY ASIGNANDO EXISTE O NO
 					//EL DNI_ANTERIOR SIRVE PARA COMPARAR CON EL DNI DE LA TABLA A PORTAL_PROFESOR EXISTENTE ANTES DE MODIFICARLOS
-	function admin_modificar_profesor($dni_anterior,$dni,$nombres,$apellido_p,$apellido_m,$username,$password){ 
+	function admin_modificar_profesor($dni_anterior,$dni,$nombres,$apellido_p,$apellido_m,$username,$password,$disponible){ 
 		$cn = $this->conexion();			
 		
 		if($cn!="no_conexion"){	
 									
-			$sql="select * from $this->nombre_tabla_profesor where dni='$dni'";  
+			$sql="select * from $this->nombre_tabla_profesor where dni='$dni' and dni<>'$dni_anterior'";  
 			$rs = mysql_query($sql,$cn);
 			
 			if(mysql_num_rows($rs)==0){
 				
-			
-        		$sql="update $this->nombre_tabla_profesor set 
-dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',username='$username',password='$password' where dni='$dni_anterior'";		
-			    $rs = mysql_query($sql,$cn);
-			    
-			    $sql="update $this->nombre_tabla_plana_docente set dni='dni' where dni='$dni_anterior'";
-			$rs = mysql_query($sql,$cn);
-				mysql_close($cn);		 
-				return "mysql_si";
+			$sql="select * from $this->nombre_tabla_profesor where username='$username' and dni<>'$dni_anterior'";	//VERIFICA Q NO EXISTA OTRO DNI IGUAL 
+				$rs = mysql_query($sql,$cn);
 				
+	        	if(mysql_num_rows($rs)==0){
+	        		
+	        		
+	        		$sql="update $this->nombre_tabla_profesor set dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',username='$username',password='$password',disponible=$disponible where dni='$dni_anterior'";		
+				    $rs = mysql_query($sql,$cn);
+				    
+				    
+				    $sql="update $this->nombre_tabla_plana_docente set dni='dni' where dni='$dni_anterior'";
+					$rs = mysql_query($sql,$cn);
+					
+					
+					if($disponible=='0'){
+					
+					    $sql="update $this->nombre_tabla_admin_cursos set id_profesor = ' ' where id_profesor='$dni_anterior'";
+						$rs = mysql_query($sql,$cn);	
+					}else{
+						
+					    $sql="update $this->nombre_tabla_admin_cursos set id_profesor = '$dni' where id_profesor='$dni_anterior'";
+						$rs = mysql_query($sql,$cn);
+					}
+					
+					mysql_close($cn);		 
+					return "mysql_si";
+					 
+				}else{
+					mysql_close($cn);
+					return "existe user";
+					}
+					
 				}else{
 					mysql_close($cn);
 					return "existe";

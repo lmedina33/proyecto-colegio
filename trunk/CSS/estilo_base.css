@@ -13,6 +13,20 @@ body{
 
 #div_back
 {    opacity: .40;
+	filter: alpha(opacity = 40);  /*para internet explorer*/
+  	top: 0px;
+	background-color: #666;
+	height:100%;
+	width:100%;
+	position: fixed;
+	display: none;
+	z-index: 80;
+}
+
+
+#div_back_pregunta
+{    opacity: .40;
+	filter: alpha(opacity = 40);  /*para internet explorer*/
   	top: 0px;
 	background-color: #666;
 	height:100%;
@@ -24,6 +38,8 @@ body{
 
 #protector_transparente
 {    opacity: 0;
+	filter: alpha(opacity = 10);  /*para internet explorer*/
+	
   	top: 0px;
 	background-color: #FFF;
 	height:100%;
@@ -36,6 +52,7 @@ body{
 
 #div_back2
 {    opacity: .40;
+	filter: alpha(opacity = 40);  /*para internet explorer*/
   	top: 0px;
 	background-color: #666;
 	height:100%;
@@ -47,6 +64,7 @@ body{
 
 #div_back3
 {    opacity: .40;
+	filter: alpha(opacity = 40);  /*para internet explorer*/
   	top: 0px;
 	background-color: #666;
 	height:100%;

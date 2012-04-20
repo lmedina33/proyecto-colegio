@@ -41,13 +41,13 @@ function click_opcion_curso(id){
 	$("#cuerpo-pagina #contenido-opciones #opcion-notas").click();
 	
 	
-	var curso=fun_get_objeto(GL_ARRAY_CURSOS,id,0);
+	var curso=fun_get_objeto(GL_ARRAY_CURSOS,fun_tratamiento_tildes(fun_guiones_por_espacios(id)),0);
 	
 	//alert(curso);
 	
 		
 	$("#cuerpo-pagina #contenido-pagina #profesor").html("Profesor a cargo del curso: "+curso[2]+" "+curso[3]+" "+curso[4]+".");
-	$("#cuerpo-pagina #contenido-pagina #codigo_curso_elegido").val(id);
+	$("#cuerpo-pagina #contenido-pagina #codigo_curso_elegido").val(fun_tratamiento_tildes(fun_guiones_por_espacios(id)));
 	
 	fun_cargar_alumnos_curso(id);
 	

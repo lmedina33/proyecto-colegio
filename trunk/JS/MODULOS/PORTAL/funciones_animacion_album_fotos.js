@@ -33,7 +33,7 @@ $("#galeria_fotos #salir_album_fotos").click(function(){
 	
 	$("#catalogo #contenido #sub_menu_inferior .opcion").attr("title","Click para seleccionar");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
-	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+//	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
 	
 });
@@ -95,26 +95,29 @@ function click_minifoto_muestra(background){
 	
 
 	
-	if(parseFloat(ancho_pantalla)<=(parseFloat(width_real_imagen)+margen_foto_marco*2)){
-	/*	alert("mas ancho");
-		alert(ancho_pantalla);*/
+	if(parseFloat(ancho_pantalla.replace("px", ""))<=(parseFloat(width_real_imagen)+margen_foto_marco*2)){
+
+		
 		width_real_imagen=parseFloat(ancho_pantalla)-60 +2;
-		$("#marco_foto_mostrada img").attr("width",width_real_imagen+"px");
+		$("#marco_foto_mostrada img").width(width_real_imagen+"px");
 		
 		height_real_imagen=$("#marco_foto_mostrada img").height();
-	}
-	
-	if(parseFloat(alto_pantalla)<=(parseFloat(height_real_imagen)+margen_foto_marco*2)){
-	/*	alert("mas alto");
-		alert(alto_pantalla);*/
-		height_real_imagen=parseFloat(alto_pantalla)-60;
+	}else{
 		
-		$("#marco_foto_mostrada img").attr("height",height_real_imagen+"px");
+	
+	if(parseFloat(alto_pantalla.replace("px", ""))<=(parseFloat(height_real_imagen)+margen_foto_marco*2)){
+
+		height_real_imagen=parseFloat(alto_pantalla.replace("px", ""))-60;
+		$("#marco_foto_mostrada img").height(height_real_imagen+"px");
+		
 		
 		width_real_imagen=parseFloat($("#marco_foto_mostrada img").width())+2;
 	}	
 	
+	}
 	
+	
+		
 	$("#marco_foto_mostrada ").css("width",(width_real_imagen+margen_foto_marco*2)+"px");
 	$("#marco_foto_mostrada ").css("height",(parseFloat(height_real_imagen)+margen_foto_marco*2)+"px");
 	
@@ -122,7 +125,6 @@ function click_minifoto_muestra(background){
 	var margen_left=(parseFloat(ancho_pantalla)-(width_real_imagen+margen_foto_marco*2))/2;
 	var margen_top=(parseFloat(alto_pantalla)-(parseFloat(height_real_imagen)+margen_foto_marco*2))/2;
 		
-	
 	$("#marco_foto_mostrada ").css("margin-left",margen_left+"px");
 	$("#marco_foto_mostrada ").css("margin-top",margen_top+"px");
 		

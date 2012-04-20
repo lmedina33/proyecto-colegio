@@ -1,3 +1,20 @@
+<?php 
+
+session_start();
+header("Cache-Control: no-store, no-cache, must-revalidate");
+
+if(!isset($_SESSION["codigo"]) || empty($_SESSION["codigo"]) || !isset($_SESSION["nombre_usuario"]) || empty($_SESSION["nombre_usuario"]) || $_SESSION["modulo"]!="MODULO_PROFESORES"){
+	header("location: ../LOGIN/index.php?logeo=PR");
+}
+
+
+header ("Expires: Thu, 27 Mar 1980 23:59:00 GMT"); //la pagina expira en una fecha pasada
+header ("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); //ultima actualizacion ahora cuando la cargamos
+header ("Cache-Control: no-cache, must-revalidate"); //no guardar en CACHE
+header ("Pragma: no-cache");
+
+?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 

@@ -29,6 +29,10 @@ class DAOGestionPadre extends Conexion{
 			   $rs = mysql_query($sql,$cn);
 			
         	if(mysql_num_rows($rs)==0){
+        		$sql="select * from $this->nombre_tabla_padre where username='$username'";	//VERIFICA Q NO EXISTA OTRO DNI IGUAL 
+				$rs = mysql_query($sql,$cn);
+				
+	        	if(mysql_num_rows($rs)==0){
 				
 			
         	$sql="insert into $this->nombre_tabla_padre (dni,nombres,apellido_paterno,apellido_materno,username,password,disponible) values ('$dni','$nombres','$apellido_p','$apellido_m','$username','$password',1)";
@@ -36,7 +40,10 @@ class DAOGestionPadre extends Conexion{
 			
 			mysql_close($cn);			 
 			return "mysql_si";
-				
+				}else{
+					mysql_close($cn);
+					return "existe user";
+				}
 			}else{
 				mysql_close($cn);
 				return "existe";
@@ -55,7 +62,7 @@ class DAOGestionPadre extends Conexion{
         		//$uno=1;
         if($cn!="no_conexion"){
 
-        	$sql="select * from $this->nombre_tabla_padre ";	
+        	$sql="select * from $this->nombre_tabla_padre order by disponible DESC";	
 			   $rs = mysql_query($sql,$cn);
 
 			while($fila=mysql_fetch_object($rs)){
@@ -102,23 +109,35 @@ class DAOGestionPadre extends Conexion{
 					//EL PRIMER IF VERIFICA LA CONEXION
 					//EL SEGUNDO ES PARA SABER SI EL CODIGO NUEVO Q LES ESTOY ASIGNANDO EXISTE O NO
 					//EL DNI_ANTERIOR SIRVE PARA COMPARAR CON EL DNI DE LA TABLA APORTAL_PADRE EXISTENTE ANTES DE MODIFICARLOS
-	function admin_modificar_padre($dni_anterior,$dni,$nombres,$apellido_p,$apellido_m,$username,$password){ 
+	function admin_modificar_padre($dni_anterior,$dni,$nombres,$apellido_p,$apellido_m,$username,$password,$disponible){ 
 		$cn = $this->conexion();			
 		
 		if($cn!="no_conexion"){	
 									
-			$sql="select * from $this->nombre_tabla_padre where dni='$dni'";  
+			$sql="select * from $this->nombre_tabla_padre where dni='$dni' and dni<>'$dni_anterior'";  
 			$rs = mysql_query($sql,$cn);
 			
 			if(mysql_num_rows($rs)==0){
 				
-			
-        		$sql="update $this->nombre_tabla_padre set 
-dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',username='$username',password='$password' where dni='$dni_anterior'";		
-			    $rs = mysql_query($sql,$cn);
-			
-				mysql_close($cn);		 
-				return "mysql_si";
+				$sql="select * from $this->nombre_tabla_padre where username='$username' and dni<>'$dni_anterior'";	//VERIFICA Q NO EXISTA OTRO DNI IGUAL 
+				$rs = mysql_query($sql,$cn);
+				
+				if(mysql_num_rows($rs)==0){
+					
+	        		$sql="update $this->nombre_tabla_padre set 	dni='$dni',nombres='$nombres',apellido_paterno='$apellido_p',apellido_materno='$apellido_m',username='$username',password='$password',disponible=$disponible where dni='$dni_anterior'";		
+	
+					
+	
+				    $rs = mysql_query($sql,$cn);
+				
+					mysql_close($cn);		 
+					return "mysql_si";
+					
+				}else{
+					mysql_close($cn);
+					return "existe user";
+					}
+					
 				
 				}else{
 					mysql_close($cn);

@@ -110,6 +110,65 @@ class DAOGestionBlogProfesor extends Conexion{
 		}
 	}
 	
+	
+		function profesor_elimina_entrada($codigo_curso,$codigo_alumno){
+		$cn = $this->conexion();
+        
+        if($cn!="no_conexion"){
+        	
+        	$sql="select * from $this->nombre_tabla_blog where id=( select max(id) from blog where codigo_curso='$codigo_curso' and codigo_alumno='$codigo_alumno') and eliminable=1 ";
+        	$rs = mysql_query($sql,$cn);
+        	
+        	
+        	$resultado="";
+        	if(mysql_num_rows($rs)>0){
+        		
+        		
+        		$sql="select max(id) id from blog where codigo_curso='$codigo_curso' and codigo_alumno='$codigo_alumno'";
+				$rs = mysql_query($sql,$cn);
+				
+				
+				while($fila=mysql_fetch_object($rs)){
+					$entrada=$fila;
+				}        
+					
+        		$sql="delete from $this->nombre_tabla_blog where id=$entrada->id ";
+			   	$rs = mysql_query($sql,$cn);
+			  
+				///////////////////Ahora revisaremos si el ultimo le pertenece al profesor para poder desbloquearlo y que sea eliminable		   
+				   			   	
+				   	$sql="select * from $this->nombre_tabla_blog where id=( select max(id) from blog where codigo_curso='$codigo_curso' and codigo_alumno='$codigo_alumno')";
+        			$rs = mysql_query($sql,$cn);
+        			
+        			if(mysql_num_rows($rs)>0){
+        				
+        				///CONSULTAMOS CUAL ES EL MÁX de los que se encuentran en el blog
+			        		$sql="select max(id) id from blog where codigo_curso='$codigo_curso' and codigo_alumno='$codigo_alumno'";
+							$rs = mysql_query($sql,$cn);
+							
+							
+							while($fila=mysql_fetch_object($rs)){
+								$entrada=$fila;
+							}      
+				
+        				$sql="update $this->nombre_tabla_blog set eliminable=1 where id=$entrada->id ";
+        	
+        				$rs = mysql_query($sql,$cn);
+        				
+        			}
+	        	$resultado="mysql_si";
+        	}else{
+        		$resultado="no realiza";
+        	}
+        	
+			mysql_close($cn);
+
+			return  $resultado;
+		}else{
+		return "mysql_no";
+		}
+	}
+	
 }
 	/*mysql> ;
     */

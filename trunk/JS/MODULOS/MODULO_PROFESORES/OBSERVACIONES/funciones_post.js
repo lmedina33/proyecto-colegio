@@ -11,7 +11,7 @@ function fun_cargar_alumnos_curso(id_curso){  //esta función es para hacer algun
 	$.ajax({
         url: "../../POST/MODULO_PROFESORES/ConsultarAlumnosDeUnCurso.php",
         type: "POST",
-        data:{codigo_curso:id_curso},
+        data:{codigo_curso:fun_tratamiento_tildes(fun_guiones_por_espacios(id_curso) )},
         async:true,
         beforeSend: function(objeto){
         	
@@ -74,11 +74,10 @@ function fun_cargar_alumnos_curso(id_curso){  //esta función es para hacer algun
 function fun_cargar_observaciones(id_curso,codigo_alumno){  //esta función es para hacer alguna llamada con ajax mediante post
 
 	
-	
 	$.ajax({
         url: "../../POST/MODULO_PROFESORES/Consulta_observacion.php",
         type: "POST",
-        data:{codigo_curso:id_curso,codigo_alumno:codigo_alumno},
+        data:{codigo_curso:fun_tratamiento_tildes(fun_guiones_por_espacios(id_curso) ),codigo_alumno:codigo_alumno},
         async:true,
         beforeSend: function(objeto){
         	
@@ -140,7 +139,7 @@ function fun_insertar_nueva_observacion(id_curso,codigo_alumno,nueva_entrada){  
 	$.ajax({
         url: "../../POST/MODULO_PROFESORES/Insertar_observacion.php",
         type: "POST",
-        data:{codigo_curso:id_curso,codigo_alumno:codigo_alumno,nueva_entrada:nueva_entrada},
+        data:{codigo_curso:fun_tratamiento_tildes(fun_guiones_por_espacios(id_curso) ),codigo_alumno:codigo_alumno,nueva_entrada:nueva_entrada},
         async:true,
         beforeSend: function(objeto){
         	

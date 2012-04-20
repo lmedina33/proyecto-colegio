@@ -84,7 +84,7 @@ class DAOConsultasProfesor extends Conexion{
 					$var_grado=$c->grado;
 					$var_nivel=$c->nivel;
 					$var_seccion=$c->seccion;
-					$sql="select * from $this->nombre_tabla_alumnos where grado='$var_grado' and nivel='$var_nivel' and seccion='$var_seccion'";
+					$sql="select * from $this->nombre_tabla_alumnos where grado='$var_grado' and nivel='$var_nivel' and seccion='$var_seccion'  and disponible=1";
 				    $rs = mysql_query($sql,$cn);
 					while($fila2=mysql_fetch_object($rs)){
 						$consulta2[]=$fila2;
@@ -126,7 +126,7 @@ class DAOConsultasProfesor extends Conexion{
 					//$cadena_respuesta.=$c->nombres."{".$c->apellido_paterno."{".$c->apellido_materno."{";
 					$codigo_alumno=$c->codigo_alumno;
 					
-					$sql="select * from $this->nombre_tabla_alumnos where codigo='$codigo_alumno' ";
+					$sql="select * from $this->nombre_tabla_alumnos where codigo='$codigo_alumno'  and disponible=1";
 				    $rs = mysql_query($sql,$cn);
 					while($fila2=mysql_fetch_object($rs)){
 						$consulta2[]=$fila2;

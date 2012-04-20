@@ -199,8 +199,8 @@
 			 <option value="no_disponible">No habilitado</option> 
 		</select> -->
 		  		
-		<div id="campos_modif"> 
-		<div id="bloque-izq">
+		<div id="campos_modif" > 
+		<div id="bloque-izq" class="oculto">
 		<div class="reglon">DNI: <input id="txt_dni" type="text" value=""/></div>
 		<div class="reglon">Nombres: <input id="txt_nombres" type="text" value=""/></div>
 		<div class="reglon">Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/></div>
@@ -210,7 +210,7 @@
 			  <option value="Sub-director">Sub-director</option>
 			  <option value="Secretaria">Secretaria</option> 
 		  </select></div>
-		  <input id="btn_aceptar" type="button" value="Modificar registro"/>
+		  <input id="btn_modificar" type="button" value="Modificar registro"/>
 		</div>
 		
 		</div>  		

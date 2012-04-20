@@ -6,7 +6,10 @@
 	<meta name="author" content="Dante Vidal Tueros, Analista Desarrollador"/>
 
 
-	<script language="javascript" src="../JS/LIBRERIAS/jquery1_6.js"></script>
+	<!--<script language="javascript" src="../JS/LIBRERIAS/jquery1_6.js"></script>-->
+	
+	<script type="text/javascript" src="../JS/LIBRERIAS/jquery1.4.min.js"></script>
+	
 	<script language="javascript" src="../JS/FUNCIONES/funciones_interfaz_grafica.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_variables_globales.js"></script>
 	
@@ -55,9 +58,12 @@
 
 <div id="cabecera">
 
-<div id="login_modulo_alumnos" class="logearse">Modulo alumnos</div>
-<div id="login_modulo_padres" class="logearse">Modulo padres</div>
-<div id="login_modulo_profesores" class="logearse">Modulo profesores</div>
+<div id="enlaces_logear">
+	<div id="login_modulo_alumnos" class="logearse">Modulo alumnos</div><br />
+	<div id="login_modulo_padres" class="logearse">Modulo padres</div><br />
+	<div id="login_modulo_profesores" class="logearse">Modulo profesores</div>
+</div>
+
 </div>
 
 
@@ -134,8 +140,8 @@
 				
 				
 				<div id="sub_menu_inferior"> 
-					<div id="opcion-admision" class="opcion" title="Click para seleccionar">Admisiones</div>
-					<div id="opcion-album"  class="opcion" title="Click para seleccionar">Album de fotos</div> 
+					<div id="opcion-admision" class="opcion" title="Click para seleccionar"></div>
+					<div id="opcion-album"  class="opcion" title="Click para seleccionar"></div> 
 				</div>
 				
 			</div>

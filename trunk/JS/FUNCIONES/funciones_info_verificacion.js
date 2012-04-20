@@ -3,6 +3,7 @@
 function fun_esblanco(arg_cadena){
 	var valores= arg_cadena.split(" ");
 	var blanco=true;
+
 	for(var i=0;i<valores.length;i++){
 		if(valores[i]){
 			blanco=false;

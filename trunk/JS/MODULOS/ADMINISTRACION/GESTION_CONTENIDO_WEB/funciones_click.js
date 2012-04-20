@@ -532,6 +532,29 @@ $("#menu_vertical #submenu-pag_web #consultar_admin-pag_web").click(function(){
 	fun_get_administrativo();
 });
 
+
+
+$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#btn_modificar").click(function(){																		   
+ 
+ //	alert("entreee");
+ 	
+ 	var dni_anterior=fun_obtener_id_fila_restaltada(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#lista .lista");
+ 	
+	var dni=$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#txt_dni").val();
+	var nombres=$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#txt_nombres").val();
+	var apellido_p=$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#txt_apellido_p").val();
+	var apellido_m=$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#txt_apellido_m").val();
+	var cargo=$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#slc_nivel").val();
+		
+		if(fun_esblanco(dni) || fun_esblanco(nombres) || fun_esblanco(apellido_p) || fun_esblanco(apellido_m)){
+			fun_aviso_popup("Debe llenar todos los datos del administrativo.",GLOBAL_TTL_ACN_INC,35,GLOBAL_MARGEN_TOP_AVISO);
+		}else{
+		//	alert("bien");
+			fun_modificar_administrativo(dni_anterior,dni,nombres,apellido_p,apellido_m,cargo);
+		}
+
+	
+});
 //////////////////////////////AREA X///////////////////////////////////
 
 
