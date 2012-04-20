@@ -1,0 +1,478 @@
+body{
+	background:url("../../../IMAGENES/fondo_imagen.jpg")  center;
+	
+	overflow-y:scroll;
+}
+
+
+#cerrar_sesion{
+	cursor: pointer;
+	float:right;
+	height:25px;
+	margin-top:20px;
+	margin-right:10px;
+	font-weight:bold;
+	
+}
+
+#cerrar_sesion #imagen{
+	cursor: pointer;
+	float:left;
+	background:url("../../../IMAGENES/cerrar_sesion.gif");
+	width:30px;
+	height:25px;
+}
+
+#cerrar_sesion .texto{
+	cursor: pointer;
+	float:left;
+
+}
+
+#cerrar_sesion .texto:hover{
+	
+	text-decoration:underline;
+	color:blue;
+	
+}
+
+
+#volver_atras{
+	cursor: pointer;
+	float:right;
+	height:25px;
+	margin-top:20px;
+	margin-right:10px;
+	font-weight:bold;
+	
+}
+
+#volver_atras #imagen{
+	cursor: pointer;
+	float:left;
+	background:url("../../../IMAGENES/volver_atras.gif") no-repeat;
+	width:30px;
+	height:25px;
+}
+
+#volver_atras .texto{
+	cursor: pointer;
+	float:left;
+
+}
+
+#volver_atras .texto:hover{
+	
+	text-decoration:underline;
+	color:blue;
+	
+}
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+/************************CABECERA***********************/
+
+#cabecera-pagina{
+ 	width:950px;
+ 	height:130px;
+ 	margin: 0px auto;
+}
+
+
+#cabecera-pagina #logotipo{
+ 	width:700px;
+ 	height:130px;
+ 	background:green;
+ 	float:left;
+ 	margin: 0px auto;
+ 	
+ 	
+}
+
+
+
+#cuerpo-pagina{
+
+ 	width:950px;
+ 	min-height:570px;
+ 	position:relative;
+	margin-top:10px;
+	margin-left:155px;
+ 	float:left;
+ 	
+}
+
+
+
+#pie-pagina{
+ 	width:950px;
+ 	height:100px;
+ 
+ 	position:relative;
+ 	margin: 0px auto;
+ 	margin-top:30px;
+}
+
+
+
+
+
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+/***********************MENU VERTICAL PRINCIPAL**************************/
+
+
+
+#cuerpo-pagina #menu_vertical{
+ 	width:200px;
+ 	min-height:550px; 
+ 	float:left;
+ 	margin-left:40px;
+ 	
+}
+
+
+#cuerpo-pagina #menu_vertical #titulo_menu{
+	width:200px;
+ 	height:30px;
+ 	font-family: cursive;
+ 	font-size:140%;
+ 	font-weight:bold;
+ 	text-align:center;
+ 	padding-top:20px;
+}
+
+
+#cuerpo-pagina #menu_vertical .opcion{
+ 	width:200px;
+ 	height:35px;
+ 	margin-top:2px;
+  	position:relative;	
+  	
+	color:black;
+	cursor:pointer;
+ 	border-radius:6px;
+}
+
+
+
+#cuerpo-pagina #menu_vertical .opcion[title="Seleccionado"] {
+
+ 	font-family: cursive;
+	color:white;	
+ 	font-weight:bold;
+ 	
+ 	background-color:blue;
+}
+
+#cuerpo-pagina #menu_vertical .opcion .texto_pestana{
+ 	width:200px;
+ 	height:30px;
+ 	margin-top:7px;
+  	position:relative;	
+	float:left;
+	
+ 	font-size:110%;
+ 	text-align:center;
+}
+
+
+
+
+#cuerpo-pagina #menu_vertical .submenu{
+ 	width:180px;
+ 	min-height:1px;
+ 	margin-left:30px;
+ 	margin-top:2px;
+ 	background:white;
+ 
+ 	display:none;
+		
+}
+
+#cuerpo-pagina #menu_vertical .submenu .subopcion{
+ 	width:170px;
+ 	height:30px;
+ 	margin-top:2px;
+	margin-left:0px;
+ /*	background:url('../../../IMAGENES/ADMINISTRACION/background_subopcion.png') repeat-y;*/
+ 	background-position:0 0;
+	
+	font-weight:normal;
+}
+
+
+#cuerpo-pagina #menu_vertical .submenu .subopcion[title="Seleccionado"]{
+
+ /*	background:url('../../../IMAGENES/ADMINISTRACION/background_subopcion.png') repeat-y;*/
+ 	background-position:-200px 0;
+	margin-left:10px;
+	
+	font-weight:bold;
+}
+
+
+
+#cuerpo-pagina #menu_vertical .submenu .subopcion .texto_pestana{
+ 	width:170px;
+ 	text-align:center;
+ 	padding-top: 8px;
+}
+
+
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+/*************************CONTENIDO*******************************/
+
+
+#cuerpo-pagina #contenido-pagina{
+ 	width:700px;
+ 		
+ 	min-height:550px;
+	background:url("../../../IMAGENES/textura2.jpg") ;
+    	
+ 	float:left;
+ 	border-radius:10px 10px 10px 10px;
+ 	border:#00F solid 2px;
+ 	box-shadow:0px 0px 25px #000;
+ 	
+   	position:absolute;
+ 	z-index:0;
+ 	
+    top:60px;
+    left:250px;
+}
+
+
+
+
+#cuerpo-pagina #contenido-pagina  #contenido-notas-principal #titulo_notas{
+	
+ 	width:577px; 		
+ 	height:35px;
+	float:left;
+	padding-left:25px;
+	padding-top:23px;
+	font-size:120%;
+	
+	font-style:italic;
+	
+	font-weight:bold;
+}
+
+
+
+#cuerpo-pagina #contenido-pagina #contenido-notas-principal #lista{
+	width:632px;
+	float:left;
+	min-height:200px;
+	
+	margin-top:30px;
+	margin-left:30px;
+}
+
+#cuerpo-pagina #contenido-pagina #contenido-notas-principal #lista #cabecera_lista{
+	width:632px;
+	background:#EEE;
+	margin-top:10px;
+	font-weight:bold;
+	
+} 
+
+#cuerpo-pagina #contenido-pagina #contenido-notas-principal #lista #cabecera_lista td{
+	text-align:center;
+	
+} 
+
+#cuerpo-pagina #contenido-pagina #contenido-notas-principal #lista #contenido-lista {
+	width:632px;
+	min-height:300px;
+} 
+
+#cuerpo-pagina #contenido-pagina #contenido-notas-principal #lista #contenido-lista .lista {
+	width:100%;
+	
+} 
+
+#cuerpo-pagina #contenido-pagina #contenido-notas-principal #lista #contenido-lista .lista td{
+	padding:3px;;
+	
+} 
+
+
+
+
+#cuerpo-pagina #contenido-pagina  #profesor{
+	
+ 	width:677px; 		
+ 	height:35px;
+	float:left;
+	padding-left:25px;
+	padding-top:23px;
+	font-size:110%;
+	
+	font-style:italic;
+	
+	font-weight:bold;
+}
+
+
+#cuerpo-pagina #contenido-pagina  #observaciones{
+ 	width:700px;
+ 		
+ 	min-height:150px;
+	float:left;
+	
+	border-top:dashed 1px gray;
+	
+}
+
+
+#cuerpo-pagina #contenido-pagina  #observaciones #titulo{
+ 	width:300px;
+ 		
+ 	height:30px;
+ 	margin-left:20px;
+ 	margin-top:20px;
+ 	margin-bottom:0px;
+	float:left;
+	font-size:120%;
+	font-family:cursive;
+	font-weight:bold;
+}
+
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion{
+ 	width:580px;
+ 		
+ 	min-height:80px;
+ 	margin-left:10px;
+ 	margin-top:10px;
+	float:left;
+	
+	background:#DDD;
+	
+ 	border-radius:7px;	
+ 	padding-bottom:15px;
+}
+
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cabecera{
+ 	width:550px;
+ 	height:30px;
+ 	padding-left:30px;
+	
+}
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cabecera .fecha_cabecera{
+ 	float:left;
+ 	font-weight:bold;
+ 	
+ 	padding-top:10px;
+}
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cabecera .btn_eliminar{
+ 	float:right;
+	cursor:pointer;
+	height:20px;
+	width:20px;
+	backgrounD:black;
+}
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cuerpo{
+ 	width:530px;
+ 	min-height:50px;
+ 	float:left;
+ 	padding-left:20px;
+ 	padding-right:30px;
+ 	
+}
+
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cuerpo table{
+ 	width:530px; 	
+ 	
+ 	float:left;
+ 	text-align:left;
+}
+#cuerpo-pagina #contenido-pagina  #observaciones .observacion .cuerpo table td{
+ 	width:530px; 	
+}
+
+
+
+
+#cuerpo-pagina  #contenido-opciones{
+ 	width:600px;
+ 		
+ 	height:60px;
+    margin-left:20px;
+   	position:relative;
+ 	float:left;
+}
+
+#cuerpo-pagina  #contenido-opciones .opcion{
+ 	width:100px;
+ 		
+ 	height:30px;
+	
+	background:#666;
+ 	float:left;
+ 	border:#00F solid 2px;
+ 	border-radius:10px 10px 0px 0px;
+ 	
+   	position:absolute;
+    margin-top:31px;
+ 	z-index:0;
+ 	
+ 	box-shadow:0px -5px 15px #333;
+ 	cursor:pointer;
+}
+
+
+#cuerpo-pagina  #contenido-opciones .opcion[title="Seleccionado"]{
+ 
+	background:white;    
+	margin-top:28px;
+ 	z-index:10;
+ 	
+}
+
+
+#cuerpo-pagina  #contenido-opciones  .opcion .texto_pestana{
+ 	width:100px;
+ 		
+ 	height:20px;
+ 	padding-top:7px;
+ 	text-align:center;
+}
+
+
+
+#cuerpo-pagina  #contenido-opciones #opcion-notas{
+
+    margin-left:10px;
+ 	
+}
+
+#cuerpo-pagina  #contenido-opciones #opcion-observaciones{
+
+    margin-left:120px;
+ 	
+}
+
+
+#cuerpo-pagina  #contenido-opciones #opcion-asistencias{
+
+    margin-left:230px;
+ 	
+}

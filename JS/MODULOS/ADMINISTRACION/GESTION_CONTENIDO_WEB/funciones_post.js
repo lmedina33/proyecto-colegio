@@ -700,7 +700,7 @@ function fun_eliminar_foto(nivel,nombre){  //esta función es para hacer alguna l
 			FMSG_ERROR_CONEXION();
 		}else{
 			fun_consultar_galeria(nivel);
-			fun_aviso_popup("La foto fue eliminada exitosamente","Eliminaci&oacute;n exitosa",30,30);
+			fun_aviso_popup("La foto fue eliminada exitosamente",GL_TTL_ELIMINA_EXITO,30,30);
 		}
 	}
 	        
@@ -750,18 +750,23 @@ function click_minifoto_muestra(background){
 	var ancho_pantalla=$("body").css("width");
 	var alto_pantalla=$("body").css("height");
 	
-
+/*
+	alert(ancho_pantalla.replace("px", ""));
+	alert((parseFloat(width_real_imagen)+margen_foto_marco*2));*/
 	
-	if(parseFloat(ancho_pantalla)<=(parseFloat(width_real_imagen)+margen_foto_marco*2)){
-	/*	alert("mas ancho");
-		alert(ancho_pantalla);*/
+	if(parseFloat(ancho_pantalla.replace("px", ""))<=(parseFloat(width_real_imagen)+margen_foto_marco*2)){
+	/*	alert("mas ancho");*/
+		
 		width_real_imagen=parseFloat(ancho_pantalla)-60 +2;
 		$("#marco_foto_mostrada img").attr("width",width_real_imagen+"px");
 		
 		height_real_imagen=$("#marco_foto_mostrada img").height();
 	}
+	/*
+	alert(alto_pantalla.replace("px", ""));
+	alert((parseFloat(height_real_imagen)+margen_foto_marco*2));*/
 	
-	if(parseFloat(alto_pantalla)<=(parseFloat(height_real_imagen)+margen_foto_marco*2)){
+	if(parseFloat(alto_pantalla.replace("px", ""))<=(parseFloat(height_real_imagen)+margen_foto_marco*2)){
 	/*	alert("mas alto");
 		alert(alto_pantalla);*/
 		height_real_imagen=parseFloat(alto_pantalla)-60;
@@ -815,8 +820,47 @@ function fun_insertar_administrativo(dni,nombres,apellido_p,apellido_m,cargo){
 		if(data=="mysql_no"){
 			FMSG_ERROR_CONEXION();
 		}else{
-			
+			if(data=="existe"){
+				fun_aviso_popup("Ya existe un personal con el mismo DNI.<br>Cambie el DNI por otro que no haya sido registrado.",GL_TTL_DATO_RPT,30,GLOBAL_MARGEN_TOP_AVISO);	
+			}else{
 			fun_aviso_popup("Los datos del personal '"+fun_tratamiento_tildes(nombres)+" "+fun_tratamiento_tildes(apellido_p)+" "+fun_tratamiento_tildes(apellido_m)+"' fueron guardados con &eacute;xito.",GL_TTL_REGISTRO_EXITO,30,GLOBAL_MARGEN_TOP_AVISO);
+			}
+		}
+	}
+	        
+			
+	});	
+	
+}
+
+
+function fun_modificar_administrativo(dni_anterior,dni,nombres,apellido_p,apellido_m,cargo){  
+
+	
+	$.ajax({
+        url: "../POST/ADMINISTRACION/GESTION_CONTENIDO_WEB/Personal_modificar.php",
+        type: "POST",
+        data:{dni_anterior:dni_anterior,dni:dni,nombres:fun_tratamiento_tildes(nombres),apellido_p:fun_tratamiento_tildes(apellido_p),apellido_m:fun_tratamiento_tildes(apellido_m),cargo:cargo},
+        async:true,
+        beforeSend: function(objeto){
+
+        	fun_mostrar_cargando();
+
+        },
+        
+	success: function(data){
+
+		fun_quitar_cargando();
+
+		if(data=="mysql_no"){
+			FMSG_ERROR_CONEXION();
+		}else{
+			if(data=="existe"){
+				fun_aviso_popup("Ya existe un personal con el mismo DNI.<br>Cambie el DNI por otro que no haya sido registrado.",GL_TTL_DATO_RPT,30,GLOBAL_MARGEN_TOP_AVISO);	
+			}else{
+			fun_get_administrativo();	
+				fun_aviso_popup("Los datos fueron modificados con &eacute;xito.",GL_TTL_REGISTRO_EXITO,30,GLOBAL_MARGEN_TOP_AVISO);	
+			}
 			
 		}
 	}
@@ -864,8 +908,14 @@ function fun_get_administrativo(){
 					GL_CONT_ADMIN++;
 				}
 				refrescar_tabla_admin();
-
+				
+			}else{
+				
+				GL_ADMIN=new Array();
+				GL_CONT_ADMIN=0;
+				refrescar_tabla_admin();
 			}
+			$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#campos_modif #bloque-izq").fadeOut(GLOBAL_VEL_FADE);
 			
 		}
 	}
@@ -875,10 +925,10 @@ function fun_get_administrativo(){
 }	
 function refrescar_tabla_admin(){
 	var html_list="";
-				
+				var cont=0;
 				for(var i=0;i<GL_CONT_ADMIN;i++){
-					
-					html_list+='<tr>'+
+					cont++;
+					html_list+='<tr id="fila_'+cont+'" title="Haga click para seleccionar fila" ondblclick="" onclick="fun_resalta_fila_tabla('+"'fila_"+cont+"','"+AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#lista .lista');tomar_datos_modif_admin();"+'">'+
 							'<td width="'+GL_DIM_TABLA_ADMIN[0]+'%">'+GL_ADMIN[i][0]+'</td>'+
 							'<td width="'+GL_DIM_TABLA_ADMIN[1]+'%">'+GL_ADMIN[i][5]+'</td>'+
 							'<td width="'+GL_DIM_TABLA_ADMIN[2]+'%">'+GL_ADMIN[i][4]+'</td></tr>';
@@ -890,3 +940,20 @@ function refrescar_tabla_admin(){
 
 	
 }
+
+		
+		
+function tomar_datos_modif_admin(){
+	var dni=fun_obtener_id_fila_restaltada(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#lista .lista");
+	
+	var admin=fun_get_objeto(GL_ADMIN,dni,0);
+	$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#txt_dni").val( admin[0]);
+	$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#txt_nombres").val(fun_invierte_tratamiento_tildes(admin[1]));
+	$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#txt_apellido_p").val(fun_invierte_tratamiento_tildes(admin[2]));
+	$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#txt_apellido_m").val(fun_invierte_tratamiento_tildes(admin[3]));
+	$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#slc_nivel").val(admin[4]);
+	
+	$(AREA_PAG_WEB+CONTENEDOR_CONSULTA_ADMIN+"#campos_modif #bloque-izq").fadeIn(GLOBAL_VEL_FADE);
+}
+
+

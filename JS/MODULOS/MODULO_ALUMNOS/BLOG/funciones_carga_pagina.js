@@ -39,7 +39,7 @@ function fun_inicializa_cursos(){
         },
         
 	success: function(data_cursos){
-			
+			alert(data_cursos);
 	
 		if(data_cursos=="mysql_no"){
 			FMSG_ERROR_CONEXION();

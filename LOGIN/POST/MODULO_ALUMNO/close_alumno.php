@@ -5,7 +5,7 @@ session_start();
 //-----------------------------------------------------------
 
 
-unset($_SESSION["usuario"],$_SESSION["modulo"],$_SESSION["dni_usuario"],$_SESSION["nombre_usuario"]);
+unset($_SESSION["codigo"],$_SESSION["modulo"],$_SESSION["nombre_usuario"],$_SESSION["nivel"],$_SESSION["grado"],$_SESSION["seccion"]);
 //-----------------------------------------------------------
 
 session_destroy();

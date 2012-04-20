@@ -22,6 +22,10 @@ Aca ponemos los datos que queremos sean actualizados cada cierto tiempo.
 $(document).ready(function(){
  
 fun_get_profesores();
+fun_get_padres(); //para poder llenar el combo de padres necesario para la modificaccion y asignacion a los alumnos
 	//Aquí hacemos las llamadas de las funciones que queremos que se ejecuten una vez cargada la página
 
+
+fun_carga_combobox_dia(AREA_CURSOS+CONTENEDOR_ASISTENCIAS,"#slc_dia ","#slc_mes ","#txt_anio ");
+	
 });

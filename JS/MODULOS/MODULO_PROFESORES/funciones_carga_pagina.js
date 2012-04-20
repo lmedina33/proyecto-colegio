@@ -58,14 +58,14 @@ function fun_inicializa_cursos(){
 					
 					GL_ARRAY_CURSOS[GL_CONT_CURSOS]=new Array(valores[i],valores[i+1],valores[i+2],valores[i+3],valores[i+4]);
 					GL_CONT_CURSOS++;
-					
-					html_cursos+='<div id="'+valores[i]+'" class="opcion" onclick="click_opcion_curso('+"'"+valores[i]+"'"+')"><div class="texto_pestana" >'+valores[i+1]+'</div></div>';
+					//Cuando vienen los nombres, debemos cambiar espacios por guiones para poder ponerlos como ID
+					html_cursos+='<div id="'+fun_espacios_por_guiones(valores[i])+'" class="opcion" onclick="click_opcion_curso('+"'"+fun_espacios_por_guiones(valores[i])+"'"+')"><div class="texto_pestana" >'+valores[i+1]+' - '+valores[i].substring(valores[i].length-1,valores[i].length)+'</div></div>';
 										
 				}
 				
 				$("#cuerpo-pagina #menu_vertical").html(html_cursos);
-				
-				click_opcion_curso(valores[0]);
+				//en esta llamada debemos cambiar los espacios por guiones y cambiar los simbolos & por tildes, ya que en los id de los div automáticamente cambia a tildes cuando se insertan los nombres
+				click_opcion_curso(fun_espacios_por_guiones(fun_invierte_tratamiento_tildes(valores[0])));
 				
 			}
 		

@@ -4,7 +4,7 @@ require_once("../../../DAO/ADMINISTRACION/DAOGestionPadres.php");
 
 $gestion_padres=new DAOGestionPadre();
 
-$respuesta=$gestion_padres->eliminar_padre("dni1");
+$respuesta=$gestion_padres->eliminar_padre($_POST['codigo']);
 
 
 echo $respuesta;

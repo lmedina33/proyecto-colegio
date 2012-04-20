@@ -70,7 +70,7 @@ class DAOGestionBlogAlumnos extends Conexion{
 			  
 				///////////////////Ahora revisaremos si el alumno le pertenece al alumno para poder desbloquearlo y que sea eliminable		   
 				   			   	
-				   	$sql="select * from $this->nombre_tabla_blog where id=( select max(id) from blog where codigo_curso='$codigo_curso' and codigo_alumno='$codigo_alumno') and  persona_responde='A'";
+				   	$sql="select * from $this->nombre_tabla_blog where id=( select max(id) from blog where codigo_curso='$codigo_curso' and codigo_alumno='$codigo_alumno')";
         			$rs = mysql_query($sql,$cn);
         			
         			if(mysql_num_rows($rs)>0){
@@ -84,7 +84,7 @@ class DAOGestionBlogAlumnos extends Conexion{
 								$entrada=$fila;
 							}      
 				
-        				$sql="update $this->nombre_tabla_blog set eliminable=1 where id=$entrada->id and persona_responde='A'";
+        				$sql="update $this->nombre_tabla_blog set eliminable=1 where id=$entrada->id";
         	
         				$rs = mysql_query($sql,$cn);
         				

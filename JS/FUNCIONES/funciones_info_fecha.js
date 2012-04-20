@@ -205,6 +205,32 @@ return fecha;  //LA FECHA ES DEVUELTA EN FORMATO ANIO-MES-DIA
 }
 
 
+function fun_arma_hora(arg_segundos,arg_minutos,arg_hora){ //los numeros pueden venir en STRING o enteros
+
+var _segundos=parseFloat(arg_segundos);
+var _minutos=parseFloat(arg_minutos);
+var _horas=parseFloat(arg_hora);
+
+var hora=_horas;
+
+if(_minutos<10){
+hora=hora+":0"+_minutos;	
+}
+else{	
+hora=hora+":"+_minutos;
+}
+
+if(_segundos<10){	
+hora=hora+":0"+_segundos;
+}
+else{
+	
+hora=hora+":"+_segundos;
+}
+return hora;  //LA FECHA ES DEVUELTA EN FORMATO ANIO-MES-DIA
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////

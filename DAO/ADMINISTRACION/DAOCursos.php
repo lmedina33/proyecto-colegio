@@ -162,6 +162,7 @@ class DAOCursos extends Conexion{
         if($cn!="no_conexion"){
         	//primero obtenemos las secciones por separado
         		$sql="select seccion from $this->nombre_tabla_admin_cursos  where grado='$grado' and nivel='$nivel' group by seccion order by seccion ASC";
+        		
 			    $rs = mysql_query($sql,$cn);
 			    
         	while($fila=mysql_fetch_object($rs)){

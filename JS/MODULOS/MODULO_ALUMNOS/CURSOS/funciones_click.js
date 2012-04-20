@@ -42,6 +42,25 @@ $("#cuerpo-pagina #contenido-opciones .opcion").click(function(){
 });
 
 
+
+$("#cerrar_sesion").click(function(){
+	$.ajax({
+			url: "../../LOGIN/POST/MODULO_ALUMNO/close_alumno.php",
+			success: function(data){
+				document.location = "../../PORTAL/index.php";
+			}
+	
+	});
+});
+
+
+
+$("#volver_atras").click(function(){
+	parent.document.location="../index.php";
+});
+
+
+
 });
 
 function click_opcion_curso(id){
@@ -56,14 +75,17 @@ function click_opcion_curso(id){
 	$("#cuerpo-pagina #contenido-opciones #opcion-notas").click();
 	
 	
-	var curso=fun_get_objeto(GL_ARRAY_CURSOS,id,0);
+	var curso=fun_get_objeto(GL_ARRAY_CURSOS,fun_tratamiento_tildes(fun_guiones_por_espacios(id)),0);
 	
 	//alert(curso);
 	
 		
 	$("#cuerpo-pagina #contenido-pagina #profesor").html("Profesor a cargo del curso: "+curso[2]+" "+curso[3]+" "+curso[4]+".");
 
-	$("#cuerpo-pagina #contenido-pagina #codigo_curso_elegido").val(id);
+	$("#cuerpo-pagina #contenido-pagina #codigo_curso_elegido").val(fun_tratamiento_tildes(fun_guiones_por_espacios(id)));
+	
+	refresca_tabla_cursos_notas();
+	
 	//fun_cargar_blog(id);
 	
 }

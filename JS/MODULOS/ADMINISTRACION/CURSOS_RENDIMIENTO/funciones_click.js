@@ -3,6 +3,8 @@ var AREA_CURSOS="#area_cursos_rendimiento ";
 	
 var CONTENEDOR_CURSOS="#contenido-registro_cursos-cursos_rendimiento ";
 var CONTENEDOR_NOTAS="#contenido-notas_alumnos-cursos_rendimiento ";
+var CONTENEDOR_ASISTENCIAS="#contenido-asistencia-cursos_rendimiento ";
+
 $(document).ready(function(){
 
 	//Aquí se declaran todos los eventos click que existen haciendo las llamadas a los eventos o funciones que correspondan, las funciones se dividen en áreas de modo que se puedan ubicar fácilmente. Las áreas serán las principales, zonas de trabajo, popups, etc.
@@ -15,6 +17,24 @@ $(AREA_CURSOS+CONTENEDOR_CURSOS+"#btn_agregar_seccion").click(function(){
 
 	fun_pregunta_popup("¿Est&aacute; Ud. seguro de agregar una nueva secci&oacute;n?","Agregar una secci&oacute;n","agregar seccion",28,GLOBAL_MARGEN_TOP_AVISO);
 });
+
+
+
+$(AREA_CURSOS+CONTENEDOR_CURSOS+"#btn_eliminar_seccion").click(function(){
+		
+		
+		if(GL_CONT_CURSOS==0){
+			//	cursos+="Sin nombre{"+nombre_seccion(GL_CONT_SECCIONES+1)+"{ {G{";
+			
+				fun_aviso_popup("No existen secciones a eliminar.","No ha secciones",28,GLOBAL_MARGEN_TOP_AVISO);
+			
+			}else{
+		
+		fun_pregunta_popup("¿Est&aacute; Ud. seguro de eliminar la &uacute;ltima secci&oacute;n?","Eliminar una secci&oacute;n","eliminar seccion",31,GLOBAL_MARGEN_TOP_AVISO);
+		
+			}
+});
+
 
 
 $(AREA_CURSOS+CONTENEDOR_CURSOS+"#btn_modificar_curso").click(function(){
@@ -117,10 +137,41 @@ $(AREA_CURSOS+CONTENEDOR_CURSOS+"#btn_agregar_curso").click(function(){
 
 
 
+$(AREA_CURSOS+CONTENEDOR_CURSOS+"#btn_eliminar_curso").click(function(){
+
+	if($(AREA_CURSOS+CONTENEDOR_CURSOS+"#slc_curso").val()){
+	
+		fun_pregunta_popup("¿Est&aacute; Ud. seguro de eliminar<br>el curso '"+fun_combobox_opcion_elegida(AREA_CURSOS+CONTENEDOR_CURSOS+"#slc_curso")+"'?","Eliminar curso","eliminar curso",31,GLOBAL_MARGEN_TOP_AVISO);	
+	}else{
+		fun_aviso_popup("No existen cursos a eliminar.","No hay cursos",28,GLOBAL_MARGEN_TOP_AVISO);
+	}
+	
+});
+
+
+
 
 $(AREA_CURSOS+CONTENEDOR_CURSOS+"#btn_elegir_profesor").click(function(){
 
-	fun_refresca_combo_box_con_tabla(AREA_CURSOS+"#popup_asignar_profesor #pp_slc_profesor",GL_PROFESORES,GL_CONT_PROFESORES,0,7);
+	//fun_refresca_combo_box_con_tabla(AREA_CURSOS+"#popup_asignar_profesor #pp_slc_profesor",GL_PROFESORES,GL_CONT_PROFESORES,0,7);
+	
+	
+				var html_select='<option value="0">Seleccione a un profesor</option>';
+								
+								
+				for(var i=0;i<GL_CONT_PROFESORES;i++){
+					
+					if(GL_PROFESORES[i][6]=="1"){
+						
+						html_option='<option value="'+GL_PROFESORES[i][0]+'">'+GL_PROFESORES[i][7]+'</option>';					
+						
+						html_select+=html_option;
+					
+					}
+				}
+				
+				
+				$(AREA_CURSOS+"#popup_asignar_profesor #pp_slc_profesor").html(html_select);
 	
 	$(AREA_CURSOS+"#popup_asignar_profesor").fadeIn(GLOBAL_VEL_FADE);
 	$("#div_back").fadeIn(GLOBAL_VEL_FADE);
@@ -171,9 +222,6 @@ $("#menu_vertical #submenu-cursos_rendimiento #notas_alumnos-cursos_rendimiento"
 
 
 
-
-
-
 $(AREA_CURSOS+CONTENEDOR_NOTAS+"#btn_insertar_nota").click(function(){
 
 
@@ -186,6 +234,48 @@ $(AREA_CURSOS+CONTENEDOR_NOTAS+"#btn_insertar_nota").click(function(){
 });
 
 
+
+
+
+$("#menu_vertical #submenu-cursos_rendimiento #asistencia-cursos_rendimiento").click(function(){
+	var nivel=$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+"#slc_nivel").val();
+	var grado=$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+"#slc_grado").val();
+	
+	get_secciones(nivel,grado,AREA_CURSOS+CONTENEDOR_ASISTENCIAS+"#slc_nivel",AREA_CURSOS+CONTENEDOR_ASISTENCIAS+"#slc_seccion","cargar-slc-alumnos-asistencias",0);
+});
+
+
+
+
+$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+"#btn_registrar").click(function(){
+
+	var codigo_alumno=$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+" #slc_alumno").val();
+	var fecha=fun_arma_fecha_sql($(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+" #slc_dia").val(),$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+" #slc_mes").val(),$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+" #txt_anio").val());
+	var hora=fun_arma_hora(0,$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+" #slc_minutos").val(),$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+" #slc_hora").val());
+	var tipo=$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+" #slc_t_o_i").val();
+				
+	fun_insertar_registro_asistencia(codigo_alumno,fecha,hora,tipo);
+	
+});
+
+
+$(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+"#btn_eliminar").click(function(){
+	
+	var codigo=fun_obtener_id_fila_restaltada(AREA_CURSOS+CONTENEDOR_ASISTENCIAS+"#lista .lista");
+	
+	
+	if(codigo=="nada"){
+			FMSG_DEBE_SELEC_OBJETO("registro");
+		}else{
+		
+			fun_pregunta_popup("¿Est&aacute; Ud. seguro de eliminar el registro seleccionado?","Eliminar registro","eliminar inasistencia tardanza",34,GLOBAL_MARGEN_TOP_AVISO);
+			
+		}
+
+});
+
+
+
 });
 
 
@@ -196,7 +286,8 @@ function get_profesor_a_cargo(nombre_curso,seccion){
 	
 	for(var i=0;i<GL_CONT_CURSOS;i++){
 		
-		if(GL_CURSOS[i][0]==nombre_curso && GL_CURSOS[i][1]==seccion){
+		
+		if(GL_CURSOS[i][0]==fun_tratamiento_tildes(nombre_curso )&& GL_CURSOS[i][1]==seccion){
 		
 			objeto=fun_get_objeto(GL_PROFESORES,GL_CURSOS[i][2],0);
 						
@@ -204,6 +295,7 @@ function get_profesor_a_cargo(nombre_curso,seccion){
 			nombre_profesor="";
 			if(objeto){
 					nombre_profesor=objeto[1]+" "+objeto[2]+" "+objeto[3];
+					
 			}
 		}
 		

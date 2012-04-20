@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("../../../DAO/ADMINISTRACION/DAOCursos.php");
 
 $gestion_alumnos=new DAOCursos();

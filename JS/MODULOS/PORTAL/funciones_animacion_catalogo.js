@@ -10,7 +10,7 @@ $("#catalogo #opciones_vertical #opcion_inicial").click(function(){
 	
 	/************CON LA SIGUIENTE FUNCIÓN SE HACE UN STAND BY EN TODA LA PÁGINA PARA QUE NO SE PERMITA HACER NINGUNA OTRA FUNCIÓN***********/
 	
-	fun_stand_by_sistema(800);
+//	fun_stand_by_sistema(800);
 	
 	///////////////////////////////////////////////////////
 	
@@ -18,13 +18,14 @@ $("#catalogo #opciones_vertical #opcion_inicial").click(function(){
 	
 	$("#catalogo #contenido #cara_1").addClass("trans_pag_1_der_izq");
 	
-	$("#catalogo #contenido #cara_1").css("left","0px");
+	//alert("s");
+	$('#catalogo #contenido #cara_1').animate({'left':"0px"},{"easing" : "linear", "duration" : 20});	
+	//$("#catalogo #contenido #cara_1").css("left","0px");
 	
-	$("#catalogo #contenido #cara_1").css("z-index","0");
-
-//	$("#catalogo #contenido #cara_1").css("background-color","green");
+	$('#catalogo #contenido #cara_1').css('z-index',"0");	
+	//$("#catalogo #contenido #cara_1").css("z-index","0");
 	
-//	$("#catalogo #contenido #cara_1").removeClass("transicion800");
+	
 	
 	$("#catalogo #opciones_vertical_izq #cerrar_catalogo").delay(800).fadeIn(500);
 	
@@ -56,7 +57,7 @@ $("#catalogo #opciones_vertical #opcion_primaria").click(function(){
 
 	/************CON LA SIGUIENTE FUNCIÓN SE HACE UN STAND BY EN TODA LA PÁGINA PARA QUE NO SE PERMITA HACER NINGUNA OTRA FUNCIÓN***********/
 	
-	fun_stand_by_sistema(800);
+//	fun_stand_by_sistema(800);
 	
 	///////////////////////////////////////////////////////
 	
@@ -256,7 +257,7 @@ $("#catalogo #opciones_vertical_izq #opcion_inicial").click(function(){
 
 	/************CON LA SIGUIENTE FUNCIÓN SE HACE UN STAND BY EN TODA LA PÁGINA PARA QUE NO SE PERMITA HACER NINGUNA OTRA FUNCIÓN***********/
 	
-	fun_stand_by_sistema(800);
+	//	fun_stand_by_sistema(800);
 	
 	///////////////////////////////////////////////////////
 	
@@ -338,7 +339,7 @@ $("#catalogo #opciones_vertical_izq #opcion_primaria").click(function(){
 
 	/************CON LA SIGUIENTE FUNCIÓN SE HACE UN STAND BY EN TODA LA PÁGINA PARA QUE NO SE PERMITA HACER NINGUNA OTRA FUNCIÓN***********/
 	
-	fun_stand_by_sistema(800);
+	//	fun_stand_by_sistema(800);
 	
 	///////////////////////////////////////////////////////
 	$("#catalogo #contenido #cara_3").removeClass("trans_pag_3_der_izq");
@@ -399,7 +400,7 @@ $("#catalogo #opciones_vertical_izq #cerrar_catalogo").click(function(){
 
 	/************CON LA SIGUIENTE FUNCIÓN SE HACE UN STAND BY EN TODA LA PÁGINA PARA QUE NO SE PERMITA HACER NINGUNA OTRA FUNCIÓN***********/
 	
-	fun_stand_by_sistema(800);
+	//	fun_stand_by_sistema(800);
 	
 	///////////////////////////////////////////////////////
 	
@@ -443,7 +444,7 @@ $("#catalogo #contenido #sub_menu_inferior .opcion").mouseover(function(){
 	$(this).addClass("trans_opcion_submenu_inferior");
 	
 	$(this).css("margin-top","0px");
-	$(this).css("background-color","white");
+//	$(this).css("background-color","white");
 	
 });
 
@@ -455,7 +456,7 @@ $("#catalogo #contenido #sub_menu_inferior .opcion").mouseout(function(){
 		$(this).addClass("trans_opcion_submenu_inferior");
 		
 		$(this).css("margin-top","10px");
-		$(this).css("background-color","red");	
+	//	$(this).css("background-color","red");	
 	}
 	
 });
@@ -467,12 +468,12 @@ $("#catalogo #contenido #sub_menu_inferior .opcion").click(function(){
 
 		$("#catalogo #contenido #sub_menu_inferior .opcion").attr("title","Click para seleccionar");
 		$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
-		$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+	//	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 			
 		$(this).attr("title","Seleccionada");
 		
 		$(this).css("margin-top","0px");
-		$(this).css("background-color","white");
+	//	$(this).css("background-color","white");
 			
 	}
 });

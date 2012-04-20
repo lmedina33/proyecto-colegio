@@ -43,7 +43,7 @@ $("#catalogo #opciones_vertical #opcion_inicial").click(function(){
 		$("#contenido-inicial-2 #contenido-actividades-inicial").fadeIn(GLOBAL_VEL_FADE);
 		$("#contenido-inicial-2 #contenido-admisiones-inicial").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
-	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+	//$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
 	$("#area_abierta").val("inicial");
 
@@ -59,7 +59,7 @@ $("#catalogo #opciones_vertical #opcion_primaria").click(function(){
 	$("#contenido-primaria-2 #contenido-actividades-primaria").fadeIn(GLOBAL_VEL_FADE);
 		$("#contenido-primaria-2 #contenido-admisiones-primaria").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
-	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+//	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
 	$("#area_abierta").val("primaria");
 	
@@ -74,7 +74,7 @@ $("#catalogo #opciones_vertical #opcion_secundaria").click(function(){
 	$("#contenido-secundaria-2 #contenido-actividades-secundaria").fadeIn(GLOBAL_VEL_FADE);
 		$("#contenido-secundaria-2 #contenido-admisiones-secundaria").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
-	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+//	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
 	
 	$("#area_abierta").val("secundaria");
@@ -89,7 +89,7 @@ $("#catalogo #opciones_vertical_izq #opcion_inicial").click(function(){
 	$("#contenido-inicial-2 #contenido-actividades-inicial").fadeIn(GLOBAL_VEL_FADE);
 	$("#contenido-inicial-2 #contenido-admisiones-inicial").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
-	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+//	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
 	$("#area_abierta").val("inicial");
 	$("#contenido #contenido-inicial-2").fadeIn(GLOBAL_VEL_FADE);
@@ -103,7 +103,7 @@ $("#catalogo #opciones_vertical_izq #opcion_primaria").click(function(){
 	$("#contenido-primaria-2 #contenido-actividades-primaria").fadeIn(GLOBAL_VEL_FADE);
 		$("#contenido-primaria-2 #contenido-admisiones-primaria").hide();
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
-	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+//	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 
 	$("#area_abierta").val("primaria");
 	
@@ -115,7 +115,7 @@ $("#catalogo #opciones_vertical_izq #cerrar_catalogo").click(function(){
 
 	$("#catalogo #sub_menu_inferior #opcion-admision").attr("title","Click para seleccionar");
 	$("#catalogo #contenido #sub_menu_inferior .opcion").css("margin-top","10px");
-	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
+//	$("#catalogo #contenido #sub_menu_inferior .opcion").css("background-color","red");	
 	
 	
 	$("#area_abierta").val("");
@@ -177,11 +177,11 @@ $(".logearse").click(function(){
 	
 	switch($(this).attr("id")){
 		case "login_modulo_alumnos":
-	parent.document.location="../login/index.php?logeo=A";	break;
+	parent.document.location="../LOGIN/index.php?logeo=A";	break;
 		case "login_modulo_padres":
-	parent.document.location="../login/index.php?logeo=P";	break;
+	parent.document.location="../LOGIN/index.php?logeo=P";	break;
 		case "login_modulo_profesores":
-	parent.document.location="../login/index.php?logeo=PR";	break;
+	parent.document.location="../LOGIN/index.php?logeo=PR";	break;
 	}	
 });
 

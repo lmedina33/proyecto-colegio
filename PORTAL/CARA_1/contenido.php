@@ -37,11 +37,13 @@
 
 
 <div id="contenido-plana_docente_administrativa-cara_1" class="contenido-cara_1 oculto">
-	<div class="contenido_titulo" style="margin-top:4%;">
-		Registro de profesores
+	<div id="contenido-titulo" >
+		Planilla
 	</div>
 	<div id="contenido-cuerpo">
-		
+		<div id="planilla">
+				
+		</div>
 	</div>
 
 

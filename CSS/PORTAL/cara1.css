@@ -46,9 +46,31 @@
  	font-size:110%;
 }
 
+#catalogo #contenido #contenido-cara_1 .contenido-cara_1  #planilla{
+ 	margin-top:20px;
+}
+
+#catalogo #contenido #contenido-cara_1 .contenido-cara_1  #planilla .subtitulo{
+ 	font-style:italic;
+ 	font-weight:bold;
+ 	font-size:110%;
+}
+
 
 #catalogo #contenido #contenido-cara_1  ul li{
 	list-style-type: square;
+}
+
+#catalogo #contenido #contenido-cara_1  ul li .subtitulo_cargo{ 
+	
+	margin-top:8px;
+	font-weight:bold;
+	font-size:110%;
+}
+
+#catalogo #contenido #contenido-cara_1  ul li .nombre_planilla{ 
+	
+	margin-left:30px;
 }
 
 

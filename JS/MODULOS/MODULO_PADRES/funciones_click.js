@@ -7,16 +7,23 @@ $(document).ready(function(){
 	
 //////////////////////////////PAGINA PRINCIPAL////////////////////////////////////
 
-$("#cuerpo-pagina #btn_cursos ").click(function(){
+
+
+
+
+$("#cerrar_sesion").click(function(){
+	$.ajax({
+			url: "../LOGIN/POST/MODULO_PADRE/close_padre.php",
+			success: function(data){
+				document.location = "../PORTAL/index.php";
+			}
 	
-	parent.document.location="CURSOS/index.php";
+	});
+});
+
 });
 
 
-$("#cuerpo-pagina #btn_blog ").click(function(){
-	
-	parent.document.location="BLOG/index.php";
-});
-
-
-});
+function click_opcion_hijo(codigo_alumno){
+	parent.document.location="INFO_HIJO/index.php?codigo_alumno="+codigo_alumno;
+}

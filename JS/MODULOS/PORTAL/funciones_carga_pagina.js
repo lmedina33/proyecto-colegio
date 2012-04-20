@@ -41,6 +41,9 @@ $(document).ready(function(){
 		fun_consultar_admision("I","#contenido #contenido-inicial-2 #contenido-admisiones-inicial #admisiones");
 		fun_consultar_admision("P","#contenido #contenido-primaria-2 #contenido-admisiones-primaria #admisiones");
 		fun_consultar_admision("S","#contenido #contenido-secundaria-2 #contenido-admisiones-secundaria #admisiones");
+		
+		//CARGAMOS PLANILLA
+		fun_consultar_planilla("#contenido #cara_1 #contenido-cara_1 #contenido-plana_docente_administrativa-cara_1 #planilla");
 });
 
 function fun_ini_nombre(){

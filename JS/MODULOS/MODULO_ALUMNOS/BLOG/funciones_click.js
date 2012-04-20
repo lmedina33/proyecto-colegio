@@ -20,6 +20,25 @@ $("#cuerpo-pagina #contenido-pagina #nueva_entrada #btn_aceptar").click(function
 });
 
 
+
+
+$("#cerrar_sesion").click(function(){
+	$.ajax({
+			url: "../../LOGIN/POST/MODULO_ALUMNO/close_alumno.php",
+			success: function(data){
+				document.location = "../../PORTAL/index.php";
+			}
+	
+	});
+});
+
+
+
+$("#volver_atras").click(function(){
+	parent.document.location="../index.php";
+});
+
+
 });
 
 
@@ -29,19 +48,23 @@ function click_opcion_curso(id){
 //	$("#menu_vertical .submenu .subopcion").css("background","red");
 	
 	
+	
 	$("#"+id).attr("title","Seleccionado");
 	
 	
 	$("#cuerpo-pagina #contenido-opciones #opcion-notas").click();
 	
-	
-	var curso=fun_get_objeto(GL_ARRAY_CURSOS,id,0);
+	//Debemos darle la forma correcta al id por eso usamos  fun_tratamiento_tildes  y  fun_guiones_por_espacios
+	var curso=fun_get_objeto(GL_ARRAY_CURSOS,fun_tratamiento_tildes(fun_guiones_por_espacios(id)),0);
 	
 	//alert(curso);
 	
 		
+	
 	$("#cuerpo-pagina #contenido-pagina #profesor").html("Profesor a cargo del curso: "+curso[2]+" "+curso[3]+" "+curso[4]+".");
-	$("#cuerpo-pagina #contenido-pagina #codigo_curso_elegido").val(id);
+	$("#cuerpo-pagina #contenido-pagina #codigo_curso_elegido").val(fun_tratamiento_tildes(fun_guiones_por_espacios(id)));
+	//en este div oculto tambien debemos tratar el id para que su valor pueda ser usado en las queris, recordemos que los nmombres están en la base dedatos con espacios y simbolos &
+	
 	fun_cargar_blog(id);
 	
 }

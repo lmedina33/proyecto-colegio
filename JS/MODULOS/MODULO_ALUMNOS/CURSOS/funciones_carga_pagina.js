@@ -19,7 +19,7 @@ Aca ponemos los datos que queremos sean actualizados cada cierto tiempo.
 
 $(document).ready(function(){
  
-
+fun_get_cursos_notas();
 	//Aquí hacemos las llamadas de las funciones que queremos que se ejecuten una vez cargada la página
 
 });

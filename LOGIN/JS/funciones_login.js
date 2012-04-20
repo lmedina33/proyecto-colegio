@@ -68,7 +68,7 @@ function logear_profesor(nombre_usuario,password){
 			}
 				
 			}else{
-				fun_aviso_popup("No es un usuario existente o disponible, o la contrase&ntilde;a es incorrecta.<br>Revise los campos y vuelva a intentarlo.<br>Revise si ha escrito su contrase&ntilde;a tal como fue creada (tomando en cuenta may&uacute;sculas y tildes).<br>Si no recuerda su contrase&ntilde;a, solic&iacute;tela en el &aacute;rea de Gerencia.","Error de logeo",48,22);
+				fun_aviso_popup("No es un usuario de profesor existente o disponible, o la contrase&ntilde;a es incorrecta.<br>Revise los campos y vuelva a intentarlo.<br>Revise si ha escrito su contrase&ntilde;a tal como fue creada (tomando en cuenta may&uacute;sculas y tildes).<br>Si no recuerda su contrase&ntilde;a, solic&iacute;tela a la administraci&oacute;n del colegio.","Error de logeo",48,22);
 			}
 			}
 			
@@ -118,7 +118,7 @@ function logear_alumno(nombre_usuario,password){
 			}
 				
 			}else{
-				fun_aviso_popup("No es un usuario existente o disponible, o la contrase&ntilde;a es incorrecta.<br>Revise los campos y vuelva a intentarlo.<br>Revise si ha escrito su contrase&ntilde;a tal como fue creada (tomando en cuenta may&uacute;sculas y tildes).<br>Si no recuerda su contrase&ntilde;a, solic&iacute;tela en el &aacute;rea de Gerencia.","Error de logeo",48,22);
+				fun_aviso_popup("No es un usuario de alumno existente o disponible, o la contrase&ntilde;a es incorrecta.<br>Revise los campos y vuelva a intentarlo.<br>Revise si ha escrito su contrase&ntilde;a tal como fue creada (tomando en cuenta may&uacute;sculas y tildes).<br>Si no recuerda su contrase&ntilde;a, solic&iacute;tela a la administraci&oacute;n del colegio.","Error de logeo",48,22);
 			}
 			}
 			
@@ -168,7 +168,7 @@ function logear_padre(nombre_usuario,password){
 			}
 				
 			}else{
-				fun_aviso_popup("No es un usuario existente o disponible, o la contrase&ntilde;a es incorrecta.<br>Revise los campos y vuelva a intentarlo.<br>Revise si ha escrito su contrase&ntilde;a tal como fue creada (tomando en cuenta may&uacute;sculas y tildes).<br>Si no recuerda su contrase&ntilde;a, solic&iacute;tela en el &aacute;rea de Gerencia.","Error de logeo",48,22);
+				fun_aviso_popup("No es un usuario de padre existente o disponible, o la contrase&ntilde;a es incorrecta.<br>Revise los campos y vuelva a intentarlo.<br>Revise si ha escrito su contrase&ntilde;a tal como fue creada (tomando en cuenta may&uacute;sculas y tildes).<br>Si no recuerda su contrase&ntilde;a, solic&iacute;tela a la administraci&oacute;n del colegio.","Error de logeo",48,22);
 			}
 			}
 			

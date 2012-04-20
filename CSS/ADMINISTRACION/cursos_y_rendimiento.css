@@ -134,7 +134,99 @@
 	
 } 
 
+#contenido-notas_alumnos-cursos_rendimiento #lista #contenido-lista .lista td{
+	padding:3px;;
+	
+} 
+
 .texto_vertical{
+	width:15px;
+	text-align:center;
+	 -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+}
+
+
+
+/*********NOTAS CURSOS********/
+/*********NOTAS CURSOS********/
+/*********NOTAS CURSOS********/
+/*********NOTAS CURSOS********/
+/*********NOTAS CURSOS********/
+
+
+
+#contenido-asistencia-cursos_rendimiento #contenido-cuerpo > .reglon:first-child{
+	
+	height:20px;
+}
+#contenido-asistencia-cursos_rendimiento #contenido-cuerpo > .reglon {
+	width:600px;
+	height:28px;
+}
+#contenido-asistencia-cursos_rendimiento #contenido-cuerpo > .reglon .campo{
+	float:left;
+	width:80px;
+}
+
+#contenido-asistencia-cursos_rendimiento #contenido-cuerpo > .reglon .campo:first-child{
+	float:left;
+	width:150px;
+}
+
+
+#contenido-asistencia-cursos_rendimiento .subtitulo{
+	text-decoration:underline;
+	font-style:italic;
+	font-weight:bold;
+	font-size:110%;
+	margin-top:20px;
+}
+
+
+#contenido-asistencia-cursos_rendimiento #txt_anio{
+	border:0px;
+}
+
+
+#contenido-asistencia-cursos_rendimiento #lista{
+	width:400px;
+	float:left;
+	min-height:200px;
+}
+
+#contenido-asistencia-cursos_rendimiento #lista #cabecera_lista{
+	width:400px;
+	background:#EEE;
+	margin-top:10px;
+	font-weight:bold;
+	
+} 
+
+#contenido-asistencia-cursos_rendimiento #lista #cabecera_lista   td{
+	text-align:center;
+	
+} 
+
+#contenido-asistencia-cursos_rendimiento #lista #contenido-lista {
+	width:400px;
+	min-height:300px;
+} 
+
+#contenido-asistencia-cursos_rendimiento #lista #contenido-lista .lista {
+	width:100%;
+	
+} 
+
+#contenido-asistencia-cursos_rendimiento #lista #contenido-lista .lista td{
+	padding:3px;;
+	
+	text-align:center;
+} 
+
+.texto_vertical{
+	width:15px;
+	text-align:center;
 	 -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
 }

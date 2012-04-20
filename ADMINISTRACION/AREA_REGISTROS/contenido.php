@@ -8,6 +8,13 @@
 		<div>C&oacute;digo de alumno:</div><input id="txt_codigo" type="text" value=""/>
 	</div>
 	
+	
+	<div class="reglon">
+		<div>Padre/apoderado: 
+		</div><select id="slc_padre">
+		  </select>
+	</div>
+	
 	<div class="reglon">
 		<div>Nombres:</div><input id="txt_nombres" type="text" value=""/>
 	</div>
@@ -50,6 +57,7 @@
 					
 		  		</select>
 	</div>
+	
 		 
 		 <input id="btn_aceptar" type="button" value="Guardar registro"/>
 		
@@ -58,7 +66,9 @@
 
 </div>
 
-<div id="contenido-consultar_alumnos-registros" class="contenido-registros alavista">
+
+
+<div id="contenido-consultar_alumnos-registros" class="contenido-registros oculto">
 	<div class="contenido_titulo" >
 		Consulta de alumnos
 	</div>
@@ -117,10 +127,10 @@
 		
 		<div id="bloque-izq">
 		<div class="reglon">
-			Habilitado: <select id="slc_habilitado">
+			Estado: <select id="slc_habilitado">
 			
-				  <option value="disponible">Habilitado</option>
-				  <option value="no_disponible">No habilitado</option> 
+				  <option value="1">Habilitado</option>
+				  <option value="0">No habilitado</option> 
 			  		</select>
 		</div>
 		
@@ -128,11 +138,145 @@
 		C&oacute;digo de alumno: <input id="txt_codigo" type="text" value=""/>
 		</div>
 		
+		<div class="reglon">
+		Password: <input id="txt_password" type="text" value=""/>		
+		</div>
+		
+		<div class="reglon">
+			Padre/apoderado: 
+			<select id="slc_padre">
+			  </select>
+		</div>
+		
+		<div class="reglon">		
+		Nombres: <input id="txt_nombres" type="text" value=""/>
+		</div>	
+		
+		<div class="reglon">	
+		Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/>	
+		</div>
+		
+		<div class="reglon">	
+		Apellido Materno: <input id="txt_apellido_m" type="text" value=""/>	
+		</div>
+		
+		<div class="reglon">
+		
+		Nivel: <select id="slc_nivel_modif">
+			  <option value="I">Inicial</option>
+			  <option value="P">Primaria</option>
+			  <option value="S">Secundaria</option> 
+		  </select>		
+		</div>
+		
+		<div class="reglon">	
+		Grado: <select id="slc_grado_modif">
+				<option value="1">1</option><option value="2">2</option><option value="3">3</option>
+		  		</select>	
+		  		Seccion: <select id="slc_seccion_modif">
+		  		</select>
+		</div>
+			
+	<div class="reglon " >
+	
+		
+		¿Repitente?  <select id="chk_repitencia" ><option value="si">Sí</option><option value="no">No</option></select>
+		<div style="width:30px; float:right;height:15px;"></div>
+					
+		  	
+	</div>
+		
+		
+		
+		
+		
+		
+		</div>
+		  		
+	
+		
+		
+		<div id="bloque-inf">
+		
+		
+		<input id="btn_modificar" type="button" value="Modificar registro"/>
+		
+		<input class="alinear_derecha" id="btn_eliminar" type="button" value="Eliminar"/>
+		
+		
+		</div>
+		<!--FIN AREA ES PARA LA MODIFICACION DE LOS DATOS DE UN ALUMNO SELECCIONADO-->
+	</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div id="contenido-consultar_alumnos_no_dispo-registros" class="contenido-registros oculto">
+	<div class="contenido_titulo" >
+		Consulta de alumnos no disponibles
+	</div>
+	<div id="contenido-cuerpo">
+		
+
+	
+	
+	
+		<div id="lista">
+		<table id="cabecera_lista">
+			<tr>
+				<td width="15%">Codigo</td>
+				<td width="35%">Nombres y Apellidos</td>
+				<td width="15%">Password</td>
+				<td width="35%">Padre</td>
+			</tr>
+		</table>
+		
+		<div id="contenido-lista">
+		<table class="lista"></table>
+		</div>
+		</div>
+		
+		<!--ESTA AREA ES PARA LA MODIFICACION DE LOS DATOS DE UN ALUMNO SELECCIONADO-->
+		
+		<div id="campos_modif"> 
+		
+		<div id="bloque-izq">
+		<div class="reglon">
+			Estado: <select id="slc_habilitado">
+			
+				  <option value="1">Habilitado</option>
+				  <option value="0">No habilitado</option> 
+			  		</select>
+		</div>
+		
+		<div class="reglon">		
+		C&oacute;digo de alumno: <input id="txt_codigo" type="text" value=""/>
+		</div>
+		
+		<div class="reglon">
+		Password: <input id="txt_password" type="text" value=""/>		
+		</div>
+		
+		<div class="reglon">
+			Padre/apoderado: 
+			<select id="slc_padre">
+			  </select>
+		</div>
+		
 		<div class="reglon">		
 		Nombres: <input id="txt_nombres" type="text" value=""/>
 		</div>	
 		<div class="reglon">	
 		Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/>	
+		</div>
+		
+		<div class="reglon">	
+		Apellido Materno: <input id="txt_apellido_m" type="text" value=""/>	
 		</div>
 		
 		<div class="reglon">
@@ -154,29 +298,16 @@
 		
 		
 		
+	<div class="reglon " >
+	
+		
+	 ¿Repitente? <select id="chk_repitencia" ><option value="si">Sí</option><option value="no">No</option></select>
+		<div style="width:30px; float:right;height:15px;"></div>
+					
+		  	
+	</div>
 		
 		
-		
-		
-		
-		</div>
-		  		
-		<div id="bloque-der">
-		
-		
-		<div class="reglon">		
-		</div>
-		
-		<div class="reglon">
-		Password: <input id="txt_password" type="text" value=""/>		
-		</div>
-		
-		<div class="reglon">		
-		</div>
-		
-		<div class="reglon">	
-		Apellido Materno: <input id="txt_apellido_m" type="text" value=""/>	
-		</div>
 		
 		
 		</div>
@@ -185,8 +316,9 @@
 		<div id="bloque-inf">
 		
 		
-		<input id="btn_aceptar" type="button" value="Modificar registro"/>
+		<input id="btn_modificar" type="button" value="Modificar registro"/>
 		
+		<input class="alinear_derecha" id="btn_eliminar" type="button" value="Eliminar"/>
 		
 		</div>
 		<!--FIN AREA ES PARA LA MODIFICACION DE LOS DATOS DE UN ALUMNO SELECCIONADO-->
@@ -229,7 +361,7 @@
 </div>
 
 
-<div id="contenido-consultar_padres-registros" class="contenido-registros alavista">
+<div id="contenido-consultar_padres-registros" class="contenido-registros oculto">
 	<div class="contenido_titulo" >
 		Consulta de Padres
 	</div>
@@ -256,24 +388,24 @@
 		<!--ESTA AREA ES PARA LA MODIFICACION DE LOS DATOS DE UN ALUMNO SELECCIONADO-->
 		<div id="campos_modif"> 
 		
-		<div id="bloque-izq">
+		<div id="bloque-izq" class="oculto">
 			<div class="reglon">
-			Habilitado: 
+			Estado: 
 			<select id="slc_habilitado">
 			
-			  <option value="disponible">Habilitado</option>
-				 <option value="no_disponible">No habilitado</option> 
+			  <option value="1">Habilitado</option>
+				 <option value="0">No habilitado</option> 
 			</select>
 			</div>
 			
 			<div class="reglon">DNI: <input id="txt_codigo" type="text" value=""/></div>
 			<div class="reglon">Nombres: <input id="txt_nombres" type="text" value=""/></div>
 			<div class="reglon">Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/></div>
-			<div class="reglon">	Usuario: <input id="txt_password" type="text" value=""/></div>
+			<div class="reglon">	Usuario: <input id="txt_user" type="text" value=""/></div>
 		</div>
 		
 		
-		<div id="bloque-der">
+		<div id="bloque-der" class="oculto">
 		
 			<div class="reglon"></div>
 			<div class="reglon"></div>
@@ -284,8 +416,9 @@
 		</div>
 		
 		
-		<div id="bloque-inf">
-		<input id="btn_aceptar" type="button" value="Modificar registro"/>
+		<div id="bloque-inf" class="oculto">
+		<input id="btn_modificar" type="button" value="Modificar registro"/>
+		<input class="alinear_derecha" id="btn_eliminar" type="button" value="Eliminar"/>
 		</div>
 				  		
 		</div>	
@@ -330,7 +463,7 @@
 
 
 
-<div id="contenido-consultar_profesores-registros" class="contenido-registros alavista">
+<div id="contenido-consultar_profesores-registros" class="contenido-registros oculto">
 	<div class="contenido_titulo" >
 		Consulta de Profesores
 	</div>
@@ -356,24 +489,24 @@
 		<!--ESTA AREA ES PARA LA MODIFICACION DE LOS DATOS DE UN ALUMNO SELECCIONADO-->
 		<div id="campos_modif"> 
 		
-		<div id="bloque-izq">
+		<div id="bloque-izq" class="oculto">
 			<div class="reglon">
-			Habilitado: 
+			Estado: 
 			<select id="slc_habilitado">
 			
-			  <option value="disponible">Habilitado</option>
-				 <option value="no_disponible">No habilitado</option> 
+			  <option value="1">Habilitado</option>
+				 <option value="0">No habilitado</option> 
 			</select>
 			</div>
 			
 			<div class="reglon">DNI: <input id="txt_codigo" type="text" value=""/></div>
 			<div class="reglon">Nombres: <input id="txt_nombres" type="text" value=""/></div>
 			<div class="reglon">Apellido Paterno: <input id="txt_apellido_p" type="text" value=""/></div>
-			<div class="reglon">	Usuario: <input id="txt_password" type="text" value=""/></div>
+			<div class="reglon">	Usuario: <input id="txt_user" type="text" value=""/></div>
 		</div>
 		
 		
-		<div id="bloque-der">
+		<div id="bloque-der" class="oculto">
 		
 			<div class="reglon"></div>
 			<div class="reglon"></div>
@@ -384,8 +517,9 @@
 		</div>
 		
 		
-		<div id="bloque-inf">
-		<input id="btn_aceptar" type="button" value="Modificar registro"/>
+		<div id="bloque-inf" class="oculto">
+		<input id="btn_modificar" type="button" value="Modificar registro"/>
+		<input class="alinear_derecha" id="btn_eliminar" type="button" value="Eliminar"/>
 		</div>
 				  		
 		</div>	

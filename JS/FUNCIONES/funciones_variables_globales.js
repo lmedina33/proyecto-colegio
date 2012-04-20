@@ -25,6 +25,8 @@ var GLOBAL_PAGINA_CARGADA=0;  //VARIABLE USADA PARA SABER SI UNA PAGINA CARGO LO
 
 var GLOBAL_TTL_ACN_INC="Acci&oacute;n incompleta";
 var GL_TTL_REGISTRO_EXITO="Registro exitoso";
+var GL_TTL_ELIMINA_EXITO="Registro borrado con &eacute;xito";
+var GL_TTL_DATO_RPT="Dato repetido";
 
 
 var GLOBAL_MARGEN_TOP_AVISO=23;

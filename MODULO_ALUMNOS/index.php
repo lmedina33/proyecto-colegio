@@ -4,7 +4,7 @@ session_start();
 header("Cache-Control: no-store, no-cache, must-revalidate");
 
 if(!isset($_SESSION["codigo"]) || empty($_SESSION["codigo"]) || !isset($_SESSION["nombre_usuario"]) || empty($_SESSION["nombre_usuario"]) || $_SESSION["modulo"]!="MODULO_ALUMNOS"){
-	header("location: ../login/index.php?logeo=A");
+	header("location: ../LOGIN/index.php?logeo=A");
 }
 
 
@@ -29,7 +29,6 @@ header ("Pragma: no-cache");
 	<script language="javascript" src="../JS/FUNCIONES/funciones_variables_globales.js"></script>
 	
 	<script language="javascript" src="../JS/MODULOS/MODULO_ALUMNOS/funciones_click.js"></script>
-	<script language="javascript" src="../JS/MODULOS/MODULO_ALUMNOS/funciones_post.js"></script>
 	<script language="javascript" src="../JS/MODULOS/MODULO_ALUMNOS/funciones_carga_pagina.js"></script>
 	
 	
@@ -54,17 +53,19 @@ header ("Pragma: no-cache");
 	<div id="logotipo">
 	
 	</div>
+	
+	<div id="cerrar_sesion" > <div id="imagen"> </div> <div class="texto">Cerrar sesion</div> </div>
 </div>
 
 
 
 <div id="cuerpo-pagina">
 
-	<div id="btn_cursos" class="boton_area">
+	<div title="Ver notas y observaciones de mis cursos" id="btn_cursos" class="boton_area">
 	
 	</div>
 	
-	<div  id="btn_blog" class="boton_area">
+	<div title="Escribir en el blog de un profesor" id="btn_blog" class="boton_area">
 	
 	</div>
 		

@@ -13,7 +13,10 @@
 	<script language="javascript" src="../JS/FUNCIONES/funciones_variables_globales.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_info_operacionales.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_info_verificacion.js"></script>
+	<script language="javascript" src="../JS/FUNCIONES/funciones_info_fecha.js"></script>
+	<script language="javascript" src="../JS/FUNCIONES/funciones_info_tabla.js"></script>
 	<script language="javascript" src="../JS/FUNCIONES/funciones_popup_pregunta.js"></script>
+	<script language="javascript" src="../JS/FUNCIONES/funciones_fmsg.js"></script>
 	
 	<script language="javascript" src="../JS/MODULOS/variables_globales.js"></script>
 	
@@ -28,6 +31,7 @@
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/REGISTROS/funciones_post.js"></script>
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/REGISTROS/funciones_click.js"></script>
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/REGISTROS/funciones_change.js"></script>
+	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/REGISTROS/funciones.js"></script>
 	
 	
 	<script language="javascript" src="../JS/MODULOS/ADMINISTRACION/CURSOS_RENDIMIENTO/funciones_post.js"></script>
@@ -52,6 +56,7 @@
 <div id="protector_transparente"></div>
 <div id="protector_marco_foto"></div>
 
+<div id="div_back_pregunta"></div>
 <div id="div_back"></div>
 <div id="div_back2"></div>
 <div id="div_back3"></div>
@@ -122,12 +127,16 @@
 				<div id="submenu-registros"  class="submenu">
 				
 						
-					<div id="alumnos-registros" class="subopcion" title="Seleccionado">
+					<div id="alumnos-registros" class="subopcion" title="Click para seleccionar">
 						<div class="texto_pestana">Registrar Alumnos</div>						
 					</div>
 						
-					<div id="consultar_alumnos-registros" class="subopcion" title="Seleccionado">
+					<div id="consultar_alumnos-registros" class="subopcion" title="Click para seleccionar">
 						<div class="texto_pestana">Consultar Alumnos</div>						
+					</div>
+					
+					<div id="consultar_alumnos_no_dispo-registros" class="subopcion" title="Click para seleccionar">
+						<div class="texto_pestana">Alumnos no disponibles</div>						
 					</div>
 					
 					<div id="padres-registros" class="subopcion" title="Click para seleccionar">
@@ -153,19 +162,23 @@
 				<div id="submenu-cursos_rendimiento"  class="submenu">
 				
 						
-					<div id="registro_cursos-cursos_rendimiento" class="subopcion" title="Seleccionado">
+					<div id="registro_cursos-cursos_rendimiento" class="subopcion" title="Click para seleccionar">
 						<div class="texto_pestana">Registrar Cursos</div>						
 					</div>
 						
-					<div id="notas_alumnos-cursos_rendimiento" class="subopcion" title="Seleccionado">
+					<div id="notas_alumnos-cursos_rendimiento" class="subopcion" title="Click para seleccionar">
 						<div class="texto_pestana">Registrar notas</div>						
+					</div>
+					
+					<div id="asistencia-cursos_rendimiento" class="subopcion" title="Click para seleccionar">
+						<div class="texto_pestana">Tardanzas e inasistencias</div>						
 					</div>
 					
 					
 				</div>
 				
-			<div class="sub_opcion"></div>
-			<div class="opcion"></div>
+			
+		
 		</div>
 
 		<div id="contenido">
@@ -194,11 +207,11 @@
 		</div>
 		
 </div>
-
+<!-- 
 
 <div id="pie_pagina">
 
-</div>
+</div>-->
 
 	<?php include("../pop_ups.php"); ?>
 

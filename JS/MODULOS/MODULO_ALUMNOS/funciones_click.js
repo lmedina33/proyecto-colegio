@@ -19,4 +19,15 @@ $("#cuerpo-pagina #btn_blog ").click(function(){
 });
 
 
+$("#cerrar_sesion").click(function(){
+	$.ajax({
+			url: "../LOGIN/POST/MODULO_ALUMNO/close_alumno.php",
+			success: function(data){
+				document.location = "../PORTAL/index.php";
+			}
+	
+	});
+});
+
+
 });
